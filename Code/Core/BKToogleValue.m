@@ -1,0 +1,65 @@
+//
+//  BKToogleValue.m
+//  BaseKit
+//
+//  Created by Bruno Wernimont on 10/12/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//
+
+#import "BKToogleValue.h"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////
+@implementation BKToogleValue
+
+@synthesize firstValue = _firstValue;
+@synthesize secondValue = _secondValue;
+@synthesize isFirstValueSelected = _isFirstValueSelected;
+
+
+////////////////////////////////////////////////////////////////////////////////
++ (id)firstValue:(id)firstValue secondValue:(id)secondValue {
+    return [[[self alloc] initWithFirstValue:firstValue secondValue:secondValue] autorelease];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.isFirstValueSelected = YES;
+    }
+    return self;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+- (id)initWithFirstValue:(id)firstValue secondValue:(id)secondValue {
+    self = [self init];
+    if (self) {
+        self.firstValue = firstValue;
+        self.secondValue = secondValue;
+    }
+    return self;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+- (void)toggle {
+    self.isFirstValueSelected = !self.isFirstValueSelected;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+- (id)currentValue {
+    return self.isFirstValueSelected ? self.firstValue : self.secondValue;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+- (void)setCurrentValue:(id)currentValue {
+    self.isFirstValueSelected = (currentValue == self.firstValue);
+}
+
+@end

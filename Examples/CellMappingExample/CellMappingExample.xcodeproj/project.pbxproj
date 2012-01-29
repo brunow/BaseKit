@@ -1,0 +1,353 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E727434C14B637EF00720D76 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E727434B14B637EF00720D76 /* UIKit.framework */; };
+		E727434E14B637EF00720D76 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E727434D14B637EF00720D76 /* Foundation.framework */; };
+		E727435014B637EF00720D76 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E727434F14B637EF00720D76 /* CoreGraphics.framework */; };
+		E727435614B637EF00720D76 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E727435414B637EF00720D76 /* InfoPlist.strings */; };
+		E727435814B637EF00720D76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E727435714B637EF00720D76 /* main.m */; };
+		E727435C14B637EF00720D76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E727435B14B637EF00720D76 /* AppDelegate.m */; };
+		E727436414B6382A00720D76 /* TableViewControllerExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E727436314B6382A00720D76 /* TableViewControllerExample.m */; };
+		E727437A14B6398C00720D76 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E727437914B6398B00720D76 /* Item.m */; };
+		E727437C14B63AE000720D76 /* tux.png in Resources */ = {isa = PBXBuildFile; fileRef = E727437B14B63AE000720D76 /* tux.png */; };
+		E72743AF14B63DE700720D76 /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72743AE14B63DE700720D76 /* MovieViewCell.m */; };
+		E72743B214B648C300720D76 /* BookViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72743B114B648C200720D76 /* BookViewCell.m */; };
+		E72743B414B648DB00720D76 /* BookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72743B314B648DB00720D76 /* BookViewCell.xib */; };
+		E795AEA214B65190002D1135 /* BKCellAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9B14B65190002D1135 /* BKCellAttributeMapping.m */; };
+		E795AEA314B65190002D1135 /* BKCellMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9C14B65190002D1135 /* BKCellMapper.m */; };
+		E795AEA414B65190002D1135 /* BKCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9D14B65190002D1135 /* BKCellMapping.m */; };
+		E795AEA514B65190002D1135 /* BKDynamicCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9E14B65190002D1135 /* BKDynamicCellMapping.m */; };
+		E795AEA614B65190002D1135 /* BKTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9F14B65190002D1135 /* BKTableModel.m */; };
+		E795AEA714B65190002D1135 /* NSDictionary+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AEA014B65190002D1135 /* NSDictionary+BaseKit.m */; };
+		E795AEA814B65190002D1135 /* UITableViewCell+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AEA114B65190002D1135 /* UITableViewCell+BaseKit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E727434714B637EF00720D76 /* CellMappingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellMappingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E727434B14B637EF00720D76 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E727434D14B637EF00720D76 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E727434F14B637EF00720D76 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E727435314B637EF00720D76 /* CellMappingExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CellMappingExample-Info.plist"; sourceTree = "<group>"; };
+		E727435514B637EF00720D76 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E727435714B637EF00720D76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E727435914B637EF00720D76 /* CellMappingExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CellMappingExample-Prefix.pch"; sourceTree = "<group>"; };
+		E727435A14B637EF00720D76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E727435B14B637EF00720D76 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E727436214B6382A00720D76 /* TableViewControllerExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControllerExample.h; sourceTree = "<group>"; };
+		E727436314B6382A00720D76 /* TableViewControllerExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerExample.m; sourceTree = "<group>"; };
+		E727437814B6398B00720D76 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		E727437914B6398B00720D76 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		E727437B14B63AE000720D76 /* tux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tux.png; sourceTree = "<group>"; };
+		E72743AD14B63DE700720D76 /* MovieViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewCell.h; sourceTree = "<group>"; };
+		E72743AE14B63DE700720D76 /* MovieViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewCell.m; sourceTree = "<group>"; };
+		E72743B014B648C200720D76 /* BookViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewCell.h; sourceTree = "<group>"; };
+		E72743B114B648C200720D76 /* BookViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewCell.m; sourceTree = "<group>"; };
+		E72743B314B648DB00720D76 /* BookViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewCell.xib; sourceTree = "<group>"; };
+		E795AE9114B65190002D1135 /* BaseKitCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseKitCellMapping.h; path = CellMappingExample/CellMapping/BaseKitCellMapping.h; sourceTree = SOURCE_ROOT; };
+		E795AE9214B65190002D1135 /* BKCellAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCellAttributeMapping.h; path = CellMappingExample/CellMapping/BKCellAttributeMapping.h; sourceTree = SOURCE_ROOT; };
+		E795AE9314B65190002D1135 /* BKCellMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCellMapper.h; path = CellMappingExample/CellMapping/BKCellMapper.h; sourceTree = SOURCE_ROOT; };
+		E795AE9414B65190002D1135 /* BKCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCellMapping.h; path = CellMappingExample/CellMapping/BKCellMapping.h; sourceTree = SOURCE_ROOT; };
+		E795AE9514B65190002D1135 /* BKCellMappingBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCellMappingBlocks.h; path = CellMappingExample/CellMapping/BKCellMappingBlocks.h; sourceTree = SOURCE_ROOT; };
+		E795AE9614B65190002D1135 /* BKDynamicCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKDynamicCellMapping.h; path = CellMappingExample/CellMapping/BKDynamicCellMapping.h; sourceTree = SOURCE_ROOT; };
+		E795AE9714B65190002D1135 /* BKTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKTableModel.h; path = CellMappingExample/CellMapping/BKTableModel.h; sourceTree = SOURCE_ROOT; };
+		E795AE9814B65190002D1135 /* BKTableModelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKTableModelDataSource.h; path = CellMappingExample/CellMapping/BKTableModelDataSource.h; sourceTree = SOURCE_ROOT; };
+		E795AE9914B65190002D1135 /* NSDictionary+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BaseKit.h"; path = "CellMappingExample/CellMapping/NSDictionary+BaseKit.h"; sourceTree = SOURCE_ROOT; };
+		E795AE9A14B65190002D1135 /* UITableViewCell+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+BaseKit.h"; path = "CellMappingExample/CellMapping/UITableViewCell+BaseKit.h"; sourceTree = SOURCE_ROOT; };
+		E795AE9B14B65190002D1135 /* BKCellAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKCellAttributeMapping.m; path = CellMappingExample/CellMapping/BKCellAttributeMapping.m; sourceTree = SOURCE_ROOT; };
+		E795AE9C14B65190002D1135 /* BKCellMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKCellMapper.m; path = CellMappingExample/CellMapping/BKCellMapper.m; sourceTree = SOURCE_ROOT; };
+		E795AE9D14B65190002D1135 /* BKCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKCellMapping.m; path = CellMappingExample/CellMapping/BKCellMapping.m; sourceTree = SOURCE_ROOT; };
+		E795AE9E14B65190002D1135 /* BKDynamicCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKDynamicCellMapping.m; path = CellMappingExample/CellMapping/BKDynamicCellMapping.m; sourceTree = SOURCE_ROOT; };
+		E795AE9F14B65190002D1135 /* BKTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKTableModel.m; path = CellMappingExample/CellMapping/BKTableModel.m; sourceTree = SOURCE_ROOT; };
+		E795AEA014B65190002D1135 /* NSDictionary+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+BaseKit.m"; path = "CellMappingExample/CellMapping/NSDictionary+BaseKit.m"; sourceTree = SOURCE_ROOT; };
+		E795AEA114B65190002D1135 /* UITableViewCell+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+BaseKit.m"; path = "CellMappingExample/CellMapping/UITableViewCell+BaseKit.m"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E727434414B637EF00720D76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E727434C14B637EF00720D76 /* UIKit.framework in Frameworks */,
+				E727434E14B637EF00720D76 /* Foundation.framework in Frameworks */,
+				E727435014B637EF00720D76 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E727433C14B637EF00720D76 = {
+			isa = PBXGroup;
+			children = (
+				E727436514B638FD00720D76 /* CellMapping */,
+				E727435114B637EF00720D76 /* CellMappingExample */,
+				E727434A14B637EF00720D76 /* Frameworks */,
+				E727434814B637EF00720D76 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E727434814B637EF00720D76 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E727434714B637EF00720D76 /* CellMappingExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E727434A14B637EF00720D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E727434B14B637EF00720D76 /* UIKit.framework */,
+				E727434D14B637EF00720D76 /* Foundation.framework */,
+				E727434F14B637EF00720D76 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E727435114B637EF00720D76 /* CellMappingExample */ = {
+			isa = PBXGroup;
+			children = (
+				E727437B14B63AE000720D76 /* tux.png */,
+				E727435A14B637EF00720D76 /* AppDelegate.h */,
+				E727435B14B637EF00720D76 /* AppDelegate.m */,
+				E727435214B637EF00720D76 /* Supporting Files */,
+				E727436214B6382A00720D76 /* TableViewControllerExample.h */,
+				E727436314B6382A00720D76 /* TableViewControllerExample.m */,
+				E727437814B6398B00720D76 /* Item.h */,
+				E727437914B6398B00720D76 /* Item.m */,
+				E72743AD14B63DE700720D76 /* MovieViewCell.h */,
+				E72743AE14B63DE700720D76 /* MovieViewCell.m */,
+				E72743B014B648C200720D76 /* BookViewCell.h */,
+				E72743B114B648C200720D76 /* BookViewCell.m */,
+				E72743B314B648DB00720D76 /* BookViewCell.xib */,
+			);
+			path = CellMappingExample;
+			sourceTree = "<group>";
+		};
+		E727435214B637EF00720D76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E727435314B637EF00720D76 /* CellMappingExample-Info.plist */,
+				E727435414B637EF00720D76 /* InfoPlist.strings */,
+				E727435714B637EF00720D76 /* main.m */,
+				E727435914B637EF00720D76 /* CellMappingExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E727436514B638FD00720D76 /* CellMapping */ = {
+			isa = PBXGroup;
+			children = (
+				E795AE9114B65190002D1135 /* BaseKitCellMapping.h */,
+				E795AE9214B65190002D1135 /* BKCellAttributeMapping.h */,
+				E795AE9314B65190002D1135 /* BKCellMapper.h */,
+				E795AE9414B65190002D1135 /* BKCellMapping.h */,
+				E795AE9514B65190002D1135 /* BKCellMappingBlocks.h */,
+				E795AE9614B65190002D1135 /* BKDynamicCellMapping.h */,
+				E795AE9714B65190002D1135 /* BKTableModel.h */,
+				E795AE9814B65190002D1135 /* BKTableModelDataSource.h */,
+				E795AE9914B65190002D1135 /* NSDictionary+BaseKit.h */,
+				E795AE9A14B65190002D1135 /* UITableViewCell+BaseKit.h */,
+				E795AE9B14B65190002D1135 /* BKCellAttributeMapping.m */,
+				E795AE9C14B65190002D1135 /* BKCellMapper.m */,
+				E795AE9D14B65190002D1135 /* BKCellMapping.m */,
+				E795AE9E14B65190002D1135 /* BKDynamicCellMapping.m */,
+				E795AE9F14B65190002D1135 /* BKTableModel.m */,
+				E795AEA014B65190002D1135 /* NSDictionary+BaseKit.m */,
+				E795AEA114B65190002D1135 /* UITableViewCell+BaseKit.m */,
+			);
+			name = CellMapping;
+			path = ../../Code/CellMapping;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E727434614B637EF00720D76 /* CellMappingExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E727435F14B637EF00720D76 /* Build configuration list for PBXNativeTarget "CellMappingExample" */;
+			buildPhases = (
+				E727434314B637EF00720D76 /* Sources */,
+				E727434414B637EF00720D76 /* Frameworks */,
+				E727434514B637EF00720D76 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CellMappingExample;
+			productName = CellMappingExample;
+			productReference = E727434714B637EF00720D76 /* CellMappingExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E727433E14B637EF00720D76 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = E727434114B637EF00720D76 /* Build configuration list for PBXProject "CellMappingExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E727433C14B637EF00720D76;
+			productRefGroup = E727434814B637EF00720D76 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E727434614B637EF00720D76 /* CellMappingExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E727434514B637EF00720D76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E727435614B637EF00720D76 /* InfoPlist.strings in Resources */,
+				E727437C14B63AE000720D76 /* tux.png in Resources */,
+				E72743B414B648DB00720D76 /* BookViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E727434314B637EF00720D76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E727435814B637EF00720D76 /* main.m in Sources */,
+				E727435C14B637EF00720D76 /* AppDelegate.m in Sources */,
+				E727436414B6382A00720D76 /* TableViewControllerExample.m in Sources */,
+				E727437A14B6398C00720D76 /* Item.m in Sources */,
+				E72743AF14B63DE700720D76 /* MovieViewCell.m in Sources */,
+				E72743B214B648C300720D76 /* BookViewCell.m in Sources */,
+				E795AEA214B65190002D1135 /* BKCellAttributeMapping.m in Sources */,
+				E795AEA314B65190002D1135 /* BKCellMapper.m in Sources */,
+				E795AEA414B65190002D1135 /* BKCellMapping.m in Sources */,
+				E795AEA514B65190002D1135 /* BKDynamicCellMapping.m in Sources */,
+				E795AEA614B65190002D1135 /* BKTableModel.m in Sources */,
+				E795AEA714B65190002D1135 /* NSDictionary+BaseKit.m in Sources */,
+				E795AEA814B65190002D1135 /* UITableViewCell+BaseKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E727435414B637EF00720D76 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E727435514B637EF00720D76 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E727435D14B637EF00720D76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E727435E14B637EF00720D76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E727436014B637EF00720D76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CellMappingExample/CellMappingExample-Prefix.pch";
+				INFOPLIST_FILE = "CellMappingExample/CellMappingExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E727436114B637EF00720D76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CellMappingExample/CellMappingExample-Prefix.pch";
+				INFOPLIST_FILE = "CellMappingExample/CellMappingExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E727434114B637EF00720D76 /* Build configuration list for PBXProject "CellMappingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E727435D14B637EF00720D76 /* Debug */,
+				E727435E14B637EF00720D76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E727435F14B637EF00720D76 /* Build configuration list for PBXNativeTarget "CellMappingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E727436014B637EF00720D76 /* Debug */,
+				E727436114B637EF00720D76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E727433E14B637EF00720D76 /* Project object */;
+}
