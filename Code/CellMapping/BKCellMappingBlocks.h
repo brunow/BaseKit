@@ -20,3 +20,5 @@
 typedef id(^BKCellValueBlock)(id value);
 
 typedef Class(^BKCellObjectRetClass)(id obj);
+
+typedef void(^BKTableViewCellSelection)(UITableViewCell *cell, id object, NSIndexPath *indexPath);

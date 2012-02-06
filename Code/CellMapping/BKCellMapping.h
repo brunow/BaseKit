@@ -25,6 +25,7 @@
 @property (nonatomic, assign) Class cellClass;
 @property (nonatomic, readonly) NSMutableDictionary *attributeMappings;
 @property (nonatomic, retain) UINib *nib;
+@property (nonatomic, copy) BKTableViewCellSelection onSelectRow;
 
 - (id)initWithObjectClass:(Class)objectClass;
 

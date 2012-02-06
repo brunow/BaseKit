@@ -39,13 +39,14 @@
 @synthesize attributeMappings = _attributeMappings;
 @synthesize cellClass = _cellClass;
 @synthesize nib = _nib;
+@synthesize onSelectRow = _onSelectRow;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)dealloc {
     [_attributeMappings release];
-    
     self.nib = nil;
+    self.onSelectRow = nil;
     
     [super dealloc];
 }
@@ -54,9 +55,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)init {
     self = [super init];
+    
     if (self) {
         _attributeMappings = [[NSMutableDictionary alloc] init];
     }
+    
     return self;
 }
 

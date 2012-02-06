@@ -36,4 +36,6 @@
 
 - (void)registerMapping:(BKCellMapping *)cellMapping;
 
+- (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

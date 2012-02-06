@@ -95,7 +95,7 @@
     
     UITableViewCell *cell = nil;
     
-    if (cellMapping.nib == nil) {
+    if (nil == cellMapping.nib) {
         cell = [cellMapping.cellClass cellForTableView:self.tableView];
     } else {
         cell = [cellMapping.cellClass cellForTableView:self.tableView fromNib:cellMapping.nib];
@@ -114,12 +114,33 @@
     NSMutableSet *set = [self.objectMappings objectForKey:objectClassStringName
                                             defaultObject:[NSMutableSet set]];
     
-    if ([self.objectMappings objectForKey:cellMapping] == nil) {
+    if (nil == [self.objectMappings objectForKey:cellMapping]) {
         [self.objectMappings setObject:set forKey:objectClassStringName];
     }
     
     [set addObject:cellMapping];
 }
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    __block BKCellMapping *cellMapping = nil;
+    __block id object = nil;
+    
+    dispatch_sync(concurrentQueue, ^{
+        object = [self.delegate tableModel:self objectForRowAtIndexPAth:indexPath];
+        NSSet *cellMappings = [BKCellMapper cellMappingsForObject:object mappings:self.objectMappings];
+        cellMapping = [BKCellMapper cellMappingForObject:object mappings:cellMappings];
+    });
+    
+    if (nil != cellMapping.onSelectRow) {
+        UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
+        cellMapping.onSelectRow(cell, object, indexPath);
+    }
+}
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -131,9 +152,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Private
-
-
-
 
 
 @end

@@ -9,8 +9,6 @@
     #import "BaseKitCore.h"
     #import "BaseKitCoreAdditions.h"
     #import "BaseKitNetwork.h"
-    //#import "BaseKitObjectMapping.h"
-    #import "BaseKitCoreData.h"
     #import "BaseKitView.h"
     #import "BaseKitCellMapping.h"
 #endif

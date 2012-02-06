@@ -39,8 +39,16 @@
             return [UIImage imageNamed:value];
         }];
         
-        cellMapping.onSelectRow = ^(UITableViewCell *cell, id object, NSIndexPath* indexPath) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You select a movie cell"
+        [cellMapping mapObjectToCellClass:[MovieViewCell class] whenValueOfKeyPath:@"type" isEqualTo:@"movie"];
+        [self.tableModel registerMapping:cellMapping];
+    }];
+    
+    [BKDynamicCellMapping mappingForObjectClass:[Item class] block:^(BKDynamicCellMapping *cellMapping) {
+        [cellMapping mapKeyPath:@"title" toAttribute:@"titleLabel.text"];
+        [cellMapping mapObjectToCellClass:[BookViewCell class] whenValueOfKeyPath:@"type" isEqualTo:@"book"];
+        
+        cellMapping.onSelectRow = ^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You select a book cell"
                                                             message:nil
                                                            delegate:nil
                                                   cancelButtonTitle:nil
@@ -50,13 +58,6 @@
             [alert release];
         };
         
-        [cellMapping mapObjectToCellClass:[MovieViewCell class] whenValueOfKeyPath:@"type" isEqualTo:@"movie"];
-        [self.tableModel registerMapping:cellMapping];
-    }];
-    
-    [BKDynamicCellMapping mappingForObjectClass:[Item class] block:^(BKDynamicCellMapping *cellMapping) {
-        [cellMapping mapKeyPath:@"title" toAttribute:@"titleLabel.text"];
-        [cellMapping mapObjectToCellClass:[BookViewCell class] whenValueOfKeyPath:@"type" isEqualTo:@"book"];
         cellMapping.nib = [BookViewCell nib];
         [self.tableModel registerMapping:cellMapping];
     }];
