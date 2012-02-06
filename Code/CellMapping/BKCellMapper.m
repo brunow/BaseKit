@@ -1,9 +1,18 @@
 //
-//  BKCellMapper.m
-//  BaseKit
+// Created by Bruno Wernimont on 2012
+// Copyright 2012 BaseKit
 //
-//  Created by Bruno Wernimont on 2/01/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 //
 
 #import "BKCellMapper.h"
@@ -103,32 +112,13 @@
                                 attributeMapping:(BKCellAttributeMapping *)attributeMapping
                                             cell:(UITableViewCell *)cell {
     
-    //NSArray *attributeKeyPaths = [attributeMapping.attribute componentsSeparatedByString:@"."];
-    //NSString *attributeUIPropertyKey = [attributeKeyPaths firstObject];
-    //NSString *attributePropertyKey = [attributeKeyPaths objectAtIndex:1];
-    
     id keyPathValue = [object valueForKeyPath:attributeMapping.keyPath];
-    //id attributeUIProperty = [cell valueForKeyPath:attributeUIPropertyKey];
-    //id attributeProperty = [cell valueForKeyPath:attributePropertyKey];
-    
-    /*NSAssert(keyPathValue, @"%@ object doesn't respond to %@",
-             NSStringFromClass([object class]), attributeMapping.keyPath);
-    
-    NSAssert(attributeProperty, @"The cell %@ doesn't respond to keyPath %@",
-             NSStringFromClass([cell class]), attributeMapping.attribute);*/
     
     if (attributeMapping.valueBlock != nil) {
         keyPathValue = attributeMapping.valueBlock(keyPathValue);
     }
     
     id cellValue = nil;
-    
-    // Check if source is same as receiver
-    /*if ([keyPathValue class] == [attributeProperty class]) {
-        cellValue = keyPathValue;
-    } else { // Temp, next try to guess destination type
-        cellValue = keyPathValue;
-    }*/
     
     cellValue = keyPathValue;
     

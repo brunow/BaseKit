@@ -19,13 +19,15 @@
 		E72743AF14B63DE700720D76 /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72743AE14B63DE700720D76 /* MovieViewCell.m */; };
 		E72743B214B648C300720D76 /* BookViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72743B114B648C200720D76 /* BookViewCell.m */; };
 		E72743B414B648DB00720D76 /* BookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72743B314B648DB00720D76 /* BookViewCell.xib */; };
-		E795AEA214B65190002D1135 /* BKCellAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9B14B65190002D1135 /* BKCellAttributeMapping.m */; };
-		E795AEA314B65190002D1135 /* BKCellMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9C14B65190002D1135 /* BKCellMapper.m */; };
-		E795AEA414B65190002D1135 /* BKCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9D14B65190002D1135 /* BKCellMapping.m */; };
-		E795AEA514B65190002D1135 /* BKDynamicCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9E14B65190002D1135 /* BKDynamicCellMapping.m */; };
-		E795AEA614B65190002D1135 /* BKTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AE9F14B65190002D1135 /* BKTableModel.m */; };
-		E795AEA714B65190002D1135 /* NSDictionary+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AEA014B65190002D1135 /* NSDictionary+BaseKit.m */; };
-		E795AEA814B65190002D1135 /* UITableViewCell+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E795AEA114B65190002D1135 /* UITableViewCell+BaseKit.m */; };
+		E7C6299D14D5CAC3007C6EB8 /* BKCellAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C6299114D5CAC3007C6EB8 /* BKCellAttributeMapping.m */; };
+		E7C6299E14D5CAC3007C6EB8 /* BKCellMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C6299314D5CAC3007C6EB8 /* BKCellMapper.m */; };
+		E7C6299F14D5CAC3007C6EB8 /* BKCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C6299514D5CAC3007C6EB8 /* BKCellMapping.m */; };
+		E7C629A014D5CAC3007C6EB8 /* BKDynamicCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C6299814D5CAC3007C6EB8 /* BKDynamicCellMapping.m */; };
+		E7C629A114D5CAC3007C6EB8 /* BKTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C6299A14D5CAC3007C6EB8 /* BKTableModel.m */; };
+		E7C629A214D5CAC3007C6EB8 /* deps in Resources */ = {isa = PBXBuildFile; fileRef = E7C6299C14D5CAC3007C6EB8 /* deps */; };
+		E7C629AF14D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C629A914D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m */; };
+		E7C629B014D5CAC9007C6EB8 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C629AB14D5CAC9007C6EB8 /* UIView+Debug.m */; };
+		E7C629B114D5CAC9007C6EB8 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C629AD14D5CAC9007C6EB8 /* UIView+Layout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,23 +51,29 @@
 		E72743B014B648C200720D76 /* BookViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewCell.h; sourceTree = "<group>"; };
 		E72743B114B648C200720D76 /* BookViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewCell.m; sourceTree = "<group>"; };
 		E72743B314B648DB00720D76 /* BookViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewCell.xib; sourceTree = "<group>"; };
-		E795AE9114B65190002D1135 /* BaseKitCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseKitCellMapping.h; path = CellMappingExample/CellMapping/BaseKitCellMapping.h; sourceTree = SOURCE_ROOT; };
-		E795AE9214B65190002D1135 /* BKCellAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCellAttributeMapping.h; path = CellMappingExample/CellMapping/BKCellAttributeMapping.h; sourceTree = SOURCE_ROOT; };
-		E795AE9314B65190002D1135 /* BKCellMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCellMapper.h; path = CellMappingExample/CellMapping/BKCellMapper.h; sourceTree = SOURCE_ROOT; };
-		E795AE9414B65190002D1135 /* BKCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCellMapping.h; path = CellMappingExample/CellMapping/BKCellMapping.h; sourceTree = SOURCE_ROOT; };
-		E795AE9514B65190002D1135 /* BKCellMappingBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKCellMappingBlocks.h; path = CellMappingExample/CellMapping/BKCellMappingBlocks.h; sourceTree = SOURCE_ROOT; };
-		E795AE9614B65190002D1135 /* BKDynamicCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKDynamicCellMapping.h; path = CellMappingExample/CellMapping/BKDynamicCellMapping.h; sourceTree = SOURCE_ROOT; };
-		E795AE9714B65190002D1135 /* BKTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKTableModel.h; path = CellMappingExample/CellMapping/BKTableModel.h; sourceTree = SOURCE_ROOT; };
-		E795AE9814B65190002D1135 /* BKTableModelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BKTableModelDataSource.h; path = CellMappingExample/CellMapping/BKTableModelDataSource.h; sourceTree = SOURCE_ROOT; };
-		E795AE9914B65190002D1135 /* NSDictionary+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BaseKit.h"; path = "CellMappingExample/CellMapping/NSDictionary+BaseKit.h"; sourceTree = SOURCE_ROOT; };
-		E795AE9A14B65190002D1135 /* UITableViewCell+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+BaseKit.h"; path = "CellMappingExample/CellMapping/UITableViewCell+BaseKit.h"; sourceTree = SOURCE_ROOT; };
-		E795AE9B14B65190002D1135 /* BKCellAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKCellAttributeMapping.m; path = CellMappingExample/CellMapping/BKCellAttributeMapping.m; sourceTree = SOURCE_ROOT; };
-		E795AE9C14B65190002D1135 /* BKCellMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKCellMapper.m; path = CellMappingExample/CellMapping/BKCellMapper.m; sourceTree = SOURCE_ROOT; };
-		E795AE9D14B65190002D1135 /* BKCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKCellMapping.m; path = CellMappingExample/CellMapping/BKCellMapping.m; sourceTree = SOURCE_ROOT; };
-		E795AE9E14B65190002D1135 /* BKDynamicCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKDynamicCellMapping.m; path = CellMappingExample/CellMapping/BKDynamicCellMapping.m; sourceTree = SOURCE_ROOT; };
-		E795AE9F14B65190002D1135 /* BKTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BKTableModel.m; path = CellMappingExample/CellMapping/BKTableModel.m; sourceTree = SOURCE_ROOT; };
-		E795AEA014B65190002D1135 /* NSDictionary+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+BaseKit.m"; path = "CellMappingExample/CellMapping/NSDictionary+BaseKit.m"; sourceTree = SOURCE_ROOT; };
-		E795AEA114B65190002D1135 /* UITableViewCell+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+BaseKit.m"; path = "CellMappingExample/CellMapping/UITableViewCell+BaseKit.m"; sourceTree = SOURCE_ROOT; };
+		E7C6298F14D5CAC3007C6EB8 /* BaseKitCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCellMapping.h; sourceTree = "<group>"; };
+		E7C6299014D5CAC3007C6EB8 /* BKCellAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellAttributeMapping.h; sourceTree = "<group>"; };
+		E7C6299114D5CAC3007C6EB8 /* BKCellAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellAttributeMapping.m; sourceTree = "<group>"; };
+		E7C6299214D5CAC3007C6EB8 /* BKCellMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellMapper.h; sourceTree = "<group>"; };
+		E7C6299314D5CAC3007C6EB8 /* BKCellMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapper.m; sourceTree = "<group>"; };
+		E7C6299414D5CAC3007C6EB8 /* BKCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellMapping.h; sourceTree = "<group>"; };
+		E7C6299514D5CAC3007C6EB8 /* BKCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapping.m; sourceTree = "<group>"; };
+		E7C6299614D5CAC3007C6EB8 /* BKCellMappingBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellMappingBlocks.h; sourceTree = "<group>"; };
+		E7C6299714D5CAC3007C6EB8 /* BKDynamicCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDynamicCellMapping.h; sourceTree = "<group>"; };
+		E7C6299814D5CAC3007C6EB8 /* BKDynamicCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDynamicCellMapping.m; sourceTree = "<group>"; };
+		E7C6299914D5CAC3007C6EB8 /* BKTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTableModel.h; sourceTree = "<group>"; };
+		E7C6299A14D5CAC3007C6EB8 /* BKTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTableModel.m; sourceTree = "<group>"; };
+		E7C6299B14D5CAC3007C6EB8 /* BKTableModelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTableModelDataSource.h; sourceTree = "<group>"; };
+		E7C6299C14D5CAC3007C6EB8 /* deps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deps; sourceTree = "<group>"; };
+		E7C629A414D5CAC9007C6EB8 /* BaseKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitView.h; sourceTree = "<group>"; };
+		E7C629A514D5CAC9007C6EB8 /* BaseKitViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitViewAdditions.h; sourceTree = "<group>"; };
+		E7C629A614D5CAC9007C6EB8 /* BKViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKViewControllerDelegate.h; sourceTree = "<group>"; };
+		E7C629A814D5CAC9007C6EB8 /* UITableViewCell+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+BaseKit.h"; sourceTree = "<group>"; };
+		E7C629A914D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+BaseKit.m"; sourceTree = "<group>"; };
+		E7C629AA14D5CAC9007C6EB8 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
+		E7C629AB14D5CAC9007C6EB8 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
+		E7C629AC14D5CAC9007C6EB8 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		E7C629AD14D5CAC9007C6EB8 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +93,8 @@
 		E727433C14B637EF00720D76 = {
 			isa = PBXGroup;
 			children = (
-				E727436514B638FD00720D76 /* CellMapping */,
+				E7C629A314D5CAC9007C6EB8 /* View */,
+				E7C6298E14D5CAC3007C6EB8 /* CellMapping */,
 				E727435114B637EF00720D76 /* CellMappingExample */,
 				E727434A14B637EF00720D76 /* Frameworks */,
 				E727434814B637EF00720D76 /* Products */,
@@ -141,29 +150,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E727436514B638FD00720D76 /* CellMapping */ = {
+		E7C6298E14D5CAC3007C6EB8 /* CellMapping */ = {
 			isa = PBXGroup;
 			children = (
-				E795AE9114B65190002D1135 /* BaseKitCellMapping.h */,
-				E795AE9214B65190002D1135 /* BKCellAttributeMapping.h */,
-				E795AE9314B65190002D1135 /* BKCellMapper.h */,
-				E795AE9414B65190002D1135 /* BKCellMapping.h */,
-				E795AE9514B65190002D1135 /* BKCellMappingBlocks.h */,
-				E795AE9614B65190002D1135 /* BKDynamicCellMapping.h */,
-				E795AE9714B65190002D1135 /* BKTableModel.h */,
-				E795AE9814B65190002D1135 /* BKTableModelDataSource.h */,
-				E795AE9914B65190002D1135 /* NSDictionary+BaseKit.h */,
-				E795AE9A14B65190002D1135 /* UITableViewCell+BaseKit.h */,
-				E795AE9B14B65190002D1135 /* BKCellAttributeMapping.m */,
-				E795AE9C14B65190002D1135 /* BKCellMapper.m */,
-				E795AE9D14B65190002D1135 /* BKCellMapping.m */,
-				E795AE9E14B65190002D1135 /* BKDynamicCellMapping.m */,
-				E795AE9F14B65190002D1135 /* BKTableModel.m */,
-				E795AEA014B65190002D1135 /* NSDictionary+BaseKit.m */,
-				E795AEA114B65190002D1135 /* UITableViewCell+BaseKit.m */,
+				E7C6298F14D5CAC3007C6EB8 /* BaseKitCellMapping.h */,
+				E7C6299014D5CAC3007C6EB8 /* BKCellAttributeMapping.h */,
+				E7C6299114D5CAC3007C6EB8 /* BKCellAttributeMapping.m */,
+				E7C6299214D5CAC3007C6EB8 /* BKCellMapper.h */,
+				E7C6299314D5CAC3007C6EB8 /* BKCellMapper.m */,
+				E7C6299414D5CAC3007C6EB8 /* BKCellMapping.h */,
+				E7C6299514D5CAC3007C6EB8 /* BKCellMapping.m */,
+				E7C6299614D5CAC3007C6EB8 /* BKCellMappingBlocks.h */,
+				E7C6299714D5CAC3007C6EB8 /* BKDynamicCellMapping.h */,
+				E7C6299814D5CAC3007C6EB8 /* BKDynamicCellMapping.m */,
+				E7C6299914D5CAC3007C6EB8 /* BKTableModel.h */,
+				E7C6299A14D5CAC3007C6EB8 /* BKTableModel.m */,
+				E7C6299B14D5CAC3007C6EB8 /* BKTableModelDataSource.h */,
+				E7C6299C14D5CAC3007C6EB8 /* deps */,
 			);
 			name = CellMapping;
 			path = ../../Code/CellMapping;
+			sourceTree = "<group>";
+		};
+		E7C629A314D5CAC9007C6EB8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7C629A414D5CAC9007C6EB8 /* BaseKitView.h */,
+				E7C629A514D5CAC9007C6EB8 /* BaseKitViewAdditions.h */,
+				E7C629A614D5CAC9007C6EB8 /* BKViewControllerDelegate.h */,
+				E7C629A814D5CAC9007C6EB8 /* UITableViewCell+BaseKit.h */,
+				E7C629A914D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m */,
+				E7C629AA14D5CAC9007C6EB8 /* UIView+Debug.h */,
+				E7C629AB14D5CAC9007C6EB8 /* UIView+Debug.m */,
+				E7C629AC14D5CAC9007C6EB8 /* UIView+Layout.h */,
+				E7C629AD14D5CAC9007C6EB8 /* UIView+Layout.m */,
+			);
+			name = View;
+			path = ../../Code/View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +242,7 @@
 				E727435614B637EF00720D76 /* InfoPlist.strings in Resources */,
 				E727437C14B63AE000720D76 /* tux.png in Resources */,
 				E72743B414B648DB00720D76 /* BookViewCell.xib in Resources */,
+				E7C629A214D5CAC3007C6EB8 /* deps in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,13 +259,14 @@
 				E727437A14B6398C00720D76 /* Item.m in Sources */,
 				E72743AF14B63DE700720D76 /* MovieViewCell.m in Sources */,
 				E72743B214B648C300720D76 /* BookViewCell.m in Sources */,
-				E795AEA214B65190002D1135 /* BKCellAttributeMapping.m in Sources */,
-				E795AEA314B65190002D1135 /* BKCellMapper.m in Sources */,
-				E795AEA414B65190002D1135 /* BKCellMapping.m in Sources */,
-				E795AEA514B65190002D1135 /* BKDynamicCellMapping.m in Sources */,
-				E795AEA614B65190002D1135 /* BKTableModel.m in Sources */,
-				E795AEA714B65190002D1135 /* NSDictionary+BaseKit.m in Sources */,
-				E795AEA814B65190002D1135 /* UITableViewCell+BaseKit.m in Sources */,
+				E7C6299D14D5CAC3007C6EB8 /* BKCellAttributeMapping.m in Sources */,
+				E7C6299E14D5CAC3007C6EB8 /* BKCellMapper.m in Sources */,
+				E7C6299F14D5CAC3007C6EB8 /* BKCellMapping.m in Sources */,
+				E7C629A014D5CAC3007C6EB8 /* BKDynamicCellMapping.m in Sources */,
+				E7C629A114D5CAC3007C6EB8 /* BKTableModel.m in Sources */,
+				E7C629AF14D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m in Sources */,
+				E7C629B014D5CAC9007C6EB8 /* UIView+Debug.m in Sources */,
+				E7C629B114D5CAC9007C6EB8 /* UIView+Layout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

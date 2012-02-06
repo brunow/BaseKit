@@ -39,6 +39,17 @@
             return [UIImage imageNamed:value];
         }];
         
+        cellMapping.onSelectRow = ^(UITableViewCell *cell, id object, NSIndexPath* indexPath) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You select a movie cell"
+                                                            message:nil
+                                                           delegate:nil
+                                                  cancelButtonTitle:nil
+                                                  otherButtonTitles:@"OK", nil];
+            
+            [alert show];
+            [alert release];
+        };
+        
         [cellMapping mapObjectToCellClass:[MovieViewCell class] whenValueOfKeyPath:@"type" isEqualTo:@"movie"];
         [self.tableModel registerMapping:cellMapping];
     }];
@@ -88,16 +99,8 @@
 
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableModel didSelectRowAtIndexPath:indexPath];
 }
 
 @end
