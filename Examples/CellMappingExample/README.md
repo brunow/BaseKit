@@ -28,8 +28,19 @@ I'm not planning on supporting ARC at the moment.
 	    [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
 	    [cellMapping mapKeyPath:@"subtitle" toAttribute:@"detailTextLabel.text"];
 	    [cellMapping mapObjectToCellClass:[BookViewCell class]];
+	    
+	    cellMapping.onSelectRow = ^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+	    	NSLog(@"did select row");
+	    };
+	    
 	    [self.tableModel registerMapping:cellMapping];
     }];
+
+### UITableViewDelegate
+
+	- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    	[self.tableModel didSelectRowAtIndexPath:indexPath];
+	}
 
 ### UITableViewDataSource
 
