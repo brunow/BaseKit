@@ -17,6 +17,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "BaseKitCore.h"
+
 #import "NSArray+BaseKit.h"
 #import "NSManagedObject+BaseKit.h"
 #import "NSString+BaseKit.h"

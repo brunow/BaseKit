@@ -15,6 +15,8 @@
 // limitations under the License.
 //
 
+#import "BaseKitView.h"
+
 #import "UIView+Layout.h"
 #import "UITableViewCell+BaseKit.h"
 #import "UIView+Debug.h"
