@@ -35,11 +35,11 @@
        toAttribute:(NSString *)attribute
         valueBlock:(BKCellValueBlock)valueBlock;
 
-- (void)mapKeyPath:(NSString *)keyPath toAttribute:(NSString *)attribute;
-
 - (void)mapKeyPath:(NSString *)keyPath
-           toLabel:(NSString *)attribute
-        valueBlock:(BKCellValueBlock)valueBlock;
+       toAttribute:(NSString *)attribute
+       objectBlock:(BKCellObjectBlock)objectBlock;
+
+- (void)mapKeyPath:(NSString *)keyPath toAttribute:(NSString *)attribute;
 
 - (void)mapObjectToCellClass:(Class)cellClass;
 

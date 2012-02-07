@@ -26,6 +26,7 @@
 @synthesize keyPath = _keyPath;
 @synthesize attribute = _attribute;
 @synthesize valueBlock = _valueBlock;
+@synthesize objectBlock = _objectBlock;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

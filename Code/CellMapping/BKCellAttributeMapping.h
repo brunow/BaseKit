@@ -29,6 +29,7 @@ typedef enum {
 @property (nonatomic, copy) NSString *keyPath;
 @property (nonatomic, copy) NSString *attribute;
 @property (nonatomic, copy) BKCellValueBlock valueBlock;
+@property (nonatomic, copy) BKCellObjectBlock objectBlock;
 
 /*
  * Convenient method to get an attributeMapping

@@ -42,10 +42,10 @@
 							<object class="IBUILabel" id="683768672">
 								<reference key="NSNextResponder" ref="667558061"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 20}, {285, 21}}</string>
+								<string key="NSFrame">{{171, 1}, {144, 21}}</string>
 								<reference key="NSSuperview" ref="667558061"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="617894243"/>
+								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -73,10 +73,10 @@
 							<object class="IBUILabel" id="617894243">
 								<reference key="NSNextResponder" ref="667558061"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{64, 0}, {179, 21}}</string>
+								<string key="NSFrame">{{3, 0}, {159, 21}}</string>
 								<reference key="NSSuperview" ref="667558061"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="309373225"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -90,11 +90,31 @@
 								<reference key="IBUIFontDescription" ref="334865966"/>
 								<reference key="IBUIFont" ref="714655410"/>
 							</object>
+							<object class="IBUILabel" id="309373225">
+								<reference key="NSNextResponder" ref="667558061"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{12, 20}, {296, 21}}</string>
+								<reference key="NSSuperview" ref="667558061"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="683768672"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">7</int>
+								<bool key="IBUIUserInteractionEnabled">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<string key="IBUIText">SubTitle</string>
+								<reference key="IBUITextColor" ref="1055187775"/>
+								<nil key="IBUIHighlightedColor"/>
+								<int key="IBUIBaselineAdjustment">1</int>
+								<float key="IBUIMinimumFontSize">10</float>
+								<reference key="IBUIFontDescription" ref="334865966"/>
+								<reference key="IBUIFont" ref="714655410"/>
+							</object>
 						</array>
 						<string key="NSFrameSize">{320, 43}</string>
 						<reference key="NSSuperview" ref="36504979"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="683768672"/>
+						<reference key="NSNextKeyView" ref="617894243"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MCAwAA</bytes>
@@ -116,7 +136,24 @@
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
-			<array class="NSMutableArray" key="connectionRecords"/>
+			<array class="NSMutableArray" key="connectionRecords">
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">subTitleLabel</string>
+						<reference key="source" ref="36504979"/>
+						<reference key="destination" ref="309373225"/>
+					</object>
+					<int key="connectionID">12</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">titleLabel</string>
+						<reference key="source" ref="36504979"/>
+						<reference key="destination" ref="683768672"/>
+					</object>
+					<int key="connectionID">13</int>
+				</object>
+			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
 					<object class="IBObjectRecord">
@@ -142,6 +179,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="617894243"/>
 							<reference ref="683768672"/>
+							<reference ref="309373225"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -155,12 +193,18 @@
 						<reference key="object" ref="683768672"/>
 						<reference key="parent" ref="36504979"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">11</int>
+						<reference key="object" ref="309373225"/>
+						<reference key="parent" ref="36504979"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="11.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.CustomClassName">BookViewCell</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -170,13 +214,27 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">10</int>
+			<int key="maxID">13</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">BookViewCell</string>
 					<string key="superclassName">UITableViewCell</string>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="subTitleLabel">UILabel</string>
+						<string key="titleLabel">UILabel</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="subTitleLabel">
+							<string key="name">subTitleLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="titleLabel">
+							<string key="name">titleLabel</string>
+							<string key="candidateClassName">UILabel</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/BookViewCell.h</string>

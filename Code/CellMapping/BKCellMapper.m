@@ -118,6 +118,10 @@
         keyPathValue = attributeMapping.valueBlock(keyPathValue);
     }
     
+    if (attributeMapping.objectBlock != nil) {
+        keyPathValue = attributeMapping.objectBlock(keyPathValue, object);
+    }
+    
     id cellValue = nil;
     
     cellValue = keyPathValue;

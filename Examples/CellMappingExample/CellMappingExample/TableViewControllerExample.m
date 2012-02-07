@@ -26,7 +26,7 @@
     self.items = [NSArray arrayWithObjects:
                   [Item itemWithTitle:@"Movie1" subtitle:@"First movie" type:@"movie"],
                   [Item itemWithTitle:@"Movie2" subtitle:@"Second movie" type:@"movie"],
-                  [Item itemWithTitle:@"Book1" subtitle:nil type:@"book"],
+                  [Item itemWithTitle:@"Book1" subtitle:@"Book subtitle" type:@"book"],
                    nil];
     
     self.tableModel = [BKTableModel tableModelForTableView:self.tableView delegate:self];
@@ -45,7 +45,12 @@
     
     [BKDynamicCellMapping mappingForObjectClass:[Item class] block:^(BKDynamicCellMapping *cellMapping) {
         [cellMapping mapKeyPath:@"title" toAttribute:@"titleLabel.text"];
-        [cellMapping mapObjectToCellClass:[BookViewCell class] whenValueOfKeyPath:@"type" isEqualTo:@"book"];
+        
+        [cellMapping mapKeyPath:@"subtitle" toAttribute:@"subTitleLabel.text" objectBlock:^id(id value, id object) {
+            Item *item = (Item *)object;
+            
+            return [NSString stringWithFormat:@"%@ - %@", item.title, item.subtitle];
+        }];
         
         cellMapping.onSelectRow = ^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"You select a book cell"
@@ -59,6 +64,7 @@
         };
         
         cellMapping.nib = [BookViewCell nib];
+        [cellMapping mapObjectToCellClass:[BookViewCell class] whenValueOfKeyPath:@"type" isEqualTo:@"book"];
         [self.tableModel registerMapping:cellMapping];
     }];
     

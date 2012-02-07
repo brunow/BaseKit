@@ -102,19 +102,23 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapKeyPath:(NSString *)keyPath toAttribute:(NSString *)attribute {
-    [self mapKeyPath:keyPath toAttribute:attribute valueBlock:nil];
+- (void)mapKeyPath:(NSString *)keyPath
+           toAttribute:(NSString *)attribute
+        objectBlock:(BKCellObjectBlock)objectBlock {
+    
+    BKCellAttributeMapping *attributeMapping = [BKCellAttributeMapping attributeMapping];
+    attributeMapping.mappingType = BKCellAttributeMappingTypeDefault;
+    attributeMapping.keyPath = keyPath;
+    attributeMapping.attribute = attribute;
+    attributeMapping.objectBlock = objectBlock;
+    
+    [self addAttributeMappingToObjectMapping:attributeMapping];
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapKeyPath:(NSString *)keyPath
-           toLabel:(NSString *)attribute
-        valueBlock:(BKCellValueBlock)valueBlock {
-    
-    [self mapKeyPath:keyPath
-         toAttribute:[NSString stringWithFormat:@"%@.text", attribute]
-          valueBlock:valueBlock];
+- (void)mapKeyPath:(NSString *)keyPath toAttribute:(NSString *)attribute {
+    [self mapKeyPath:keyPath toAttribute:attribute valueBlock:nil];
 }
 
 
