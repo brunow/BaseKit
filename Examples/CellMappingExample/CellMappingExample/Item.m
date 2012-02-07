@@ -22,6 +22,15 @@
     [super dealloc];
 }
 
++ (id)itemWithTitle:(NSString *)title subtitle:(NSString *)subtitle {
+    Item *item = [[self alloc] init];
+    
+    item.title = title;
+    item.subtitle = subtitle;
+    
+    return [item autorelease];
+}
+
 + (id)itemWithTitle:(NSString *)title subtitle:(NSString *)subtitle type:(NSString *)type {
     Item *item = [[self alloc] init];
     

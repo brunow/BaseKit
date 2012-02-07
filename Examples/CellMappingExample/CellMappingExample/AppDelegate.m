@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "TableViewControllerExample.h"
+#import "CatalogTableViewController.h"
 
 @implementation AppDelegate
 
@@ -27,10 +27,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    _rootViewController = [[TableViewControllerExample alloc] initWithStyle:UITableViewStylePlain];
+    CatalogTableViewController *vc = [[[CatalogTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+    _rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     
     [self.window addSubview:_rootViewController.view];
-    
     [self.window makeKeyAndVisible];
     return YES;
 }

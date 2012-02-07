@@ -12,7 +12,7 @@
 
 @class BKTableModel;
 
-@interface TableViewControllerExample : UITableViewController<BKTableModelDataSource>
+@interface DynamicMappingTableViewController : UITableViewController<BKTableModelDataSource>
 
 @property (nonatomic, retain) BKTableModel *tableModel;
 @property (nonatomic, retain) NSArray *items;
