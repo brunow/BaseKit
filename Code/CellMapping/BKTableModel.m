@@ -48,7 +48,7 @@
 + (id)tableModelForTableView:(UITableView *)tableView
                     delegate:(id<BKTableModelDataSource>)delegate {
     
-    return [[self alloc] initWithTableView:tableView delegate:delegate];
+    return [[[self alloc] initWithTableView:tableView delegate:delegate] autorelease];
 }
 
 
