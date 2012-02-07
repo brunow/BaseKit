@@ -39,6 +39,8 @@
 		E7C629AF14D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C629A914D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m */; };
 		E7C629B014D5CAC9007C6EB8 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C629AB14D5CAC9007C6EB8 /* UIView+Debug.m */; };
 		E7C629B114D5CAC9007C6EB8 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C629AD14D5CAC9007C6EB8 /* UIView+Layout.m */; };
+		E7F44AFA14E1BC6D00CFAE4B /* NibCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44AF914E1BC6D00CFAE4B /* NibCellTableViewController.m */; };
+		E7F44AFE14E1C01A00CFAE4B /* SimpleMappingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44AFD14E1C01900CFAE4B /* SimpleMappingTableViewController.m */; };
 		E7FC106914E1442E009B3C58 /* CatalogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FC106814E1442E009B3C58 /* CatalogTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +113,11 @@
 		E7C629AB14D5CAC9007C6EB8 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
 		E7C629AC14D5CAC9007C6EB8 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		E7C629AD14D5CAC9007C6EB8 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
-		E7FC106714E1442E009B3C58 /* CatalogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CatalogTableViewController.h; sourceTree = "<group>"; };
+		E7F44AF814E1BC6D00CFAE4B /* NibCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibCellTableViewController.h; sourceTree = "<group>"; };
+		E7F44AF914E1BC6D00CFAE4B /* NibCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NibCellTableViewController.m; sourceTree = "<group>"; };
+		E7F44AFC14E1C01900CFAE4B /* SimpleMappingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleMappingTableViewController.h; sourceTree = "<group>"; };
+		E7F44AFD14E1C01900CFAE4B /* SimpleMappingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleMappingTableViewController.m; sourceTree = "<group>"; };
+		E7FC106714E1442E009B3C58 /* CatalogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogTableViewController.h; sourceTree = "<group>"; };
 		E7FC106814E1442E009B3C58 /* CatalogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,16 +173,20 @@
 				E72743B014B648C200720D76 /* BookViewCell.h */,
 				E72743B114B648C200720D76 /* BookViewCell.m */,
 				E72743B314B648DB00720D76 /* BookViewCell.xib */,
-				E727436214B6382A00720D76 /* DynamicMappingTableViewController.h */,
-				E727436314B6382A00720D76 /* DynamicMappingTableViewController.m */,
 				E727437814B6398B00720D76 /* Item.h */,
 				E727437914B6398B00720D76 /* Item.m */,
 				E72743AD14B63DE700720D76 /* MovieViewCell.h */,
 				E72743AE14B63DE700720D76 /* MovieViewCell.m */,
 				E727435214B637EF00720D76 /* Supporting Files */,
+				E727437B14B63AE000720D76 /* tux.png */,
 				E7FC106714E1442E009B3C58 /* CatalogTableViewController.h */,
 				E7FC106814E1442E009B3C58 /* CatalogTableViewController.m */,
-				E727437B14B63AE000720D76 /* tux.png */,
+				E727436214B6382A00720D76 /* DynamicMappingTableViewController.h */,
+				E727436314B6382A00720D76 /* DynamicMappingTableViewController.m */,
+				E7F44AF814E1BC6D00CFAE4B /* NibCellTableViewController.h */,
+				E7F44AF914E1BC6D00CFAE4B /* NibCellTableViewController.m */,
+				E7F44AFC14E1C01900CFAE4B /* SimpleMappingTableViewController.h */,
+				E7F44AFD14E1C01900CFAE4B /* SimpleMappingTableViewController.m */,
 			);
 			path = CellMappingExample;
 			sourceTree = "<group>";
@@ -354,6 +364,8 @@
 				E76A91B214E06CBF003F35ED /* NSSet+BaseKit.m in Sources */,
 				E76A91B314E06CBF003F35ED /* NSString+BaseKit.m in Sources */,
 				E7FC106914E1442E009B3C58 /* CatalogTableViewController.m in Sources */,
+				E7F44AFA14E1BC6D00CFAE4B /* NibCellTableViewController.m in Sources */,
+				E7F44AFE14E1C01A00CFAE4B /* SimpleMappingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

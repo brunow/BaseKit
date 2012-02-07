@@ -1,25 +1,20 @@
 //
-//  FirstTableViewExample.m
+//  NibCellTableViewController.m
 //  CellMappingExample
 //
 //  Created by Bruno Wernimont on 7/02/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "CatalogTableViewController.h"
+#import "NibCellTableViewController.h"
 
 #import "BaseKitCellMapping.h"
+
 #import "Item.h"
+#import "MovieViewCell.h"
+#import "BookViewCell.h"
 
-#import "DynamicMappingTableViewController.h"
-#import "NibCellTableViewController.h"
-#import "SimpleMappingTableViewController.h"
-
-#define DYNAMIC_MAPPING @"DynamicMappingTableViewController"
-#define NIB_CELL @"NibCellTableViewController"
-#define SIMPLE_MAPPING @"SimpleMappingTableViewController"
-
-@implementation CatalogTableViewController
+@implementation NibCellTableViewController
 
 @synthesize tableModel = _tableModel;
 @synthesize items = _items;
@@ -29,25 +24,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Catalog";
+    self.title = @"Nib cell";
+    
+    self.items = [NSArray arrayWithObjects:
+                  [Item itemWithTitle:@"Book1" subtitle:@"Book subtitle" type:@"book"],
+                  nil];
     
     self.tableModel = [BKTableModel tableModelForTableView:self.tableView delegate:self];
     
-    self.items = [NSArray arrayWithObjects:
-                  [Item itemWithTitle:@"Simple mapping" subtitle:nil type:SIMPLE_MAPPING],
-                  [Item itemWithTitle:@"Nib cell example" subtitle:nil type:NIB_CELL],
-                  [Item itemWithTitle:@"Dynamic Mapping example" subtitle:nil type:DYNAMIC_MAPPING],
-                  nil];
-    
-    [BKCellMapping mappingForObjectClass:[Item class] block:^(BKCellMapping *cellMapping) {
-        [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
-        
-        cellMapping.onSelectRow = ^(UITableViewCell *cell, Item *item, NSIndexPath *indexPath) {
-            UIViewController *vc = [[[NSClassFromString(item.type) alloc] init] autorelease];
-            [self.navigationController pushViewController:vc animated:YES];
-        };
-        
-        [cellMapping mapObjectToCellClass:[UITableViewCell class]];
+    [BKDynamicCellMapping mappingForObjectClass:[Item class] block:^(BKDynamicCellMapping *cellMapping) {
+        [cellMapping mapKeyPath:@"title" toAttribute:@"titleLabel.text"];
+        [cellMapping mapKeyPath:@"subtitle" toAttribute:@"subTitleLabel.text"];
+        cellMapping.nib = [BookViewCell nib];
+        [cellMapping mapObjectToCellClass:[BookViewCell class] whenValueOfKeyPath:@"type" isEqualTo:@"book"];
         [self.tableModel registerMapping:cellMapping];
     }];
 }
@@ -103,7 +92,6 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self.tableModel didSelectRowAtIndexPath:indexPath];
 }
 
 

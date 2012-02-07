@@ -49,10 +49,8 @@
     [BKDynamicCellMapping mappingForObjectClass:[Item class] block:^(BKDynamicCellMapping *cellMapping) {
         [cellMapping mapKeyPath:@"title" toAttribute:@"titleLabel.text"];
         
-        [cellMapping mapKeyPath:@"subtitle" toAttribute:@"subTitleLabel.text" objectBlock:^id(id value, id object) {
-            Item *item = (Item *)object;
-            
-            return [NSString stringWithFormat:@"%@ - %@", item.title, item.subtitle];
+        [cellMapping mapKeyPath:@"subtitle" toAttribute:@"subTitleLabel.text" objectBlock:^id(id value, Item *object) {
+            return [NSString stringWithFormat:@"%@ - %@", object.title, object.subtitle];
         }];
         
         cellMapping.nib = [BookViewCell nib];
