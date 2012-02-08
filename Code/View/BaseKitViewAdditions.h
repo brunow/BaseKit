@@ -20,3 +20,5 @@
 #import "UIView+Layout.h"
 #import "UITableViewCell+BaseKit.h"
 #import "UIView+Debug.h"
+#import "UIViewController+BaseKit.h"
+#import "UINavigationController+BaseKit.h"

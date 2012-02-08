@@ -129,6 +129,11 @@
 		E7D2C66714B734E200D03E0F /* NSOperationQueue+BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E7D2C66514B734E200D03E0F /* NSOperationQueue+BaseKit.h */; };
 		E7D2C66814B734E200D03E0F /* NSOperationQueue+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D2C66614B734E200D03E0F /* NSOperationQueue+BaseKit.m */; };
 		E7D2C66C14B7351600D03E0F /* NSOperationQueue+BaseKitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D2C66B14B7351600D03E0F /* NSOperationQueue+BaseKitTest.m */; };
+		E7F44B5114E2483300CFAE4B /* UIViewController+BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F44B4F14E2483300CFAE4B /* UIViewController+BaseKit.h */; };
+		E7F44B5214E2483300CFAE4B /* UIViewController+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44B5014E2483300CFAE4B /* UIViewController+BaseKit.m */; };
+		E7F44B5514E2484A00CFAE4B /* UINavigationController+BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F44B5314E2484A00CFAE4B /* UINavigationController+BaseKit.h */; };
+		E7F44B5614E2484A00CFAE4B /* UINavigationController+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44B5414E2484A00CFAE4B /* UINavigationController+BaseKit.m */; };
+		E7F44B5914E24A1500CFAE4B /* BKViewBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = E7F44B5714E24A1500CFAE4B /* BKViewBlocks.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,6 +269,11 @@
 		E7D2C66514B734E200D03E0F /* NSOperationQueue+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+BaseKit.h"; sourceTree = "<group>"; };
 		E7D2C66614B734E200D03E0F /* NSOperationQueue+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+BaseKit.m"; sourceTree = "<group>"; };
 		E7D2C66B14B7351600D03E0F /* NSOperationQueue+BaseKitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+BaseKitTest.m"; sourceTree = "<group>"; };
+		E7F44B4F14E2483300CFAE4B /* UIViewController+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BaseKit.h"; sourceTree = "<group>"; };
+		E7F44B5014E2483300CFAE4B /* UIViewController+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BaseKit.m"; sourceTree = "<group>"; };
+		E7F44B5314E2484A00CFAE4B /* UINavigationController+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+BaseKit.h"; sourceTree = "<group>"; };
+		E7F44B5414E2484A00CFAE4B /* UINavigationController+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+BaseKit.m"; sourceTree = "<group>"; };
+		E7F44B5714E24A1500CFAE4B /* BKViewBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKViewBlocks.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -457,6 +467,11 @@
 				E735637A14B0F07700DF1D9E /* UITableViewCell+BaseKit.h */,
 				E735637B14B0F07700DF1D9E /* UITableViewCell+BaseKit.m */,
 				E75B4C5C14C5CAC6006D5BEF /* BaseKitViewAdditions.h */,
+				E7F44B4F14E2483300CFAE4B /* UIViewController+BaseKit.h */,
+				E7F44B5014E2483300CFAE4B /* UIViewController+BaseKit.m */,
+				E7F44B5314E2484A00CFAE4B /* UINavigationController+BaseKit.h */,
+				E7F44B5414E2484A00CFAE4B /* UINavigationController+BaseKit.m */,
+				E7F44B5714E24A1500CFAE4B /* BKViewBlocks.h */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -621,6 +636,9 @@
 				E75B4C5914C5CA7D006D5BEF /* UIView+Debug.h in Headers */,
 				E75B4C5E14C5CAC6006D5BEF /* BaseKitViewAdditions.h in Headers */,
 				E7703D5414C61066002598A7 /* ObjectTest.h in Headers */,
+				E7F44B5114E2483300CFAE4B /* UIViewController+BaseKit.h in Headers */,
+				E7F44B5514E2484A00CFAE4B /* UINavigationController+BaseKit.h in Headers */,
+				E7F44B5914E24A1500CFAE4B /* BKViewBlocks.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +784,8 @@
 				E727433B14B6373200720D76 /* SOCKit.m in Sources */,
 				E7D2C66814B734E200D03E0F /* NSOperationQueue+BaseKit.m in Sources */,
 				E75B4C5A14C5CA7D006D5BEF /* UIView+Debug.m in Sources */,
+				E7F44B5214E2483300CFAE4B /* UIViewController+BaseKit.m in Sources */,
+				E7F44B5614E2484A00CFAE4B /* UINavigationController+BaseKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
