@@ -17,7 +17,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)pushViewControllerWithBlock:(BKViewControllerBlock)viewController animated:(BOOL)animated {
-    [self pushViewController:viewController animated:animated];
+    [self pushViewController:viewController() animated:animated];
 }
 
 

@@ -24,3 +24,5 @@ typedef id(^BKCellObjectBlock)(id value, id object);
 typedef Class(^BKCellObjectRetClass)(id obj);
 
 typedef void(^BKTableViewCellSelection)(UITableViewCell *cell, id object, NSIndexPath *indexPath);
+
+typedef CGFloat(^BKCellRowHeight)(UITableViewCell *cell, id object, NSIndexPath *indexPath);

@@ -38,4 +38,6 @@
 
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
+- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

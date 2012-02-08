@@ -8,4 +8,4 @@
 
 #import <Foundation/Foundation.h>
 
-typedef UIViewController(^BKViewControllerBlock)();
+typedef UIViewController *(^BKViewControllerBlock)();

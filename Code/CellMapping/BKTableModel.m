@@ -143,6 +143,32 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    __block BKCellMapping *cellMapping = nil;
+    __block id object = nil;
+    
+    dispatch_sync(concurrentQueue, ^{
+        object = [self.delegate tableModel:self objectForRowAtIndexPAth:indexPath];
+        NSSet *cellMappings = [BKCellMapper cellMappingsForObject:object mappings:self.objectMappings];
+        cellMapping = [BKCellMapper cellMappingForObject:object mappings:cellMappings];
+    });
+    
+    CGFloat rowHeight = 0;
+    
+    if (nil != cellMapping.rowHeightBlock) {
+        UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
+        rowHeight = cellMapping.rowHeightBlock(cell, object, indexPath);
+    } else if (cellMapping.rowHeight > 0) {
+        rowHeight = cellMapping.rowHeight;
+    }
+    
+    return rowHeight;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Setters

@@ -40,6 +40,8 @@
 @synthesize cellClass = _cellClass;
 @synthesize nib = _nib;
 @synthesize onSelectRow = _onSelectRow;
+@synthesize rowHeight = _rowHeight;
+@synthesize rowHeightBlock = _rowHeightBlock;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -47,6 +49,7 @@
     [_attributeMappings release];
     self.nib = nil;
     self.onSelectRow = nil;
+    self.rowHeightBlock = nil;
     
     [super dealloc];
 }

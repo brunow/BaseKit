@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomRowHeightTableViewController : UITableViewController
+#import "BKTableModelDataSource.h"
+
+@class BKTableModel;
+
+@interface CustomRowHeightTableViewController : UITableViewController<BKTableModelDataSource>
+
+@property (nonatomic, retain) BKTableModel *tableModel;
+@property (nonatomic, retain) NSArray *items;
 
 @end

@@ -31,6 +31,7 @@ typedef enum {
 @property (nonatomic, copy) BKCellValueBlock valueBlock;
 @property (nonatomic, copy) BKCellObjectBlock objectBlock;
 
+
 /*
  * Convenient method to get an attributeMapping
  */

@@ -14,10 +14,12 @@
 #import "DynamicMappingTableViewController.h"
 #import "NibCellTableViewController.h"
 #import "SimpleMappingTableViewController.h"
+#import "CustomRowHeightTableViewController.h"
 
 #define DYNAMIC_MAPPING @"DynamicMappingTableViewController"
 #define NIB_CELL @"NibCellTableViewController"
 #define SIMPLE_MAPPING @"SimpleMappingTableViewController"
+#define CUSTOM_ROW_HEIGHT @"CustomRowHeightTableViewController"
 
 @implementation CatalogTableViewController
 
@@ -37,6 +39,7 @@
                   [Item itemWithTitle:@"Simple mapping" subtitle:nil type:SIMPLE_MAPPING],
                   [Item itemWithTitle:@"Nib cell example" subtitle:nil type:NIB_CELL],
                   [Item itemWithTitle:@"Dynamic Mapping example" subtitle:nil type:DYNAMIC_MAPPING],
+                  [Item itemWithTitle:@"Custom row height example" subtitle:nil type:CUSTOM_ROW_HEIGHT],
                   nil];
     
     [BKCellMapping mappingForObjectClass:[Item class] block:^(BKCellMapping *cellMapping) {

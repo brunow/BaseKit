@@ -26,6 +26,8 @@
 @property (nonatomic, readonly) NSMutableDictionary *attributeMappings;
 @property (nonatomic, retain) UINib *nib;
 @property (nonatomic, copy) BKTableViewCellSelection onSelectRow;
+@property (nonatomic, assign) CGFloat rowHeight;
+@property (nonatomic, copy) BKCellRowHeight rowHeightBlock;
 
 - (id)initWithObjectClass:(Class)objectClass;
 
