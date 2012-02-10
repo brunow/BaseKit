@@ -23,6 +23,7 @@
     if (navigationController) {
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:viewController()];
         [self presentModalViewController:nc animated:animated];
+        [nc release];
     } else {
         [self presentModalViewController:viewController() animated:animated];
     }
