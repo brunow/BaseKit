@@ -9,7 +9,7 @@ build/*
 #ignore private workspace stuff added by Xcode4
 xcuserdata
 project.xcworkspace
-
+*.xcuserdata
 
 ## generic files to ignore
 *~
