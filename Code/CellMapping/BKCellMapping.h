@@ -25,9 +25,9 @@
 @property (nonatomic, assign) Class cellClass;
 @property (nonatomic, readonly) NSMutableDictionary *attributeMappings;
 @property (nonatomic, retain) UINib *nib;
-@property (nonatomic, copy) BKTableViewCellSelection onSelectRow;
+@property (nonatomic, copy) BKTableViewCellSelectionBlock onSelectRowBlock;
 @property (nonatomic, assign) CGFloat rowHeight;
-@property (nonatomic, copy) BKCellRowHeight rowHeightBlock;
+@property (nonatomic, copy) BKCellRowHeightBlock rowHeightBlock;
 
 - (id)initWithObjectClass:(Class)objectClass;
 
@@ -42,6 +42,10 @@
        objectBlock:(BKCellObjectBlock)objectBlock;
 
 - (void)mapKeyPath:(NSString *)keyPath toAttribute:(NSString *)attribute;
+
+- (void)rowHeightWithBlock:(BKCellRowHeightBlock)rowHeightBlock;
+
+- (void)onSelectRowWithBlock:(BKTableViewCellSelectionBlock)onSelectRowBlock;
 
 - (void)mapObjectToCellClass:(Class)cellClass;
 

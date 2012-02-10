@@ -135,9 +135,9 @@
         cellMapping = [BKCellMapper cellMappingForObject:object mappings:cellMappings];
     });
     
-    if (nil != cellMapping.onSelectRow) {
+    if (nil != cellMapping.onSelectRowBlock) {
         UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
-        cellMapping.onSelectRow(cell, object, indexPath);
+        cellMapping.onSelectRowBlock(cell, object, indexPath);
     }
 }
 

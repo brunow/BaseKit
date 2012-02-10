@@ -39,7 +39,7 @@
 @synthesize attributeMappings = _attributeMappings;
 @synthesize cellClass = _cellClass;
 @synthesize nib = _nib;
-@synthesize onSelectRow = _onSelectRow;
+@synthesize onSelectRowBlock = _onSelectRowBlock;
 @synthesize rowHeight = _rowHeight;
 @synthesize rowHeightBlock = _rowHeightBlock;
 
@@ -48,7 +48,7 @@
 - (void)dealloc {
     [_attributeMappings release];
     self.nib = nil;
-    self.onSelectRow = nil;
+    self.onSelectRowBlock = nil;
     self.rowHeightBlock = nil;
     
     [super dealloc];
@@ -134,6 +134,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)addAttributeMappingToObjectMapping:(BKCellAttributeMapping *)attributeMapping {
     [self.attributeMappings setObject:attributeMapping forKey:attributeMapping.keyPath];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)rowHeightWithBlock:(BKCellRowHeightBlock)rowHeightBlock {
+    self.rowHeightBlock = rowHeightBlock;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)onSelectRowWithBlock:(BKTableViewCellSelectionBlock)onSelectRowBlock {
+    self.onSelectRowBlock = onSelectRowBlock;
 }
 
 

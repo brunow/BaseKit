@@ -45,10 +45,10 @@
     [BKCellMapping mappingForObjectClass:[Item class] block:^(BKCellMapping *cellMapping) {
         [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
         
-        cellMapping.onSelectRow = ^(UITableViewCell *cell, Item *item, NSIndexPath *indexPath) {
+        [cellMapping onSelectRowWithBlock:^(UITableViewCell *cell, Item *item, NSIndexPath *indexPath) {
             UIViewController *vc = [[[NSClassFromString(item.type) alloc] init] autorelease];
             [self.navigationController pushViewController:vc animated:YES];
-        };
+        }];
         
         [cellMapping mapObjectToCellClass:[UITableViewCell class]];
         [self.tableModel registerMapping:cellMapping];
