@@ -162,6 +162,8 @@
         rowHeight = cellMapping.rowHeightBlock(cell, object, indexPath);
     } else if (cellMapping.rowHeight > 0) {
         rowHeight = cellMapping.rowHeight;
+    } else {
+        rowHeight = self.tableView.rowHeight;
     }
     
     return rowHeight;
