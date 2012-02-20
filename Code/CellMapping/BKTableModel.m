@@ -31,10 +31,6 @@
 @interface BKTableModel ()
     
 @property (nonatomic, readonly) NSMutableDictionary *objectMappings;
-
-- (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-- (BKCellMapping *)cellMappingForObject:(id)object;
     
 @end
 
@@ -86,8 +82,17 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id object = [self objectForRowAtIndexPath:indexPath];;
-    BKCellMapping *cellMapping = [self cellMappingForObject:object];
+    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    __block BKCellMapping *cellMapping = nil;
+    __block id object = nil;
+    
+    dispatch_sync(concurrentQueue, ^{
+        object = [self.delegate tableModel:self objectForRowAtIndexPAth:indexPath];
+        NSSet *cellMappings = [BKCellMapper cellMappingsForObject:object mappings:self.objectMappings];
+        cellMapping = [BKCellMapper cellMappingForObject:object mappings:cellMappings];
+    });
+    
     UITableViewCell *cell = nil;
     
     if (nil == cellMapping.nib) {
@@ -119,8 +124,16 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    id object = [self objectForRowAtIndexPath:indexPath];
-    BKCellMapping *cellMapping = [self cellMappingForObject:object];
+    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    __block BKCellMapping *cellMapping = nil;
+    __block id object = nil;
+    
+    dispatch_sync(concurrentQueue, ^{
+        object = [self.delegate tableModel:self objectForRowAtIndexPAth:indexPath];
+        NSSet *cellMappings = [BKCellMapper cellMappingsForObject:object mappings:self.objectMappings];
+        cellMapping = [BKCellMapper cellMappingForObject:object mappings:cellMappings];
+    });
     
     if (nil != cellMapping.onSelectRowBlock) {
         UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
@@ -131,8 +144,16 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id object = [self objectForRowAtIndexPath:indexPath];
-    BKCellMapping *cellMapping = [self cellMappingForObject:object];
+    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    __block BKCellMapping *cellMapping = nil;
+    __block id object = nil;
+    
+    dispatch_sync(concurrentQueue, ^{
+        object = [self.delegate tableModel:self objectForRowAtIndexPAth:indexPath];
+        NSSet *cellMappings = [BKCellMapper cellMappingsForObject:object mappings:self.objectMappings];
+        cellMapping = [BKCellMapper cellMappingForObject:object mappings:cellMappings];
+    });
     
     CGFloat rowHeight = 0;
     
@@ -158,26 +179,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Private
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.delegate tableModel:self objectForRowAtIndexPAth:indexPath];
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (BKCellMapping *)cellMappingForObject:(id)object {
-    dispatch_queue_t concurrentQueue = dispatch_queue_create("be.BaseKit.CellMapping.TableModel", NULL);
-    __block BKCellMapping *cellMapping = nil;
-    
-    dispatch_sync(concurrentQueue, ^{
-        NSSet *cellMappings = [BKCellMapper cellMappingsForObject:object mappings:self.objectMappings];
-        cellMapping = [BKCellMapper cellMappingForObject:object mappings:cellMappings];
-    });
-    
-    return cellMapping;
-}
 
 
 @end
