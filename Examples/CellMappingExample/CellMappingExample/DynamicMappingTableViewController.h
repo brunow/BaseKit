@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BKTableModelDataSource.h"
-
 @class BKTableModel;
 
-@interface DynamicMappingTableViewController : UITableViewController<BKTableModelDataSource>
+@interface DynamicMappingTableViewController : UITableViewController
 
 @property (nonatomic, retain) BKTableModel *tableModel;
 @property (nonatomic, retain) NSArray *items;

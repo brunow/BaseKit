@@ -34,7 +34,11 @@
                   [Item itemWithTitle:@"Book1" subtitle:nil],
                   nil];
     
-    self.tableModel = [BKTableModel tableModelForTableView:self.tableView delegate:self];
+    self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
+    
+    [self.tableModel objectForRowAtIndexPathWithBlock:^id(NSIndexPath *indexPath) {
+        return [self.items objectAtIndex:indexPath.row];
+    }];
     
     [BKCellMapping mappingForObjectClass:[Item class] block:^(BKCellMapping *cellMapping) {
         [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];

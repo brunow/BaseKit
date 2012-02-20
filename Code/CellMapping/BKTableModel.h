@@ -17,20 +17,18 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BKTableModelDataSource.h"
+#import "BKCellMappingBlocks.h"
 
 @class BKCellMapping;
 
 @interface BKTableModel : NSObject
 
 @property (nonatomic, retain) UITableView *tableView;
-@property (nonatomic, assign) id<BKTableModelDataSource> delegate;
+@property (nonatomic, copy) BKObjectForRowAtIndexPathBlock objectForRowAtIndexPathBlock;
 
-+ (id)tableModelForTableView:(UITableView *)tableView
-                    delegate:(id<BKTableModelDataSource>)delegate;
++ (id)tableModelForTableView:(UITableView *)tableView;
 
-- (id)initWithTableView:(UITableView *)tableView
-               delegate:(id<BKTableModelDataSource>)delegate;
+- (id)initWithTableView:(UITableView *)tableView;
 
 - (UITableViewCell *)cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -39,5 +37,7 @@
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)objectForRowAtIndexPathWithBlock:(BKObjectForRowAtIndexPathBlock)block;
 
 @end

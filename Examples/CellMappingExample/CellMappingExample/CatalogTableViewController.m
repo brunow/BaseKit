@@ -33,7 +33,11 @@
     
     self.title = @"Catalog";
     
-    self.tableModel = [BKTableModel tableModelForTableView:self.tableView delegate:self];
+    self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
+    
+    [self.tableModel objectForRowAtIndexPathWithBlock:^id(NSIndexPath *indexPath) {
+        return [self.items objectAtIndex:indexPath.row];
+    }];
     
     self.items = [NSArray arrayWithObjects:
                   [Item itemWithTitle:@"Simple mapping" subtitle:nil type:SIMPLE_MAPPING],

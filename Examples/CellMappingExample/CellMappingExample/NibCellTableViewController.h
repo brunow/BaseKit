@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BKTableModelDataSource.h"
-
 @class BKTableModel;
 
-@interface NibCellTableViewController : UITableViewController<BKTableModelDataSource>
+@interface NibCellTableViewController : UITableViewController
 
 @property (nonatomic, retain) BKTableModel *tableModel;
 @property (nonatomic, retain) NSArray *items;

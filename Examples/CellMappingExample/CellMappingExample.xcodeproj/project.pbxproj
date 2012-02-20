@@ -103,7 +103,6 @@
 		E7C6299814D5CAC3007C6EB8 /* BKDynamicCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDynamicCellMapping.m; sourceTree = "<group>"; };
 		E7C6299914D5CAC3007C6EB8 /* BKTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTableModel.h; sourceTree = "<group>"; };
 		E7C6299A14D5CAC3007C6EB8 /* BKTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTableModel.m; sourceTree = "<group>"; };
-		E7C6299B14D5CAC3007C6EB8 /* BKTableModelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTableModelDataSource.h; sourceTree = "<group>"; };
 		E7C6299C14D5CAC3007C6EB8 /* deps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deps; sourceTree = "<group>"; };
 		E7C629A414D5CAC9007C6EB8 /* BaseKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitView.h; sourceTree = "<group>"; };
 		E7C629A514D5CAC9007C6EB8 /* BaseKitViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitViewAdditions.h; sourceTree = "<group>"; };
@@ -255,7 +254,6 @@
 				E7C6299814D5CAC3007C6EB8 /* BKDynamicCellMapping.m */,
 				E7C6299914D5CAC3007C6EB8 /* BKTableModel.h */,
 				E7C6299A14D5CAC3007C6EB8 /* BKTableModel.m */,
-				E7C6299B14D5CAC3007C6EB8 /* BKTableModelDataSource.h */,
 				E7C6299C14D5CAC3007C6EB8 /* deps */,
 			);
 			name = CellMapping;

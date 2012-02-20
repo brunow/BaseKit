@@ -45,27 +45,34 @@
 
 @synthesize tableView = _tableView;
 @synthesize objectMappings = _objectMappings;
-@synthesize delegate = _delegate;
+@synthesize objectForRowAtIndexPathBlock = _objectForRowAtIndexPathBlock;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (id)tableModelForTableView:(UITableView *)tableView
-                    delegate:(id<BKTableModelDataSource>)delegate {
+- (void)dealloc {
+    self.tableView = nil;
+    [_objectMappings release]; _objectMappings = nil;
+    self.objectForRowAtIndexPathBlock = nil;
     
-    return [[[self alloc] initWithTableView:tableView delegate:delegate] autorelease];
+    [super dealloc];
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)initWithTableView:(UITableView *)tableView
-               delegate:(id<BKTableModelDataSource>)delegate {
++ (id)tableModelForTableView:(UITableView *)tableView {
+    
+    return [[[self alloc] initWithTableView:tableView] autorelease];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)initWithTableView:(UITableView *)tableView {
     
     self = [self init];
     
     if (self) {
         _objectMappings = [[NSMutableDictionary alloc] init];
         self.tableView = tableView;
-        self.delegate = delegate;
     }
     
     return self;
@@ -149,6 +156,12 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)objectForRowAtIndexPathWithBlock:(BKObjectForRowAtIndexPathBlock)block {
+    self.objectForRowAtIndexPathBlock = block;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Setters
@@ -162,7 +175,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.delegate tableModel:self objectForRowAtIndexPAth:indexPath];
+    return self.objectForRowAtIndexPathBlock(indexPath);
 }
 
 

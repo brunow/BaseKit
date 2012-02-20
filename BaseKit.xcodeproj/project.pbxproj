@@ -28,7 +28,6 @@
 		E72742BA14B6367500720D76 /* BKDynamicCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E72742AB14B6367500720D76 /* BKDynamicCellMapping.m */; };
 		E72742BB14B6367500720D76 /* BKTableModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E72742AC14B6367500720D76 /* BKTableModel.h */; };
 		E72742BC14B6367500720D76 /* BKTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E72742AD14B6367500720D76 /* BKTableModel.m */; };
-		E72742BD14B6367500720D76 /* BKTableModelDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = E72742AE14B6367500720D76 /* BKTableModelDataSource.h */; };
 		E727430414B6373200720D76 /* AFHTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E72742C714B6373200720D76 /* AFHTTPClient.h */; };
 		E727430514B6373200720D76 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E72742C814B6373200720D76 /* AFHTTPClient.m */; };
 		E727430614B6373200720D76 /* AFHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E72742C914B6373200720D76 /* AFHTTPRequestOperation.h */; };
@@ -163,7 +162,6 @@
 		E72742AB14B6367500720D76 /* BKDynamicCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDynamicCellMapping.m; sourceTree = "<group>"; };
 		E72742AC14B6367500720D76 /* BKTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTableModel.h; sourceTree = "<group>"; };
 		E72742AD14B6367500720D76 /* BKTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTableModel.m; sourceTree = "<group>"; };
-		E72742AE14B6367500720D76 /* BKTableModelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTableModelDataSource.h; sourceTree = "<group>"; };
 		E72742C714B6373200720D76 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		E72742C814B6373200720D76 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		E72742C914B6373200720D76 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -318,7 +316,6 @@
 				E72742AB14B6367500720D76 /* BKDynamicCellMapping.m */,
 				E72742AC14B6367500720D76 /* BKTableModel.h */,
 				E72742AD14B6367500720D76 /* BKTableModel.m */,
-				E72742AE14B6367500720D76 /* BKTableModelDataSource.h */,
 			);
 			path = CellMapping;
 			sourceTree = "<group>";
@@ -607,7 +604,6 @@
 				E72742B814B6367500720D76 /* BKCellMappingBlocks.h in Headers */,
 				E72742B914B6367500720D76 /* BKDynamicCellMapping.h in Headers */,
 				E72742BB14B6367500720D76 /* BKTableModel.h in Headers */,
-				E72742BD14B6367500720D76 /* BKTableModelDataSource.h in Headers */,
 				E727430414B6373200720D76 /* AFHTTPClient.h in Headers */,
 				E727430614B6373200720D76 /* AFHTTPRequestOperation.h in Headers */,
 				E727430814B6373200720D76 /* AFImageCache.h in Headers */,

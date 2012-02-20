@@ -18,7 +18,6 @@
 #import <Foundation/Foundation.h>
 
 #import "BKCellMappingBlocks.h"
-#import "BKTableModelDataSource.h"
 #import "BKCellAttributeMapping.h"
 #import "BKCellMapping.h"
 #import "BKTableModel.h"
