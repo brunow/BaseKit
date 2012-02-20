@@ -25,7 +25,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 + (void)performBlockInBackground:(BKBasicBlock)block completion:(BKBasicBlock)completionBlock waitUntilDone:(BOOL)waitUntilDone {
-    dispatch_queue_t concurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("be.BaseKit.Core.OperationHelper", NULL);
     dispatch_queue_t mainQueue = dispatch_get_main_queue();
     
     BKBasicBlock operation = [[block copy] autorelease];
