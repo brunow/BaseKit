@@ -40,4 +40,8 @@
 
 + (void)performBlockInBackground:(BKBasicBlock)block;
 
++ (void)performBlockInMainThread:(BKBasicBlock)block waitUntilDone:(BOOL)waitUntilDone;
+
++ (void)performBlockInMainThread:(BKBasicBlock)block;
+
 @end
