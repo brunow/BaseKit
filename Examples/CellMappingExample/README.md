@@ -22,16 +22,20 @@ I'm not planning on supporting ARC at the moment.
 
 ### Configure the mapping
 
-    self.tableModel = [BKTableModel tableModelForTableView:self.tableView delegate:self];
+    self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
+    
+    [self.tableModel objectForRowAtIndexPathWithBlock:^id(NSIndexPath *indexPath) {
+      return [self.items objectAtIndex:indexPath.row];
+    }];
 
     [BKCellMapping mappingForObjectClass:[Item class] block:^(BKCellMapping *cellMapping) {
 	    [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
 	    [cellMapping mapKeyPath:@"subtitle" toAttribute:@"detailTextLabel.text"];
 	    [cellMapping mapObjectToCellClass:[BookViewCell class]];
 	    
-	    cellMapping.onSelectRow = ^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+	    [cellMapping onSelectRowWithBlock:^(UITableViewCell *cell, Item *item, NSIndexPath *indexPath) {
 	    	NSLog(@"did select row");
-	    };
+	    }];
 	    
 	    [self.tableModel registerMapping:cellMapping];
     }];
@@ -56,12 +60,5 @@ I'm not planning on supporting ARC at the moment.
     		return [self.tableModel cellForRowAtIndexPath:indexPath];
 	}
 
-### BKTableModelDataSource
-
-	#pragma mark - BKTableModelDataSource
-
-	- (id)tableModel:(BKTableModel *)tableModel objectForRowAtIndexPAth:(NSIndexPath *)indexPath {
-    	return [self.items objectAtIndex:indexPath.row];
-	}
 
 That's it.
