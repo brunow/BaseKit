@@ -158,8 +158,7 @@
     CGFloat rowHeight = 0;
     
     if (nil != cellMapping.rowHeightBlock) {
-        UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
-        rowHeight = cellMapping.rowHeightBlock(cell, object, indexPath);
+        rowHeight = cellMapping.rowHeightBlock(object, indexPath);
     } else if (cellMapping.rowHeight > 0) {
         rowHeight = cellMapping.rowHeight;
     } else {

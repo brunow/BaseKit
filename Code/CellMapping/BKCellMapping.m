@@ -27,7 +27,7 @@
 @interface BKCellMapping ()
 
 - (void)addAttributeMappingToObjectMapping:(BKCellAttributeMapping *)attributeMapping;
-    
+
 @end
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
