@@ -34,6 +34,7 @@
     self.keyPath = nil;
     self.attribute = nil;
     self.valueBlock = nil;
+    self.objectBlock = nil;
     
     [super dealloc];
 }
