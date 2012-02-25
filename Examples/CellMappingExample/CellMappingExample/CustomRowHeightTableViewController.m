@@ -44,7 +44,7 @@
         [cellMapping mapObjectToCellClass:[UITableViewCell class]];
         
         //cellMapping.rowHeight = 150;
-        [cellMapping rowHeightWithBlock:^CGFloat(id object, NSIndexPath *indexPath) {
+        [cellMapping rowHeightWithBlock:^CGFloat(Class cellClass, id object, NSIndexPath *indexPath) {
             return 150;
         }];
         

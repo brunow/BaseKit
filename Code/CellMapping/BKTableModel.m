@@ -144,7 +144,7 @@
     CGFloat rowHeight = 0;
     
     if (nil != cellMapping.rowHeightBlock) {
-        rowHeight = cellMapping.rowHeightBlock(object, indexPath);
+        rowHeight = cellMapping.rowHeightBlock(cellMapping.cellClass, object, indexPath);
     } else if (cellMapping.rowHeight > 0) {
         rowHeight = cellMapping.rowHeight;
     } else {
