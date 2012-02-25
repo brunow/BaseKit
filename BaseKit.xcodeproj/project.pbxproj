@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E71198AF14F2C79100DDD253 /* BKTableMappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E71198AE14F2C79100DDD253 /* BKTableMappingTest.m */; };
 		E7143ACB14A85FA300A682B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E757BF79149A77B200B8662B /* UIKit.framework */; };
 		E7143ACC14A85FA300A682B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E754F45D149013AE0028E91D /* Foundation.framework */; };
 		E7143ACD14A85FA300A682B8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E757BF87149A84D100B8662B /* CoreGraphics.framework */; };
@@ -76,7 +77,6 @@
 		E735637C14B0F07800DF1D9E /* UITableViewCell+BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E735637A14B0F07700DF1D9E /* UITableViewCell+BaseKit.h */; };
 		E735637D14B0F07800DF1D9E /* UITableViewCell+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E735637B14B0F07700DF1D9E /* UITableViewCell+BaseKit.m */; };
 		E750AD4314D5C2AA00BFDD90 /* BKCellMappingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7703D4A14C61066002598A7 /* BKCellMappingTest.m */; };
-		E750AD4414D5C2B200BFDD90 /* BKTableModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7703D4B14C61066002598A7 /* BKTableModelTest.m */; };
 		E750AD4514D5C2C400BFDD90 /* CustomCellTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7703D4D14C61066002598A7 /* CustomCellTest.m */; };
 		E750AD4714D5C2D500BFDD90 /* ObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7703D4F14C61066002598A7 /* ObjectTest.m */; };
 		E754F45E149013AE0028E91D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E754F45D149013AE0028E91D /* Foundation.framework */; };
@@ -146,6 +146,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E71198AE14F2C79100DDD253 /* BKTableMappingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTableMappingTest.m; sourceTree = "<group>"; };
 		E7143AC914A85FA300A682B8 /* BaseKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7143AED14A861AB00A682B8 /* BaseKitTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseKitTest-Prefix.pch"; sourceTree = "<group>"; };
 		E7143AEE14A861AB00A682B8 /* BaseKitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseKitTestMain.m; sourceTree = "<group>"; };
@@ -218,7 +219,6 @@
 		E75B4C5814C5CA7D006D5BEF /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
 		E75B4C5C14C5CAC6006D5BEF /* BaseKitViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitViewAdditions.h; sourceTree = "<group>"; };
 		E7703D4A14C61066002598A7 /* BKCellMappingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMappingTest.m; sourceTree = "<group>"; };
-		E7703D4B14C61066002598A7 /* BKTableModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTableModelTest.m; sourceTree = "<group>"; };
 		E7703D4C14C61066002598A7 /* CustomCellTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellTest.h; sourceTree = "<group>"; };
 		E7703D4D14C61066002598A7 /* CustomCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellTest.m; sourceTree = "<group>"; };
 		E7703D4E14C61066002598A7 /* ObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectTest.h; sourceTree = "<group>"; };
@@ -445,11 +445,11 @@
 			isa = PBXGroup;
 			children = (
 				E7703D4A14C61066002598A7 /* BKCellMappingTest.m */,
-				E7703D4B14C61066002598A7 /* BKTableModelTest.m */,
 				E7703D4C14C61066002598A7 /* CustomCellTest.h */,
 				E7703D4D14C61066002598A7 /* CustomCellTest.m */,
 				E7703D4E14C61066002598A7 /* ObjectTest.h */,
 				E7703D4F14C61066002598A7 /* ObjectTest.m */,
+				E71198AE14F2C79100DDD253 /* BKTableMappingTest.m */,
 			);
 			path = CellMapping;
 			sourceTree = "<group>";
@@ -731,9 +731,9 @@
 				E7A4816914AA0214000E0F5A /* BKNetworkClientTest.m in Sources */,
 				E7D2C66C14B7351600D03E0F /* NSOperationQueue+BaseKitTest.m in Sources */,
 				E750AD4314D5C2AA00BFDD90 /* BKCellMappingTest.m in Sources */,
-				E750AD4414D5C2B200BFDD90 /* BKTableModelTest.m in Sources */,
 				E750AD4514D5C2C400BFDD90 /* CustomCellTest.m in Sources */,
 				E750AD4714D5C2D500BFDD90 /* ObjectTest.m in Sources */,
+				E71198AF14F2C79100DDD253 /* BKTableMappingTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

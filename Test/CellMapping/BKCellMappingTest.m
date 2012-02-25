@@ -49,23 +49,20 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setUpClass {
     UITableView *tableView = [[[UITableView alloc] initWithFrame:CGRectZero] autorelease];
-    self.tableModel = [BKTableModel tableModelForTableView:tableView delegate:nil];
+    self.tableModel = [BKTableModel tableModelForTableView:tableView];
     
     self.cellMapping = [BKCellMapping mappingForObjectClass:[ObjectTest class] block:^(BKCellMapping *cellMapping) {
         [cellMapping mapKeyPath:@"fullName" toAttribute:@"textLabel.text"];
         [cellMapping mapKeyPath:@"oneLabel" toAttribute:@"textLabel.text"];
-        [cellMapping mapKeyPath:@"oneImageView" toAttribute:@"uiimageview" valueBlock:^id(NSString *value) {
-            return [UIImage imageNamed:value];
-        }];
         [cellMapping mapObjectToCellClass:[CustomCellTest class]];
         [self.tableModel registerMapping:cellMapping];
-    }];    
+    }];
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)testShouldTableViewNotBeNil {
-    GHAssertNotNil(self.tableModel.tableView, nil);
+- (void)testShouldCellMappingHaveTwoAttributeMapping {
+    GHAssertTrue(self.cellMapping.attributeMappings.count == 2, nil);
 }
 
 

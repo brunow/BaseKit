@@ -18,7 +18,7 @@
 #import "CustomCellTest.h"
 #import "ObjectTest.h"
 
-@interface BKTableModelTest : GHTestCase<UITableViewDataSource, BKTableModelDataSource>
+@interface BKTableMappingTest : GHTestCase <UITableViewDataSource>
 
 @property (nonatomic, retain) BKCellAttributeMapping *attributeMapping;
 @property (nonatomic, retain) BKTableModel *tableModel;
@@ -26,7 +26,7 @@
 
 @end
 
-@implementation BKTableModelTest
+@implementation BKTableMappingTest
 
 @synthesize attributeMapping;
 @synthesize tableModel;
@@ -61,14 +61,29 @@
     
     UITableView *tableView = [[[UITableView alloc] initWithFrame:CGRectZero] autorelease];
     tableView.dataSource = self;
-    self.tableModel = [BKTableModel tableModelForTableView:tableView delegate:self];
+    self.tableModel = [BKTableModel tableModelForTableView:tableView];
+    
+    [self.tableModel objectForRowAtIndexPathWithBlock:^id(NSIndexPath *indexPath) {
+        return [self.items objectAtIndex:indexPath.row];
+    }];
     
     self.attributeMapping = [BKCellMapping mappingForObjectClass:[ObjectTest class] block:^(BKCellMapping *cellMapping) {
         [cellMapping mapKeyPath:@"fullName" toAttribute:@"textLabel.text"];
         [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
         [cellMapping mapObjectToCellClass:[CustomCellTest class]];
         [self.tableModel registerMapping:cellMapping];
-    }];    
+    }];
+    
+    NSLog(@"dsdddsdsdsddsdsds");
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)loadTableViewData {
+    // This method is used to force tableView to load data
+    [self.tableModel.tableView reloadData];
+    NSLog(@"dsdsdsdssd ddfdf---------");
+    GHAssertTrue(NO, nil);
 }
 
 
@@ -90,22 +105,11 @@
 }
 
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"----------cellForRowAtIndexPath---------");
     return [self.tableModel cellForRowAtIndexPath:indexPath];
 }
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-#pragma mark BKTableModelDataSource
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)tableModel:(BKTableModel *)tableModel objectForRowAtIndexPAth:(NSIndexPath *)indexPath {
-    return [self.items objectAtIndex:indexPath.row];
-}
-
 
 
 @end
