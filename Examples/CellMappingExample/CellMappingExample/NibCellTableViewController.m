@@ -27,7 +27,7 @@
     self.title = @"Nib cell";
     
     self.items = [NSArray arrayWithObjects:
-                  [Item itemWithTitle:@"Book1" subtitle:@"Book subtitle" type:@"book"],
+                  [Item itemWithTitle:@"Book1" subtitle:@"Book subtitle" type:nil],
                   nil];
     
     self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
@@ -36,11 +36,11 @@
         return [self.items objectAtIndex:indexPath.row];
     }];
     
-    [BKDynamicCellMapping mappingForObjectClass:[Item class] block:^(BKDynamicCellMapping *cellMapping) {
+    [BKCellMapping mappingForObjectClass:[Item class] block:^(BKCellMapping *cellMapping) {
         [cellMapping mapKeyPath:@"title" toAttribute:@"titleLabel.text"];
         [cellMapping mapKeyPath:@"subtitle" toAttribute:@"subTitleLabel.text"];
         cellMapping.nib = [BookViewCell nib];
-        [cellMapping mapObjectToCellClass:[BookViewCell class] whenValueOfKeyPath:@"type" isEqualTo:@"book"];
+        [cellMapping mapObjectToCellClass:[BookViewCell class]];
         [self.tableModel registerMapping:cellMapping];
     }];
 }
