@@ -16,7 +16,6 @@
 @implementation SimpleMappingTableViewController
 
 @synthesize tableModel = _tableModel;
-@synthesize items = _items;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,26 +24,26 @@
     
     self.title = @"Simple mapping";
     
-    self.items = [NSArray arrayWithObjects:
-                  [Item itemWithTitle:@"Book1" subtitle:nil],
-                  [Item itemWithTitle:@"Book1" subtitle:nil],
-                  [Item itemWithTitle:@"Book1" subtitle:nil],
-                  [Item itemWithTitle:@"Book1" subtitle:nil],
-                  [Item itemWithTitle:@"Book1" subtitle:nil],
-                  [Item itemWithTitle:@"Book1" subtitle:nil],
-                  nil];
-    
     self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
-    
-    [self.tableModel objectForRowAtIndexPathWithBlock:^id(NSIndexPath *indexPath) {
-        return [self.items objectAtIndex:indexPath.row];
-    }];
+    self.tableView.dataSource = self.tableModel;
+    self.tableView.delegate = self.tableModel;
     
     [BKCellMapping mappingForObjectClass:[Item class] block:^(BKCellMapping *cellMapping) {
         [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
         [cellMapping mapObjectToCellClass:[UITableViewCell class]];
         [self.tableModel registerMapping:cellMapping];
     }];
+    
+    NSArray *items = [NSArray arrayWithObjects:
+                      [Item itemWithTitle:@"Book1" subtitle:nil],
+                      [Item itemWithTitle:@"Book1" subtitle:nil],
+                      [Item itemWithTitle:@"Book1" subtitle:nil],
+                      [Item itemWithTitle:@"Book1" subtitle:nil],
+                      [Item itemWithTitle:@"Book1" subtitle:nil],
+                      [Item itemWithTitle:@"Book1" subtitle:nil],
+                      nil];
+    
+    [self.tableModel loadTableItems:items];
 }
 
 
@@ -53,40 +52,6 @@
     [super viewDidUnload];
     
     self.tableModel = nil;
-    self.items = nil;
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark - Table view data source
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.items.count;
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.tableModel cellForRowAtIndexPath:indexPath];
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark - Table view delegate
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 

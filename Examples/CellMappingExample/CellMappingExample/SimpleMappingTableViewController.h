@@ -13,6 +13,5 @@
 @interface SimpleMappingTableViewController : UITableViewController
 
 @property (nonatomic, retain) BKTableModel *tableModel;
-@property (nonatomic, retain) NSArray *items;
 
 @end

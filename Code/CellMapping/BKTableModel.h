@@ -21,10 +21,13 @@
 
 @class BKCellMapping;
 
-@interface BKTableModel : NSObject
+@interface BKTableModel : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, copy) BKObjectForRowAtIndexPathBlock objectForRowAtIndexPathBlock;
+@property (nonatomic, retain) NSMutableArray *sectionTitles; // Doesn't work yet with sections !
+@property (nonatomic, retain) NSMutableArray *sections; // Doesn't work yet with sections !
+@property (nonatomic, retain) NSMutableArray *items;
 
 + (id)tableModelForTableView:(UITableView *)tableView;
 
@@ -39,5 +42,7 @@
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (void)objectForRowAtIndexPathWithBlock:(BKObjectForRowAtIndexPathBlock)block;
+
+- (void)loadTableItems:(NSArray *)items;
 
 @end

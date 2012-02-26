@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class BKTableViewModel;
+@class BKTableModel;
 
 @interface CatalogTableViewController : UITableViewController
 
-@property (nonatomic, retain) BKTableViewModel *tableModel;
-@property (nonatomic, retain) NSArray *items;
+@property (nonatomic, retain) BKTableModel *tableModel;
 
 @end
