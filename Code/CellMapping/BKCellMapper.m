@@ -30,6 +30,8 @@
                                 attributeMapping:(BKCellAttributeMapping *)attributeMapping
                                             cell:(UITableViewCell *)cell;
 
++ (void)setCell:(UITableViewCell *)cell value:(id)value forKeyPath:(NSString *)keyPath;
+
 @end
 
 
@@ -108,11 +110,31 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
++ (void)setCell:(UITableViewCell *)cell value:(id)value forKeyPath:(NSString *)keyPath {
+    @try {
+        [cell setValue:value forKeyPath:keyPath];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Error BaseKitCellMapping attribute %@ doesn't exist for cell name %@",
+              keyPath, NSStringFromClass([cell class]));
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 + (void)mapLabelAttributeOfTypeDefaultWithObject:(id)object
                                 attributeMapping:(BKCellAttributeMapping *)attributeMapping
                                             cell:(UITableViewCell *)cell {
     
-    id keyPathValue = [object valueForKeyPath:attributeMapping.keyPath];
+    id keyPathValue = nil;
+    
+    @try {
+        keyPathValue = [object valueForKeyPath:attributeMapping.keyPath];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Error BaseKitCellMapping keyPath %@ doesn't exist for object name %@",
+              attributeMapping.keyPath, NSStringFromClass([object class]));
+    }
     
     if (attributeMapping.valueBlock != nil) {
         keyPathValue = attributeMapping.valueBlock(keyPathValue);
@@ -126,7 +148,7 @@
     
     cellValue = keyPathValue;
     
-    [cell setValue:cellValue forKeyPath:attributeMapping.attribute];
+    [self setCell:cell value:cellValue forKeyPath:attributeMapping.attribute];
 }
 
 @end
