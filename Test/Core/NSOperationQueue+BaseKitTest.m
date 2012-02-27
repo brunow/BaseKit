@@ -23,6 +23,15 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)testShouldReturnEmptyOrNot {
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    GHAssertTrue(queue.isEmpty, @"Queue should be empty");
+    
+    for (int i = 0; i < 5; i++) {
+        [queue addOperationWithBlock:^{}];
+    }
+    
+    GHAssertTrue(!queue.isEmpty, @"Queue should not be empty");
 }
 
 

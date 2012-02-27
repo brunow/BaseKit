@@ -51,7 +51,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setUpClass {
-    ObjectTest *object = [[[ObjectTest alloc] init] autorelease];
+    /*ObjectTest *object = [[[ObjectTest alloc] init] autorelease];
     
     object.title = @"title";
     object.fullName = @"fullName";
@@ -72,7 +72,7 @@
         [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
         [cellMapping mapObjectToCellClass:[CustomCellTest class]];
         [self.tableModel registerMapping:cellMapping];
-    }];
+    }];*/
     
     NSLog(@"dsdddsdsdsddsdsds");
 }
