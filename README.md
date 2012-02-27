@@ -5,7 +5,6 @@ BaseKit is a set of IOS class to make your life easier.
 Simply add Code and Vendor dir into your project.
 
 # Core
-------
 
 Perform operation in background.
 
@@ -22,7 +21,6 @@ Iteration.
     }];
 
 ### NSArray
------------
 
 	@property (nonatomic, readonly) BOOL isEmpty;
 	
@@ -43,7 +41,6 @@ Iteration.
 	- (NSNumber *)numberValueAtIndex:(NSInteger)index;
 
 ### NSDictionary
-----------------
 
 	@property (nonatomic, readonly) BOOL isEmpty;
 
@@ -79,27 +76,22 @@ Iteration.
 
 
 ### NSMutableArray
-------------------
 
 	- (void)addObject:(id)anObject defaultValue:(id)defaultValue;
 
 ### NSMutableDictionary
------------------------
 
 	- (void)setObject:(id)anObject forKey:(id)aKey defaultValue:(id)defaultValue;
 
 ### NSOperationQueue
---------------------
 
 	@property (nonatomic, readonly) BOOL isEmpty;
 
 ### NSSet
----------
 
 	@property (nonatomic, readonly) BOOL isEmpty;
 
 ### NSString
-------------
 
 	- (NSString *)stringByCapitalizingFirstLetter;
 
@@ -108,7 +100,6 @@ Iteration.
 	- (BOOL)containsString:(NSString *)string;
 
 # View
-------
 
 Present modal view controller with block.
 
@@ -123,7 +114,6 @@ Push view controller with block.
     } animated:YES];
 
 # Cell mapping
---------------
 
 	- (void)viewDidLoad {
 	    self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
@@ -153,7 +143,6 @@ For more **example** open **Examples/CellMappingExample/CellMappingExample.xcode
 
 
 # ARC Support
--------------
 
 I'm not planning on supporting ARC at the moment.
 
