@@ -57,6 +57,4 @@
 
 - (NSNumber *)numberValueForKey:(id)aKey;
 
-//+ (id)gh_dictionaryWithKeysAndObjectsMaybeNil:(id)firstObject, ... NS_REQUIRES_NIL_TERMINATION; [NSNull null]
-
 @end
