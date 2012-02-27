@@ -139,6 +139,8 @@ Push view controller with block.
 	    [self.tableModel loadTableItems:items];
 	}
 
+For more **example** open **Examples/CellMappingExample/CellMappingExample.xcodeproj project**.
+
 
 # ARC Support
 
