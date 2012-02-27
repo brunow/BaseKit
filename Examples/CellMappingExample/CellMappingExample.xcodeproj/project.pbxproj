@@ -39,7 +39,6 @@
 		E7C629A214D5CAC3007C6EB8 /* deps in Resources */ = {isa = PBXBuildFile; fileRef = E7C6299C14D5CAC3007C6EB8 /* deps */; };
 		E7C629AF14D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C629A914D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m */; };
 		E7C629B014D5CAC9007C6EB8 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C629AB14D5CAC9007C6EB8 /* UIView+Debug.m */; };
-		E7C629B114D5CAC9007C6EB8 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C629AD14D5CAC9007C6EB8 /* UIView+Layout.m */; };
 		E7F44AFA14E1BC6D00CFAE4B /* NibCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44AF914E1BC6D00CFAE4B /* NibCellTableViewController.m */; };
 		E7F44AFE14E1C01A00CFAE4B /* SimpleMappingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44AFD14E1C01900CFAE4B /* SimpleMappingTableViewController.m */; };
 		E7F44C4614E2902200CFAE4B /* CustomRowHeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44C4514E2902200CFAE4B /* CustomRowHeightTableViewController.m */; };
@@ -114,8 +113,6 @@
 		E7C629A914D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+BaseKit.m"; sourceTree = "<group>"; };
 		E7C629AA14D5CAC9007C6EB8 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
 		E7C629AB14D5CAC9007C6EB8 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
-		E7C629AC14D5CAC9007C6EB8 /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
-		E7C629AD14D5CAC9007C6EB8 /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		E7F44AF814E1BC6D00CFAE4B /* NibCellTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NibCellTableViewController.h; sourceTree = "<group>"; };
 		E7F44AF914E1BC6D00CFAE4B /* NibCellTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NibCellTableViewController.m; sourceTree = "<group>"; };
 		E7F44AFC14E1C01900CFAE4B /* SimpleMappingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleMappingTableViewController.h; sourceTree = "<group>"; };
@@ -275,8 +272,6 @@
 				E7C629A914D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m */,
 				E7C629AA14D5CAC9007C6EB8 /* UIView+Debug.h */,
 				E7C629AB14D5CAC9007C6EB8 /* UIView+Debug.m */,
-				E7C629AC14D5CAC9007C6EB8 /* UIView+Layout.h */,
-				E7C629AD14D5CAC9007C6EB8 /* UIView+Layout.m */,
 			);
 			name = View;
 			path = ../../Code/View;
@@ -359,7 +354,6 @@
 				E7C629A114D5CAC3007C6EB8 /* BKTableModel.m in Sources */,
 				E7C629AF14D5CAC9007C6EB8 /* UITableViewCell+BaseKit.m in Sources */,
 				E7C629B014D5CAC9007C6EB8 /* UIView+Debug.m in Sources */,
-				E7C629B114D5CAC9007C6EB8 /* UIView+Layout.m in Sources */,
 				E76A91A714E06CBE003F35ED /* BKDeviceAvailability.m in Sources */,
 				E76A91A814E06CBF003F35ED /* BKIteratingHelper.m in Sources */,
 				E76A91A914E06CBF003F35ED /* BKOperationHelper.m in Sources */,

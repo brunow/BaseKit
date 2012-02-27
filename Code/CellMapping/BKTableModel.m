@@ -31,7 +31,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface BKTableModel ()
 
-@property (nonatomic, readonly) NSMutableDictionary *objectMappings;
+@property (nonatomic, retain) NSMutableDictionary *objectMappings;
 
 - (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath;
 
@@ -56,7 +56,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)dealloc {
     self.tableView = nil;
-    [_objectMappings release]; _objectMappings = nil;
+    self.objectMappings = nil;
     self.objectForRowAtIndexPathBlock = nil;
     self.sections = nil;
     self.sectionTitles = nil;
@@ -89,7 +89,7 @@
     self = [super init];
     
     if (self) {
-        _objectMappings = [[NSMutableDictionary alloc] init];
+        self.objectMappings = [[[NSMutableDictionary alloc] init] autorelease];
     }
     
     return self;
@@ -241,13 +241,15 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (BKCellMapping *)cellMappingForObject:(id)object {
-    dispatch_queue_t concurrentQueue = dispatch_queue_create("be.BaseKit.CellMapping.TableModel", NULL);
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("be.basekit.cellmapping.tablebodel", NULL);
     __block BKCellMapping *cellMapping = nil;
     
     dispatch_sync(concurrentQueue, ^{
         NSSet *cellMappings = [BKCellMapper cellMappingsForObject:object mappings:self.objectMappings];
         cellMapping = [BKCellMapper cellMappingForObject:object mappings:cellMappings];
     });
+    
+    dispatch_release(concurrentQueue);
     
     return cellMapping;
 }

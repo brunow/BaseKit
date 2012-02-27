@@ -25,7 +25,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 + (void)performBlockInBackground:(BKBasicBlock)block completion:(BKBasicBlock)completionBlock waitUntilDone:(BOOL)waitUntilDone {
-    dispatch_queue_t concurrentQueue = dispatch_queue_create("be.BaseKit.Core.OperationHelper", NULL);
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("be.basekit.core.operationhelper", NULL);
     dispatch_queue_t mainQueue = dispatch_get_main_queue();
     
     BKBasicBlock operation = [[block copy] autorelease];
@@ -47,6 +47,8 @@
             });
         });
     }
+    
+    dispatch_release(concurrentQueue);
 }
 
 
