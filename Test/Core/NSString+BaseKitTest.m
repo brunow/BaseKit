@@ -48,7 +48,7 @@
 - (void)testShouldContainString {
     NSString *aString = @"This string contain hello";
     
-    GHAssertTrue([aString containsString:@"hello"], nil);
+    GHAssertTrue([aString containString:@"hello"], nil);
 }
 
 @end

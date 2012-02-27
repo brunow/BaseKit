@@ -31,6 +31,6 @@
 /**
  * 
  */
-- (BOOL)containsString:(NSString *)string;
+- (BOOL)containString:(NSString *)string;
 
 @end

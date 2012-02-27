@@ -25,10 +25,13 @@
 @property (nonatomic, readonly) BOOL isEmpty;
 
 /**
- * Check if a value is assiated with the key
+ * Check if any value is assiated with given key
  */
 - (BOOL)containsObjectForKey:(id)key;
 
+/**
+ * If dictionary has a object for aKey return it, else return defaultObject
+ */
 - (id)objectForKey:(id)aKey defaultObject:(id)defaultObject;
 
 - (BOOL)boolValueForKey:(id)aKey defaultValue:(BOOL)defaultValue;

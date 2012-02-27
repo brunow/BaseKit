@@ -51,7 +51,7 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (BOOL)containsString:(NSString *)string {
+- (BOOL)containString:(NSString *)string {
     return ([self rangeOfString:string].location == NSNotFound) ? NO : YES;
 }
 

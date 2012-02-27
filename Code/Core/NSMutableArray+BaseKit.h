@@ -19,6 +19,9 @@
 
 @interface NSMutableArray (BaseKit)
 
+/*
+ * Add object if not nil else add defaultValue
+ */
 - (void)addObject:(id)anObject defaultValue:(id)defaultValue;
 
 @end

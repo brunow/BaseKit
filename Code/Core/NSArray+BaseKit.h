@@ -27,18 +27,39 @@
  */
 - (id)firstObject;
 
+/**
+ * Return boolean value at given index
+ */
 - (BOOL)boolValueAtIndex:(NSInteger)index;
 
+/**
+ * Return int value at given index
+ */
 - (int)intValueAtIndex:(NSInteger)index;
 
+/**
+ * Return integer value at given index
+ */
 - (NSInteger)integerValueAtIndex:(NSInteger)index;
 
+/**
+ * Return float value at given index
+ */
 - (float)floatValueAtIndex:(NSInteger)index;
 
+/**
+ * Return double value at given index
+ */
 - (double)doubleValueAtIndex:(NSInteger)index;
 
+/**
+ * Return string value at given index
+ */
 - (NSString *)stringValueAtIndex:(NSInteger)index;
 
+/**
+ * Return number value at given index
+ */
 - (NSNumber *)numberValueAtIndex:(NSInteger)index;
 
 @end
