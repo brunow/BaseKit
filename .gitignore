@@ -1,3 +1,5 @@
+Doc/
+
 #xcode specific
 build/*
 *.pbxuser
