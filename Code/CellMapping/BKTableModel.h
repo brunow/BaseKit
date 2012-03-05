@@ -43,6 +43,8 @@
 
 - (void)objectForRowAtIndexPathWithBlock:(BKObjectForRowAtIndexPathBlock)block;
 
+- (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 - (void)loadTableItems:(NSArray *)items;
 
 @end

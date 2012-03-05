@@ -33,8 +33,6 @@
 
 @property (nonatomic, retain) NSMutableDictionary *objectMappings;
 
-- (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath;
-
 - (BKCellMapping *)cellMappingForObject:(id)object;
 
 @end
@@ -174,6 +172,18 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (nil != self.objectForRowAtIndexPathBlock) {
+        return self.objectForRowAtIndexPathBlock(indexPath);
+    } else if (nil != self.items) {
+        return [self.items objectAtIndex:indexPath.row];
+    }
+    
+    return nil;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Setters
@@ -225,18 +235,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Private
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (nil != self.objectForRowAtIndexPathBlock) {
-        return self.objectForRowAtIndexPathBlock(indexPath);
-    } else if (nil != self.items) {
-        return [self.items objectAtIndex:indexPath.row];
-    }
-    
-    return nil;
-}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
