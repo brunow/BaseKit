@@ -108,6 +108,14 @@
     
     [BKCellMapper mapCellAttributeWithMapping:cellMapping object:object cell:cell];
     
+#ifndef DEBUG
+    
+    if (nil == cell) {
+        cell = [UITableViewCell cellForTableView:self.tableView];
+    }
+    
+#endif
+    
     return cell;
 }
 
