@@ -26,18 +26,26 @@
 /**
  * Iterate from zero til a given number by a given slice and execute each time a block.
  *
+ * <h3>Example</h3>
+ *
+ * @code
  * [BWIterating iterateTil:10 bySlice:2 usingBlock:^(int number) {
  *      NSLog(@"Number %d", number);
  * }];
+ * @endcode
  */
 + (void)iterateTil:(int)iterateTil bySlice:(int)slice usingBlock:(BKIterationBlock)iterationBlock;
 
 /**
  * Iterate from zero til a given number and execute each time a block.
  *
+ * <h3>Example</h3>
+ *
+ * @code
  * [BWIterating iterateTil:10 usingBlock:^(int number) {
  *      NSLog(@"Number %d", number);
  * }];
+ * @endcode
  */
 + (void)iterateTil:(int)iterateTil usingBlock:(BKIterationBlock)iterationBlock;
 

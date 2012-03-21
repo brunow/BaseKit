@@ -28,7 +28,7 @@
 + (NSString *)primaryKeyAttribute;
 
 /**
- * See above
+ * + (NSString *)primaryKeyAttribute;
  */
 - (NSString *)primaryKeyAttribute;
 
