@@ -16,9 +16,8 @@
 //
 #import <Foundation/Foundation.h>
 
-#ifndef BK_HAS_ARC
 #define BK_HAS_ARC __has_feature(objc_arc)
-#endif
+#define BK_HAS_WEAK __has_feature(objc_arc_weak)
 
 #if BK_HAS_ARC
     #define BK_RETAIN(xx)           xx
@@ -27,7 +26,14 @@
     #define BK_PROP_COPY nonatomic, copy
     #define BK_PROP_RETAIN strong
     #define BK_RELEASE_SAFELY(xx)
-    #define BK_UNRETAINED_BLOCK_IVAR __unsafe_unretained
+
+    #if BK_HAS_WEAK
+        #define BK_PROP_RETAIN_WEAK __weak
+        #define BK_UNRETAINED_BLOCK_IVAR __weak
+    #else
+        #define BK_PROP_RETAIN_WEAK __unsafe_unretained
+        #define BK_UNRETAINED_BLOCK_IVAR __unsafe_unretained
+    #endif
 #else
     #define BK_RETAIN(xx)             [xx retain];
     #define BK_RELEASE(xx)            [xx release];
@@ -37,6 +43,3 @@
     #define BK_RELEASE_SAFELY(xx)     { [xx release]; xx = nil; }
     #define BK_UNRETAINED_BLOCK_IVAR __block
 #endif
-
-
-
