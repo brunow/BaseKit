@@ -54,3 +54,11 @@
  */
 #define AppDelegateSharedInstance ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
+
+// Time saving shortcuts
+#define BK_BOOLEAN(val) [NSNumber numberWithBool:val]
+#define BK_NULL [NSNull null]
+#define BK_INT(val) [NSNumber numberWithInt:val]
+#define BK_INTEGER(val) [NSNumber numberWithInteger:val]
+#define BK_FLOAT(val) [NSNumber numberWithFloat:val]
+
