@@ -2,7 +2,20 @@ BaseKit is a set of IOS class to make your life easier.
 
 # Installation
 
-Simply add Code and Vendor dir into your project.
+You have two way to do that
+
+* Copying files.
+* Install using CocoaPods.
+
+## Copying files
+
+Add Code dir or pick library that you need inside Code/*.
+
+## Install using CocoaPods.
+
+    dependency 'BaseKit/Core', '~> 0.1'
+    dependency 'BaseKit/View', '~> 0.1'
+    dependency 'BaseKit/CellMapping', '~> 0.1'
 
 # Core
 
