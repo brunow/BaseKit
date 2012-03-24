@@ -26,9 +26,3 @@
 #import "BKDeviceAvailability.h"
 
 #import "BKMacros.h"
-
-/**
- * Return the app delegate shared instance.
- * Expected that the app delegate is named AppDelegate
- */
-#define AppDelegateSharedInstance ((AppDelegate *)[[UIApplication sharedApplication] delegate])

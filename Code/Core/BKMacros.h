@@ -47,3 +47,10 @@
 
 #define BK_RGBA_COLOR(r, g, b, a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 #define BK_RGB_COLOR(r, g, b, a) BK_RGBA_COLOR(r, g, b, a)
+
+/**
+ * Return the app delegate shared instance.
+ * Expected that the app delegate is named AppDelegate
+ */
+#define AppDelegateSharedInstance ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
