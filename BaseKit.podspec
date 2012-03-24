@@ -13,16 +13,13 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |core|
     core.source_files = 'Code/Core/*.{h,m}'
-  end
 
-  s.subspec 'View' do |view|
-    view.source_files = 'Code/View/*.{h,m}'
-    view.dependency 'BaseKit/Core'
-  end
+    core.subspec 'View' do |view|
+      view.source_files = 'Code/View/*.{h,m}'
 
-  s.subspec 'CellMapping' do |cell_mapping|
-    cell_mapping.source_files = 'Code/CellMapping/*.{h,m}'
-    cell_mapping.dependency 'BaseKit/Core'
-    cell_mapping.dependency 'BaseKit/View'
+      view.subspec 'CellMapping' do |cell_mapping|
+        cell_mapping.source_files = 'Code/CellMapping/*.{h,m}'
+      end
+    end
   end
 end
