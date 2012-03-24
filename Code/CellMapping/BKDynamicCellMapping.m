@@ -27,12 +27,14 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+#if !BK_HAS_ARC
 - (void)dealloc {
     self.dynamicKeyPath = nil;
     self.keyPathEqualTo = nil;
     
     [super dealloc];
 }
+#endif
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -41,7 +43,7 @@
     
     block(cellMapping);
     
-    return [cellMapping autorelease];
+    return BK_AUTORELEASE(cellMapping);
 }
 
 

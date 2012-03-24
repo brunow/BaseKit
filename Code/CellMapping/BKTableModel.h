@@ -18,16 +18,17 @@
 #import <Foundation/Foundation.h>
 
 #import "BKCellMappingBlocks.h"
+#import "BKMacros.h"
 
 @class BKCellMapping;
 
 @interface BKTableModel : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, retain) UITableView *tableView;
+@property (nonatomic, BK_PROP_RETAIN) UITableView *tableView;
 @property (nonatomic, copy) BKObjectForRowAtIndexPathBlock objectForRowAtIndexPathBlock;
-@property (nonatomic, retain) NSMutableArray *sectionTitles; // Doesn't work yet with sections !
-@property (nonatomic, retain) NSMutableArray *sections; // Doesn't work yet with sections !
-@property (nonatomic, retain) NSMutableArray *items;
+@property (nonatomic, BK_PROP_RETAIN) NSMutableArray *sectionTitles; // Doesn't work yet with sections !
+@property (nonatomic, BK_PROP_RETAIN) NSMutableArray *sections; // Doesn't work yet with sections !
+@property (nonatomic, BK_PROP_RETAIN) NSMutableArray *items;
 
 + (id)tableModelForTableView:(UITableView *)tableView;
 

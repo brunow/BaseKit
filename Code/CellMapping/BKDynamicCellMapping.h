@@ -16,11 +16,12 @@
 //
 
 #import "BKCellMapping.h"
+#import "BKMacros.h"
 
 @interface BKDynamicCellMapping : BKCellMapping
 
 @property (nonatomic, copy) NSString *dynamicKeyPath;
-@property (nonatomic, retain) NSString *keyPathEqualTo;
+@property (nonatomic, BK_PROP_RETAIN) NSString *keyPathEqualTo;
 
 + (id)mappingForObjectClass:(Class)objectClass block:(void(^)(BKDynamicCellMapping *cellMapping))block;
 

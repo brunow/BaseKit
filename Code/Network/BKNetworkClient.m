@@ -17,6 +17,8 @@
 
 #import "BKNetworkClient.h"
 
+#import "BKMacros.h"
+
 static BKNetworkClient *_networkclient = nil;
 
 
@@ -34,19 +36,17 @@ static BKNetworkClient *_networkclient = nil;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (void)setSharedClient:(id)client {
-    if (_networkclient != nil) {
-        [_networkclient release];
+    if (_networkclient != client) {
+        BK_RELEASE(_networkclient);
+        _networkclient = BK_RETAIN(client);
     }
-    
-    _networkclient = [client retain];
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)clientWithBaseURL:(NSString *)URL {
     id client = [[self alloc] initWithBaseURL:[NSURL URLWithString:URL]];
-    
-    return [client autorelease];
+    return BK_AUTORELEASE(client);
 }
 
 

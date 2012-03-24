@@ -17,10 +17,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "BKMacros.h"
+
 @interface BKToogleValue : NSObject
 
-@property (nonatomic, retain) id firstValue;
-@property (nonatomic, retain) id secondValue;
+@property (nonatomic, BK_PROP_RETAIN) id firstValue;
+@property (nonatomic, BK_PROP_RETAIN) id secondValue;
 @property (nonatomic, assign) BOOL isFirstValueSelected;
 @property (nonatomic, readonly) id currentValue;
 

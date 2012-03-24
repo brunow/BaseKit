@@ -17,6 +17,8 @@
 
 #import "BKOperationHelper.h"
 
+#import "BKMacros.h"
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,8 +30,8 @@
     dispatch_queue_t concurrentQueue = dispatch_queue_create("be.basekit.core.operationhelper", NULL);
     dispatch_queue_t mainQueue = dispatch_get_main_queue();
     
-    BKBasicBlock operation = [[block copy] autorelease];
-    BKBasicBlock completion = [[completionBlock copy] autorelease];
+    BKBasicBlock operation = BK_AUTORELEASE([block copy]);
+    BKBasicBlock completion = BK_AUTORELEASE([completionBlock copy]);
     
     if (completion == nil)
         completion = ^{};

@@ -45,6 +45,7 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+#if !BK_HAS_ARC
 - (void)dealloc {
     [_attributeMappings release];
     self.nib = nil;
@@ -53,6 +54,7 @@
     
     [super dealloc];
 }
+#endif
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -85,7 +87,7 @@
     
     block(cellMapping);
     
-    return [cellMapping autorelease];
+    return BK_AUTORELEASE(cellMapping);
 }
 
 

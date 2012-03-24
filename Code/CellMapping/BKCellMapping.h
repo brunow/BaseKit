@@ -18,13 +18,14 @@
 #import <Foundation/Foundation.h>
 
 #import "BKCellMappingBlocks.h"
+#import "BKMacros.h"
 
 @interface BKCellMapping : NSObject
 
 @property (nonatomic, assign) Class objectClass;
 @property (nonatomic, assign) Class cellClass;
 @property (nonatomic, readonly) NSMutableDictionary *attributeMappings;
-@property (nonatomic, retain) UINib *nib;
+@property (nonatomic, BK_PROP_RETAIN) UINib *nib;
 @property (nonatomic, copy) BKTableViewCellSelectionBlock onSelectRowBlock;
 @property (nonatomic, assign) CGFloat rowHeight;
 @property (nonatomic, copy) BKCellRowHeightBlock rowHeightBlock;

@@ -8,6 +8,8 @@
 
 #import "UIViewController+BaseKit.h"
 
+#import "BKMacros.h"
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +25,7 @@
     if (navigationController) {
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:viewController()];
         [self presentModalViewController:nc animated:animated];
-        [nc release];
+        BK_RELEASE(nc);
     } else {
         [self presentModalViewController:viewController() animated:animated];
     }

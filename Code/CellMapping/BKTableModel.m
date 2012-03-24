@@ -31,7 +31,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface BKTableModel ()
 
-@property (nonatomic, retain) NSMutableDictionary *objectMappings;
+@property (nonatomic, BK_PROP_RETAIN) NSMutableDictionary *objectMappings;
 
 - (BKCellMapping *)cellMappingForObject:(id)object;
 
@@ -52,6 +52,7 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+#if !BK_HAS_ARC
 - (void)dealloc {
     self.tableView = nil;
     self.objectMappings = nil;
@@ -62,11 +63,13 @@
     
     [super dealloc];
 }
+#endif
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)tableModelForTableView:(UITableView *)tableView {
-    return [[[self alloc] initWithTableView:tableView] autorelease];
+    BKTableModel *tableModel = [[self alloc] initWithTableView:tableView];
+    return BK_AUTORELEASE(tableModel);
 }
 
 
@@ -87,7 +90,7 @@
     self = [super init];
     
     if (self) {
-        self.objectMappings = [[[NSMutableDictionary alloc] init] autorelease];
+        self.objectMappings = [NSMutableDictionary dictionary];
     }
     
     return self;
@@ -109,11 +112,9 @@
     [BKCellMapper mapCellAttributeWithMapping:cellMapping object:object cell:cell];
     
 #ifndef DEBUG
-    
     if (nil == cell) {
         cell = [UITableViewCell cellForTableView:self.tableView];
     }
-    
 #endif
     
     return cell;
@@ -168,7 +169,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadTableItems:(NSArray *)items {
-    self.items = [[[NSMutableArray alloc] initWithArray:items] autorelease];
+    self.items = [NSMutableArray arrayWithArray:items];
     [self.tableView reloadData];
 }
 
@@ -248,7 +249,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (BKCellMapping *)cellMappingForObject:(id)object {
     dispatch_queue_t concurrentQueue = dispatch_queue_create("be.basekit.cellmapping.tablebodel", NULL);
-    __block BKCellMapping *cellMapping = nil;
+    BK_UNRETAINED_BLOCK_IVAR BKCellMapping *cellMapping = nil;
     
     dispatch_sync(concurrentQueue, ^{
         NSSet *cellMappings = [BKCellMapper cellMappingsForObject:object mappings:self.objectMappings];

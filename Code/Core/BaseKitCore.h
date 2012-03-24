@@ -25,6 +25,8 @@
 #import "BKToogleValue.h"
 #import "BKDeviceAvailability.h"
 
+#import "BKMacros.h"
+
 /**
  * Return the app delegate shared instance.
  * Expected that the app delegate is named AppDelegate
