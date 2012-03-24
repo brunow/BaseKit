@@ -43,3 +43,7 @@
     #define BK_RELEASE_SAFELY(xx)     { [xx release]; xx = nil; }
     #define BK_UNRETAINED_BLOCK_IVAR __block
 #endif
+
+
+#define BK_RGBA_COLOR(r, g, b, a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+#define BK_RGB_COLOR(r, g, b, a) BK_RGBA_COLOR(r, g, b, a)

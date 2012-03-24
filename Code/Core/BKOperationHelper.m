@@ -68,7 +68,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (void)performBlockInMainThread:(BKBasicBlock)block waitUntilDone:(BOOL)waitUntilDone {
-    [self performBlockInBackground:^{} completion:block waitUntilDone:waitUntilDone];
+    [self performBlockInBackground:nil completion:block waitUntilDone:waitUntilDone];
 }
 
 

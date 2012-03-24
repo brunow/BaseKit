@@ -28,7 +28,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)cellForTableView:(UITableView *)tableView { 
-    NSString *cellID = [self cellIdentifier]; 
+    NSString *cellID = [self cellIdentifier];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     if (cell == nil) {

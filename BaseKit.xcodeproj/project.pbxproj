@@ -17,7 +17,6 @@
 		E7143AF414A862CE00A682B8 /* BKIterationHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A43048149A0E7E00D8A4F6 /* BKIterationHelperTest.m */; };
 		E7143B2D14A89D6300A682B8 /* libBaseKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E754F45A149013AE0028E91D /* libBaseKit.a */; };
 		E7143B2E14A89DCA00A682B8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E757BF89149A84D100B8662B /* CoreData.framework */; };
-		E71EC7A0151DABE500813C05 /* BKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = E71EC79E151DABE500813C05 /* BKMacros.h */; };
 		E72742B114B6367500720D76 /* BaseKitCellMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E72742A214B6367500720D76 /* BaseKitCellMapping.h */; };
 		E72742B214B6367500720D76 /* BKCellAttributeMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E72742A314B6367500720D76 /* BKCellAttributeMapping.h */; };
 		E72742B314B6367500720D76 /* BKCellAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E72742A414B6367500720D76 /* BKCellAttributeMapping.m */; };
@@ -125,6 +124,7 @@
 		E7A480EA14A909B0000E0F5A /* BKNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A480E814A909B0000E0F5A /* BKNetworkClient.m */; };
 		E7A4815914A9BBBC000E0F5A /* BKNetworkMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = E7A4815814A9BBBC000E0F5A /* BKNetworkMethod.h */; };
 		E7A4816914AA0214000E0F5A /* BKNetworkClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A4816814AA0214000E0F5A /* BKNetworkClientTest.m */; };
+		E7BE881E151DC7B2005BF962 /* BKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = E7BE881D151DC7B2005BF962 /* BKMacros.h */; };
 		E7D2C60714B70C5000D03E0F /* BaseKitCoreAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E7D2C60514B70C5000D03E0F /* BaseKitCoreAdditions.h */; };
 		E7D2C66714B734E200D03E0F /* NSOperationQueue+BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E7D2C66514B734E200D03E0F /* NSOperationQueue+BaseKit.h */; };
 		E7D2C66814B734E200D03E0F /* NSOperationQueue+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D2C66614B734E200D03E0F /* NSOperationQueue+BaseKit.m */; };
@@ -152,7 +152,6 @@
 		E7143AED14A861AB00A682B8 /* BaseKitTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseKitTest-Prefix.pch"; sourceTree = "<group>"; };
 		E7143AEE14A861AB00A682B8 /* BaseKitTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseKitTestMain.m; sourceTree = "<group>"; };
 		E7143AF214A861DB00A682B8 /* BaseKitTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BaseKitTest-Info.plist"; sourceTree = "<group>"; };
-		E71EC79E151DABE500813C05 /* BKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKMacros.h; sourceTree = "<group>"; };
 		E72742A214B6367500720D76 /* BaseKitCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCellMapping.h; sourceTree = "<group>"; };
 		E72742A314B6367500720D76 /* BKCellAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellAttributeMapping.h; sourceTree = "<group>"; };
 		E72742A414B6367500720D76 /* BKCellAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellAttributeMapping.m; sourceTree = "<group>"; };
@@ -265,6 +264,7 @@
 		E7A480E814A909B0000E0F5A /* BKNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKNetworkClient.m; sourceTree = "<group>"; };
 		E7A4815814A9BBBC000E0F5A /* BKNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKNetworkMethod.h; sourceTree = "<group>"; };
 		E7A4816814AA0214000E0F5A /* BKNetworkClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKNetworkClientTest.m; sourceTree = "<group>"; };
+		E7BE881D151DC7B2005BF962 /* BKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKMacros.h; sourceTree = "<group>"; };
 		E7D2C60514B70C5000D03E0F /* BaseKitCoreAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCoreAdditions.h; sourceTree = "<group>"; };
 		E7D2C66514B734E200D03E0F /* NSOperationQueue+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+BaseKit.h"; sourceTree = "<group>"; };
 		E7D2C66614B734E200D03E0F /* NSOperationQueue+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+BaseKit.m"; sourceTree = "<group>"; };
@@ -528,7 +528,7 @@
 				E735636E14AEFB1900DF1D9E /* BKDeviceAvailability.h */,
 				E735636F14AEFB1900DF1D9E /* BKDeviceAvailability.m */,
 				E7D2C60514B70C5000D03E0F /* BaseKitCoreAdditions.h */,
-				E71EC79E151DABE500813C05 /* BKMacros.h */,
+				E7BE881D151DC7B2005BF962 /* BKMacros.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -638,7 +638,7 @@
 				E7F44B5114E2483300CFAE4B /* UIViewController+BaseKit.h in Headers */,
 				E7F44B5514E2484A00CFAE4B /* UINavigationController+BaseKit.h in Headers */,
 				E7F44B5914E24A1500CFAE4B /* BKViewBlocks.h in Headers */,
-				E71EC7A0151DABE500813C05 /* BKMacros.h in Headers */,
+				E7BE881E151DC7B2005BF962 /* BKMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
