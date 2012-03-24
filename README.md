@@ -144,5 +144,5 @@ For more **example** open **Examples/CellMappingExample/CellMappingExample.xcode
 
 # ARC Support
 
-I'm not planning on supporting ARC at the moment.
+BaseKit is fully compatible out of box with both ARC and non-ARC project.
 
