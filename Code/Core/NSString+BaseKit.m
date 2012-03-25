@@ -55,4 +55,5 @@
     return ([self rangeOfString:string].location == NSNotFound) ? NO : YES;
 }
 
+
 @end

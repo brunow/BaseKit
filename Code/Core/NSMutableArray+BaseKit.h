@@ -24,4 +24,11 @@
  */
 - (void)addObject:(id)anObject defaultValue:(id)defaultValue;
 
+
+/*
+ * Move an object inside mutable array
+ */
+- (void)moveObjectFromIndex:(NSInteger)from toIndex:(NSInteger)to;
+
+
 @end
