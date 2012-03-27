@@ -20,7 +20,7 @@
 #import "BKCellMapping.h"
 #import "BKCellAttributeMapping.h"
 #import "BKDynamicCellMapping.h"
-#import "BKMacros.h"
+#import "BKMacrosDefinitions.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

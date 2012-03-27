@@ -25,4 +25,4 @@
 #import "BKToogleValue.h"
 #import "BKDeviceAvailability.h"
 
-#import "BKMacros.h"
+#import "BKMacrosDefinitions.h"

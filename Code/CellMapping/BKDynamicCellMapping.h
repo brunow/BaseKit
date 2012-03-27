@@ -16,7 +16,7 @@
 //
 
 #import "BKCellMapping.h"
-#import "BKMacros.h"
+#import "BKMacrosDefinitions.h"
 
 @interface BKDynamicCellMapping : BKCellMapping
 

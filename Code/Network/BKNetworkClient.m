@@ -17,7 +17,7 @@
 
 #import "BKNetworkClient.h"
 
-#import "BKMacros.h"
+#import "BKMacrosDefinitions.h"
 
 static BKNetworkClient *_networkclient = nil;
 

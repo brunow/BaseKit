@@ -17,7 +17,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "BKMacros.h"
+#import "BKMacrosDefinitions.h"
 
 @interface BKToogleValue : NSObject
 
