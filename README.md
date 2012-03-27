@@ -142,7 +142,7 @@ Push view controller with block.
         
 	        [cellMapping mapObjectToCellClass:[UITableViewCell class]];
 	        [self.tableModel registerMapping:cellMapping];
-	    ];
+	    }];
 
 		NSArray *items = [NSArray arrayWithObjects:
                       		[Item itemWithTitle:@"Simple mapping"],
