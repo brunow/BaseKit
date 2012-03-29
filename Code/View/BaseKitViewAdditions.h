@@ -22,3 +22,4 @@
 #import "UIView+Debug.h"
 #import "UIViewController+BaseKit.h"
 #import "UINavigationController+BaseKit.h"
+#import "UITableView+BaseKit.h"
