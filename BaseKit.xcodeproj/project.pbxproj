@@ -20,6 +20,8 @@
 		E72009C915223F630025B36D /* BKMacrosDefinitions.h in Headers */ = {isa = PBXBuildFile; fileRef = E72009C815223F630025B36D /* BKMacrosDefinitions.h */; };
 		E720A4151524EA6F008BA19E /* UITableView+BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E720A4131524EA6F008BA19E /* UITableView+BaseKit.h */; };
 		E720A4161524EA6F008BA19E /* UITableView+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E720A4141524EA6F008BA19E /* UITableView+BaseKit.m */; };
+		E720A41A1524EDC3008BA19E /* UIBarButtonItem+BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E720A4181524EDC3008BA19E /* UIBarButtonItem+BaseKit.h */; };
+		E720A41B1524EDC3008BA19E /* UIBarButtonItem+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E720A4191524EDC3008BA19E /* UIBarButtonItem+BaseKit.m */; };
 		E72742B114B6367500720D76 /* BaseKitCellMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E72742A214B6367500720D76 /* BaseKitCellMapping.h */; };
 		E72742B214B6367500720D76 /* BKCellAttributeMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E72742A314B6367500720D76 /* BKCellAttributeMapping.h */; };
 		E72742B314B6367500720D76 /* BKCellAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E72742A414B6367500720D76 /* BKCellAttributeMapping.m */; };
@@ -157,6 +159,8 @@
 		E72009C815223F630025B36D /* BKMacrosDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKMacrosDefinitions.h; sourceTree = "<group>"; };
 		E720A4131524EA6F008BA19E /* UITableView+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BaseKit.h"; sourceTree = "<group>"; };
 		E720A4141524EA6F008BA19E /* UITableView+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BaseKit.m"; sourceTree = "<group>"; };
+		E720A4181524EDC3008BA19E /* UIBarButtonItem+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BaseKit.h"; sourceTree = "<group>"; };
+		E720A4191524EDC3008BA19E /* UIBarButtonItem+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BaseKit.m"; sourceTree = "<group>"; };
 		E72742A214B6367500720D76 /* BaseKitCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCellMapping.h; sourceTree = "<group>"; };
 		E72742A314B6367500720D76 /* BKCellAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellAttributeMapping.h; sourceTree = "<group>"; };
 		E72742A414B6367500720D76 /* BKCellAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellAttributeMapping.m; sourceTree = "<group>"; };
@@ -477,6 +481,8 @@
 				E7F44B5714E24A1500CFAE4B /* BKViewBlocks.h */,
 				E720A4131524EA6F008BA19E /* UITableView+BaseKit.h */,
 				E720A4141524EA6F008BA19E /* UITableView+BaseKit.m */,
+				E720A4181524EDC3008BA19E /* UIBarButtonItem+BaseKit.h */,
+				E720A4191524EDC3008BA19E /* UIBarButtonItem+BaseKit.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -646,6 +652,7 @@
 				E7F44B5914E24A1500CFAE4B /* BKViewBlocks.h in Headers */,
 				E72009C915223F630025B36D /* BKMacrosDefinitions.h in Headers */,
 				E720A4151524EA6F008BA19E /* UITableView+BaseKit.h in Headers */,
+				E720A41A1524EDC3008BA19E /* UIBarButtonItem+BaseKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,6 +801,7 @@
 				E7F44B5214E2483300CFAE4B /* UIViewController+BaseKit.m in Sources */,
 				E7F44B5614E2484A00CFAE4B /* UINavigationController+BaseKit.m in Sources */,
 				E720A4161524EA6F008BA19E /* UITableView+BaseKit.m in Sources */,
+				E720A41B1524EDC3008BA19E /* UIBarButtonItem+BaseKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
