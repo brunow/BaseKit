@@ -78,3 +78,10 @@ For more **example** open **Examples/CellMappingExample/CellMappingExample.xcode
 
 BaseKit is fully compatible out of box with both ARC and non-ARC project.
 
+
+# App using BaseKit
+
+If you use BaseKit I'll be happy to add your app name here.
+
+[LiègeExpo2017](http://itunes.apple.com/fr/app/liege-expo-2017/id505451794?mt=8)
+
