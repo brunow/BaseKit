@@ -28,10 +28,10 @@
     #define BK_RELEASE_SAFELY(xx)
 
     #if BK_HAS_WEAK
-        #define BK_PROP_RETAIN_WEAK __weak
+        #define BK_PROP_WEAK __weak
         #define BK_UNRETAINED_BLOCK_IVAR __weak
     #else
-        #define BK_PROP_RETAIN_WEAK __unsafe_unretained
+        #define BK_PROP_WEAK __unsafe_unretained
         #define BK_UNRETAINED_BLOCK_IVAR __unsafe_unretained
     #endif
 #else
@@ -39,6 +39,7 @@
     #define BK_RELEASE(xx)            [xx release];
     #define BK_AUTORELEASE(xx)        [xx autorelease];
     #define BK_PROP_COPY nonatomic,   copy
+    #define BK_PROP_WEAK assign
     #define BK_PROP_RETAIN retain
     #define BK_RELEASE_SAFELY(xx)     { [xx release]; xx = nil; }
     #define BK_UNRETAINED_BLOCK_IVAR __block
