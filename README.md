@@ -73,6 +73,22 @@ Push view controller with block.
 
 For more **example** open **Examples/CellMappingExample/CellMappingExample.xcodeproj project**.
 
+# LocationManager
+
+Easy to use CoreLocation manager with block or default delegate.
+
+    BKLocationManager *manager = [BKLocationManager sharedManager];
+    
+    [manager setDidUpdateLocationBlock:^(CLLocationManager *manager, CLLocation *newLocation, CLLocation *oldLocation) {
+        NSLog(@"didUpdateLocation");
+    }];
+    
+    [manager setDidFailBlock:^(CLLocationManager *manager, NSError *error) {
+        NSLog(@"didFailUpdateLocation");
+    }];
+    
+    [manager startUpdatingLocationWithAccuracy:kCLLocationAccuracyHundredMeters];
+
 
 # ARC Support
 
