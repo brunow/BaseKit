@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "BaseKitLocationManager.h"
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -24,6 +26,19 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    BKLocationManager *manager = [BKLocationManager sharedManager];
+    
+    [manager setDidUpdateLocationBlock:^(CLLocationManager *manager, CLLocation *newLocation, CLLocation *oldLocation) {
+        NSLog(@"didUpdateLocation");
+    }];
+    
+    [manager setDidFailBlock:^(CLLocationManager *manager, NSError *error) {
+        NSLog(@"didFailUpdateLocation");
+    }];
+    
+    [manager startUpdatingLocationWithAccuracy:kCLLocationAccuracyHundredMeters];
+    
     return YES;
 }
 
