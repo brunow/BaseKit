@@ -29,7 +29,7 @@
 
     #if BK_HAS_WEAK
         #define BK_PROP_WEAK __weak
-        #define BK_UNRETAINED_BLOCK_IVAR __weak
+        #define BK_UNRETAINED_BLOCK_IVAR __weak __block
     #else
         #define BK_PROP_WEAK __unsafe_unretained
         #define BK_UNRETAINED_BLOCK_IVAR __unsafe_unretained

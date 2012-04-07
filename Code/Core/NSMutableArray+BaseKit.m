@@ -37,7 +37,7 @@
 - (void)moveObjectFromIndex:(NSInteger)from toIndex:(NSInteger)to {
     if (to != from) {
         id object = [self objectAtIndex:from];
-        BK_RETAIN(object);
+        #pragma unused(BK_RETAIN(object))
         
         if (to >= self.count) {
             [self addObject:object];

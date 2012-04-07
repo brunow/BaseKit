@@ -97,7 +97,7 @@
 #if !BK_HAS_ARC
         Block_release(_didUpdateLocationBlock);
 #endif
-        _didUpdateLocationBlock = Block_copy(block);
+        _didUpdateLocationBlock = [block copy];
     }
 }
 
@@ -108,7 +108,7 @@
 #if !BK_HAS_ARC
         Block_release(_didFailBlock);
 #endif
-        _didFailBlock = Block_copy(block);
+        _didFailBlock = [block copy];
     }
 }
 

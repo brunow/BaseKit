@@ -32,7 +32,7 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                           target:nil
                                                                           action:nil];
-    BK_AUTORELEASE(item);
+    #pragma unused(BK_AUTORELEASE(item))
 	return item;
 }
 

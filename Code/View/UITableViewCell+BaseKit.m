@@ -34,7 +34,7 @@
     if (cell == nil) {
         UITableViewCellStyle cellStyle = [self cellStyle];
         cell = [[self alloc] initWithStyle:cellStyle reuseIdentifier:cellID];
-        BK_AUTORELEASE(cell);
+        #pragma unused(BK_AUTORELEASE(cell))
     } 
     
     return cell;

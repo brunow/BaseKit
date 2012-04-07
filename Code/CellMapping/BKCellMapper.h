@@ -21,9 +21,9 @@
 
 @interface BKCellMapper : NSObject
 
-@property (nonatomic, readonly) BKCellMapping *cellMapping;
-@property (nonatomic, readonly) id object;
-@property (nonatomic, readonly) UITableViewCell *cell;
+@property (nonatomic, readonly, BK_PROP_RETAIN) BKCellMapping *cellMapping;
+@property (nonatomic, readonly, BK_PROP_RETAIN) id object;
+@property (nonatomic, readonly, BK_PROP_RETAIN) UITableViewCell *cell;
 
 + (NSSet *)cellMappingsForObject:(id)object mappings:(NSDictionary *)mappings;
 
