@@ -68,6 +68,7 @@
 		E72743B014B648C200720D76 /* BookViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewCell.h; sourceTree = "<group>"; };
 		E72743B114B648C200720D76 /* BookViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewCell.m; sourceTree = "<group>"; };
 		E72743B314B648DB00720D76 /* BookViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewCell.xib; sourceTree = "<group>"; };
+		E7500A911530CD6200090716 /* BKMacrosDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKMacrosDefinitions.h; sourceTree = "<group>"; };
 		E76A918B14E06CBE003F35ED /* BaseKitCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCore.h; sourceTree = "<group>"; };
 		E76A918C14E06CBE003F35ED /* BaseKitCoreAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCoreAdditions.h; sourceTree = "<group>"; };
 		E76A918D14E06CBE003F35ED /* BKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBlocks.h; sourceTree = "<group>"; };
@@ -211,6 +212,7 @@
 		E76A918A14E06CBE003F35ED /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E7500A911530CD6200090716 /* BKMacrosDefinitions.h */,
 				E76A918B14E06CBE003F35ED /* BaseKitCore.h */,
 				E76A918C14E06CBE003F35ED /* BaseKitCoreAdditions.h */,
 				E76A918D14E06CBE003F35ED /* BKBlocks.h */,
