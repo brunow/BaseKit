@@ -28,10 +28,10 @@
     #define BK_RELEASE_SAFELY(xx)
 
     #if BK_HAS_WEAK
-        #define BK_PROP_WEAK weak
+        #define BK_PROP_WEAK          weak
         #define BK_UNRETAINED_BLOCK_IVAR __weak __block
     #else
-        #define BK_PROP_WEAK __unsafe_unretained
+        #define BK_PROP_WEAK          unsafe_unretained
         #define BK_UNRETAINED_BLOCK_IVAR __unsafe_unretained
     #endif
 #else
