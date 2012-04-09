@@ -28,7 +28,7 @@
     #define BK_RELEASE_SAFELY(xx)
 
     #if BK_HAS_WEAK
-        #define BK_PROP_WEAK __weak
+        #define BK_PROP_WEAK weak
         #define BK_UNRETAINED_BLOCK_IVAR __weak __block
     #else
         #define BK_PROP_WEAK __unsafe_unretained
