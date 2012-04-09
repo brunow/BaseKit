@@ -17,6 +17,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "BKMacrosDefinitions.h"
+
 @class BKCellMapping;
 
 @interface BKCellMapper : NSObject

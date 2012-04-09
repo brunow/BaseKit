@@ -20,11 +20,11 @@
 #define BK_HAS_WEAK __has_feature(objc_arc_weak)
 
 #if BK_HAS_ARC
-    #define BK_RETAIN(xx)           xx
+    #define BK_RETAIN(xx)           ((void)(0))
     #define BK_RELEASE(xx)
-    #define BK_AUTORELEASE(xx)      xx
-    #define BK_PROP_COPY nonatomic, copy
-    #define BK_PROP_RETAIN strong
+    #define BK_AUTORELEASE(xx)      ((void)(0))
+    #define BK_PROP_COPY            nonatomic, copy
+    #define BK_PROP_RETAIN          strong
     #define BK_RELEASE_SAFELY(xx)
 
     #if BK_HAS_WEAK
@@ -38,9 +38,9 @@
     #define BK_RETAIN(xx)             [xx retain];
     #define BK_RELEASE(xx)            [xx release];
     #define BK_AUTORELEASE(xx)        [xx autorelease];
-    #define BK_PROP_COPY nonatomic,   copy
-    #define BK_PROP_WEAK assign
-    #define BK_PROP_RETAIN retain
+    #define BK_PROP_COPY              nonatomic, copy
+    #define BK_PROP_WEAK              assign
+    #define BK_PROP_RETAIN            retain
     #define BK_RELEASE_SAFELY(xx)     { [xx release]; xx = nil; }
     #define BK_UNRETAINED_BLOCK_IVAR __block
 #endif
