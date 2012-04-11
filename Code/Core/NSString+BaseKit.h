@@ -29,6 +29,13 @@
 - (NSString *)stringByCamelizingString;
 
 /**
+ * Return the underscored string
+ * Expected that the string is of type: first_letter
+ * firstLetter -> first_letter
+ */
+- (NSString *)stringByUnderscoringWord;
+
+/**
  * 
  */
 - (BOOL)containString:(NSString *)string;

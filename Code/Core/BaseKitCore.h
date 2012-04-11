@@ -25,4 +25,6 @@
 #import "BKToogleValue.h"
 #import "BKDeviceAvailability.h"
 
+#import "BKUtils.h"
+
 #import "BKMacrosDefinitions.h"

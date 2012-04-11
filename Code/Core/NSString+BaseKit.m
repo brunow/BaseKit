@@ -51,6 +51,31 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSString *)stringByUnderscoringWord {
+    NSMutableString *word = [NSMutableString string];
+    NSMutableString *strings = [NSMutableString string];
+    
+    for (NSInteger index = 0; index < self.length; index++) {
+        NSRange letterRange = NSMakeRange(index, 1);
+        NSString *character = [[self substringWithRange:letterRange] uppercaseString];
+        BOOL isUppercase = [[NSCharacterSet uppercaseLetterCharacterSet]
+                            characterIsMember:[self characterAtIndex:index]];
+        
+        if (isUppercase) {
+            [strings appendFormat:@"_%@", [word lowercaseString]];
+            word = [NSMutableString string];
+        }
+        
+        [strings appendString:character];
+    }
+    
+    [strings deleteCharactersInRange:NSMakeRange(0, 1)];
+    
+    return strings;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (BOOL)containString:(NSString *)string {
     return ([self rangeOfString:string].location == NSNotFound) ? NO : YES;
 }
