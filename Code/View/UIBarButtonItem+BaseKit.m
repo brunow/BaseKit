@@ -32,9 +32,22 @@
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                           target:nil
                                                                           action:nil];
-    #pragma unused(BK_AUTORELEASE(item))
-	return item;
+    
+	return BK_AUTORELEASE(item);
 }
+
+
++ (UIBarButtonItem *)barButtonSystemItem:(UIBarButtonSystemItem)systemItem
+                                  target:(id)target
+                                  action:(SEL)action {
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:systemItem
+                                                                          target:target
+                                                                          action:action];
+    
+    return BK_AUTORELEASE(item);
+}
+
 
 
 @end
