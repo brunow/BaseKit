@@ -44,6 +44,7 @@
 		E7F44C4614E2902200CFAE4B /* CustomRowHeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44C4514E2902200CFAE4B /* CustomRowHeightTableViewController.m */; };
 		E7FC106914E1442E009B3C58 /* CatalogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FC106814E1442E009B3C58 /* CatalogTableViewController.m */; };
 		E7FC71461545D104008D1401 /* EditingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FC71451545D104008D1401 /* EditingTableViewController.m */; };
+		E7FC719D1545F172008D1401 /* UITableView+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FC719C1545F172008D1401 /* UITableView+BaseKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +126,8 @@
 		E7FC106814E1442E009B3C58 /* CatalogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogTableViewController.m; sourceTree = "<group>"; };
 		E7FC71441545D104008D1401 /* EditingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingTableViewController.h; sourceTree = "<group>"; };
 		E7FC71451545D104008D1401 /* EditingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingTableViewController.m; sourceTree = "<group>"; };
+		E7FC719B1545F172008D1401 /* UITableView+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BaseKit.h"; sourceTree = "<group>"; };
+		E7FC719C1545F172008D1401 /* UITableView+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BaseKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +275,8 @@
 		E7C629A314D5CAC9007C6EB8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E7FC719B1545F172008D1401 /* UITableView+BaseKit.h */,
+				E7FC719C1545F172008D1401 /* UITableView+BaseKit.m */,
 				E7C629A414D5CAC9007C6EB8 /* BaseKitView.h */,
 				E7C629A514D5CAC9007C6EB8 /* BaseKitViewAdditions.h */,
 				E7C629A614D5CAC9007C6EB8 /* BKViewControllerDelegate.h */,
@@ -378,6 +383,7 @@
 				E7F44C4614E2902200CFAE4B /* CustomRowHeightTableViewController.m in Sources */,
 				E7212CC014FA8084004736A6 /* CustomDataSourceAndDelegateTableViewController.m in Sources */,
 				E7FC71461545D104008D1401 /* EditingTableViewController.m in Sources */,
+				E7FC719D1545F172008D1401 /* UITableView+BaseKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

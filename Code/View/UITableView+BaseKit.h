@@ -21,4 +21,6 @@
 
 - (void)reloadDataAndKeepSelection;
 
+- (void)toggleEditAnimated:(BOOL)animated;
+
 @end
