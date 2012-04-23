@@ -16,12 +16,14 @@
 #import "SimpleMappingTableViewController.h"
 #import "CustomRowHeightTableViewController.h"
 #import "CustomDataSourceAndDelegateTableViewController.h"
+#import "EditingTableViewController.h"
 
 #define DYNAMIC_MAPPING @"DynamicMappingTableViewController"
 #define NIB_CELL @"NibCellTableViewController"
 #define SIMPLE_MAPPING @"SimpleMappingTableViewController"
 #define CUSTOM_ROW_HEIGHT @"CustomRowHeightTableViewController"
 #define CUSTOM_DATASOURCE_AND_DELEGATE @"CustomDataSourceAndDelegateTableViewController"
+#define EDITING @"EditingTableViewController"
 
 @implementation CatalogTableViewController
 
@@ -56,6 +58,7 @@
                       [Item itemWithTitle:@"Dynamic Mapping example" subtitle:nil type:DYNAMIC_MAPPING],
                       [Item itemWithTitle:@"Custom row height example" subtitle:nil type:CUSTOM_ROW_HEIGHT],
                       [Item itemWithTitle:@"Custom dataSource and delegate" subtitle:nil type:CUSTOM_DATASOURCE_AND_DELEGATE],
+                      [Item itemWithTitle:@"Editing table view" subtitle:nil type:EDITING],
                       nil];
     
     [self.tableModel loadTableItems:items];

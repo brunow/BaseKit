@@ -9,9 +9,7 @@
 #import "SimpleMappingTableViewController.h"
 
 #import "BaseKitCellMapping.h"
-
 #import "Item.h"
-
 
 @implementation SimpleMappingTableViewController
 

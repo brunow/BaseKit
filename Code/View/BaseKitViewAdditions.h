@@ -22,3 +22,4 @@
 #import "UIViewController+BaseKit.h"
 #import "UINavigationController+BaseKit.h"
 #import "UITableView+BaseKit.h"
+#import "UIBarButtonItem+BaseKit.h"

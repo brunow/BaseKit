@@ -46,6 +46,9 @@
 
 - (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath;
 
+- (void)commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+         forRowAtIndexPath:(NSIndexPath *)indexPath;
+
 - (void)loadTableItems:(NSArray *)items;
 
 @end

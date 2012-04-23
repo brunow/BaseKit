@@ -43,6 +43,7 @@
 		E7F44AFE14E1C01A00CFAE4B /* SimpleMappingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44AFD14E1C01900CFAE4B /* SimpleMappingTableViewController.m */; };
 		E7F44C4614E2902200CFAE4B /* CustomRowHeightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F44C4514E2902200CFAE4B /* CustomRowHeightTableViewController.m */; };
 		E7FC106914E1442E009B3C58 /* CatalogTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FC106814E1442E009B3C58 /* CatalogTableViewController.m */; };
+		E7FC71461545D104008D1401 /* EditingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FC71451545D104008D1401 /* EditingTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,8 @@
 		E7F44C4514E2902200CFAE4B /* CustomRowHeightTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomRowHeightTableViewController.m; sourceTree = "<group>"; };
 		E7FC106714E1442E009B3C58 /* CatalogTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogTableViewController.h; sourceTree = "<group>"; };
 		E7FC106814E1442E009B3C58 /* CatalogTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogTableViewController.m; sourceTree = "<group>"; };
+		E7FC71441545D104008D1401 /* EditingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingTableViewController.h; sourceTree = "<group>"; };
+		E7FC71451545D104008D1401 /* EditingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,8 @@
 				E7F44C4514E2902200CFAE4B /* CustomRowHeightTableViewController.m */,
 				E7212CBE14FA8084004736A6 /* CustomDataSourceAndDelegateTableViewController.h */,
 				E7212CBF14FA8084004736A6 /* CustomDataSourceAndDelegateTableViewController.m */,
+				E7FC71441545D104008D1401 /* EditingTableViewController.h */,
+				E7FC71451545D104008D1401 /* EditingTableViewController.m */,
 			);
 			path = CellMappingExample;
 			sourceTree = "<group>";
@@ -372,6 +377,7 @@
 				E7F44AFE14E1C01A00CFAE4B /* SimpleMappingTableViewController.m in Sources */,
 				E7F44C4614E2902200CFAE4B /* CustomRowHeightTableViewController.m in Sources */,
 				E7212CC014FA8084004736A6 /* CustomDataSourceAndDelegateTableViewController.m in Sources */,
+				E7FC71461545D104008D1401 /* EditingTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

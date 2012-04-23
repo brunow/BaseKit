@@ -168,6 +168,32 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+         forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    id object = [self objectForRowAtIndexPath:indexPath];
+    BKCellMapping *cellMapping = [self cellMappingForObject:object];
+    
+    if (nil != cellMapping) {
+        cellMapping.commitEditingStyleBlock(object, indexPath, editingStyle);
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (UITableViewCellEditingStyle)editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    id object = [self objectForRowAtIndexPath:indexPath];
+    BKCellMapping *cellMapping = [self cellMappingForObject:object];
+    
+    if (nil != cellMapping) {
+        return cellMapping.editingStyleBlock(object, indexPath);
+    }
+    
+    return UITableViewCellEditingStyleNone;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadTableItems:(NSArray *)items {
     self.items = [NSMutableArray arrayWithArray:items];
     [self.tableView reloadData];
@@ -225,6 +251,21 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self heightForRowAtIndexPath:indexPath];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void) tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+ forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return [self commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleDelete;
 }
 
 
