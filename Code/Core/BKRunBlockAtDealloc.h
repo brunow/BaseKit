@@ -18,4 +18,6 @@
 
 @property (nonatomic, copy) BKBasicBlock block;
 
+- (id)initWithBlock:(BKBasicBlock)block;
+
 @end
