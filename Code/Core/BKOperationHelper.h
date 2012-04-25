@@ -45,19 +45,19 @@
 
 
 /**
- * Execute block in main thread
+ * Execute block on main thread
  *
- * Execute your long operation in main thread
+ * Execute your long operation on main thread
  *
  * <h3>Example</h3>
  *
  * @code
- * [BKOperationHelper performBlockInMainThread:^{
+ * [BKOperationHelper performBlockOnMainThread:^{
  *  } waitUntilDone:NO];
  * @endcode
  */
-+ (void)performBlockInMainThread:(BKBasicBlock)block waitUntilDone:(BOOL)waitUntilDone;
++ (void)performBlockOnMainThread:(BKBasicBlock)block waitUntilDone:(BOOL)waitUntilDone;
 
-+ (void)performBlockInMainThread:(BKBasicBlock)block;
++ (void)performBlockOnMainThread:(BKBasicBlock)block;
 
 @end
