@@ -131,6 +131,8 @@
 		E7A480EA14A909B0000E0F5A /* BKNetworkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A480E814A909B0000E0F5A /* BKNetworkClient.m */; };
 		E7A4815914A9BBBC000E0F5A /* BKNetworkMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = E7A4815814A9BBBC000E0F5A /* BKNetworkMethod.h */; };
 		E7A4816914AA0214000E0F5A /* BKNetworkClientTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A4816814AA0214000E0F5A /* BKNetworkClientTest.m */; };
+		E7C71087154839F000D6DE4F /* BKRunBlockAtDealloc.h in Headers */ = {isa = PBXBuildFile; fileRef = E7C71085154839F000D6DE4F /* BKRunBlockAtDealloc.h */; };
+		E7C71088154839F000D6DE4F /* BKRunBlockAtDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C71086154839F000D6DE4F /* BKRunBlockAtDealloc.m */; };
 		E7D2C60714B70C5000D03E0F /* BaseKitCoreAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E7D2C60514B70C5000D03E0F /* BaseKitCoreAdditions.h */; };
 		E7D2C66714B734E200D03E0F /* NSOperationQueue+BaseKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E7D2C66514B734E200D03E0F /* NSOperationQueue+BaseKit.h */; };
 		E7D2C66814B734E200D03E0F /* NSOperationQueue+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7D2C66614B734E200D03E0F /* NSOperationQueue+BaseKit.m */; };
@@ -277,6 +279,8 @@
 		E7A480E814A909B0000E0F5A /* BKNetworkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKNetworkClient.m; sourceTree = "<group>"; };
 		E7A4815814A9BBBC000E0F5A /* BKNetworkMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKNetworkMethod.h; sourceTree = "<group>"; };
 		E7A4816814AA0214000E0F5A /* BKNetworkClientTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKNetworkClientTest.m; sourceTree = "<group>"; };
+		E7C71085154839F000D6DE4F /* BKRunBlockAtDealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRunBlockAtDealloc.h; sourceTree = "<group>"; };
+		E7C71086154839F000D6DE4F /* BKRunBlockAtDealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRunBlockAtDealloc.m; sourceTree = "<group>"; };
 		E7D2C60514B70C5000D03E0F /* BaseKitCoreAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCoreAdditions.h; sourceTree = "<group>"; };
 		E7D2C66514B734E200D03E0F /* NSOperationQueue+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+BaseKit.h"; sourceTree = "<group>"; };
 		E7D2C66614B734E200D03E0F /* NSOperationQueue+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+BaseKit.m"; sourceTree = "<group>"; };
@@ -547,6 +551,8 @@
 				E72009C815223F630025B36D /* BKMacrosDefinitions.h */,
 				E709037415355C4500B3EDA8 /* BKUtils.h */,
 				E709037515355C4500B3EDA8 /* BKUtils.m */,
+				E7C71085154839F000D6DE4F /* BKRunBlockAtDealloc.h */,
+				E7C71086154839F000D6DE4F /* BKRunBlockAtDealloc.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -660,6 +666,7 @@
 				E720A4151524EA6F008BA19E /* UITableView+BaseKit.h in Headers */,
 				E720A41A1524EDC3008BA19E /* UIBarButtonItem+BaseKit.h in Headers */,
 				E709037615355C4500B3EDA8 /* BKUtils.h in Headers */,
+				E7C71087154839F000D6DE4F /* BKRunBlockAtDealloc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,6 +817,7 @@
 				E720A4161524EA6F008BA19E /* UITableView+BaseKit.m in Sources */,
 				E720A41B1524EDC3008BA19E /* UIBarButtonItem+BaseKit.m in Sources */,
 				E709037715355C4500B3EDA8 /* BKUtils.m in Sources */,
+				E7C71088154839F000D6DE4F /* BKRunBlockAtDealloc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
