@@ -24,6 +24,7 @@
 #import "BKOperationHelper.h"
 #import "BKToogleValue.h"
 #import "BKDeviceAvailability.h"
+#import "BKRunBlockAtDealloc.h"
 
 #import "BKUtils.h"
 
