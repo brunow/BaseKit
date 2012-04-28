@@ -67,14 +67,14 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (void)performBlockOnMainThread:(BKBasicBlock)block waitUntilDone:(BOOL)waitUntilDone {
++ (void)performBlockInMainThread:(BKBasicBlock)block waitUntilDone:(BOOL)waitUntilDone {
     [self performBlockInBackground:nil completion:block waitUntilDone:waitUntilDone];
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (void)performBlockOnMainThread:(BKBasicBlock)block {
-    [self performBlockOnMainThread:block waitUntilDone:NO];
++ (void)performBlockInMainThread:(BKBasicBlock)block {
+    [self performBlockInMainThread:block waitUntilDone:NO];
 }
 
 

@@ -21,8 +21,10 @@
 
 #if BK_HAS_ARC
     #define BK_RETAIN(xx)           (xx)
+    #define BK_RETAIN_WITHOUT_RETURN(xx)
     #define BK_RELEASE(xx)
     #define BK_AUTORELEASE(xx)      (xx)
+    #define BK_AUTORELEASE_WITHOUT_RETURN(xx)
     #define BK_PROP_COPY            nonatomic, copy
     #define BK_PROP_RETAIN          strong
     #define BK_RELEASE_SAFELY(xx)
@@ -37,8 +39,10 @@
     #endif
 #else
     #define BK_RETAIN(xx)             [xx retain];
+    #define BK_RETAIN_WITHOUT_RETURN(xx)  [xx retain];
     #define BK_RELEASE(xx)            [xx release];
     #define BK_AUTORELEASE(xx)        [xx autorelease];
+    #define BK_AUTORELEASE_WITHOUT_RETURN(xx) [xx autorelease];
     #define BK_PROP_COPY              nonatomic, copy
     #define BK_PROP_WEAK              assign
     #define BK_PROP_RETAIN            retain
