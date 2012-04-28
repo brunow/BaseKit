@@ -43,6 +43,8 @@
 @synthesize rowHeight = _rowHeight;
 @synthesize rowHeightBlock = _rowHeightBlock;
 @synthesize willDisplayCellBlock = _willDisplayCellBlock;
+@synthesize commitEditingStyleBlock = _commitEditingStyleBlock;
+@synthesize editingStyleBlock = _editingStyleBlock;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -53,6 +55,8 @@
     self.onSelectRowBlock = nil;
     self.rowHeightBlock = nil;
     self.willDisplayCellBlock = nil;
+    self.commitEditingStyleBlock = nil;
+    self.editingStyleBlock = nil;
     
     [super dealloc];
 }
@@ -148,6 +152,18 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)willDisplayCellWithBlock:(BKTableViewCellWillDisplayCellBlock)willDisplayCellBlock {
     self.willDisplayCellBlock = willDisplayCellBlock;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)commitEditingStyleWithBlock:(BKTableViewCommitEditingStyleBlock)commitEditingStyleBlock {
+    self.commitEditingStyleBlock = commitEditingStyleBlock;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)editingStyleWithBlock:(BKTableViewEditingStyleBlock)editingStyleBlock {
+    self.editingStyleBlock = editingStyleBlock;
 }
 
 

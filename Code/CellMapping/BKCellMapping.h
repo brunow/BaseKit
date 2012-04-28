@@ -32,6 +32,8 @@
 @property (nonatomic, assign) CGFloat rowHeight;
 @property (nonatomic, copy) BKCellRowHeightBlock rowHeightBlock;
 @property (nonatomic, copy) BKTableViewCellWillDisplayCellBlock willDisplayCellBlock;
+@property (nonatomic, copy) BKTableViewCommitEditingStyleBlock commitEditingStyleBlock;
+@property (nonatomic, copy) BKTableViewEditingStyleBlock editingStyleBlock;
 
 - (id)initWithObjectClass:(Class)objectClass;
 
@@ -52,6 +54,10 @@
 - (void)onSelectRowWithBlock:(BKTableViewCellSelectionBlock)onSelectRowBlock;
 
 - (void)willDisplayCellWithBlock:(BKTableViewCellWillDisplayCellBlock)willDisplayCellBlock;
+
+- (void)commitEditingStyleWithBlock:(BKTableViewCommitEditingStyleBlock)commitEditingStyleBlock;
+
+- (void)editingStyleWithBlock:(BKTableViewEditingStyleBlock)editingStyleBlock;
 
 - (void)mapObjectToCellClass:(Class)cellClass;
 

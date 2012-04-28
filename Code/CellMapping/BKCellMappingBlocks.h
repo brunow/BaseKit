@@ -30,3 +30,7 @@ typedef CGFloat(^BKCellRowHeightBlock)(Class cellClass, id object, NSIndexPath *
 typedef id(^BKObjectForRowAtIndexPathBlock)(NSIndexPath *indexPath);
 
 typedef void(^BKTableViewCellWillDisplayCellBlock)(UITableViewCell *cell, id object, NSIndexPath *indexPath);
+
+typedef void(^BKTableViewCommitEditingStyleBlock)(id object, NSIndexPath *indexPath, UITableViewCellEditingStyle editingStyle);
+
+typedef UITableViewCellEditingStyle(^BKTableViewEditingStyleBlock)(id object, NSIndexPath *indexPath);

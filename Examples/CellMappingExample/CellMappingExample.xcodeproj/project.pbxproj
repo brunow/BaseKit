@@ -20,6 +20,7 @@
 		E72743AF14B63DE700720D76 /* MovieViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72743AE14B63DE700720D76 /* MovieViewCell.m */; };
 		E72743B214B648C300720D76 /* BookViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E72743B114B648C200720D76 /* BookViewCell.m */; };
 		E72743B414B648DB00720D76 /* BookViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72743B314B648DB00720D76 /* BookViewCell.xib */; };
+		E76721B5154BBBA800B0EADC /* WillDisplayCellExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E76721B4154BBBA800B0EADC /* WillDisplayCellExampleViewController.m */; };
 		E76A91A714E06CBE003F35ED /* BKDeviceAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = E76A918F14E06CBE003F35ED /* BKDeviceAvailability.m */; };
 		E76A91A814E06CBF003F35ED /* BKIteratingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E76A919114E06CBE003F35ED /* BKIteratingHelper.m */; };
 		E76A91A914E06CBF003F35ED /* BKOperationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E76A919314E06CBE003F35ED /* BKOperationHelper.m */; };
@@ -71,6 +72,8 @@
 		E72743B114B648C200720D76 /* BookViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewCell.m; sourceTree = "<group>"; };
 		E72743B314B648DB00720D76 /* BookViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewCell.xib; sourceTree = "<group>"; };
 		E7500A911530CD6200090716 /* BKMacrosDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKMacrosDefinitions.h; sourceTree = "<group>"; };
+		E76721B3154BBBA800B0EADC /* WillDisplayCellExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WillDisplayCellExampleViewController.h; sourceTree = "<group>"; };
+		E76721B4154BBBA800B0EADC /* WillDisplayCellExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WillDisplayCellExampleViewController.m; sourceTree = "<group>"; };
 		E76A918B14E06CBE003F35ED /* BaseKitCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCore.h; sourceTree = "<group>"; };
 		E76A918C14E06CBE003F35ED /* BaseKitCoreAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCoreAdditions.h; sourceTree = "<group>"; };
 		E76A918D14E06CBE003F35ED /* BKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBlocks.h; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 				E7212CBF14FA8084004736A6 /* CustomDataSourceAndDelegateTableViewController.m */,
 				E7FC71441545D104008D1401 /* EditingTableViewController.h */,
 				E7FC71451545D104008D1401 /* EditingTableViewController.m */,
+				E76721B3154BBBA800B0EADC /* WillDisplayCellExampleViewController.h */,
+				E76721B4154BBBA800B0EADC /* WillDisplayCellExampleViewController.m */,
 			);
 			path = CellMappingExample;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				E7212CC014FA8084004736A6 /* CustomDataSourceAndDelegateTableViewController.m in Sources */,
 				E7FC71461545D104008D1401 /* EditingTableViewController.m in Sources */,
 				E7FC719D1545F172008D1401 /* UITableView+BaseKit.m in Sources */,
+				E76721B5154BBBA800B0EADC /* WillDisplayCellExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
