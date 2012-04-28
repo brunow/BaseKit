@@ -17,6 +17,7 @@
 #import "CustomRowHeightTableViewController.h"
 #import "CustomDataSourceAndDelegateTableViewController.h"
 #import "EditingTableViewController.h"
+#import "WillDisplayCellExampleViewController.h"
 
 #define DYNAMIC_MAPPING @"DynamicMappingTableViewController"
 #define NIB_CELL @"NibCellTableViewController"
@@ -24,6 +25,7 @@
 #define CUSTOM_ROW_HEIGHT @"CustomRowHeightTableViewController"
 #define CUSTOM_DATASOURCE_AND_DELEGATE @"CustomDataSourceAndDelegateTableViewController"
 #define EDITING @"EditingTableViewController"
+#define WILL_DISPLAY_CELL @"WillDisplayCellExampleViewController"
 
 @implementation CatalogTableViewController
 
@@ -59,6 +61,7 @@
                       [Item itemWithTitle:@"Custom row height example" subtitle:nil type:CUSTOM_ROW_HEIGHT],
                       [Item itemWithTitle:@"Custom dataSource and delegate" subtitle:nil type:CUSTOM_DATASOURCE_AND_DELEGATE],
                       [Item itemWithTitle:@"Editing table view" subtitle:nil type:EDITING],
+                      [Item itemWithTitle:@"Will display cell block" subtitle:nil type:WILL_DISPLAY_CELL],
                       nil];
     
     [self.tableModel loadTableItems:items];

@@ -30,19 +30,10 @@
         [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
         [cellMapping mapObjectToCellClass:[UITableViewCell class]];
         
-        [cellMapping commitEditingStyleWithBlock:^(id object, NSIndexPath *indexPath, UITableViewCellEditingStyle editingStyle) {
-            if (editingStyle == UITableViewCellEditingStyleDelete) {
-                [self.tableModel.items removeObject:object];
-                NSArray *rows = [NSArray arrayWithObjects:indexPath, nil];
-                [self.tableView deleteRowsAtIndexPaths:rows withRowAnimation:UITableViewRowAnimationMiddle];
-            }
+        [cellMapping willDisplayCellWithBlock:^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+            NSLog(@"Will display cell");
         }];
-        
-        // Not needed but you can set certain object to UITableViewCellEditingStyleInsert or UITableViewCellEditingStyleNone
-        [cellMapping editingStyleWithBlock:^UITableViewCellEditingStyle(id object, NSIndexPath *indexPath) {
-            return UITableViewCellEditingStyleDelete;
-        }];
-        
+                
         [self.tableModel registerMapping:cellMapping];
     }];
     
@@ -56,8 +47,6 @@
                       nil];
     
     [self.tableModel loadTableItems:items];
-    
-    [self.tableView setEditing:YES animated:NO];
 }
 
 
