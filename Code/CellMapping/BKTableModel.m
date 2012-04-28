@@ -168,28 +168,14 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-         forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (void)willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     id object = [self objectForRowAtIndexPath:indexPath];
     BKCellMapping *cellMapping = [self cellMappingForObject:object];
     
-    if (nil != cellMapping) {
-        cellMapping.commitEditingStyleBlock(object, indexPath, editingStyle);
+    if (nil != cellMapping.willDisplayCellBlock) {
+        UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
+        cellMapping.willDisplayCellBlock(cell, object, indexPath);
     }
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (UITableViewCellEditingStyle)editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    id object = [self objectForRowAtIndexPath:indexPath];
-    BKCellMapping *cellMapping = [self cellMappingForObject:object];
-    
-    if (nil != cellMapping) {
-        return cellMapping.editingStyleBlock(object, indexPath);
-    }
-    
-    return UITableViewCellEditingStyleNone;
 }
 
 
@@ -255,17 +241,11 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void) tableView:(UITableView *)tableView
-commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
- forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView
+  willDisplayCell:(UITableViewCell *)cell
+forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return [self commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellEditingStyleDelete;
+    return [self willDisplayCell:cell forRowAtIndexPath:indexPath];
 }
 
 

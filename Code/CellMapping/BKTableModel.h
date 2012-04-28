@@ -42,12 +42,11 @@
 
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 
+- (void)willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath;
+
 - (void)objectForRowAtIndexPathWithBlock:(BKObjectForRowAtIndexPathBlock)block;
 
 - (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-- (void)commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-         forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (void)loadTableItems:(NSArray *)items;
 

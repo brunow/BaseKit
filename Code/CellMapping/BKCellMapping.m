@@ -42,8 +42,7 @@
 @synthesize onSelectRowBlock = _onSelectRowBlock;
 @synthesize rowHeight = _rowHeight;
 @synthesize rowHeightBlock = _rowHeightBlock;
-@synthesize commitEditingStyleBlock = _commitEditingStyleBlock;
-@synthesize editingStyleBlock = _editingStyleBlock;
+@synthesize willDisplayCellBlock = _willDisplayCellBlock;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -53,8 +52,7 @@
     self.nib = nil;
     self.onSelectRowBlock = nil;
     self.rowHeightBlock = nil;
-    self.commitEditingStyleBlock = nil;
-    self.editingStyleBlock = nil;
+    self.willDisplayCellBlock = nil;
     
     [super dealloc];
 }
@@ -76,11 +74,9 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithObjectClass:(Class)objectClass {
     self = [self init];
-    
     if (self) {
         self.objectClass = objectClass;
     }
-    
     return self;
 }
 
@@ -90,7 +86,7 @@
     BKCellMapping *cellMapping = [[self alloc] initWithObjectClass:objectClass];
     
     block(cellMapping);
-    
+
     return BK_AUTORELEASE(cellMapping);
 }
 
@@ -150,14 +146,14 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)commitEditingStyleWithBlock:(BKTableViewCommitEditingStyleBlock)commitEditingStyleBlock {
-    self.commitEditingStyleBlock = commitEditingStyleBlock;
+- (void)willDisplayCellWithBlock:(BKTableViewCellWillDisplayCellBlock)willDisplayCellBlock {
+    self.willDisplayCellBlock = willDisplayCellBlock;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)editingStyleWithBlock:(BKTableViewEditingStyleBlock)editingStyleBlock {
-    self.editingStyleBlock = editingStyleBlock;
++ (void)configureMappingsWithTableModel:(BKTableModel *)tableModel object:(id)object {
+    
 }
 
 

@@ -20,6 +20,8 @@
 #import "BKCellMappingBlocks.h"
 #import "BKMacrosDefinitions.h"
 
+@class BKTableModel;
+
 @interface BKCellMapping : NSObject
 
 @property (nonatomic, assign) Class objectClass;
@@ -29,8 +31,7 @@
 @property (nonatomic, copy) BKTableViewCellSelectionBlock onSelectRowBlock;
 @property (nonatomic, assign) CGFloat rowHeight;
 @property (nonatomic, copy) BKCellRowHeightBlock rowHeightBlock;
-@property (nonatomic, copy) BKTableViewCommitEditingStyleBlock commitEditingStyleBlock;
-@property (nonatomic, copy) BKTableViewEditingStyleBlock editingStyleBlock;
+@property (nonatomic, copy) BKTableViewCellWillDisplayCellBlock willDisplayCellBlock;
 
 - (id)initWithObjectClass:(Class)objectClass;
 
@@ -50,11 +51,10 @@
 
 - (void)onSelectRowWithBlock:(BKTableViewCellSelectionBlock)onSelectRowBlock;
 
-- (void)commitEditingStyleWithBlock:(BKTableViewCommitEditingStyleBlock)commitEditingStyleBlock;
-
-- (void)editingStyleWithBlock:(BKTableViewEditingStyleBlock)editingStyleBlock;
+- (void)willDisplayCellWithBlock:(BKTableViewCellWillDisplayCellBlock)willDisplayCellBlock;
 
 - (void)mapObjectToCellClass:(Class)cellClass;
 
++ (void)configureMappingsWithTableModel:(BKTableModel *)tableModel object:(id)object;
 
 @end
