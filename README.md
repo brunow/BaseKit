@@ -101,3 +101,10 @@ If you use BaseKit I'll be happy to add your app name here.
 
 [LiègeExpo2017](http://itunes.apple.com/fr/app/liege-expo-2017/id505451794?mt=8)
 
+# Contact
+
+Bruno Wernimont
+
+- http://twitter.com/brunowernimont
+
+- hello@brunowernimont.be
