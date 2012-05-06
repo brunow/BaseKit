@@ -24,7 +24,6 @@
 @implementation BKLocationManager
 
 @synthesize locationManager = _locationManager;
-@synthesize delegate;
 
 
 #if !BK_HAS_ARC
@@ -141,12 +140,6 @@
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation
            fromLocation:(CLLocation *)oldLocation {
-
-    if ([self.delegate respondsToSelector:@selector(locationManager:didUpdateToLocation:fromLocation:)]) {
-        [self.delegate locationManager:manager
-                   didUpdateToLocation:newLocation
-                          fromLocation:oldLocation];
-    }
     
     if (nil != _didUpdateLocationBlock) {
         _didUpdateLocationBlock(manager, newLocation, oldLocation);
@@ -157,10 +150,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)locationManager:(CLLocationManager *)manager
 	   didFailWithError:(NSError *)error {
-    
-    if ([self.delegate respondsToSelector:@selector(locationManager:didFailWithError:)]) {
-        [self.delegate locationManager:manager didFailWithError:error];
-    }
     
     if (nil != _didFailBlock) {
         _didFailBlock(manager, error);
