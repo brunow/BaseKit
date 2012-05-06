@@ -33,8 +33,6 @@ typedef void (^BKLocationManagerDidFail)(CLLocationManager *manager, NSError *er
 
 + (id)sharedManager;
 
-+ (id)manager;
-
 - (void)startUpdatingLocationWithAccuracy:(CLLocationAccuracy)accurary;
 
 - (void)startUpdatingLocation;
