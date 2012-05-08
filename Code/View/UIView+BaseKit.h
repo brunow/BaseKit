@@ -15,12 +15,10 @@
 // limitations under the License.
 //
 
-#import "BaseKitView.h"
+#import <UIKit/UIKit.h>
 
-#import "UITableViewCell+BaseKit.h"
-#import "UIView+Debug.h"
-#import "UIViewController+BaseKit.h"
-#import "UINavigationController+BaseKit.h"
-#import "UITableView+BaseKit.h"
-#import "UIBarButtonItem+BaseKit.h"
-#import "UIView+BaseKit.h"
+@interface UIView (BaseKit)
+
+- (UIView *)findFirstResponder;
+
+@end
