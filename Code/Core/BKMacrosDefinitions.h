@@ -32,11 +32,13 @@
     #define BK_SUPER_DEALLOC
 
     #if BK_HAS_WEAK
-        #define BK_PROP_WEAK              weak
-        #define BK_UNRETAINED_BLOCK_IVAR  __weak __block
+        #define BK_PROP_WEAK             weak
+        #define BK_WEAK_IVAR             __weak
+        #define BK_UNRETAINED_BLOCK_IVAR __weak __block
     #else
-        #define BK_PROP_WEAK              unsafe_unretained
-        #define BK_UNRETAINED_BLOCK_IVAR  __unsafe_unretained
+        #define BK_PROP_WEAK             unsafe_unretained
+        #define BK_WEAK_IVAR             __unsafe_unretained
+        #define BK_UNRETAINED_BLOCK_IVAR __unsafe_unretained __block
     #endif
 #else
     #define BK_RETAIN(xx)                     [xx retain];
