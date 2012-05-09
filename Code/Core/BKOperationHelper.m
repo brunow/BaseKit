@@ -36,6 +36,9 @@
     if (completion == nil)
         completion = ^{};
     
+    if (operation == nil)
+        operation = ^{};
+    
     if (waitUntilDone) {
         dispatch_sync(concurrentQueue, operation);
         dispatch_sync(mainQueue, ^{
