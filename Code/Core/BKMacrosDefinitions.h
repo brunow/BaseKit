@@ -53,6 +53,7 @@
     #define BK_UNRETAINED_BLOCK_IVAR          __block
     #define BK_STRONG_IVAR
     #define BK_SUPER_DEALLOC                  [super dealloc];
+    #define BK_WEAK_IVAR
 #endif
 
 
