@@ -105,6 +105,8 @@ BaseKit use an external library called ActionSheetPicker but unfortunately that 
     
     [self.formModel loadFieldsWithObject:movie];
 
+![Form Mapping](https://github.com/brunow/BaseKit/raw/master/form-mapping.png)
+
 For more **example** open **Examples/FormMappingExample/FormMappingExample.xcodeproj project**.
 
 # LocationManager
