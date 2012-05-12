@@ -73,6 +73,40 @@ Push view controller with block.
 
 For more **example** open **Examples/CellMappingExample/CellMappingExample.xcodeproj project**.
 
+# Form mapping
+
+Create form connected with a model very easy. Each time you add a "mapAttribute" you must give a property name that belongs to your object, after value change it is automatically saved into the property.
+
+BaseKit use an external library called ActionSheetPicker but unfortunately that library doesn't support ARC yet, so you need to add "-fno-objc-arc" when you import it to your project.
+
+	self.formModel = [BKFormModel formTableModelForTableView:self.tableView navigationController:self.navigationController];
+    
+    [BKFormMapping mappingForClass:[Movie class] block:^(BKFormMapping *formMapping) {
+        [formMapping sectiontTitle:@"Information section" identifier:@"info"];
+        [formMapping mapAttribute:@"title" title:@"Title" type:BKFormAttributeMappingTypeText];
+        [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDatePicker];
+        [formMapping mapAttribute:@"suitAllAges" title:@"All ages" type:BKFormAttributeMappingTypeBoolean];
+        [formMapping mapAttribute:@"shortName" title:@"ShortName" type:BKFormAttributeMappingTypeLabel];
+        [formMapping mapAttribute:@"numberOfActor" title:@"Number of actor" type:BKFormAttributeMappingTypeInteger];
+        [formMapping mapAttribute:@"content" title:@"Content" type:BKFormAttributeMappingTypeBigText];
+        
+        [formMapping mapAttribute:@"choice" title:@"Choices" selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
+            *selectedValueIndex = 1;
+            return [NSArray arrayWithObjects:@"choice1", @"choice2", nil];
+        } valueWithBlock:^id(id value, id object, NSInteger selectedValueIndex) {
+            return value;
+        }];
+        
+        [formMapping buttonSave:@"Save" handler:^{
+        }];
+        
+        [self.formModel registerMapping:formMapping];
+    }];
+    
+    [self.formModel loadFieldsWithObject:movie];
+
+For more **example** open **Examples/FormMappingExample/FormMappingExample.xcodeproj project**.
+
 # LocationManager
 
 Easy to use CoreLocation manager with block or default delegate.
