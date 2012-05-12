@@ -133,6 +133,15 @@ Easy to use CoreLocation manager with block or default delegate.
 
 BaseKit is fully compatible out of box with both ARC and non-ARC project.
 
+# Changelog
+
+- 2012/05/12 (0.2)
+	- Added LocationManager
+	- Added FormField
+	- Added FormMapping
+
+- 2012/29/01 (0.1)
+	- Initial release.
 
 # App using BaseKit
 
