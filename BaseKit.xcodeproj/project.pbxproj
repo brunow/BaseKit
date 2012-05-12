@@ -94,6 +94,65 @@
 		E75B4C5A14C5CA7D006D5BEF /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B4C5814C5CA7D006D5BEF /* UIView+Debug.m */; };
 		E75B4C5E14C5CAC6006D5BEF /* BaseKitViewAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = E75B4C5C14C5CAC6006D5BEF /* BaseKitViewAdditions.h */; };
 		E7703D5414C61066002598A7 /* ObjectTest.h in Headers */ = {isa = PBXBuildFile; fileRef = E7703D4E14C61066002598A7 /* ObjectTest.h */; };
+		E772DB53155E488F008A15B1 /* BaseKitFormField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB21155E488F008A15B1 /* BaseKitFormField.h */; };
+		E772DB54155E488F008A15B1 /* BKBadgeField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB22155E488F008A15B1 /* BKBadgeField.h */; };
+		E772DB55155E488F008A15B1 /* BKBadgeField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB23155E488F008A15B1 /* BKBadgeField.m */; };
+		E772DB56155E488F008A15B1 /* BKBigTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB24155E488F008A15B1 /* BKBigTextField.h */; };
+		E772DB57155E488F008A15B1 /* BKBigTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB25155E488F008A15B1 /* BKBigTextField.m */; };
+		E772DB58155E488F008A15B1 /* BKButtonField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB26155E488F008A15B1 /* BKButtonField.h */; };
+		E772DB59155E488F008A15B1 /* BKButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB27155E488F008A15B1 /* BKButtonField.m */; };
+		E772DB5A155E488F008A15B1 /* BKFloatField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB28155E488F008A15B1 /* BKFloatField.h */; };
+		E772DB5B155E488F008A15B1 /* BKFloatField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB29155E488F008A15B1 /* BKFloatField.m */; };
+		E772DB5C155E488F008A15B1 /* BKFormFieldBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB2A155E488F008A15B1 /* BKFormFieldBlocks.h */; };
+		E772DB5D155E488F008A15B1 /* BKImageField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB2B155E488F008A15B1 /* BKImageField.h */; };
+		E772DB5E155E488F008A15B1 /* BKImageField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB2C155E488F008A15B1 /* BKImageField.m */; };
+		E772DB5F155E488F008A15B1 /* BKIntegerField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB2D155E488F008A15B1 /* BKIntegerField.h */; };
+		E772DB60155E488F008A15B1 /* BKIntegerField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB2E155E488F008A15B1 /* BKIntegerField.m */; };
+		E772DB61155E488F008A15B1 /* BKLabelField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB2F155E488F008A15B1 /* BKLabelField.h */; };
+		E772DB62155E488F008A15B1 /* BKLabelField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB30155E488F008A15B1 /* BKLabelField.m */; };
+		E772DB63155E488F008A15B1 /* BKPasswordTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB31155E488F008A15B1 /* BKPasswordTextField.h */; };
+		E772DB64155E488F008A15B1 /* BKPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB32155E488F008A15B1 /* BKPasswordTextField.m */; };
+		E772DB65155E488F008A15B1 /* BKSaveButtonField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB33155E488F008A15B1 /* BKSaveButtonField.h */; };
+		E772DB66155E488F008A15B1 /* BKSaveButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB34155E488F008A15B1 /* BKSaveButtonField.m */; };
+		E772DB67155E488F008A15B1 /* BKSimpleField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB35155E488F008A15B1 /* BKSimpleField.h */; };
+		E772DB68155E488F008A15B1 /* BKSimpleField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB36155E488F008A15B1 /* BKSimpleField.m */; };
+		E772DB69155E488F008A15B1 /* BKSliderField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB37155E488F008A15B1 /* BKSliderField.h */; };
+		E772DB6A155E488F008A15B1 /* BKSliderField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB38155E488F008A15B1 /* BKSliderField.m */; };
+		E772DB6B155E488F008A15B1 /* BKSwitchField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB39155E488F008A15B1 /* BKSwitchField.h */; };
+		E772DB6C155E488F008A15B1 /* BKSwitchField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB3A155E488F008A15B1 /* BKSwitchField.m */; };
+		E772DB6D155E488F008A15B1 /* BKTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB3B155E488F008A15B1 /* BKTextField.h */; };
+		E772DB6E155E488F008A15B1 /* BKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB3C155E488F008A15B1 /* BKTextField.m */; };
+		E772DB6F155E488F008A15B1 /* BKTextViewField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB3D155E488F008A15B1 /* BKTextViewField.h */; };
+		E772DB70155E488F008A15B1 /* BKTextViewField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB3E155E488F008A15B1 /* BKTextViewField.m */; };
+		E772DB71155E488F008A15B1 /* BKValueViewField.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB3F155E488F008A15B1 /* BKValueViewField.h */; };
+		E772DB72155E488F008A15B1 /* BKValueViewField.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB40155E488F008A15B1 /* BKValueViewField.m */; };
+		E772DB73155E488F008A15B1 /* BaseKitFormModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB42155E488F008A15B1 /* BaseKitFormModel.h */; };
+		E772DB74155E488F008A15B1 /* BKFormAttributeMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB43155E488F008A15B1 /* BKFormAttributeMapping.h */; };
+		E772DB75155E488F008A15B1 /* BKFormAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB44155E488F008A15B1 /* BKFormAttributeMapping.m */; };
+		E772DB76155E488F008A15B1 /* BKFormMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB45155E488F008A15B1 /* BKFormMapper.h */; };
+		E772DB77155E488F008A15B1 /* BKFormMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB46155E488F008A15B1 /* BKFormMapper.m */; };
+		E772DB78155E488F008A15B1 /* BKFormMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB47155E488F008A15B1 /* BKFormMapping.h */; };
+		E772DB79155E488F008A15B1 /* BKFormMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB48155E488F008A15B1 /* BKFormMapping.m */; };
+		E772DB7A155E488F008A15B1 /* BKFormMappingBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB49155E488F008A15B1 /* BKFormMappingBlocks.h */; };
+		E772DB7B155E488F008A15B1 /* BKFormModel.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB4A155E488F008A15B1 /* BKFormModel.h */; };
+		E772DB7C155E488F008A15B1 /* BKFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB4B155E488F008A15B1 /* BKFormModel.m */; };
+		E772DB7D155E488F008A15B1 /* NSObject+BKFormAttributeMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB4C155E488F008A15B1 /* NSObject+BKFormAttributeMapping.h */; };
+		E772DB7E155E488F008A15B1 /* NSObject+BKFormAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB4D155E488F008A15B1 /* NSObject+BKFormAttributeMapping.m */; };
+		E772DB94155E48A3008A15B1 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB84155E48A3008A15B1 /* AbstractActionSheetPicker.h */; };
+		E772DB95155E48A3008A15B1 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB85155E48A3008A15B1 /* AbstractActionSheetPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E772DB96155E48A3008A15B1 /* ActionSheetCustomPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB86155E48A3008A15B1 /* ActionSheetCustomPicker.h */; };
+		E772DB97155E48A3008A15B1 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB87155E48A3008A15B1 /* ActionSheetCustomPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E772DB98155E48A3008A15B1 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB88155E48A3008A15B1 /* ActionSheetCustomPickerDelegate.h */; };
+		E772DB99155E48A3008A15B1 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB89155E48A3008A15B1 /* ActionSheetDatePicker.h */; };
+		E772DB9A155E48A3008A15B1 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB8A155E48A3008A15B1 /* ActionSheetDatePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E772DB9B155E48A3008A15B1 /* ActionSheetDistancePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB8B155E48A3008A15B1 /* ActionSheetDistancePicker.h */; };
+		E772DB9C155E48A3008A15B1 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB8C155E48A3008A15B1 /* ActionSheetDistancePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E772DB9D155E48A3008A15B1 /* ActionSheetStringPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB8D155E48A3008A15B1 /* ActionSheetStringPicker.h */; };
+		E772DB9E155E48A3008A15B1 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB8E155E48A3008A15B1 /* ActionSheetStringPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E772DB9F155E48A3008A15B1 /* DistancePickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB8F155E48A3008A15B1 /* DistancePickerView.h */; };
+		E772DBA0155E48A3008A15B1 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB90155E48A3008A15B1 /* DistancePickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E772DBA1155E48A3008A15B1 /* BWLongTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E772DB92155E48A3008A15B1 /* BWLongTextViewController.h */; };
+		E772DBA2155E48A3008A15B1 /* BWLongTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DB93155E48A3008A15B1 /* BWLongTextViewController.m */; };
 		E781954014AC6FEB00D70854 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E757BF89149A84D100B8662B /* CoreData.framework */; };
 		E781955414AC718E00D70854 /* BaseKitView.h in Headers */ = {isa = PBXBuildFile; fileRef = E781955214AC718E00D70854 /* BaseKitView.h */; };
 		E7853F1214A2699E003C776D /* BaseKitNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = E7853F1014A2699E003C776D /* BaseKitNetwork.h */; };
@@ -243,6 +302,65 @@
 		E7703D4D14C61066002598A7 /* CustomCellTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellTest.m; sourceTree = "<group>"; };
 		E7703D4E14C61066002598A7 /* ObjectTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectTest.h; sourceTree = "<group>"; };
 		E7703D4F14C61066002598A7 /* ObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectTest.m; sourceTree = "<group>"; };
+		E772DB21155E488F008A15B1 /* BaseKitFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitFormField.h; sourceTree = "<group>"; };
+		E772DB22155E488F008A15B1 /* BKBadgeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBadgeField.h; sourceTree = "<group>"; };
+		E772DB23155E488F008A15B1 /* BKBadgeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKBadgeField.m; sourceTree = "<group>"; };
+		E772DB24155E488F008A15B1 /* BKBigTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBigTextField.h; sourceTree = "<group>"; };
+		E772DB25155E488F008A15B1 /* BKBigTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKBigTextField.m; sourceTree = "<group>"; };
+		E772DB26155E488F008A15B1 /* BKButtonField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKButtonField.h; sourceTree = "<group>"; };
+		E772DB27155E488F008A15B1 /* BKButtonField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKButtonField.m; sourceTree = "<group>"; };
+		E772DB28155E488F008A15B1 /* BKFloatField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFloatField.h; sourceTree = "<group>"; };
+		E772DB29155E488F008A15B1 /* BKFloatField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFloatField.m; sourceTree = "<group>"; };
+		E772DB2A155E488F008A15B1 /* BKFormFieldBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormFieldBlocks.h; sourceTree = "<group>"; };
+		E772DB2B155E488F008A15B1 /* BKImageField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKImageField.h; sourceTree = "<group>"; };
+		E772DB2C155E488F008A15B1 /* BKImageField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKImageField.m; sourceTree = "<group>"; };
+		E772DB2D155E488F008A15B1 /* BKIntegerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKIntegerField.h; sourceTree = "<group>"; };
+		E772DB2E155E488F008A15B1 /* BKIntegerField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKIntegerField.m; sourceTree = "<group>"; };
+		E772DB2F155E488F008A15B1 /* BKLabelField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLabelField.h; sourceTree = "<group>"; };
+		E772DB30155E488F008A15B1 /* BKLabelField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLabelField.m; sourceTree = "<group>"; };
+		E772DB31155E488F008A15B1 /* BKPasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPasswordTextField.h; sourceTree = "<group>"; };
+		E772DB32155E488F008A15B1 /* BKPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPasswordTextField.m; sourceTree = "<group>"; };
+		E772DB33155E488F008A15B1 /* BKSaveButtonField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSaveButtonField.h; sourceTree = "<group>"; };
+		E772DB34155E488F008A15B1 /* BKSaveButtonField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSaveButtonField.m; sourceTree = "<group>"; };
+		E772DB35155E488F008A15B1 /* BKSimpleField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSimpleField.h; sourceTree = "<group>"; };
+		E772DB36155E488F008A15B1 /* BKSimpleField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSimpleField.m; sourceTree = "<group>"; };
+		E772DB37155E488F008A15B1 /* BKSliderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSliderField.h; sourceTree = "<group>"; };
+		E772DB38155E488F008A15B1 /* BKSliderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSliderField.m; sourceTree = "<group>"; };
+		E772DB39155E488F008A15B1 /* BKSwitchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSwitchField.h; sourceTree = "<group>"; };
+		E772DB3A155E488F008A15B1 /* BKSwitchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSwitchField.m; sourceTree = "<group>"; };
+		E772DB3B155E488F008A15B1 /* BKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTextField.h; sourceTree = "<group>"; };
+		E772DB3C155E488F008A15B1 /* BKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTextField.m; sourceTree = "<group>"; };
+		E772DB3D155E488F008A15B1 /* BKTextViewField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTextViewField.h; sourceTree = "<group>"; };
+		E772DB3E155E488F008A15B1 /* BKTextViewField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTextViewField.m; sourceTree = "<group>"; };
+		E772DB3F155E488F008A15B1 /* BKValueViewField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKValueViewField.h; sourceTree = "<group>"; };
+		E772DB40155E488F008A15B1 /* BKValueViewField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKValueViewField.m; sourceTree = "<group>"; };
+		E772DB42155E488F008A15B1 /* BaseKitFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitFormModel.h; sourceTree = "<group>"; };
+		E772DB43155E488F008A15B1 /* BKFormAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormAttributeMapping.h; sourceTree = "<group>"; };
+		E772DB44155E488F008A15B1 /* BKFormAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormAttributeMapping.m; sourceTree = "<group>"; };
+		E772DB45155E488F008A15B1 /* BKFormMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormMapper.h; sourceTree = "<group>"; };
+		E772DB46155E488F008A15B1 /* BKFormMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormMapper.m; sourceTree = "<group>"; };
+		E772DB47155E488F008A15B1 /* BKFormMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormMapping.h; sourceTree = "<group>"; };
+		E772DB48155E488F008A15B1 /* BKFormMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormMapping.m; sourceTree = "<group>"; };
+		E772DB49155E488F008A15B1 /* BKFormMappingBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormMappingBlocks.h; sourceTree = "<group>"; };
+		E772DB4A155E488F008A15B1 /* BKFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormModel.h; sourceTree = "<group>"; };
+		E772DB4B155E488F008A15B1 /* BKFormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormModel.m; sourceTree = "<group>"; };
+		E772DB4C155E488F008A15B1 /* NSObject+BKFormAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BKFormAttributeMapping.h"; sourceTree = "<group>"; };
+		E772DB4D155E488F008A15B1 /* NSObject+BKFormAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BKFormAttributeMapping.m"; sourceTree = "<group>"; };
+		E772DB84155E48A3008A15B1 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		E772DB85155E48A3008A15B1 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		E772DB86155E48A3008A15B1 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		E772DB87155E48A3008A15B1 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		E772DB88155E48A3008A15B1 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		E772DB89155E48A3008A15B1 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		E772DB8A155E48A3008A15B1 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		E772DB8B155E48A3008A15B1 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		E772DB8C155E48A3008A15B1 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		E772DB8D155E48A3008A15B1 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		E772DB8E155E48A3008A15B1 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		E772DB8F155E48A3008A15B1 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
+		E772DB90155E48A3008A15B1 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		E772DB92155E48A3008A15B1 /* BWLongTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLongTextViewController.h; sourceTree = "<group>"; };
+		E772DB93155E48A3008A15B1 /* BWLongTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLongTextViewController.m; sourceTree = "<group>"; };
 		E781955214AC718E00D70854 /* BaseKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitView.h; sourceTree = "<group>"; };
 		E7853F1014A2699E003C776D /* BaseKitNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitNetwork.h; sourceTree = "<group>"; };
 		E7A42FE4149A0C2E00D8A4F6 /* BaseKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -345,6 +463,8 @@
 		E72742C514B6373200720D76 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E772DB83155E48A3008A15B1 /* ActionSheetPicker */,
+				E772DB91155E48A3008A15B1 /* BWLongTextViewController */,
 				E72742C614B6373200720D76 /* AFNetworking */,
 				E72742DD14B6373200720D76 /* JSONKit */,
 				E72742E014B6373200720D76 /* MagicalRecord */,
@@ -476,6 +596,93 @@
 			path = CellMapping;
 			sourceTree = "<group>";
 		};
+		E772DB20155E488F008A15B1 /* FormField */ = {
+			isa = PBXGroup;
+			children = (
+				E772DB21155E488F008A15B1 /* BaseKitFormField.h */,
+				E772DB22155E488F008A15B1 /* BKBadgeField.h */,
+				E772DB23155E488F008A15B1 /* BKBadgeField.m */,
+				E772DB24155E488F008A15B1 /* BKBigTextField.h */,
+				E772DB25155E488F008A15B1 /* BKBigTextField.m */,
+				E772DB26155E488F008A15B1 /* BKButtonField.h */,
+				E772DB27155E488F008A15B1 /* BKButtonField.m */,
+				E772DB28155E488F008A15B1 /* BKFloatField.h */,
+				E772DB29155E488F008A15B1 /* BKFloatField.m */,
+				E772DB2A155E488F008A15B1 /* BKFormFieldBlocks.h */,
+				E772DB2B155E488F008A15B1 /* BKImageField.h */,
+				E772DB2C155E488F008A15B1 /* BKImageField.m */,
+				E772DB2D155E488F008A15B1 /* BKIntegerField.h */,
+				E772DB2E155E488F008A15B1 /* BKIntegerField.m */,
+				E772DB2F155E488F008A15B1 /* BKLabelField.h */,
+				E772DB30155E488F008A15B1 /* BKLabelField.m */,
+				E772DB31155E488F008A15B1 /* BKPasswordTextField.h */,
+				E772DB32155E488F008A15B1 /* BKPasswordTextField.m */,
+				E772DB33155E488F008A15B1 /* BKSaveButtonField.h */,
+				E772DB34155E488F008A15B1 /* BKSaveButtonField.m */,
+				E772DB35155E488F008A15B1 /* BKSimpleField.h */,
+				E772DB36155E488F008A15B1 /* BKSimpleField.m */,
+				E772DB37155E488F008A15B1 /* BKSliderField.h */,
+				E772DB38155E488F008A15B1 /* BKSliderField.m */,
+				E772DB39155E488F008A15B1 /* BKSwitchField.h */,
+				E772DB3A155E488F008A15B1 /* BKSwitchField.m */,
+				E772DB3B155E488F008A15B1 /* BKTextField.h */,
+				E772DB3C155E488F008A15B1 /* BKTextField.m */,
+				E772DB3D155E488F008A15B1 /* BKTextViewField.h */,
+				E772DB3E155E488F008A15B1 /* BKTextViewField.m */,
+				E772DB3F155E488F008A15B1 /* BKValueViewField.h */,
+				E772DB40155E488F008A15B1 /* BKValueViewField.m */,
+			);
+			path = FormField;
+			sourceTree = "<group>";
+		};
+		E772DB41155E488F008A15B1 /* FormMapping */ = {
+			isa = PBXGroup;
+			children = (
+				E772DB42155E488F008A15B1 /* BaseKitFormModel.h */,
+				E772DB43155E488F008A15B1 /* BKFormAttributeMapping.h */,
+				E772DB44155E488F008A15B1 /* BKFormAttributeMapping.m */,
+				E772DB45155E488F008A15B1 /* BKFormMapper.h */,
+				E772DB46155E488F008A15B1 /* BKFormMapper.m */,
+				E772DB47155E488F008A15B1 /* BKFormMapping.h */,
+				E772DB48155E488F008A15B1 /* BKFormMapping.m */,
+				E772DB49155E488F008A15B1 /* BKFormMappingBlocks.h */,
+				E772DB4A155E488F008A15B1 /* BKFormModel.h */,
+				E772DB4B155E488F008A15B1 /* BKFormModel.m */,
+				E772DB4C155E488F008A15B1 /* NSObject+BKFormAttributeMapping.h */,
+				E772DB4D155E488F008A15B1 /* NSObject+BKFormAttributeMapping.m */,
+			);
+			path = FormMapping;
+			sourceTree = "<group>";
+		};
+		E772DB83155E48A3008A15B1 /* ActionSheetPicker */ = {
+			isa = PBXGroup;
+			children = (
+				E772DB84155E48A3008A15B1 /* AbstractActionSheetPicker.h */,
+				E772DB85155E48A3008A15B1 /* AbstractActionSheetPicker.m */,
+				E772DB86155E48A3008A15B1 /* ActionSheetCustomPicker.h */,
+				E772DB87155E48A3008A15B1 /* ActionSheetCustomPicker.m */,
+				E772DB88155E48A3008A15B1 /* ActionSheetCustomPickerDelegate.h */,
+				E772DB89155E48A3008A15B1 /* ActionSheetDatePicker.h */,
+				E772DB8A155E48A3008A15B1 /* ActionSheetDatePicker.m */,
+				E772DB8B155E48A3008A15B1 /* ActionSheetDistancePicker.h */,
+				E772DB8C155E48A3008A15B1 /* ActionSheetDistancePicker.m */,
+				E772DB8D155E48A3008A15B1 /* ActionSheetStringPicker.h */,
+				E772DB8E155E48A3008A15B1 /* ActionSheetStringPicker.m */,
+				E772DB8F155E48A3008A15B1 /* DistancePickerView.h */,
+				E772DB90155E48A3008A15B1 /* DistancePickerView.m */,
+			);
+			path = ActionSheetPicker;
+			sourceTree = "<group>";
+		};
+		E772DB91155E48A3008A15B1 /* BWLongTextViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E772DB92155E48A3008A15B1 /* BWLongTextViewController.h */,
+				E772DB93155E48A3008A15B1 /* BWLongTextViewController.m */,
+			);
+			path = BWLongTextViewController;
+			sourceTree = "<group>";
+		};
 		E78194D814AC66C100D70854 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -515,6 +722,8 @@
 		E7A42FE3149A0C2E00D8A4F6 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				E772DB20155E488F008A15B1 /* FormField */,
+				E772DB41155E488F008A15B1 /* FormMapping */,
 				E7A42FE4149A0C2E00D8A4F6 /* BaseKit-Prefix.pch */,
 				E72742A114B6367500720D76 /* CellMapping */,
 				E78194D814AC66C100D70854 /* View */,
@@ -674,6 +883,38 @@
 				E709037615355C4500B3EDA8 /* BKUtils.h in Headers */,
 				E7C71087154839F000D6DE4F /* BKRunBlockAtDealloc.h in Headers */,
 				E75150C715592AC100921894 /* UIView+BaseKit.h in Headers */,
+				E772DB53155E488F008A15B1 /* BaseKitFormField.h in Headers */,
+				E772DB54155E488F008A15B1 /* BKBadgeField.h in Headers */,
+				E772DB56155E488F008A15B1 /* BKBigTextField.h in Headers */,
+				E772DB58155E488F008A15B1 /* BKButtonField.h in Headers */,
+				E772DB5A155E488F008A15B1 /* BKFloatField.h in Headers */,
+				E772DB5C155E488F008A15B1 /* BKFormFieldBlocks.h in Headers */,
+				E772DB5D155E488F008A15B1 /* BKImageField.h in Headers */,
+				E772DB5F155E488F008A15B1 /* BKIntegerField.h in Headers */,
+				E772DB61155E488F008A15B1 /* BKLabelField.h in Headers */,
+				E772DB63155E488F008A15B1 /* BKPasswordTextField.h in Headers */,
+				E772DB65155E488F008A15B1 /* BKSaveButtonField.h in Headers */,
+				E772DB67155E488F008A15B1 /* BKSimpleField.h in Headers */,
+				E772DB69155E488F008A15B1 /* BKSliderField.h in Headers */,
+				E772DB6B155E488F008A15B1 /* BKSwitchField.h in Headers */,
+				E772DB6D155E488F008A15B1 /* BKTextField.h in Headers */,
+				E772DB6F155E488F008A15B1 /* BKTextViewField.h in Headers */,
+				E772DB71155E488F008A15B1 /* BKValueViewField.h in Headers */,
+				E772DB73155E488F008A15B1 /* BaseKitFormModel.h in Headers */,
+				E772DB74155E488F008A15B1 /* BKFormAttributeMapping.h in Headers */,
+				E772DB76155E488F008A15B1 /* BKFormMapper.h in Headers */,
+				E772DB78155E488F008A15B1 /* BKFormMapping.h in Headers */,
+				E772DB7A155E488F008A15B1 /* BKFormMappingBlocks.h in Headers */,
+				E772DB7B155E488F008A15B1 /* BKFormModel.h in Headers */,
+				E772DB7D155E488F008A15B1 /* NSObject+BKFormAttributeMapping.h in Headers */,
+				E772DB94155E48A3008A15B1 /* AbstractActionSheetPicker.h in Headers */,
+				E772DB96155E48A3008A15B1 /* ActionSheetCustomPicker.h in Headers */,
+				E772DB98155E48A3008A15B1 /* ActionSheetCustomPickerDelegate.h in Headers */,
+				E772DB99155E48A3008A15B1 /* ActionSheetDatePicker.h in Headers */,
+				E772DB9B155E48A3008A15B1 /* ActionSheetDistancePicker.h in Headers */,
+				E772DB9D155E48A3008A15B1 /* ActionSheetStringPicker.h in Headers */,
+				E772DB9F155E48A3008A15B1 /* DistancePickerView.h in Headers */,
+				E772DBA1155E48A3008A15B1 /* BWLongTextViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +1067,33 @@
 				E709037715355C4500B3EDA8 /* BKUtils.m in Sources */,
 				E7C71088154839F000D6DE4F /* BKRunBlockAtDealloc.m in Sources */,
 				E75150C815592AC100921894 /* UIView+BaseKit.m in Sources */,
+				E772DB55155E488F008A15B1 /* BKBadgeField.m in Sources */,
+				E772DB57155E488F008A15B1 /* BKBigTextField.m in Sources */,
+				E772DB59155E488F008A15B1 /* BKButtonField.m in Sources */,
+				E772DB5B155E488F008A15B1 /* BKFloatField.m in Sources */,
+				E772DB5E155E488F008A15B1 /* BKImageField.m in Sources */,
+				E772DB60155E488F008A15B1 /* BKIntegerField.m in Sources */,
+				E772DB62155E488F008A15B1 /* BKLabelField.m in Sources */,
+				E772DB64155E488F008A15B1 /* BKPasswordTextField.m in Sources */,
+				E772DB66155E488F008A15B1 /* BKSaveButtonField.m in Sources */,
+				E772DB68155E488F008A15B1 /* BKSimpleField.m in Sources */,
+				E772DB6A155E488F008A15B1 /* BKSliderField.m in Sources */,
+				E772DB6C155E488F008A15B1 /* BKSwitchField.m in Sources */,
+				E772DB6E155E488F008A15B1 /* BKTextField.m in Sources */,
+				E772DB70155E488F008A15B1 /* BKTextViewField.m in Sources */,
+				E772DB72155E488F008A15B1 /* BKValueViewField.m in Sources */,
+				E772DB75155E488F008A15B1 /* BKFormAttributeMapping.m in Sources */,
+				E772DB77155E488F008A15B1 /* BKFormMapper.m in Sources */,
+				E772DB79155E488F008A15B1 /* BKFormMapping.m in Sources */,
+				E772DB7C155E488F008A15B1 /* BKFormModel.m in Sources */,
+				E772DB7E155E488F008A15B1 /* NSObject+BKFormAttributeMapping.m in Sources */,
+				E772DB95155E48A3008A15B1 /* AbstractActionSheetPicker.m in Sources */,
+				E772DB97155E48A3008A15B1 /* ActionSheetCustomPicker.m in Sources */,
+				E772DB9A155E48A3008A15B1 /* ActionSheetDatePicker.m in Sources */,
+				E772DB9C155E48A3008A15B1 /* ActionSheetDistancePicker.m in Sources */,
+				E772DB9E155E48A3008A15B1 /* ActionSheetStringPicker.m in Sources */,
+				E772DBA0155E48A3008A15B1 /* DistancePickerView.m in Sources */,
+				E772DBA2155E48A3008A15B1 /* BWLongTextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

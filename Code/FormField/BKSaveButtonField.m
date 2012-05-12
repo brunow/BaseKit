@@ -15,7 +15,9 @@
 // limitations under the License.
 //
 
-#import "UITableViewCell+BaseKit.h"
+#import "BKSaveButtonField.h"
+
+#import <QuartzCore/QuartzCore.h>
 
 #import "BKMacrosDefinitions.h"
 
@@ -23,62 +25,37 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-@implementation UITableViewCell (BaseKit)
+@implementation BKSaveButtonField
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (id)cellForTableView:(UITableView *)tableView { 
-    NSString *cellID = [self cellIdentifier];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    
-    if (cell == nil) {
-        UITableViewCellStyle cellStyle = [self cellStyle];
-        cell = [[self alloc] initWithStyle:cellStyle reuseIdentifier:cellID];
-        BK_AUTORELEASE_WITHOUT_RETURN(cell);
-    } 
-    
-    return cell;
+#if !BK_HAS_ARC
+- (void)dealloc {    
+    [super dealloc];
 }
+#endif
 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (id)cellForTableView:(UITableView *)tableView fromNib:(UINib *)nib {
-    NSString *cellID = [self cellIdentifier];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
-    if (cell == nil) {
-        NSArray *nibObjects = [nib instantiateWithOwner:nil options:nil];
-        cell = [nibObjects objectAtIndex:0];
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleBlue;
     }
     
-    return cell;
+    return self;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (UITableViewCellStyle)cellStyle {
-    return UITableViewCellStyleDefault;
-}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+#pragma mark -
+#pragma mark Public
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (NSString *)cellIdentifier {
-    return NSStringFromClass([self class]);
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (UINib *)nib {
-    NSBundle *classBundle = [NSBundle bundleForClass:[self class]];
-    NSString *nibName = [self nibName];
-    
-    return [UINib nibWithNibName:nibName bundle:classBundle];
-} 
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-+ (NSString *)nibName {
-    return [self cellIdentifier];
+- (void)setTitle:(NSString *)title {
 }
 
 
