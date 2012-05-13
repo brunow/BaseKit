@@ -13,12 +13,18 @@ Add Code dir or pick library that you need inside Code/*.
 
 ## Install using CocoaPods.
 
-    dependency 'BaseKit/Core', '~> 0.2'
-    dependency 'BaseKit/View', '~> 0.2'
-    dependency 'BaseKit/CellMapping', '~> 0.2'
-    dependency 'BaseKit/LocationManager', '~> 0.2'
-    dependency 'BaseKit/FormField', '~> 0.2'
-    dependency 'BaseKit/FormMapping', '~> 0.2'
+    dependency 'BaseKit/Core', '~> 0.2.1'
+    dependency 'BaseKit/View', '~> 0.2.1'
+    dependency 'BaseKit/CellMapping', '~> 0.2.1'
+    dependency 'BaseKit/LocationManager', '~> 0.2.1'
+    dependency 'BaseKit/FormField', '~> 0.2.1'
+    dependency 'BaseKit/FormMapping', '~> 0.2.1'
+
+# Tutorials
+
+[Create iPhone and iPad IOS FORM with BaseKit](http://blog.brunowernimont.be/2012/05/12/create_ios_form_easily_with_basekit.html)
+
+[UITableView Dynamic cell mapping like Restkit](http://blog.brunowernimont.be/2012/01/08_uitableview_dynamic_cell_mapping_like_restkit.html)
 
 # Core
 
