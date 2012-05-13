@@ -48,6 +48,8 @@
 
 - (NSString *)formattedStringDate:(NSDate *)date usingFormat:(NSString *)dateFormat;
 
+- (id)convertValueIfneeded:(id)value attributeMapping:(BKFormAttributeMapping *)attributeMapping;
+
 @end
 
 
@@ -183,8 +185,10 @@
     [formatter setDateFormat:dateFormat];
     [formatter setCalendar:cal];
     [formatter setLocale:[NSLocale currentLocale]];
+    NSString *stringDate = [formatter stringFromDate:date];
     BK_RELEASE(cal);
-    return BK_AUTORELEASE([formatter stringFromDate:date]);
+    BK_RELEASE(formatter);
+    return stringDate;
 }
 
 
@@ -193,31 +197,8 @@
                       value:(id)value
                   withField:(BKSimpleField *)field {
     
-    id convertedValue = value;
-    
-    // Value convertion if needed
-    if (attributeMapping.type == BKFormAttributeMappingTypeInteger) {
-        NSInteger integerValue = [(NSNumber *)value integerValue];
-        convertedValue = [NSString stringWithFormat:@"%d", integerValue];
-        
-    } else if (attributeMapping.type == BKFormAttributeMappingTypeFloat) {
-        float floatValue = [(NSNumber *)value floatValue];
-        convertedValue = [NSString stringWithFormat:@"%d", floatValue];
-        
-    } else if (attributeMapping.type == BKFormAttributeMappingTypeDateTimePicker ||
-               attributeMapping.type == BKFormAttributeMappingTypeDatePicker ||
-               attributeMapping.type == BKFormAttributeMappingTypeTimePicker) {
-        
-        if (nil != attributeMapping.dateFormat) {
-            convertedValue = [self formattedStringDate:value usingFormat:attributeMapping.dateFormat];
-        } else if (nil != attributeMapping.dateFormatBlock) {
-            NSString *dataFormat = attributeMapping.dateFormatBlock();
-            convertedValue = [self formattedStringDate:value usingFormat:dataFormat];
-        } else {
-            convertedValue = [value description];
-        }
-
-    }
+    id convertedValue = [self convertValueIfneeded:value attributeMapping:attributeMapping];
+    BK_RETAIN_WITHOUT_RETURN(convertedValue);
     
     // Value attribution
     if ([field isKindOfClass:[BKTextField class]]) {
@@ -247,6 +228,8 @@
         field.detailTextLabel.text = convertedValue;
         
     }
+    
+    BK_RELEASE(convertedValue);
 }
 
 
@@ -297,6 +280,37 @@
     }
     
     return field;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)convertValueIfneeded:(id)value attributeMapping:(BKFormAttributeMapping *)attributeMapping {
+    id convertedValue = nil;
+    
+    if (attributeMapping.type == BKFormAttributeMappingTypeInteger) {
+        NSInteger integerValue = [(NSNumber *)value integerValue];
+        convertedValue = [NSString stringWithFormat:@"%d", integerValue];
+        
+    } else if (attributeMapping.type == BKFormAttributeMappingTypeFloat) {
+        float floatValue = [(NSNumber *)value floatValue];
+        convertedValue = [NSString stringWithFormat:@"%d", floatValue];
+        
+    } else if (attributeMapping.type == BKFormAttributeMappingTypeDateTimePicker ||
+               attributeMapping.type == BKFormAttributeMappingTypeDatePicker ||
+               attributeMapping.type == BKFormAttributeMappingTypeTimePicker) {
+        
+        if (nil != attributeMapping.dateFormat) {
+            convertedValue = [self formattedStringDate:value usingFormat:attributeMapping.dateFormat];
+        } else if (nil != attributeMapping.dateFormatBlock) {
+            NSString *dataFormat = attributeMapping.dateFormatBlock();
+            convertedValue = [self formattedStringDate:value usingFormat:dataFormat];
+        } else {
+            convertedValue = [value description];
+        }
+        
+    }
+    
+    return convertedValue;
 }
 
 
