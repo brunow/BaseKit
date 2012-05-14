@@ -13,12 +13,12 @@ Add Code dir or pick library that you need inside Code/*.
 
 ## Install using CocoaPods.
 
-    dependency 'BaseKit/Core', '~> 0.2.1'
-    dependency 'BaseKit/View', '~> 0.2.1'
-    dependency 'BaseKit/CellMapping', '~> 0.2.1'
-    dependency 'BaseKit/LocationManager', '~> 0.2.1'
-    dependency 'BaseKit/FormField', '~> 0.2.1'
-    dependency 'BaseKit/FormMapping', '~> 0.2.1'
+    dependency 'BaseKit/Core', '~> 0.2.2'
+    dependency 'BaseKit/View', '~> 0.2.2'
+    dependency 'BaseKit/CellMapping', '~> 0.2.2'
+    dependency 'BaseKit/LocationManager', '~> 0.2.2'
+    dependency 'BaseKit/FormField', '~> 0.2.2'
+    dependency 'BaseKit/FormMapping', '~> 0.2.2'
 
 # Tutorials
 
