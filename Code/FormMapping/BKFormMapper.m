@@ -285,7 +285,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)convertValueIfneeded:(id)value attributeMapping:(BKFormAttributeMapping *)attributeMapping {
-    id convertedValue = nil;
+    id convertedValue = value;
     
     if (attributeMapping.type == BKFormAttributeMappingTypeInteger) {
         NSInteger integerValue = [(NSNumber *)value integerValue];
