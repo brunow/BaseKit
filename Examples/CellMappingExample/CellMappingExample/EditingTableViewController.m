@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Simple mapping";
+    self.title = @"Editing table view";
     
     self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
     self.tableView.dataSource = self.tableModel;

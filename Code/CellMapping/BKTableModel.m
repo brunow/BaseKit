@@ -180,6 +180,32 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+         forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    id object = [self objectForRowAtIndexPath:indexPath];
+    BKCellMapping *cellMapping = [self cellMappingForObject:object];
+    
+    if (nil != cellMapping.commitEditingStyleBlock) {
+        cellMapping.commitEditingStyleBlock(object, indexPath, editingStyle);
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (UITableViewCellEditingStyle)editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    id object = [self objectForRowAtIndexPath:indexPath];
+    BKCellMapping *cellMapping = [self cellMappingForObject:object];
+    
+    if (nil != cellMapping.editingStyleBlock) {
+        return cellMapping.editingStyleBlock(object, indexPath);
+    }
+    
+    return UITableViewCellEditingStyleDelete;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)loadTableItems:(NSArray *)items {
     self.items = [NSMutableArray arrayWithArray:items];
     [self.tableView reloadData];
@@ -250,6 +276,15 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark UITableViewDelegate
@@ -258,6 +293,14 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self didSelectRowAtIndexPath:indexPath];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView
+           editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return [self editingStyleForRowAtIndexPath:indexPath];
 }
 
 
