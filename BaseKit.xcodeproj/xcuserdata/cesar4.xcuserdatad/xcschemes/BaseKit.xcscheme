@@ -13,8 +13,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E754F459149013AE0028E91D"
-               BuildableName = "libBaseKit.a"
+               BlueprintIdentifier = "E74E26E0156798B1004E6FE9"
+               BuildableName = "BaseKit.app"
                BlueprintName = "BaseKit"
                ReferencedContainer = "container:BaseKit.xcodeproj">
             </BuildableReference>
@@ -22,8 +22,8 @@
       </BuildActionEntries>
    </BuildAction>
    <TestAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
@@ -31,22 +31,41 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E754F469149013AE0028E91D"
+               BlueprintIdentifier = "E74E2700156798B2004E6FE9"
                BuildableName = "BaseKitTests.octest"
                BlueprintName = "BaseKitTests"
                ReferencedContainer = "container:BaseKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E74E26E0156798B1004E6FE9"
+            BuildableName = "BaseKit.app"
+            BlueprintName = "BaseKit"
+            ReferencedContainer = "container:BaseKit.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Debug"
+      ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E74E26E0156798B1004E6FE9"
+            BuildableName = "BaseKit.app"
+            BlueprintName = "BaseKit"
+            ReferencedContainer = "container:BaseKit.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -56,6 +75,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "E74E26E0156798B1004E6FE9"
+            BuildableName = "BaseKit.app"
+            BlueprintName = "BaseKit"
+            ReferencedContainer = "container:BaseKit.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

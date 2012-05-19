@@ -9,30 +9,15 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>BaseKitTest.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E7143AC814A85FA300A682B8</key>
+		<key>E74E26E0156798B1004E6FE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E754F459149013AE0028E91D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E754F469149013AE0028E91D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E757BF82149A84D100B8662B</key>
+		<key>E74E2700156798B2004E6FE9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
