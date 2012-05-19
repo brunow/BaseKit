@@ -69,9 +69,7 @@
         [strings appendString:character];
     }
     
-    [strings deleteCharactersInRange:NSMakeRange(0, 1)];
-    
-    return strings;
+    return [strings lowercaseString];
 }
 
 

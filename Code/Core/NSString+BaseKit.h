@@ -36,7 +36,7 @@
 - (NSString *)stringByUnderscoringWord;
 
 /**
- * 
+ * Return boolean value that say if the string contain a given string
  */
 - (BOOL)containString:(NSString *)string;
 
