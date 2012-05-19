@@ -29,13 +29,14 @@
 @synthesize title = _title;
 @synthesize type = _type;
 @synthesize selectValuesBlock = _selectValuesBlock;
-@synthesize selectDidSelectValueBlock = _selectDidSelectValueBlock;
+@synthesize valueFromSelectBlock = _valueFromSelectBlock;
 @synthesize placeholderText = _placeholderText;
 @synthesize saveBtnHandler = _saveBtnHandler;
 @synthesize btnHandler = _btnHandler;
 @synthesize accesoryType = _accesoryType;
 @synthesize dateFormat = _dateFormat;
 @synthesize dateFormatBlock = _dateFormatBlock;
+@synthesize labelValueBlock = _labelValueBlock;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -49,6 +50,7 @@
     self.selectDidSelectValueBlock = nil;
     self.dateFormat = nil;
     self.dateFormatBlock = nil;
+    self.labelValueBlock = nil;
     
     [super dealloc];
 }

@@ -308,6 +308,9 @@
             convertedValue = [value description];
         }
         
+    } else if (attributeMapping.type == BKFormAttributeMappingTypeSelect) {
+        convertedValue = attributeMapping.labelValueBlock(value, self.object);
+        
     }
     
     return convertedValue;

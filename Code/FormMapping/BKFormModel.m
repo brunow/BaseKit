@@ -313,7 +313,7 @@
     BK_WEAK_IVAR BKFormModel *weakRef = self;
     ActionStringDoneBlock done = ^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
         BKFormAttributeMapping *formAttributeMapping = picker.formAttributeMapping;
-        id value = formAttributeMapping.selectDidSelectValueBlock(selectedValue, self.object, selectedIndex);
+        id value = formAttributeMapping.valueFromSelectBlock(selectedValue, self.object, selectedIndex);
         [weakRef.formMapper setValue:value forAttributeMapping:formAttributeMapping];
         [weakRef reloadRowWithAttributeMapping:formAttributeMapping];
     };

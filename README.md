@@ -13,12 +13,12 @@ Add Code dir or pick library that you need inside Code/*.
 
 ## Install using CocoaPods.
 
-    dependency 'BaseKit/Core', '~> 0.2.2'
-    dependency 'BaseKit/View', '~> 0.2.2'
-    dependency 'BaseKit/CellMapping', '~> 0.2.2'
-    dependency 'BaseKit/LocationManager', '~> 0.2.2'
-    dependency 'BaseKit/FormField', '~> 0.2.2'
-    dependency 'BaseKit/FormMapping', '~> 0.2.2'
+    dependency 'BaseKit/Core', '~> 0.2.3'
+    dependency 'BaseKit/View', '~> 0.2.3'
+    dependency 'BaseKit/CellMapping', '~> 0.2.3'
+    dependency 'BaseKit/LocationManager', '~> 0.2.3'
+    dependency 'BaseKit/FormField', '~> 0.2.3'
+    dependency 'BaseKit/FormMapping', '~> 0.2.3'
 
 # Tutorials
 
@@ -141,12 +141,15 @@ BaseKit is fully compatible out of box with both ARC and non-ARC project.
 
 # Changelog
 
+- 2012/05/17 (0.2.3)
+	- Fix cell mapping editing style
+
 - 2012/05/12 (0.2)
 	- Added LocationManager
 	- Added FormField
 	- Added FormMapping
 
-- 2012/29/01 (0.1)
+- 2012/01/29 (0.1)
 	- Initial release.
 
 # App using BaseKit

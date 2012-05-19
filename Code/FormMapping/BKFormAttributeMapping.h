@@ -45,13 +45,14 @@ typedef enum {
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, assign) BKFormAttributeMappingType type;
 @property (nonatomic, copy) BKFormMappingSelectValueBlock selectValuesBlock;
-@property (nonatomic, copy) BKFormMappingValueWithSelectValueBlock selectDidSelectValueBlock;
+@property (nonatomic, copy) BKFormMappingValueFromSelectBlock valueFromSelectBlock;
 @property (nonatomic, copy) NSString *placeholderText;
 @property (nonatomic, copy) BKBasicBlock saveBtnHandler;
 @property (nonatomic, copy) BKFormMappingButtonHandlerBlock btnHandler;
 @property (nonatomic, assign) UITableViewCellAccessoryType accesoryType;
 @property (nonatomic, copy) NSString *dateFormat;
 @property (nonatomic, copy) BKFormMappingDateFormatBlock dateFormatBlock;
+@property (nonatomic, copy) BKFormMappingSelectLabelValueBlock labelValueBlock;
 
 /*
  * Convenient method to get an attributeMapping

@@ -167,14 +167,16 @@
 - (void)mapAttribute:(NSString *)attribute
                title:(NSString *)title
    selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
-      valueWithBlock:(BKFormMappingValueWithSelectValueBlock)valueBlock {
+valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
+     labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue {
     
     BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
     attributeMapping.title = title;
     attributeMapping.attribute = attribute;
     attributeMapping.selectValuesBlock = selectValueBlock;
     attributeMapping.type = BKFormAttributeMappingTypeSelect;
-    attributeMapping.selectDidSelectValueBlock = valueBlock;
+    attributeMapping.valueFromSelectBlock = valueFromSelectBlock;
+    attributeMapping.labelValueBlock = labelValue;
     
     [self addAttributeMappingToFormMapping:attributeMapping];
 }

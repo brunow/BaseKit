@@ -19,8 +19,10 @@
 
 typedef NSArray *(^BKFormMappingSelectValueBlock)(id value, id object, NSInteger *selectedValueIndex);
 
-typedef id(^BKFormMappingValueWithSelectValueBlock)(id value, id object, NSInteger selectedValueIndex);
+typedef id(^BKFormMappingValueFromSelectBlock)(id value, id object, NSInteger selectedValueIndex);
 
 typedef void(^BKFormMappingButtonHandlerBlock)(id object);
 
 typedef NSString *(^BKFormMappingDateFormatBlock)();
+
+typedef id (^BKFormMappingSelectLabelValueBlock)(id value, id object);

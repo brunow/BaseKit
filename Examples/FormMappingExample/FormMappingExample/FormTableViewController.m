@@ -60,7 +60,9 @@
         [formMapping mapAttribute:@"choice" title:@"Choices" selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
             *selectedValueIndex = 1;
             return [NSArray arrayWithObjects:@"choice1", @"choice2", nil];
-        } valueWithBlock:^id(id value, id object, NSInteger selectedValueIndex) {
+        } valueFromSelectBlock:^id(id value, id object, NSInteger selectedValueIndex) {
+            return value;
+        } labelValueBlock:^id(id value, id object) {
             return value;
         }];
         
