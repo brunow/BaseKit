@@ -46,7 +46,7 @@
         [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
         
         [cellMapping onSelectRowWithBlock:^(UITableViewCell *cell, Item *item, NSIndexPath *indexPath) {
-            UIViewController *vc = [[[NSClassFromString(item.type) alloc] init] autorelease];
+            UIViewController *vc = [[NSClassFromString(item.type) alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
         }];
         

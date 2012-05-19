@@ -12,11 +12,4 @@
 
 @synthesize titleLabel, subTitleLabel;
 
-- (void)dealloc {
-    self.titleLabel = nil;
-    self.subTitleLabel = nil;
-    
-    [super dealloc];
-}
-
 @end

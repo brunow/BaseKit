@@ -14,13 +14,6 @@
 @synthesize subtitle = _subtitle;
 @synthesize type = _type;
 
-- (void)dealloc {
-    self.title = nil;
-    self.subtitle = nil;
-    self.type = nil;
-    
-    [super dealloc];
-}
 
 + (id)itemWithTitle:(NSString *)title subtitle:(NSString *)subtitle {
     Item *item = [[self alloc] init];
@@ -28,7 +21,7 @@
     item.title = title;
     item.subtitle = subtitle;
     
-    return [item autorelease];
+    return item;
 }
 
 + (id)itemWithTitle:(NSString *)title subtitle:(NSString *)subtitle type:(NSString *)type {
@@ -38,7 +31,7 @@
     item.subtitle = subtitle;
     item.type = type;
     
-    return [item autorelease];
+    return item;
 }
 
 - (NSString *)imageName {

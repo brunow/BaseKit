@@ -14,20 +14,13 @@
 
 @synthesize window = _window;
 
-- (void)dealloc
-{
-    [_window release];
-    [_rootViewController release];
-    [super dealloc];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    CatalogTableViewController *vc = [[[CatalogTableViewController alloc] initWithStyle:UITableViewStylePlain] autorelease];
+    CatalogTableViewController *vc = [[CatalogTableViewController alloc] initWithStyle:UITableViewStylePlain];
     _rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     
     [self.window addSubview:_rootViewController.view];
