@@ -31,8 +31,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface BKTableModel ()
 
-@property (nonatomic, strong) NSMutableDictionary *objectMappings;
-
 - (BKCellMapping *)cellMappingForObject:(id)object;
 
 @end
@@ -75,7 +73,7 @@
     self = [super init];
     
     if (self) {
-        self.objectMappings = [NSMutableDictionary dictionary];
+        _objectMappings = [NSMutableDictionary dictionary];
     }
     
     return self;

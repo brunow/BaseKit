@@ -88,6 +88,8 @@
 		E7DCB35615679B590092FBBA /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DCB35515679B590092FBBA /* libKiwi.a */; };
 		E7DCB35D1567A3D00092FBBA /* BKIterationHelperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */; };
 		E7DCB35F1567A7420092FBBA /* NSArrayBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */; };
+		E7E830CA1568220600BE1A62 /* BKCellMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830C7156821C500BE1A62 /* BKCellMapperSpecs.m */; };
+		E7E830D21568229100BE1A62 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830D01568227600BE1A62 /* Item.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +258,9 @@
 		E7DCB35515679B590092FBBA /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "../../dev/xcodeBuilds/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKIterationHelperSpecs.m; sourceTree = "<group>"; };
 		E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayBaseKitSpecs.m; sourceTree = "<group>"; };
+		E7E830C7156821C500BE1A62 /* BKCellMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapperSpecs.m; sourceTree = SOURCE_ROOT; };
+		E7E830CF1568227600BE1A62 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = SOURCE_ROOT; };
+		E7E830D01568227600BE1A62 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -640,6 +645,9 @@
 		E7DCB3591567A38C0092FBBA /* CellMapping */ = {
 			isa = PBXGroup;
 			children = (
+				E7E830C7156821C500BE1A62 /* BKCellMapperSpecs.m */,
+				E7E830CF1568227600BE1A62 /* Item.h */,
+				E7E830D01568227600BE1A62 /* Item.m */,
 			);
 			path = CellMapping;
 			sourceTree = "<group>";
@@ -844,6 +852,8 @@
 				E7871FF61567D40000061D17 /* BKToogleValueSpecs.m in Sources */,
 				E7871FFE15680CBB00061D17 /* NSManagedObjectBaseKitSpecs.m in Sources */,
 				E787200015680E5900061D17 /* NSStringBaseKitSpecs.m in Sources */,
+				E7E830CA1568220600BE1A62 /* BKCellMapperSpecs.m in Sources */,
+				E7E830D21568229100BE1A62 /* Item.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
