@@ -48,22 +48,6 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-#if !BK_HAS_ARC
-- (void)dealloc {
-    [_attributeMappings release];
-    self.nib = nil;
-    self.onSelectRowBlock = nil;
-    self.rowHeightBlock = nil;
-    self.willDisplayCellBlock = nil;
-    self.commitEditingStyleBlock = nil;
-    self.editingStyleBlock = nil;
-    
-    [super dealloc];
-}
-#endif
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)init {
     self = [super init];
     
@@ -88,10 +72,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)mappingForObjectClass:(Class)objectClass block:(void(^)(BKCellMapping *cellMapping))block {
     BKCellMapping *cellMapping = [[self alloc] initWithObjectClass:objectClass];
-    
     block(cellMapping);
-
-    return BK_AUTORELEASE(cellMapping);
+    return cellMapping;
 }
 
 

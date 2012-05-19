@@ -40,26 +40,8 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-#if !BK_HAS_ARC
-- (void)dealloc {
-    self.attribute = nil;
-    self.title = nil;
-    self.selectValuesBlock = nil;
-    self.placeholderText = nil;
-    self.btnHandler = nil;
-    self.selectDidSelectValueBlock = nil;
-    self.dateFormat = nil;
-    self.dateFormatBlock = nil;
-    self.labelValueBlock = nil;
-    
-    [super dealloc];
-}
-#endif
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)attributeMapping {
-    return BK_AUTORELEASE([[self alloc] init]);
+    return [[self alloc] init];
 }
 
 

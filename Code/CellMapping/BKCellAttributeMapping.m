@@ -33,22 +33,9 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-#if !BK_HAS_ARC
-- (void)dealloc {
-    self.keyPath = nil;
-    self.attribute = nil;
-    self.valueBlock = nil;
-    self.objectBlock = nil;
-    
-    [super dealloc];
-}
-#endif
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)attributeMapping {
     BKCellAttributeMapping *attributeMapping = [[self alloc] init];
-    return BK_AUTORELEASE(attributeMapping);
+    return attributeMapping;
 }
 
 

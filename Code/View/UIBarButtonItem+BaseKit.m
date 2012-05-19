@@ -33,7 +33,7 @@
                                                                           target:nil
                                                                           action:nil];
     
-	return BK_AUTORELEASE(item);
+	return item;
 }
 
 
@@ -46,7 +46,7 @@
                                                                           target:target
                                                                           action:action];
     
-    return BK_AUTORELEASE(item);
+    return item;
 }
 
 

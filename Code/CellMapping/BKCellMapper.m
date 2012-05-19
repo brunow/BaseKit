@@ -48,17 +48,6 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-#if !BK_HAS_ARC
-- (void)dealloc {
-    [_cellMapping release];
-    [_cell release];
-    
-    [super dealloc];
-}
-#endif
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 + (NSSet *)cellMappingsForObject:(id)object mappings:(NSDictionary *)mappings {
     NSString *objectStringName = NSStringFromClass([object class]);
     return [mappings objectForKey:objectStringName];
@@ -67,7 +56,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (BKCellMapping *)cellMappingForObject:(id)object mappings:(NSSet *)mappings {
-    BK_UNRETAINED_BLOCK_IVAR BKCellMapping *cellMappingForObject = [mappings anyObject];
+    BK_WEAK_IVAR __block BKCellMapping *cellMappingForObject = [mappings anyObject];
     BOOL isDynamicMapping = mappings.count > 1;
     
     if (isDynamicMapping) {

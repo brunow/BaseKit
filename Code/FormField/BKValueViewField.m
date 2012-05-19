@@ -41,9 +41,7 @@
 - (void)setValueView:(UIView *)valueView {
     if (_valueView != valueView) {
         [_valueView removeFromSuperview];
-        BK_RETAIN_WITHOUT_RETURN(_valueView);
-        
-        _valueView = BK_RETAIN(valueView);
+        _valueView = valueView;
         [self.contentView addSubview:_valueView];
     }
 }

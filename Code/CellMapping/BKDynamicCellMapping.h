@@ -21,7 +21,7 @@
 @interface BKDynamicCellMapping : BKCellMapping
 
 @property (nonatomic, copy) NSString *dynamicKeyPath;
-@property (nonatomic, BK_PROP_RETAIN) NSString *keyPathEqualTo;
+@property (nonatomic, strong) NSString *keyPathEqualTo;
 
 + (id)mappingForObjectClass:(Class)objectClass block:(void(^)(BKDynamicCellMapping *cellMapping))block;
 

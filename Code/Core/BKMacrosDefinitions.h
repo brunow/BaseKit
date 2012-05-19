@@ -19,41 +19,12 @@
 #define BK_HAS_ARC __has_feature(objc_arc)
 #define BK_HAS_WEAK __has_feature(objc_arc_weak)
 
-#if BK_HAS_ARC
-    #define BK_RETAIN(xx)                     (xx)
-    #define BK_RETAIN_WITHOUT_RETURN(xx)
-    #define BK_RELEASE(xx)
-    #define BK_AUTORELEASE(xx)                (xx)
-    #define BK_AUTORELEASE_WITHOUT_RETURN(xx)
-    #define BK_PROP_COPY                      nonatomic, copy
-    #define BK_PROP_RETAIN                    strong
-    #define BK_RELEASE_SAFELY(xx)
-    #define BK_STRONG_IVAR                    __strong
-    #define BK_SUPER_DEALLOC
-
-    #if BK_HAS_WEAK
-        #define BK_PROP_WEAK             weak
-        #define BK_WEAK_IVAR             __weak
-        #define BK_UNRETAINED_BLOCK_IVAR __weak __block
-    #else
-        #define BK_PROP_WEAK             unsafe_unretained
-        #define BK_WEAK_IVAR             __unsafe_unretained
-        #define BK_UNRETAINED_BLOCK_IVAR __unsafe_unretained __block
-    #endif
+#if BK_HAS_WEAK
+    #define BK_PROP_WEAK             weak
+    #define BK_WEAK_IVAR             __weak
 #else
-    #define BK_RETAIN(xx)                     [xx retain];
-    #define BK_RETAIN_WITHOUT_RETURN(xx)      [xx retain];
-    #define BK_RELEASE(xx)                    [xx release];
-    #define BK_AUTORELEASE(xx)                [xx autorelease];
-    #define BK_AUTORELEASE_WITHOUT_RETURN(xx) [xx autorelease];
-    #define BK_PROP_COPY                      nonatomic, copy
-    #define BK_PROP_WEAK                      assign
-    #define BK_PROP_RETAIN                    retain
-    #define BK_RELEASE_SAFELY(xx)             { [xx release]; xx = nil; }
-    #define BK_UNRETAINED_BLOCK_IVAR          __block
-    #define BK_STRONG_IVAR
-    #define BK_SUPER_DEALLOC                  [super dealloc];
-    #define BK_WEAK_IVAR
+    #define BK_PROP_WEAK             unsafe_unretained
+    #define BK_WEAK_IVAR             __unsafe_unretained
 #endif
 
 

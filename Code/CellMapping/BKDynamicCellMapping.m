@@ -27,23 +27,10 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-#if !BK_HAS_ARC
-- (void)dealloc {
-    self.dynamicKeyPath = nil;
-    self.keyPathEqualTo = nil;
-    
-    [super dealloc];
-}
-#endif
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)mappingForObjectClass:(Class)objectClass block:(void(^)(BKDynamicCellMapping *cellMapping))block {
     BKDynamicCellMapping *cellMapping = [[self alloc] initWithObjectClass:objectClass];
-    
     block(cellMapping);
-    
-    return BK_AUTORELEASE(cellMapping);
+    return cellMapping;
 }
 
 

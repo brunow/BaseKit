@@ -29,21 +29,10 @@
 @synthesize isFirstValueSelected = _isFirstValueSelected;
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////
-#if !BK_HAS_ARC
-- (void)dealloc {
-    self.firstValue = nil;
-    self.secondValue = nil;
-    
-    [super dealloc];
-}
-#endif
-
-
 ////////////////////////////////////////////////////////////////////////////////
 + (id)firstValue:(id)firstValue secondValue:(id)secondValue {
     BKToogleValue *toogleValue = [[self alloc] initWithFirstValue:firstValue secondValue:secondValue];
-    return BK_AUTORELEASE(toogleValue);
+    return toogleValue;
 }
 
 

@@ -43,19 +43,6 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-#if !BK_HAS_ARC
-- (void)dealloc {
-    [_attributeMappings release];
-    [_sectionTitles release];
-    [_saveAttribute release];
-    self.fieldsOrder = nil;
-    
-    [super dealloc];
-}
-#endif
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)init {
     self = [super init];
     
@@ -84,10 +71,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)mappingForClass:(Class)objectClass block:(void(^)(BKFormMapping *formMapping))block {
     BKFormMapping *formMapping = [[self alloc] initWithObjectClass:objectClass];
-    
     block(formMapping);
-    
-    return BK_AUTORELEASE(formMapping);
+    return formMapping;
 }
 
 

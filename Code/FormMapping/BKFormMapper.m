@@ -66,20 +66,6 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-#if !BK_HAS_ARC
-- (void)dealloc {
-    [_formMapping release];
-    [_tableView release];
-    [_object retain];
-    self.titles = nil;
-    self.sections = nil;
-    
-    [super dealloc];
-}
-#endif
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithFormMapping:(BKFormMapping *)formMapping
                 tabelView:(UITableView *)tableView
                    object:(id)object
@@ -89,9 +75,9 @@
     
     if (self) {
         _formModel = formModel; // weak ivar
-        _formMapping = BK_RETAIN(formMapping);
-        _tableView = BK_RETAIN(tableView);
-        _object = BK_RETAIN(object);
+        _formMapping = formMapping;
+        _tableView = tableView;
+        _object = object;
         [self splitFieldsIntoSections];
     }
     
@@ -186,8 +172,6 @@
     [formatter setCalendar:cal];
     [formatter setLocale:[NSLocale currentLocale]];
     NSString *stringDate = [formatter stringFromDate:date];
-    BK_RELEASE(cal);
-    BK_RELEASE(formatter);
     return stringDate;
 }
 
@@ -198,7 +182,6 @@
                   withField:(BKSimpleField *)field {
     
     id convertedValue = [self convertValueIfneeded:value attributeMapping:attributeMapping];
-    BK_RETAIN_WITHOUT_RETURN(convertedValue);
     
     // Value attribution
     if ([field isKindOfClass:[BKTextField class]]) {
@@ -228,8 +211,6 @@
         field.detailTextLabel.text = convertedValue;
         
     }
-    
-    BK_RELEASE(convertedValue);
 }
 
 
@@ -382,9 +363,6 @@
     
     self.titles = [NSArray arrayWithArray:titles];
     self.sections = [NSArray arrayWithArray:sections];
-    
-    BK_RELEASE(titles);
-    BK_RELEASE(sections);
 }
 
 

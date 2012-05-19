@@ -36,25 +36,13 @@
 @synthesize locationManager = _locationManager;
 
 
-#if !BK_HAS_ARC
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)dealloc {
-    self.locationManager = nil;
-    Block_release(_didUpdateLocationBlock);
-    Block_release(_didFailBlock);
-    
-    [super dealloc];
-}
-#endif
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)sharedManager {
     static dispatch_once_t pred = 0;
     static id _sharedObject = nil;
     
     dispatch_once(&pred, ^{
-        _sharedObject = BK_RETAIN([self manager]);
+        _sharedObject = [self manager];
     });
     
     return _sharedObject;
@@ -63,7 +51,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)manager {
-    return BK_AUTORELEASE([[self alloc ] init]);
+    return [[self alloc ] init];
 }
 
 

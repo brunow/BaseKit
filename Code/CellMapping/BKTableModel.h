@@ -24,11 +24,11 @@
 
 @interface BKTableModel : NSObject <UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, BK_PROP_RETAIN) UITableView *tableView;
+@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, copy) BKObjectForRowAtIndexPathBlock objectForRowAtIndexPathBlock;
-@property (nonatomic, BK_PROP_RETAIN) NSMutableArray *sectionTitles; // Doesn't work yet with sections !
-@property (nonatomic, BK_PROP_RETAIN) NSMutableArray *sections; // Doesn't work yet with sections !
-@property (nonatomic, BK_PROP_RETAIN) NSMutableArray *items;
+@property (nonatomic, strong) NSMutableArray *sectionTitles; // Doesn't work yet with sections !
+@property (nonatomic, strong) NSMutableArray *sections; // Doesn't work yet with sections !
+@property (nonatomic, strong) NSMutableArray *items;
 
 + (id)tableModelForTableView:(UITableView *)tableView;
 

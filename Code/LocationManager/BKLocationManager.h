@@ -28,7 +28,7 @@ typedef void (^BKLocationManagerDidFail)(CLLocationManager *manager, NSError *er
     BKLocationManagerDidFail _didFailBlock;
 }
 
-@property (nonatomic, BK_PROP_RETAIN) CLLocationManager *locationManager;
+@property (nonatomic, strong) CLLocationManager *locationManager;
 @property(nonatomic, assign) CLLocationAccuracy desiredAccuracy;
 
 + (id)sharedManager;

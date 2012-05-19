@@ -6,7 +6,7 @@ describe(@"NSStringBaseKitSpecs", ^{
     
     it(@"should capitalize first letter of first word", ^{
         id expected = @"StringByCapitalizingFirstLetter";
-        id value = [@"stringByCapitalizingFirstLetter" stringByCapitalizingFirstLetter];
+        id value = [(NSString *)@"stringByCapitalizingFirstLetter" stringByCapitalizingFirstLetter];
         [[value should] equal:expected];
     });
     

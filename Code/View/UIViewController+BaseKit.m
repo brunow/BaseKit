@@ -34,7 +34,6 @@
     if (navigationController) {
         UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:viewController()];
         [self presentModalViewController:nc animated:animated];
-        BK_RELEASE(nc);
     } else {
         [self presentModalViewController:viewController() animated:animated];
     }

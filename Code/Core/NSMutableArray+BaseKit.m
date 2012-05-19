@@ -37,15 +37,12 @@
 - (void)moveObjectFromIndex:(NSInteger)from toIndex:(NSInteger)to {
     if (to != from) {
         id object = [self objectAtIndex:from];
-        BK_RETAIN_WITHOUT_RETURN(object);
         
         if (to >= self.count) {
             [self addObject:object];
         } else {
             [self insertObject:object atIndex:to];
         }
-        
-        BK_RELEASE(object);
     }
 }
 

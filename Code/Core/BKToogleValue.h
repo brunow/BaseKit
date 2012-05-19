@@ -21,8 +21,8 @@
 
 @interface BKToogleValue : NSObject
 
-@property (nonatomic, BK_PROP_RETAIN) id firstValue;
-@property (nonatomic, BK_PROP_RETAIN) id secondValue;
+@property (nonatomic, strong) id firstValue;
+@property (nonatomic, strong) id secondValue;
 @property (nonatomic, assign) BOOL isFirstValueSelected;
 @property (nonatomic, readonly) id currentValue;
 

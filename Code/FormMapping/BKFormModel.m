@@ -62,19 +62,6 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-#if !BK_HAS_ARC
-- (void)dealloc {
-    self.tableView = nil;
-    self.formMapping = nil;
-    self.object = nil;
-    self.navigationController = nil;
-    
-    [super dealloc];
-}
-#endif
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)formTableModelForTableView:(UITableView *)tableView {
     return [self formTableModelForTableView:tableView navigationController:nil];
 }
@@ -84,8 +71,8 @@
 + (id)formTableModelForTableView:(UITableView *)tableView
             navigationController:(UINavigationController *)navigationController {
     
-    return BK_AUTORELEASE([[self alloc] initWithTableView:tableView
-                                     navigationController:navigationController]);
+    return [[self alloc] initWithTableView:tableView
+                      navigationController:navigationController];
 }
 
 
@@ -178,10 +165,10 @@
 - (void)loadFieldsWithObject:(id)object {
     self.object = object;
     
-    self.formMapper = BK_AUTORELEASE([[BKFormMapper alloc] initWithFormMapping:self.formMapping
-                                                                     tabelView:self.tableView
-                                                                        object:self.object
-                                                                     formModel:self]);
+    self.formMapper = [[BKFormMapper alloc] initWithFormMapping:self.formMapping
+                                                      tabelView:self.tableView
+                                                         object:self.object
+                                                      formModel:self];
 }
 
 
@@ -190,7 +177,6 @@
     __block NSIndexPath *indexPath = nil;
     [BKOperationHelper performBlockInBackground:^{
         indexPath = [self.formMapper indexPathOfAttributeMapping:attributeMapping];
-        BK_RETAIN_WITHOUT_RETURN(indexPath);
     } completion:^{
         [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                               withRowAnimation:UITableViewRowAnimationNone];
@@ -207,8 +193,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setTableView:(UITableView *)tableView {
     if (_tableView != tableView) {
-        BK_RELEASE(_tableView);
-        _tableView = BK_RETAIN(tableView);
+        _tableView = tableView;
     }
     
     tableView.dataSource = self;
@@ -219,8 +204,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)setObject:(id)object {
     if (object != _object) {
-        BK_RELEASE(_object);
-        _object = BK_RETAIN(object);
+        _object = object;
     }
 }
 
@@ -303,7 +287,7 @@
         vc.title = attributeMapping.title;
         vc.textView.delegate = weakRef.formMapper;
         vc.textView.formAttributeMapping = attributeMapping;
-        return BK_AUTORELEASE(vc);
+        return vc;
     } animated:YES];
 }
 

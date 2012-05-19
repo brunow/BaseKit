@@ -30,8 +30,8 @@
     dispatch_queue_t concurrentQueue = dispatch_queue_create("be.basekit.core.operationhelper", NULL);
     dispatch_queue_t mainQueue = dispatch_get_main_queue();
     
-    BKBasicBlock operation = BK_AUTORELEASE([block copy]);
-    BKBasicBlock completion = BK_AUTORELEASE([completionBlock copy]);
+    BKBasicBlock operation = [block copy];
+    BKBasicBlock completion = [completionBlock copy];
     
     if (completion == nil)
         completion = ^{};
