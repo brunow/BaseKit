@@ -901,7 +901,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BaseKit/BaseKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Resources/BaseKit-Prefix.pch";
 				INFOPLIST_FILE = "Resources/BaseKit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -912,7 +912,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BaseKit/BaseKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Resources/BaseKit-Prefix.pch";
 				INFOPLIST_FILE = "Resources/BaseKit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -928,7 +928,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BaseKit/BaseKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Resources/BaseKit-Prefix.pch";
 				INFOPLIST_FILE = "Resources/BaseKitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -950,7 +950,7 @@
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BaseKit/BaseKit-Prefix.pch";
+				GCC_PREFIX_HEADER = "Resources/BaseKit-Prefix.pch";
 				INFOPLIST_FILE = "Resources/BaseKitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
