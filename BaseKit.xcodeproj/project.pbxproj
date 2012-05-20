@@ -13,6 +13,8 @@
 		E729EFB21568AF8A00BB874A /* BaseKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E729EFAC1568AF8A00BB874A /* BaseKit-Info.plist */; };
 		E729EFB31568AF8A00BB874A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAD1568AF8A00BB874A /* AppDelegate.m */; };
 		E729EFB41568AF8A00BB874A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAE1568AF8A00BB874A /* main.m */; };
+		E729EFBB1568B7AC00BB874A /* BKCellMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFB81568B7AC00BB874A /* BKCellMapperSpecs.m */; };
+		E729EFBC1568B7AC00BB874A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFBA1568B7AC00BB874A /* Item.m */; };
 		E74E26E6156798B1004E6FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E5156798B1004E6FE9 /* UIKit.framework */; };
 		E74E26E8156798B1004E6FE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E7156798B1004E6FE9 /* Foundation.framework */; };
 		E74E26EA156798B1004E6FE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E9156798B1004E6FE9 /* CoreGraphics.framework */; };
@@ -89,8 +91,6 @@
 		E7DCB35615679B590092FBBA /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DCB35515679B590092FBBA /* libKiwi.a */; };
 		E7DCB35D1567A3D00092FBBA /* BKIterationHelperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */; };
 		E7DCB35F1567A7420092FBBA /* NSArrayBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */; };
-		E7E830CA1568220600BE1A62 /* BKCellMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830C7156821C500BE1A62 /* BKCellMapperSpecs.m */; };
-		E7E830D21568229100BE1A62 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830D01568227600BE1A62 /* Item.m */; };
 		E7E830D8156838C400BE1A62 /* BKFormMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +114,9 @@
 		E729EFAE1568AF8A00BB874A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E729EFAF1568AF8A00BB874A /* BaseKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseKit-Prefix.pch"; sourceTree = "<group>"; };
 		E729EFB01568AF8A00BB874A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E729EFB81568B7AC00BB874A /* BKCellMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapperSpecs.m; sourceTree = "<group>"; };
+		E729EFB91568B7AC00BB874A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		E729EFBA1568B7AC00BB874A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
 		E74E26E1156798B1004E6FE9 /* BaseKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74E26E5156798B1004E6FE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E74E26E7156798B1004E6FE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -260,9 +263,6 @@
 		E7DCB35515679B590092FBBA /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "../../dev/xcodeBuilds/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKIterationHelperSpecs.m; sourceTree = "<group>"; };
 		E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayBaseKitSpecs.m; sourceTree = "<group>"; };
-		E7E830C7156821C500BE1A62 /* BKCellMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapperSpecs.m; sourceTree = SOURCE_ROOT; };
-		E7E830CF1568227600BE1A62 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = SOURCE_ROOT; };
-		E7E830D01568227600BE1A62 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = SOURCE_ROOT; };
 		E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormMapperSpecs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -306,6 +306,16 @@
 				E729EFA81568AF4B00BB874A /* BaseKitTests-Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E729EFB71568B7AC00BB874A /* CellMapping */ = {
+			isa = PBXGroup;
+			children = (
+				E729EFB81568B7AC00BB874A /* BKCellMapperSpecs.m */,
+				E729EFB91568B7AC00BB874A /* Item.h */,
+				E729EFBA1568B7AC00BB874A /* Item.m */,
+			);
+			path = CellMapping;
 			sourceTree = "<group>";
 		};
 		E74E26D6156798B1004E6FE9 = {
@@ -611,22 +621,12 @@
 		E7DCB3581567A2CA0092FBBA /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				E729EFB71568B7AC00BB874A /* CellMapping */,
 				E7871FF71567D4AD00061D17 /* CoreData */,
-				E7DCB3591567A38C0092FBBA /* CellMapping */,
 				E7DCB35A1567A38C0092FBBA /* Core */,
 				E7DCB35B1567A38C0092FBBA /* FormMapping */,
 			);
 			path = Test;
-			sourceTree = "<group>";
-		};
-		E7DCB3591567A38C0092FBBA /* CellMapping */ = {
-			isa = PBXGroup;
-			children = (
-				E7E830C7156821C500BE1A62 /* BKCellMapperSpecs.m */,
-				E7E830CF1568227600BE1A62 /* Item.h */,
-				E7E830D01568227600BE1A62 /* Item.m */,
-			);
-			path = CellMapping;
 			sourceTree = "<group>";
 		};
 		E7DCB35A1567A38C0092FBBA /* Core */ = {
@@ -832,10 +832,10 @@
 				E7871FF61567D40000061D17 /* BKToogleValueSpecs.m in Sources */,
 				E7871FFE15680CBB00061D17 /* NSManagedObjectBaseKitSpecs.m in Sources */,
 				E787200015680E5900061D17 /* NSStringBaseKitSpecs.m in Sources */,
-				E7E830CA1568220600BE1A62 /* BKCellMapperSpecs.m in Sources */,
-				E7E830D21568229100BE1A62 /* Item.m in Sources */,
 				E7E830D8156838C400BE1A62 /* BKFormMapperSpecs.m in Sources */,
 				E729EFA61568406300BB874A /* Book.m in Sources */,
+				E729EFBB1568B7AC00BB874A /* BKCellMapperSpecs.m in Sources */,
+				E729EFBC1568B7AC00BB874A /* Item.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
