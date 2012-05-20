@@ -58,6 +58,8 @@ Push view controller with block.
 
 # Cell mapping
 
+Create table view with blocks based syntax.
+
 	self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
 	self.tableView.dataSource = self.tableModel;
 	self.tableView.delegate = self.tableModel;
@@ -84,7 +86,7 @@ For more **example** open **Examples/CellMappingExample/CellMappingExample.xcode
 
 # Form mapping
 
-Create form connected with a model very easy. Each time you add a "mapAttribute" you must give a property name that belongs to your object, after value change it is automatically saved into the property.
+FormMapping is a library for building form with table view. Fields data are automatically filled from a model. When data changed it's automatically savec inside the object.
 
 BaseKit use an external library called ActionSheetPicker but unfortunately that library doesn't support ARC yet, so you need to add "-fno-objc-arc" when you import it to your project.
 
