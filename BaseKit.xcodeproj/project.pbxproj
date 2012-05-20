@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E729EFA61568406300BB874A /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFA41568406300BB874A /* Book.m */; };
 		E74E26E6156798B1004E6FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E5156798B1004E6FE9 /* UIKit.framework */; };
 		E74E26E8156798B1004E6FE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E7156798B1004E6FE9 /* Foundation.framework */; };
 		E74E26EA156798B1004E6FE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E9156798B1004E6FE9 /* CoreGraphics.framework */; };
@@ -90,6 +91,7 @@
 		E7DCB35F1567A7420092FBBA /* NSArrayBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */; };
 		E7E830CA1568220600BE1A62 /* BKCellMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830C7156821C500BE1A62 /* BKCellMapperSpecs.m */; };
 		E7E830D21568229100BE1A62 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830D01568227600BE1A62 /* Item.m */; };
+		E7E830D8156838C400BE1A62 /* BKFormMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E729EFA41568406300BB874A /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		E729EFA51568406300BB874A /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		E74E26E1156798B1004E6FE9 /* BaseKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74E26E5156798B1004E6FE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E74E26E7156798B1004E6FE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -261,6 +265,7 @@
 		E7E830C7156821C500BE1A62 /* BKCellMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapperSpecs.m; sourceTree = SOURCE_ROOT; };
 		E7E830CF1568227600BE1A62 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = SOURCE_ROOT; };
 		E7E830D01568227600BE1A62 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = SOURCE_ROOT; };
+		E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormMapperSpecs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -667,6 +672,9 @@
 		E7DCB35B1567A38C0092FBBA /* FormMapping */ = {
 			isa = PBXGroup;
 			children = (
+				E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */,
+				E729EFA41568406300BB874A /* Book.m */,
+				E729EFA51568406300BB874A /* Book.h */,
 			);
 			path = FormMapping;
 			sourceTree = "<group>";
@@ -854,6 +862,8 @@
 				E787200015680E5900061D17 /* NSStringBaseKitSpecs.m in Sources */,
 				E7E830CA1568220600BE1A62 /* BKCellMapperSpecs.m in Sources */,
 				E7E830D21568229100BE1A62 /* Item.m in Sources */,
+				E7E830D8156838C400BE1A62 /* BKFormMapperSpecs.m in Sources */,
+				E729EFA61568406300BB874A /* Book.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
