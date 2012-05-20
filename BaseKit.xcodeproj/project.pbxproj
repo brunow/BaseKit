@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		E729EFA61568406300BB874A /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFA41568406300BB874A /* Book.m */; };
+		E729EFA91568AF4B00BB874A /* BaseKitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E729EFA81568AF4B00BB874A /* BaseKitTests-Info.plist */; };
+		E729EFB11568AF8A00BB874A /* BaseKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAA1568AF8A00BB874A /* BaseKit.xcdatamodeld */; };
+		E729EFB21568AF8A00BB874A /* BaseKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E729EFAC1568AF8A00BB874A /* BaseKit-Info.plist */; };
+		E729EFB31568AF8A00BB874A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAD1568AF8A00BB874A /* AppDelegate.m */; };
+		E729EFB41568AF8A00BB874A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAE1568AF8A00BB874A /* main.m */; };
 		E74E26E6156798B1004E6FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E5156798B1004E6FE9 /* UIKit.framework */; };
 		E74E26E8156798B1004E6FE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E7156798B1004E6FE9 /* Foundation.framework */; };
 		E74E26EA156798B1004E6FE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E9156798B1004E6FE9 /* CoreGraphics.framework */; };
 		E74E26EC156798B1004E6FE9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26EB156798B1004E6FE9 /* CoreData.framework */; };
-		E74E26F2156798B1004E6FE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E74E26F0156798B1004E6FE9 /* InfoPlist.strings */; };
-		E74E26F4156798B1004E6FE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E26F3156798B1004E6FE9 /* main.m */; };
-		E74E26F8156798B2004E6FE9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E26F7156798B2004E6FE9 /* AppDelegate.m */; };
-		E74E26FB156798B2004E6FE9 /* BaseKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E74E26F9156798B2004E6FE9 /* BaseKit.xcdatamodeld */; };
 		E74E2703156798B2004E6FE9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E2702156798B2004E6FE9 /* SenTestingKit.framework */; };
 		E74E2704156798B2004E6FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E5156798B1004E6FE9 /* UIKit.framework */; };
 		E74E2705156798B2004E6FE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E7156798B1004E6FE9 /* Foundation.framework */; };
 		E74E2706156798B2004E6FE9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26EB156798B1004E6FE9 /* CoreData.framework */; };
-		E74E270E156798B2004E6FE9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E74E270C156798B2004E6FE9 /* InfoPlist.strings */; };
 		E74E2797156798C2004E6FE9 /* BKCellAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E271F156798C2004E6FE9 /* BKCellAttributeMapping.m */; };
 		E74E2798156798C2004E6FE9 /* BKCellMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2721156798C2004E6FE9 /* BKCellMapper.m */; };
 		E74E2799156798C2004E6FE9 /* BKCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2723156798C2004E6FE9 /* BKCellMapping.m */; };
@@ -107,22 +107,20 @@
 /* Begin PBXFileReference section */
 		E729EFA41568406300BB874A /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		E729EFA51568406300BB874A /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		E729EFA81568AF4B00BB874A /* BaseKitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BaseKitTests-Info.plist"; sourceTree = "<group>"; };
+		E729EFAB1568AF8A00BB874A /* BaseKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BaseKit.xcdatamodel; sourceTree = "<group>"; };
+		E729EFAC1568AF8A00BB874A /* BaseKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BaseKit-Info.plist"; sourceTree = "<group>"; };
+		E729EFAD1568AF8A00BB874A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E729EFAE1568AF8A00BB874A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E729EFAF1568AF8A00BB874A /* BaseKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseKit-Prefix.pch"; sourceTree = "<group>"; };
+		E729EFB01568AF8A00BB874A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E74E26E1156798B1004E6FE9 /* BaseKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74E26E5156798B1004E6FE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E74E26E7156798B1004E6FE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E74E26E9156798B1004E6FE9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E74E26EB156798B1004E6FE9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		E74E26EF156798B1004E6FE9 /* BaseKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaseKit-Info.plist"; sourceTree = "<group>"; };
-		E74E26F1156798B1004E6FE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E74E26F3156798B1004E6FE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E74E26F5156798B1004E6FE9 /* BaseKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseKit-Prefix.pch"; sourceTree = "<group>"; };
-		E74E26F6156798B2004E6FE9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E74E26F7156798B2004E6FE9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E74E26FA156798B2004E6FE9 /* BaseKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BaseKit.xcdatamodel; sourceTree = "<group>"; };
 		E74E2701156798B2004E6FE9 /* BaseKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74E2702156798B2004E6FE9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E74E270B156798B2004E6FE9 /* BaseKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BaseKitTests-Info.plist"; sourceTree = "<group>"; };
-		E74E270D156798B2004E6FE9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E74E271D156798C2004E6FE9 /* BaseKitCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCellMapping.h; sourceTree = "<group>"; };
 		E74E271E156798C2004E6FE9 /* BKCellAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellAttributeMapping.h; sourceTree = "<group>"; };
 		E74E271F156798C2004E6FE9 /* BKCellAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellAttributeMapping.m; sourceTree = "<group>"; };
@@ -296,15 +294,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E729EFA71568AF4B00BB874A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E729EFAA1568AF8A00BB874A /* BaseKit.xcdatamodeld */,
+				E729EFAC1568AF8A00BB874A /* BaseKit-Info.plist */,
+				E729EFAD1568AF8A00BB874A /* AppDelegate.m */,
+				E729EFAE1568AF8A00BB874A /* main.m */,
+				E729EFAF1568AF8A00BB874A /* BaseKit-Prefix.pch */,
+				E729EFB01568AF8A00BB874A /* AppDelegate.h */,
+				E729EFA81568AF4B00BB874A /* BaseKitTests-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		E74E26D6156798B1004E6FE9 = {
 			isa = PBXGroup;
 			children = (
 				E7DCB3581567A2CA0092FBBA /* Test */,
 				E74E27CC156798CA004E6FE9 /* Vendor */,
 				E74E271A156798C2004E6FE9 /* Code */,
-				E74E26ED156798B1004E6FE9 /* BaseKit */,
-				E74E2709156798B2004E6FE9 /* BaseKitTests */,
 				E74E26E4156798B1004E6FE9 /* Frameworks */,
+				E729EFA71568AF4B00BB874A /* Resources */,
 				E74E26E2156798B1004E6FE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -330,45 +341,6 @@
 				E74E2702156798B2004E6FE9 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E74E26ED156798B1004E6FE9 /* BaseKit */ = {
-			isa = PBXGroup;
-			children = (
-				E74E26F6156798B2004E6FE9 /* AppDelegate.h */,
-				E74E26F7156798B2004E6FE9 /* AppDelegate.m */,
-				E74E26F9156798B2004E6FE9 /* BaseKit.xcdatamodeld */,
-				E74E26EE156798B1004E6FE9 /* Supporting Files */,
-			);
-			path = BaseKit;
-			sourceTree = "<group>";
-		};
-		E74E26EE156798B1004E6FE9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E74E26EF156798B1004E6FE9 /* BaseKit-Info.plist */,
-				E74E26F0156798B1004E6FE9 /* InfoPlist.strings */,
-				E74E26F3156798B1004E6FE9 /* main.m */,
-				E74E26F5156798B1004E6FE9 /* BaseKit-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E74E2709156798B2004E6FE9 /* BaseKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				E74E270A156798B2004E6FE9 /* Supporting Files */,
-			);
-			path = BaseKitTests;
-			sourceTree = "<group>";
-		};
-		E74E270A156798B2004E6FE9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E74E270B156798B2004E6FE9 /* BaseKitTests-Info.plist */,
-				E74E270C156798B2004E6FE9 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E74E271A156798C2004E6FE9 /* Code */ = {
@@ -749,13 +721,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74E26F2156798B1004E6FE9 /* InfoPlist.strings in Resources */,
 				E74E279C156798C2004E6FE9 /* deps in Resources */,
 				E74E27A3156798C2004E6FE9 /* deps in Resources */,
 				E74E27BB156798C2004E6FE9 /* deps in Resources */,
 				E74E27C0156798C2004E6FE9 /* deps in Resources */,
 				E74E27C3156798C2004E6FE9 /* deps in Resources */,
 				E74E27C4156798C2004E6FE9 /* deps in Resources */,
+				E729EFB21568AF8A00BB874A /* BaseKit-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,7 +735,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74E270E156798B2004E6FE9 /* InfoPlist.strings in Resources */,
+				E729EFA91568AF4B00BB874A /* BaseKitTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,9 +762,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74E26F4156798B1004E6FE9 /* main.m in Sources */,
-				E74E26F8156798B2004E6FE9 /* AppDelegate.m in Sources */,
-				E74E26FB156798B2004E6FE9 /* BaseKit.xcdatamodeld in Sources */,
 				E74E2797156798C2004E6FE9 /* BKCellAttributeMapping.m in Sources */,
 				E74E2798156798C2004E6FE9 /* BKCellMapper.m in Sources */,
 				E74E2799156798C2004E6FE9 /* BKCellMapping.m in Sources */,
@@ -847,6 +816,9 @@
 				E74E27E8156798CA004E6FE9 /* ActionSheetStringPicker.m in Sources */,
 				E74E27E9156798CA004E6FE9 /* DistancePickerView.m in Sources */,
 				E74E27EA156798CA004E6FE9 /* BWLongTextViewController.m in Sources */,
+				E729EFB11568AF8A00BB874A /* BaseKit.xcdatamodeld in Sources */,
+				E729EFB31568AF8A00BB874A /* AppDelegate.m in Sources */,
+				E729EFB41568AF8A00BB874A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -876,25 +848,6 @@
 			targetProxy = E74E2707156798B2004E6FE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E74E26F0156798B1004E6FE9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E74E26F1156798B1004E6FE9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E74E270C156798B2004E6FE9 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E74E270D156798B2004E6FE9 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E74E2712156798B2004E6FE9 /* Debug */ = {
@@ -949,7 +902,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BaseKit/BaseKit-Prefix.pch";
-				INFOPLIST_FILE = "BaseKit/BaseKit-Info.plist";
+				INFOPLIST_FILE = "Resources/BaseKit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -960,7 +913,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BaseKit/BaseKit-Prefix.pch";
-				INFOPLIST_FILE = "BaseKit/BaseKit-Info.plist";
+				INFOPLIST_FILE = "Resources/BaseKit-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -976,7 +929,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BaseKit/BaseKit-Prefix.pch";
-				INFOPLIST_FILE = "BaseKitTests/BaseKitTests-Info.plist";
+				INFOPLIST_FILE = "Resources/BaseKitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -998,7 +951,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BaseKit/BaseKit-Prefix.pch";
-				INFOPLIST_FILE = "BaseKitTests/BaseKitTests-Info.plist";
+				INFOPLIST_FILE = "Resources/BaseKitTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -1043,12 +996,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E74E26F9156798B2004E6FE9 /* BaseKit.xcdatamodeld */ = {
+		E729EFAA1568AF8A00BB874A /* BaseKit.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E74E26FA156798B2004E6FE9 /* BaseKit.xcdatamodel */,
+				E729EFAB1568AF8A00BB874A /* BaseKit.xcdatamodel */,
 			);
-			currentVersion = E74E26FA156798B2004E6FE9 /* BaseKit.xcdatamodel */;
+			currentVersion = E729EFAB1568AF8A00BB874A /* BaseKit.xcdatamodel */;
 			path = BaseKit.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
