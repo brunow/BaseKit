@@ -23,11 +23,13 @@
 
 @interface BKFormModel : NSObject <UITableViewDataSource, UITableViewDelegate> {
     BOOL _canHideKeyBoard;
+    NSMutableArray *_textFields;
 }
 
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) id object;
 @property (nonatomic, retain) UINavigationController *navigationController;
+@property (nonatomic, readonly) NSMutableArray *textFields;
 
 + (id)formTableModelForTableView:(UITableView *)tableView;
 

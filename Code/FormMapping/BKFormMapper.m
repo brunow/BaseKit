@@ -187,6 +187,7 @@
     if ([field isKindOfClass:[BKTextField class]]) {
         [(BKTextField *)field textField].text = convertedValue;
         [(BKTextField *)field textField].placeholder = attributeMapping.placeholderText;
+        [self.formModel.textFields addObject:[(BKTextField *)field textField]];
         
     } else if ([field isKindOfClass:[BKSwitchField class]] && [convertedValue isKindOfClass:[NSNumber class]]) {
         UISwitch *switchControl = [(BKSwitchField *)field switchControl];

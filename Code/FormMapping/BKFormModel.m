@@ -59,6 +59,7 @@
 @synthesize object = _object;
 @synthesize formMapper = _formMapper;
 @synthesize navigationController = _navigationController;
+@synthesize textFields = _textFields;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -93,6 +94,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+        _textFields = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -169,6 +171,8 @@
                                                       tabelView:self.tableView
                                                          object:self.object
                                                       formModel:self];
+    
+    [self.tableView reloadData];
 }
 
 

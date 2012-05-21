@@ -468,7 +468,7 @@
 		E7BCB77414BE2BEE00A9C715 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = E7BCB77714BE2BEE00A9C715 /* Build configuration list for PBXProject "FormMappingExample" */;
 			compatibilityVersion = "Xcode 3.2";
