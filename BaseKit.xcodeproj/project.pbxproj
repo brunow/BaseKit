@@ -86,6 +86,7 @@
 		E7871FF61567D40000061D17 /* BKToogleValueSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7871FF41567D3B800061D17 /* BKToogleValueSpecs.m */; };
 		E7871FFE15680CBB00061D17 /* NSManagedObjectBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7871FFD15680CBB00061D17 /* NSManagedObjectBaseKitSpecs.m */; };
 		E787200015680E5900061D17 /* NSStringBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7871FFF15680E5900061D17 /* NSStringBaseKitSpecs.m */; };
+		E7AD2B5C156AD642007F7790 /* UIViewBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7AD2B5B156AD642007F7790 /* UIViewBaseKitSpecs.m */; };
 		E7DCB35615679B590092FBBA /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DCB35515679B590092FBBA /* libKiwi.a */; };
 		E7DCB35D1567A3D00092FBBA /* BKIterationHelperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */; };
 		E7DCB35F1567A7420092FBBA /* NSArrayBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */; };
@@ -258,6 +259,7 @@
 		E7871FF81567D4C800061D17 /* BaseKitCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCoreData.h; sourceTree = "<group>"; };
 		E7871FFD15680CBB00061D17 /* NSManagedObjectBaseKitSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSManagedObjectBaseKitSpecs.m; sourceTree = "<group>"; };
 		E7871FFF15680E5900061D17 /* NSStringBaseKitSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringBaseKitSpecs.m; sourceTree = "<group>"; };
+		E7AD2B5B156AD642007F7790 /* UIViewBaseKitSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewBaseKitSpecs.m; sourceTree = "<group>"; };
 		E7DCB35515679B590092FBBA /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "../../dev/xcodeBuilds/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKIterationHelperSpecs.m; sourceTree = "<group>"; };
 		E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayBaseKitSpecs.m; sourceTree = "<group>"; };
@@ -616,9 +618,18 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		E7AD2B59156AD629007F7790 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7AD2B5B156AD642007F7790 /* UIViewBaseKitSpecs.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E7DCB3581567A2CA0092FBBA /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				E7AD2B59156AD629007F7790 /* View */,
 				E729EFB71568B7AC00BB874A /* CellMapping */,
 				E7871FF71567D4AD00061D17 /* CoreData */,
 				E7DCB35A1567A38C0092FBBA /* Core */,
@@ -832,6 +843,7 @@
 				E729EFA61568406300BB874A /* Book.m in Sources */,
 				E729EFBB1568B7AC00BB874A /* BKCellMapperSpecs.m in Sources */,
 				E729EFBC1568B7AC00BB874A /* Item.m in Sources */,
+				E7AD2B5C156AD642007F7790 /* UIViewBaseKitSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
