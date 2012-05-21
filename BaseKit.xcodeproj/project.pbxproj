@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E729EFA61568406300BB874A /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFA41568406300BB874A /* Book.m */; };
-		E729EFA91568AF4B00BB874A /* BaseKitTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E729EFA81568AF4B00BB874A /* BaseKitTests-Info.plist */; };
 		E729EFB11568AF8A00BB874A /* BaseKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAA1568AF8A00BB874A /* BaseKit.xcdatamodeld */; };
-		E729EFB21568AF8A00BB874A /* BaseKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E729EFAC1568AF8A00BB874A /* BaseKit-Info.plist */; };
 		E729EFB31568AF8A00BB874A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAD1568AF8A00BB874A /* AppDelegate.m */; };
 		E729EFB41568AF8A00BB874A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAE1568AF8A00BB874A /* main.m */; };
 		E729EFBB1568B7AC00BB874A /* BKCellMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFB81568B7AC00BB874A /* BKCellMapperSpecs.m */; };
@@ -727,7 +725,6 @@
 				E74E27C0156798C2004E6FE9 /* deps in Resources */,
 				E74E27C3156798C2004E6FE9 /* deps in Resources */,
 				E74E27C4156798C2004E6FE9 /* deps in Resources */,
-				E729EFB21568AF8A00BB874A /* BaseKit-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -735,7 +732,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E729EFA91568AF4B00BB874A /* BaseKitTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

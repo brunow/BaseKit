@@ -59,7 +59,6 @@
 @synthesize object = _object;
 @synthesize formMapper = _formMapper;
 @synthesize navigationController = _navigationController;
-@synthesize textFields = _textFields;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -94,7 +93,6 @@
 - (id)init {
     self = [super init];
     if (self) {
-        _textFields = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -185,6 +183,18 @@
         [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
                               withRowAnimation:UITableViewRowAnimationNone];
     }];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (id)findFirstTextField {
+    return [self.tableView findFirstTextField];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSArray *)findTextFields {
+    return [self.tableView findTextFields];
 }
 
 

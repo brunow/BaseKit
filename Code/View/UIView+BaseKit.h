@@ -21,4 +21,8 @@
 
 - (UIView *)findFirstResponder;
 
+- (id)findFirstTextField;
+
+- (NSArray *)findTextFields;
+
 @end
