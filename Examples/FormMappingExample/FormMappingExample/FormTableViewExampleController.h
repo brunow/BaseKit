@@ -11,7 +11,7 @@
 @class BKFormModel;
 @class Movie;
 
-@interface FormTableViewController : UITableViewController
+@interface FormTableViewExampleController : UITableViewController
 
 @property (nonatomic, strong) BKFormModel *formModel;
 @property (nonatomic, strong) Movie *movie;

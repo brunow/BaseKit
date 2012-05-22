@@ -26,3 +26,7 @@ typedef void(^BKFormMappingButtonHandlerBlock)(id object);
 typedef NSString *(^BKFormMappingDateFormatBlock)();
 
 typedef id (^BKFormMappingSelectLabelValueBlock)(id value, id object);
+
+typedef void(^BKFormMappingWillDisplayCellBlock)(UITableViewCell *cell, id object, NSIndexPath *indexPath);
+
+typedef void(^BKFormMappingCellSelectionBlock)(UITableViewCell *cell, id object, NSIndexPath *indexPath);

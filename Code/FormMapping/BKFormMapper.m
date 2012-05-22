@@ -36,7 +36,7 @@
 
 - (void)mapAttributeMapping:(BKFormAttributeMapping *)attributeMapping
                       value:(id)value
-                  withField:(BKSimpleField *)field;
+                  withField:(UITableViewCell *)field;
 
 - (BKSimpleField *)cellWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping sourceClass:(Class)sourceClass;
 
@@ -107,10 +107,17 @@
 - (UITableViewCell *)cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BKFormAttributeMapping *attributeMapping = [self attributeMappingAtIndexPath:indexPath];
     Class sourceClass = [self classFromSourcePropertyAtIndexPath:indexPath keyPath:attributeMapping.attribute];
-    BKSimpleField *field = [self cellWithAttributeMapping:attributeMapping sourceClass:sourceClass];
-    id value = [self valueForAttriteMapping:attributeMapping];
-    [self mapAttributeMapping:attributeMapping value:value withField:field];
-    field.textLabel.text = attributeMapping.title;
+    UITableViewCell *field = [self cellWithAttributeMapping:attributeMapping sourceClass:sourceClass];
+    
+    if (BKFormAttributeMappingTypeCustomCell == attributeMapping.type) {
+        attributeMapping.willDisplayCellBlock(field, indexPath, self.object);
+        
+    } else {
+        id value = [self valueForAttriteMapping:attributeMapping];
+        [self mapAttributeMapping:attributeMapping value:value withField:field];
+        field.textLabel.text = attributeMapping.title;
+        
+    }
     
     return field;
 }
@@ -179,7 +186,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)mapAttributeMapping:(BKFormAttributeMapping *)attributeMapping
                       value:(id)value
-                  withField:(BKSimpleField *)field {
+                  withField:(UITableViewCell *)field {
     
     id convertedValue = [self convertValueIfneeded:value attributeMapping:attributeMapping];
     
@@ -255,6 +262,9 @@
         
     } else if (type == BKFormAttributeMappingTypeBigText) {
         field = [BKBigTextField cellForTableView:self.tableView];
+        
+    } else if (type == BKFormAttributeMappingTypeCustomCell) {
+        field = [attributeMapping.customCell cellForTableView:self.tableView];
         
     } else {
         field = [BKLabelField cellForTableView:self.tableView];
@@ -363,6 +373,13 @@
     
     self.titles = [NSArray arrayWithArray:titles];
     self.sections = [NSArray arrayWithArray:sections];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingAtIndexPath:indexPath];
+    return attributeMapping.type == BKFormAttributeMappingTypeCustomCell ? attributeMapping.rowHeight : 44;
 }
 
 

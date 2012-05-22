@@ -54,4 +54,6 @@
 
 - (NSIndexPath *)indexPathOfAttributeMapping:(BKFormAttributeMapping *)attributeMapping;
 
+- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

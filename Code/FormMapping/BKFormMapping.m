@@ -168,6 +168,25 @@ valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)mapCustomCell:(Class)cell
+           identifier:(NSString *)identifier
+            rowHeight:(CGFloat)rowHeight
+ willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
+       didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock {
+    
+    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
+    attributeMapping.willDisplayCellBlock = willDisplayCellBlock;;
+    attributeMapping.type = BKFormAttributeMappingTypeCustomCell;
+    attributeMapping.cellSelectionBlock = selectionBlock;
+    attributeMapping.customCell = cell;
+    attributeMapping.attribute = identifier;
+    attributeMapping.rowHeight = rowHeight;
+    
+    [self addAttributeMappingToFormMapping:attributeMapping];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)button:(NSString *)title
     identifier:(NSString *)identifier
        handler:(BKFormMappingButtonHandlerBlock)blockHandler

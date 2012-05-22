@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "FormTableViewController.h"
+#import "FormTableViewExampleController.h"
 
 @implementation AppDelegate
 
@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    UIViewController *vc = [[FormTableViewController alloc] init];
+    UIViewController *vc = [[FormTableViewExampleController alloc] init];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
     
     self.window.rootViewController = nc;

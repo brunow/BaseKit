@@ -63,6 +63,16 @@
 valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
      labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue;
 
+- (void)mapCustomCell:(Class)cell
+           identifier:(NSString *)identifier
+            rowHeight:(CGFloat)rowHeight
+ willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
+       didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock;
+
+//[formMapping mapCustomCell:[UITableViewCell class] identidier:@"customCell" willDisplayCellBlock:^UITableViewCell *(id object, NSIndexPath *indexPath, UITableViewCell *cell) {
+//    cell.textLabel.text = @"It's a custom cell";
+//}];
+
 - (void)sectiontTitle:(NSString *)title identifier:(NSString *)identifier;
 
 - (void)button:(NSString *)title

@@ -37,6 +37,10 @@
 @synthesize dateFormat = _dateFormat;
 @synthesize dateFormatBlock = _dateFormatBlock;
 @synthesize labelValueBlock = _labelValueBlock;
+@synthesize willDisplayCellBlock = _willDisplayCellBlock;
+@synthesize cellSelectionBlock = _cellSelectionBlock;
+@synthesize customCell = _customCell;
+@synthesize rowHeight = _rowHeight;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

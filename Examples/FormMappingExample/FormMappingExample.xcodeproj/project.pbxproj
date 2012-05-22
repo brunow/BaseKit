@@ -66,7 +66,7 @@
 		E7BCB78C14BE2BEE00A9C715 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7BCB78A14BE2BEE00A9C715 /* InfoPlist.strings */; };
 		E7BCB78E14BE2BEE00A9C715 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BCB78D14BE2BEE00A9C715 /* main.m */; };
 		E7BCB79214BE2BEE00A9C715 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BCB79114BE2BEE00A9C715 /* AppDelegate.m */; };
-		E7BCB79A14BE2C1B00A9C715 /* FormTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BCB79914BE2C1B00A9C715 /* FormTableViewController.m */; };
+		E7BCB79A14BE2C1B00A9C715 /* FormTableViewExampleController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7BCB79914BE2C1B00A9C715 /* FormTableViewExampleController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,8 +196,8 @@
 		E7BCB78F14BE2BEE00A9C715 /* FormMappingExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormMappingExample-Prefix.pch"; sourceTree = "<group>"; };
 		E7BCB79014BE2BEE00A9C715 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7BCB79114BE2BEE00A9C715 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E7BCB79814BE2C1B00A9C715 /* FormTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTableViewController.h; sourceTree = "<group>"; };
-		E7BCB79914BE2C1B00A9C715 /* FormTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTableViewController.m; sourceTree = "<group>"; };
+		E7BCB79814BE2C1B00A9C715 /* FormTableViewExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = FormTableViewExampleController.h; sourceTree = "<group>"; };
+		E7BCB79914BE2C1B00A9C715 /* FormTableViewExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTableViewExampleController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,8 +419,8 @@
 				E7BCB79014BE2BEE00A9C715 /* AppDelegate.h */,
 				E7BCB79114BE2BEE00A9C715 /* AppDelegate.m */,
 				E7BCB78814BE2BEE00A9C715 /* Supporting Files */,
-				E7BCB79814BE2C1B00A9C715 /* FormTableViewController.h */,
-				E7BCB79914BE2C1B00A9C715 /* FormTableViewController.m */,
+				E7BCB79814BE2C1B00A9C715 /* FormTableViewExampleController.h */,
+				E7BCB79914BE2C1B00A9C715 /* FormTableViewExampleController.m */,
 				E75C1D0E14FEAC13009DBDCA /* Movie.h */,
 				E75C1D0F14FEAC13009DBDCA /* Movie.m */,
 				E75C1D1114FEAC48009DBDCA /* Comment.h */,
@@ -507,7 +507,7 @@
 			files = (
 				E7BCB78E14BE2BEE00A9C715 /* main.m in Sources */,
 				E7BCB79214BE2BEE00A9C715 /* AppDelegate.m in Sources */,
-				E7BCB79A14BE2C1B00A9C715 /* FormTableViewController.m in Sources */,
+				E7BCB79A14BE2C1B00A9C715 /* FormTableViewExampleController.m in Sources */,
 				E75C1D1014FEAC13009DBDCA /* Movie.m in Sources */,
 				E75C1D1314FEAC48009DBDCA /* Comment.m in Sources */,
 				E75C1D1614FEAC4F009DBDCA /* Genre.m in Sources */,

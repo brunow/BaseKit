@@ -35,7 +35,8 @@ typedef enum {
     BKFormAttributeMappingTypeBigText = 11,
     BKFormAttributeMappingTypeImage = 12,
     BKFormAttributeMappingTypeButton = 13,
-    BKFormAttributeMappingTypeSelect = 14
+    BKFormAttributeMappingTypeSelect = 14,
+    BKFormAttributeMappingTypeCustomCell = 15
 } BKFormAttributeMappingType;
 
 @interface BKFormAttributeMapping : NSObject
@@ -53,6 +54,10 @@ typedef enum {
 @property (nonatomic, copy) NSString *dateFormat;
 @property (nonatomic, copy) BKFormMappingDateFormatBlock dateFormatBlock;
 @property (nonatomic, copy) BKFormMappingSelectLabelValueBlock labelValueBlock;
+@property (nonatomic, copy) BKFormMappingWillDisplayCellBlock willDisplayCellBlock;
+@property (nonatomic, copy) BKFormMappingCellSelectionBlock cellSelectionBlock;
+@property (nonatomic, assign) Class customCell;
+@property (nonatomic, assign) CGFloat rowHeight;
 
 /*
  * Convenient method to get an attributeMapping

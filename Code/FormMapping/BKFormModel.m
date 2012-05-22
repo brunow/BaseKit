@@ -149,6 +149,10 @@
                BKFormAttributeMappingTypeDatePicker == attributeMapping.type) {
         
         [self showDatePickerWithAttributeMapping:attributeMapping];
+        
+    } else if (BKFormAttributeMappingTypeCustomCell == attributeMapping.type) {
+        attributeMapping.cellSelectionBlock([self cellForRowAtIndexPath:indexPath], indexPath, self.object);
+        
     }
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -250,6 +254,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [self titleForHeaderInSection:section];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self.formMapper heightForRowAtIndexPath:indexPath];
 }
 
 

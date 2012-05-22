@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "FormTableViewController.h"
+#import "FormTableViewExampleController.h"
 
 #import "BaseKitFormModel.h"
 
@@ -14,7 +14,7 @@
 #import "Comment.h"
 #import "Genre.h"
 
-@implementation FormTableViewController
+@implementation FormTableViewExampleController
 
 @synthesize formModel;
 @synthesize movie = _movie;
@@ -66,9 +66,19 @@
             return value;
         }];
         
+        [formMapping mapCustomCell:[UITableViewCell class]
+                        identifier:@"custom"
+                         rowHeight:70
+              willDisplayCellBlock:^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+                  cell.textLabel.text = @"I am a custom cell !";
+                  
+              }     didSelectBlock:^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+                  NSLog(@"You pressed me");
+                  
+              }];
+        
         [formMapping buttonSave:@"Save" handler:^{
             NSLog(@"save pressed");
-            
             NSLog(@"%@", self.movie);
         }];
         
