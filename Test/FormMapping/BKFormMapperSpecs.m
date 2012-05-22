@@ -10,6 +10,7 @@ describe(@"", ^{
     BKFormMapping __block *_formMapping;
     BKFormMapper __block *_mapper;
     id firstSectionTitle = @"Title";
+    CGFloat customCellRowHeight = 70;
     
     beforeEach(^{
         _formModel = [BKFormModel formTableModelForTableView:nil navigationController:nil];
@@ -31,6 +32,12 @@ describe(@"", ^{
             [formMapping mapAttribute:@"numberOfActor" title:@"Number of actor" type:BKFormAttributeMappingTypeInteger];
             [formMapping mapAttribute:@"content" title:@"Content" type:BKFormAttributeMappingTypeBigText];
             
+            [formMapping mapCustomCell:[UITableView class]
+                            identifier:@"custom"
+                             rowHeight:customCellRowHeight
+                  willDisplayCellBlock:nil
+                        didSelectBlock:nil];
+            
             [_formModel registerMapping:formMapping];
             _formMapping = formMapping;
         }];
@@ -48,7 +55,7 @@ describe(@"", ^{
     });
     
     it(@"should be right number of rows in section", ^{
-        id expected = theValue(2);
+        id expected = theValue(3);
         id value = theValue([_mapper numberOfRowsInSection:1]);
         [[value should] equal:expected];
     });
@@ -88,6 +95,13 @@ describe(@"", ^{
         id expected = @"new title";
         [_mapper setValue:expected forAttributeMapping:attributeMapping];
         [[_book.title should] equal:expected];
+    });
+    
+    it(@"should return cutom row height", ^{
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:2 inSection:1];
+        CGFloat expected = customCellRowHeight;
+        CGFloat value = [_mapper heightForRowAtIndexPath:indexPath];
+        [[theValue(value) should] equal:theValue(expected)];
     });
     
     context(@"cell relative to attribute", ^{
