@@ -151,7 +151,10 @@
         [self showDatePickerWithAttributeMapping:attributeMapping];
         
     } else if (BKFormAttributeMappingTypeCustomCell == attributeMapping.type) {
-        attributeMapping.cellSelectionBlock([self cellForRowAtIndexPath:indexPath], indexPath, self.object);
+        if (nil != attributeMapping.cellSelectionBlock) {
+            UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
+            attributeMapping.cellSelectionBlock(cell, indexPath, self.object);
+        }
         
     }
     

@@ -110,7 +110,9 @@
     UITableViewCell *field = [self cellWithAttributeMapping:attributeMapping sourceClass:sourceClass];
     
     if (BKFormAttributeMappingTypeCustomCell == attributeMapping.type) {
-        attributeMapping.willDisplayCellBlock(field, indexPath, self.object);
+        if (nil != attributeMapping.willDisplayCellBlock) {
+            attributeMapping.willDisplayCellBlock(field, indexPath, self.object);
+        }
         
     } else {
         id value = [self valueForAttriteMapping:attributeMapping];
