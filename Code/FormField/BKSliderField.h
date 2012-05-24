@@ -17,9 +17,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BKSimpleField.h"
+#import "BKValueViewField.h"
 
-@interface BKSliderField : BKSimpleField {
+@interface BKSliderField : BKValueViewField {
     UISlider *_slider;
 }
 

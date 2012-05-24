@@ -31,13 +31,19 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    
     if (self) {
         _slider = [[UISlider alloc] init];
-        [self.contentView addSubview:self.slider];
+        self.valueView = self.slider;
     }
-    
     return self;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    self.slider.frame = self.valueView.frame;
 }
 
 
