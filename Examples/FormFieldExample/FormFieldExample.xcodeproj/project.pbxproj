@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E7160C35156CEDBE000EFE09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7160C34156CEDBE000EFE09 /* UIKit.framework */; };
+		E7160C37156CEDBE000EFE09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7160C36156CEDBE000EFE09 /* Foundation.framework */; };
+		E7160C39156CEDBE000EFE09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7160C38156CEDBE000EFE09 /* CoreGraphics.framework */; };
+		E7160C3F156CEDBE000EFE09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7160C3D156CEDBE000EFE09 /* InfoPlist.strings */; };
+		E7160C41156CEDBE000EFE09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C40156CEDBE000EFE09 /* main.m */; };
+		E7160C45156CEDBE000EFE09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C44156CEDBE000EFE09 /* AppDelegate.m */; };
+		E7160C56156CEE34000EFE09 /* FormFieldExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C55156CEE34000EFE09 /* FormFieldExampleTableViewController.m */; };
+		E7160CAD156CEE49000EFE09 /* BKDeviceAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C5C156CEE49000EFE09 /* BKDeviceAvailability.m */; };
+		E7160CAE156CEE49000EFE09 /* BKIteratingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C5E156CEE49000EFE09 /* BKIteratingHelper.m */; };
+		E7160CAF156CEE49000EFE09 /* BKOperationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C61156CEE49000EFE09 /* BKOperationHelper.m */; };
+		E7160CB0156CEE49000EFE09 /* BKRunBlockAtDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C63156CEE49000EFE09 /* BKRunBlockAtDealloc.m */; };
+		E7160CB1156CEE49000EFE09 /* BKToogleValue.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C65156CEE49000EFE09 /* BKToogleValue.m */; };
+		E7160CB2156CEE49000EFE09 /* BKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C67156CEE49000EFE09 /* BKUtils.m */; };
+		E7160CB3156CEE49000EFE09 /* deps in Resources */ = {isa = PBXBuildFile; fileRef = E7160C68156CEE49000EFE09 /* deps */; };
+		E7160CB4156CEE49000EFE09 /* NSArray+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C6A156CEE49000EFE09 /* NSArray+BaseKit.m */; };
+		E7160CB5156CEE49000EFE09 /* NSDictionary+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C6C156CEE49000EFE09 /* NSDictionary+BaseKit.m */; };
+		E7160CB6156CEE49000EFE09 /* NSMutableArray+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C6E156CEE49000EFE09 /* NSMutableArray+BaseKit.m */; };
+		E7160CB7156CEE49000EFE09 /* NSMutableDictionary+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C70156CEE49000EFE09 /* NSMutableDictionary+BaseKit.m */; };
+		E7160CB8156CEE49000EFE09 /* NSOperationQueue+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C72156CEE49000EFE09 /* NSOperationQueue+BaseKit.m */; };
+		E7160CB9156CEE49000EFE09 /* NSSet+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C74156CEE49000EFE09 /* NSSet+BaseKit.m */; };
+		E7160CBA156CEE49000EFE09 /* NSString+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C76156CEE49000EFE09 /* NSString+BaseKit.m */; };
+		E7160CBB156CEE49000EFE09 /* BKBadgeField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C7A156CEE49000EFE09 /* BKBadgeField.m */; };
+		E7160CBC156CEE49000EFE09 /* BKBigTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C7C156CEE49000EFE09 /* BKBigTextField.m */; };
+		E7160CBD156CEE49000EFE09 /* BKButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C7E156CEE49000EFE09 /* BKButtonField.m */; };
+		E7160CBE156CEE49000EFE09 /* BKFloatField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C80156CEE49000EFE09 /* BKFloatField.m */; };
+		E7160CBF156CEE49000EFE09 /* BKImageField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C83156CEE49000EFE09 /* BKImageField.m */; };
+		E7160CC0156CEE49000EFE09 /* BKIntegerField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C85156CEE49000EFE09 /* BKIntegerField.m */; };
+		E7160CC1156CEE49000EFE09 /* BKLabelField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C87156CEE49000EFE09 /* BKLabelField.m */; };
+		E7160CC2156CEE49000EFE09 /* BKPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C89156CEE49000EFE09 /* BKPasswordTextField.m */; };
+		E7160CC3156CEE49000EFE09 /* BKSaveButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C8B156CEE49000EFE09 /* BKSaveButtonField.m */; };
+		E7160CC4156CEE49000EFE09 /* BKSimpleField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C8D156CEE49000EFE09 /* BKSimpleField.m */; };
+		E7160CC5156CEE49000EFE09 /* BKSliderField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C8F156CEE49000EFE09 /* BKSliderField.m */; };
+		E7160CC6156CEE49000EFE09 /* BKSwitchField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C91156CEE49000EFE09 /* BKSwitchField.m */; };
+		E7160CC7156CEE49000EFE09 /* BKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C93156CEE49000EFE09 /* BKTextField.m */; };
+		E7160CC8156CEE49000EFE09 /* BKTextViewField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C95156CEE49000EFE09 /* BKTextViewField.m */; };
+		E7160CC9156CEE49000EFE09 /* BKValueViewField.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160C97156CEE49000EFE09 /* BKValueViewField.m */; };
+		E7160CCA156CEE49000EFE09 /* deps in Resources */ = {isa = PBXBuildFile; fileRef = E7160C98156CEE49000EFE09 /* deps */; };
+		E7160CCB156CEE49000EFE09 /* deps in Resources */ = {isa = PBXBuildFile; fileRef = E7160C9E156CEE49000EFE09 /* deps */; };
+		E7160CCC156CEE49000EFE09 /* UIBarButtonItem+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160CA0156CEE49000EFE09 /* UIBarButtonItem+BaseKit.m */; };
+		E7160CCD156CEE49000EFE09 /* UINavigationController+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160CA2156CEE49000EFE09 /* UINavigationController+BaseKit.m */; };
+		E7160CCE156CEE49000EFE09 /* UITableView+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160CA4156CEE49000EFE09 /* UITableView+BaseKit.m */; };
+		E7160CCF156CEE49000EFE09 /* UITableViewCell+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160CA6156CEE49000EFE09 /* UITableViewCell+BaseKit.m */; };
+		E7160CD0156CEE49000EFE09 /* UIView+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160CA8156CEE49000EFE09 /* UIView+BaseKit.m */; };
+		E7160CD1156CEE49000EFE09 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160CAA156CEE49000EFE09 /* UIView+Debug.m */; };
+		E7160CD2156CEE49000EFE09 /* UIViewController+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E7160CAC156CEE49000EFE09 /* UIViewController+BaseKit.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E7160C30156CEDBE000EFE09 /* FormFieldExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormFieldExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7160C34156CEDBE000EFE09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E7160C36156CEDBE000EFE09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E7160C38156CEDBE000EFE09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E7160C3C156CEDBE000EFE09 /* FormFieldExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FormFieldExample-Info.plist"; sourceTree = "<group>"; };
+		E7160C3E156CEDBE000EFE09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E7160C40156CEDBE000EFE09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7160C42156CEDBE000EFE09 /* FormFieldExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormFieldExample-Prefix.pch"; sourceTree = "<group>"; };
+		E7160C43156CEDBE000EFE09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E7160C44156CEDBE000EFE09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E7160C54156CEE34000EFE09 /* FormFieldExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormFieldExampleTableViewController.h; sourceTree = "<group>"; };
+		E7160C55156CEE34000EFE09 /* FormFieldExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormFieldExampleTableViewController.m; sourceTree = "<group>"; };
+		E7160C58156CEE49000EFE09 /* BaseKitCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCore.h; sourceTree = "<group>"; };
+		E7160C59156CEE49000EFE09 /* BaseKitCoreAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCoreAdditions.h; sourceTree = "<group>"; };
+		E7160C5A156CEE49000EFE09 /* BKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBlocks.h; sourceTree = "<group>"; };
+		E7160C5B156CEE49000EFE09 /* BKDeviceAvailability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDeviceAvailability.h; sourceTree = "<group>"; };
+		E7160C5C156CEE49000EFE09 /* BKDeviceAvailability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDeviceAvailability.m; sourceTree = "<group>"; };
+		E7160C5D156CEE49000EFE09 /* BKIteratingHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKIteratingHelper.h; sourceTree = "<group>"; };
+		E7160C5E156CEE49000EFE09 /* BKIteratingHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKIteratingHelper.m; sourceTree = "<group>"; };
+		E7160C5F156CEE49000EFE09 /* BKMacrosDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKMacrosDefinitions.h; sourceTree = "<group>"; };
+		E7160C60156CEE49000EFE09 /* BKOperationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKOperationHelper.h; sourceTree = "<group>"; };
+		E7160C61156CEE49000EFE09 /* BKOperationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOperationHelper.m; sourceTree = "<group>"; };
+		E7160C62156CEE49000EFE09 /* BKRunBlockAtDealloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKRunBlockAtDealloc.h; sourceTree = "<group>"; };
+		E7160C63156CEE49000EFE09 /* BKRunBlockAtDealloc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKRunBlockAtDealloc.m; sourceTree = "<group>"; };
+		E7160C64156CEE49000EFE09 /* BKToogleValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKToogleValue.h; sourceTree = "<group>"; };
+		E7160C65156CEE49000EFE09 /* BKToogleValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKToogleValue.m; sourceTree = "<group>"; };
+		E7160C66156CEE49000EFE09 /* BKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKUtils.h; sourceTree = "<group>"; };
+		E7160C67156CEE49000EFE09 /* BKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKUtils.m; sourceTree = "<group>"; };
+		E7160C68156CEE49000EFE09 /* deps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deps; sourceTree = "<group>"; };
+		E7160C69156CEE49000EFE09 /* NSArray+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BaseKit.h"; sourceTree = "<group>"; };
+		E7160C6A156CEE49000EFE09 /* NSArray+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BaseKit.m"; sourceTree = "<group>"; };
+		E7160C6B156CEE49000EFE09 /* NSDictionary+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BaseKit.h"; sourceTree = "<group>"; };
+		E7160C6C156CEE49000EFE09 /* NSDictionary+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BaseKit.m"; sourceTree = "<group>"; };
+		E7160C6D156CEE49000EFE09 /* NSMutableArray+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+BaseKit.h"; sourceTree = "<group>"; };
+		E7160C6E156CEE49000EFE09 /* NSMutableArray+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+BaseKit.m"; sourceTree = "<group>"; };
+		E7160C6F156CEE49000EFE09 /* NSMutableDictionary+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+BaseKit.h"; sourceTree = "<group>"; };
+		E7160C70156CEE49000EFE09 /* NSMutableDictionary+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+BaseKit.m"; sourceTree = "<group>"; };
+		E7160C71156CEE49000EFE09 /* NSOperationQueue+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSOperationQueue+BaseKit.h"; sourceTree = "<group>"; };
+		E7160C72156CEE49000EFE09 /* NSOperationQueue+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSOperationQueue+BaseKit.m"; sourceTree = "<group>"; };
+		E7160C73156CEE49000EFE09 /* NSSet+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+BaseKit.h"; sourceTree = "<group>"; };
+		E7160C74156CEE49000EFE09 /* NSSet+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+BaseKit.m"; sourceTree = "<group>"; };
+		E7160C75156CEE49000EFE09 /* NSString+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BaseKit.h"; sourceTree = "<group>"; };
+		E7160C76156CEE49000EFE09 /* NSString+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BaseKit.m"; sourceTree = "<group>"; };
+		E7160C78156CEE49000EFE09 /* BaseKitFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitFormField.h; sourceTree = "<group>"; };
+		E7160C79156CEE49000EFE09 /* BKBadgeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBadgeField.h; sourceTree = "<group>"; };
+		E7160C7A156CEE49000EFE09 /* BKBadgeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKBadgeField.m; sourceTree = "<group>"; };
+		E7160C7B156CEE49000EFE09 /* BKBigTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBigTextField.h; sourceTree = "<group>"; };
+		E7160C7C156CEE49000EFE09 /* BKBigTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKBigTextField.m; sourceTree = "<group>"; };
+		E7160C7D156CEE49000EFE09 /* BKButtonField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKButtonField.h; sourceTree = "<group>"; };
+		E7160C7E156CEE49000EFE09 /* BKButtonField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKButtonField.m; sourceTree = "<group>"; };
+		E7160C7F156CEE49000EFE09 /* BKFloatField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFloatField.h; sourceTree = "<group>"; };
+		E7160C80156CEE49000EFE09 /* BKFloatField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFloatField.m; sourceTree = "<group>"; };
+		E7160C81156CEE49000EFE09 /* BKFormFieldBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormFieldBlocks.h; sourceTree = "<group>"; };
+		E7160C82156CEE49000EFE09 /* BKImageField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKImageField.h; sourceTree = "<group>"; };
+		E7160C83156CEE49000EFE09 /* BKImageField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKImageField.m; sourceTree = "<group>"; };
+		E7160C84156CEE49000EFE09 /* BKIntegerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKIntegerField.h; sourceTree = "<group>"; };
+		E7160C85156CEE49000EFE09 /* BKIntegerField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKIntegerField.m; sourceTree = "<group>"; };
+		E7160C86156CEE49000EFE09 /* BKLabelField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLabelField.h; sourceTree = "<group>"; };
+		E7160C87156CEE49000EFE09 /* BKLabelField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLabelField.m; sourceTree = "<group>"; };
+		E7160C88156CEE49000EFE09 /* BKPasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPasswordTextField.h; sourceTree = "<group>"; };
+		E7160C89156CEE49000EFE09 /* BKPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPasswordTextField.m; sourceTree = "<group>"; };
+		E7160C8A156CEE49000EFE09 /* BKSaveButtonField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSaveButtonField.h; sourceTree = "<group>"; };
+		E7160C8B156CEE49000EFE09 /* BKSaveButtonField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSaveButtonField.m; sourceTree = "<group>"; };
+		E7160C8C156CEE49000EFE09 /* BKSimpleField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSimpleField.h; sourceTree = "<group>"; };
+		E7160C8D156CEE49000EFE09 /* BKSimpleField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSimpleField.m; sourceTree = "<group>"; };
+		E7160C8E156CEE49000EFE09 /* BKSliderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSliderField.h; sourceTree = "<group>"; };
+		E7160C8F156CEE49000EFE09 /* BKSliderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSliderField.m; sourceTree = "<group>"; };
+		E7160C90156CEE49000EFE09 /* BKSwitchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSwitchField.h; sourceTree = "<group>"; };
+		E7160C91156CEE49000EFE09 /* BKSwitchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSwitchField.m; sourceTree = "<group>"; };
+		E7160C92156CEE49000EFE09 /* BKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTextField.h; sourceTree = "<group>"; };
+		E7160C93156CEE49000EFE09 /* BKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTextField.m; sourceTree = "<group>"; };
+		E7160C94156CEE49000EFE09 /* BKTextViewField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTextViewField.h; sourceTree = "<group>"; };
+		E7160C95156CEE49000EFE09 /* BKTextViewField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTextViewField.m; sourceTree = "<group>"; };
+		E7160C96156CEE49000EFE09 /* BKValueViewField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKValueViewField.h; sourceTree = "<group>"; };
+		E7160C97156CEE49000EFE09 /* BKValueViewField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKValueViewField.m; sourceTree = "<group>"; };
+		E7160C98156CEE49000EFE09 /* deps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deps; sourceTree = "<group>"; };
+		E7160C9A156CEE49000EFE09 /* BaseKitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitView.h; sourceTree = "<group>"; };
+		E7160C9B156CEE49000EFE09 /* BaseKitViewAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitViewAdditions.h; sourceTree = "<group>"; };
+		E7160C9C156CEE49000EFE09 /* BKViewBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKViewBlocks.h; sourceTree = "<group>"; };
+		E7160C9D156CEE49000EFE09 /* BKViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKViewControllerDelegate.h; sourceTree = "<group>"; };
+		E7160C9E156CEE49000EFE09 /* deps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deps; sourceTree = "<group>"; };
+		E7160C9F156CEE49000EFE09 /* UIBarButtonItem+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+BaseKit.h"; sourceTree = "<group>"; };
+		E7160CA0156CEE49000EFE09 /* UIBarButtonItem+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+BaseKit.m"; sourceTree = "<group>"; };
+		E7160CA1156CEE49000EFE09 /* UINavigationController+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+BaseKit.h"; sourceTree = "<group>"; };
+		E7160CA2156CEE49000EFE09 /* UINavigationController+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+BaseKit.m"; sourceTree = "<group>"; };
+		E7160CA3156CEE49000EFE09 /* UITableView+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BaseKit.h"; sourceTree = "<group>"; };
+		E7160CA4156CEE49000EFE09 /* UITableView+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BaseKit.m"; sourceTree = "<group>"; };
+		E7160CA5156CEE49000EFE09 /* UITableViewCell+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+BaseKit.h"; sourceTree = "<group>"; };
+		E7160CA6156CEE49000EFE09 /* UITableViewCell+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+BaseKit.m"; sourceTree = "<group>"; };
+		E7160CA7156CEE49000EFE09 /* UIView+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BaseKit.h"; sourceTree = "<group>"; };
+		E7160CA8156CEE49000EFE09 /* UIView+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BaseKit.m"; sourceTree = "<group>"; };
+		E7160CA9156CEE49000EFE09 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
+		E7160CAA156CEE49000EFE09 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
+		E7160CAB156CEE49000EFE09 /* UIViewController+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BaseKit.h"; sourceTree = "<group>"; };
+		E7160CAC156CEE49000EFE09 /* UIViewController+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BaseKit.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E7160C2D156CEDBE000EFE09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7160C35156CEDBE000EFE09 /* UIKit.framework in Frameworks */,
+				E7160C37156CEDBE000EFE09 /* Foundation.framework in Frameworks */,
+				E7160C39156CEDBE000EFE09 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E7160C25156CEDBE000EFE09 = {
+			isa = PBXGroup;
+			children = (
+				E7160C57156CEE49000EFE09 /* Core */,
+				E7160C77156CEE49000EFE09 /* FormField */,
+				E7160C99156CEE49000EFE09 /* View */,
+				E7160C3A156CEDBE000EFE09 /* FormFieldExample */,
+				E7160C33156CEDBE000EFE09 /* Frameworks */,
+				E7160C31156CEDBE000EFE09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E7160C31156CEDBE000EFE09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7160C30156CEDBE000EFE09 /* FormFieldExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7160C33156CEDBE000EFE09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7160C34156CEDBE000EFE09 /* UIKit.framework */,
+				E7160C36156CEDBE000EFE09 /* Foundation.framework */,
+				E7160C38156CEDBE000EFE09 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7160C3A156CEDBE000EFE09 /* FormFieldExample */ = {
+			isa = PBXGroup;
+			children = (
+				E7160C43156CEDBE000EFE09 /* AppDelegate.h */,
+				E7160C44156CEDBE000EFE09 /* AppDelegate.m */,
+				E7160C3B156CEDBE000EFE09 /* Supporting Files */,
+				E7160C54156CEE34000EFE09 /* FormFieldExampleTableViewController.h */,
+				E7160C55156CEE34000EFE09 /* FormFieldExampleTableViewController.m */,
+			);
+			path = FormFieldExample;
+			sourceTree = "<group>";
+		};
+		E7160C3B156CEDBE000EFE09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7160C3C156CEDBE000EFE09 /* FormFieldExample-Info.plist */,
+				E7160C3D156CEDBE000EFE09 /* InfoPlist.strings */,
+				E7160C40156CEDBE000EFE09 /* main.m */,
+				E7160C42156CEDBE000EFE09 /* FormFieldExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7160C57156CEE49000EFE09 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E7160C58156CEE49000EFE09 /* BaseKitCore.h */,
+				E7160C59156CEE49000EFE09 /* BaseKitCoreAdditions.h */,
+				E7160C5A156CEE49000EFE09 /* BKBlocks.h */,
+				E7160C5B156CEE49000EFE09 /* BKDeviceAvailability.h */,
+				E7160C5C156CEE49000EFE09 /* BKDeviceAvailability.m */,
+				E7160C5D156CEE49000EFE09 /* BKIteratingHelper.h */,
+				E7160C5E156CEE49000EFE09 /* BKIteratingHelper.m */,
+				E7160C5F156CEE49000EFE09 /* BKMacrosDefinitions.h */,
+				E7160C60156CEE49000EFE09 /* BKOperationHelper.h */,
+				E7160C61156CEE49000EFE09 /* BKOperationHelper.m */,
+				E7160C62156CEE49000EFE09 /* BKRunBlockAtDealloc.h */,
+				E7160C63156CEE49000EFE09 /* BKRunBlockAtDealloc.m */,
+				E7160C64156CEE49000EFE09 /* BKToogleValue.h */,
+				E7160C65156CEE49000EFE09 /* BKToogleValue.m */,
+				E7160C66156CEE49000EFE09 /* BKUtils.h */,
+				E7160C67156CEE49000EFE09 /* BKUtils.m */,
+				E7160C68156CEE49000EFE09 /* deps */,
+				E7160C69156CEE49000EFE09 /* NSArray+BaseKit.h */,
+				E7160C6A156CEE49000EFE09 /* NSArray+BaseKit.m */,
+				E7160C6B156CEE49000EFE09 /* NSDictionary+BaseKit.h */,
+				E7160C6C156CEE49000EFE09 /* NSDictionary+BaseKit.m */,
+				E7160C6D156CEE49000EFE09 /* NSMutableArray+BaseKit.h */,
+				E7160C6E156CEE49000EFE09 /* NSMutableArray+BaseKit.m */,
+				E7160C6F156CEE49000EFE09 /* NSMutableDictionary+BaseKit.h */,
+				E7160C70156CEE49000EFE09 /* NSMutableDictionary+BaseKit.m */,
+				E7160C71156CEE49000EFE09 /* NSOperationQueue+BaseKit.h */,
+				E7160C72156CEE49000EFE09 /* NSOperationQueue+BaseKit.m */,
+				E7160C73156CEE49000EFE09 /* NSSet+BaseKit.h */,
+				E7160C74156CEE49000EFE09 /* NSSet+BaseKit.m */,
+				E7160C75156CEE49000EFE09 /* NSString+BaseKit.h */,
+				E7160C76156CEE49000EFE09 /* NSString+BaseKit.m */,
+			);
+			name = Core;
+			path = ../../Code/Core;
+			sourceTree = "<group>";
+		};
+		E7160C77156CEE49000EFE09 /* FormField */ = {
+			isa = PBXGroup;
+			children = (
+				E7160C78156CEE49000EFE09 /* BaseKitFormField.h */,
+				E7160C79156CEE49000EFE09 /* BKBadgeField.h */,
+				E7160C7A156CEE49000EFE09 /* BKBadgeField.m */,
+				E7160C7B156CEE49000EFE09 /* BKBigTextField.h */,
+				E7160C7C156CEE49000EFE09 /* BKBigTextField.m */,
+				E7160C7D156CEE49000EFE09 /* BKButtonField.h */,
+				E7160C7E156CEE49000EFE09 /* BKButtonField.m */,
+				E7160C7F156CEE49000EFE09 /* BKFloatField.h */,
+				E7160C80156CEE49000EFE09 /* BKFloatField.m */,
+				E7160C81156CEE49000EFE09 /* BKFormFieldBlocks.h */,
+				E7160C82156CEE49000EFE09 /* BKImageField.h */,
+				E7160C83156CEE49000EFE09 /* BKImageField.m */,
+				E7160C84156CEE49000EFE09 /* BKIntegerField.h */,
+				E7160C85156CEE49000EFE09 /* BKIntegerField.m */,
+				E7160C86156CEE49000EFE09 /* BKLabelField.h */,
+				E7160C87156CEE49000EFE09 /* BKLabelField.m */,
+				E7160C88156CEE49000EFE09 /* BKPasswordTextField.h */,
+				E7160C89156CEE49000EFE09 /* BKPasswordTextField.m */,
+				E7160C8A156CEE49000EFE09 /* BKSaveButtonField.h */,
+				E7160C8B156CEE49000EFE09 /* BKSaveButtonField.m */,
+				E7160C8C156CEE49000EFE09 /* BKSimpleField.h */,
+				E7160C8D156CEE49000EFE09 /* BKSimpleField.m */,
+				E7160C8E156CEE49000EFE09 /* BKSliderField.h */,
+				E7160C8F156CEE49000EFE09 /* BKSliderField.m */,
+				E7160C90156CEE49000EFE09 /* BKSwitchField.h */,
+				E7160C91156CEE49000EFE09 /* BKSwitchField.m */,
+				E7160C92156CEE49000EFE09 /* BKTextField.h */,
+				E7160C93156CEE49000EFE09 /* BKTextField.m */,
+				E7160C94156CEE49000EFE09 /* BKTextViewField.h */,
+				E7160C95156CEE49000EFE09 /* BKTextViewField.m */,
+				E7160C96156CEE49000EFE09 /* BKValueViewField.h */,
+				E7160C97156CEE49000EFE09 /* BKValueViewField.m */,
+				E7160C98156CEE49000EFE09 /* deps */,
+			);
+			name = FormField;
+			path = ../../Code/FormField;
+			sourceTree = "<group>";
+		};
+		E7160C99156CEE49000EFE09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E7160C9A156CEE49000EFE09 /* BaseKitView.h */,
+				E7160C9B156CEE49000EFE09 /* BaseKitViewAdditions.h */,
+				E7160C9C156CEE49000EFE09 /* BKViewBlocks.h */,
+				E7160C9D156CEE49000EFE09 /* BKViewControllerDelegate.h */,
+				E7160C9E156CEE49000EFE09 /* deps */,
+				E7160C9F156CEE49000EFE09 /* UIBarButtonItem+BaseKit.h */,
+				E7160CA0156CEE49000EFE09 /* UIBarButtonItem+BaseKit.m */,
+				E7160CA1156CEE49000EFE09 /* UINavigationController+BaseKit.h */,
+				E7160CA2156CEE49000EFE09 /* UINavigationController+BaseKit.m */,
+				E7160CA3156CEE49000EFE09 /* UITableView+BaseKit.h */,
+				E7160CA4156CEE49000EFE09 /* UITableView+BaseKit.m */,
+				E7160CA5156CEE49000EFE09 /* UITableViewCell+BaseKit.h */,
+				E7160CA6156CEE49000EFE09 /* UITableViewCell+BaseKit.m */,
+				E7160CA7156CEE49000EFE09 /* UIView+BaseKit.h */,
+				E7160CA8156CEE49000EFE09 /* UIView+BaseKit.m */,
+				E7160CA9156CEE49000EFE09 /* UIView+Debug.h */,
+				E7160CAA156CEE49000EFE09 /* UIView+Debug.m */,
+				E7160CAB156CEE49000EFE09 /* UIViewController+BaseKit.h */,
+				E7160CAC156CEE49000EFE09 /* UIViewController+BaseKit.m */,
+			);
+			name = View;
+			path = ../../Code/View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E7160C2F156CEDBE000EFE09 /* FormFieldExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7160C51156CEDBF000EFE09 /* Build configuration list for PBXNativeTarget "FormFieldExample" */;
+			buildPhases = (
+				E7160C2C156CEDBE000EFE09 /* Sources */,
+				E7160C2D156CEDBE000EFE09 /* Frameworks */,
+				E7160C2E156CEDBE000EFE09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FormFieldExample;
+			productName = FormFieldExample;
+			productReference = E7160C30156CEDBE000EFE09 /* FormFieldExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E7160C27156CEDBE000EFE09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E7160C2A156CEDBE000EFE09 /* Build configuration list for PBXProject "FormFieldExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E7160C25156CEDBE000EFE09;
+			productRefGroup = E7160C31156CEDBE000EFE09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E7160C2F156CEDBE000EFE09 /* FormFieldExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E7160C2E156CEDBE000EFE09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7160C3F156CEDBE000EFE09 /* InfoPlist.strings in Resources */,
+				E7160CB3156CEE49000EFE09 /* deps in Resources */,
+				E7160CCA156CEE49000EFE09 /* deps in Resources */,
+				E7160CCB156CEE49000EFE09 /* deps in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7160C2C156CEDBE000EFE09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7160C41156CEDBE000EFE09 /* main.m in Sources */,
+				E7160C45156CEDBE000EFE09 /* AppDelegate.m in Sources */,
+				E7160C56156CEE34000EFE09 /* FormFieldExampleTableViewController.m in Sources */,
+				E7160CAD156CEE49000EFE09 /* BKDeviceAvailability.m in Sources */,
+				E7160CAE156CEE49000EFE09 /* BKIteratingHelper.m in Sources */,
+				E7160CAF156CEE49000EFE09 /* BKOperationHelper.m in Sources */,
+				E7160CB0156CEE49000EFE09 /* BKRunBlockAtDealloc.m in Sources */,
+				E7160CB1156CEE49000EFE09 /* BKToogleValue.m in Sources */,
+				E7160CB2156CEE49000EFE09 /* BKUtils.m in Sources */,
+				E7160CB4156CEE49000EFE09 /* NSArray+BaseKit.m in Sources */,
+				E7160CB5156CEE49000EFE09 /* NSDictionary+BaseKit.m in Sources */,
+				E7160CB6156CEE49000EFE09 /* NSMutableArray+BaseKit.m in Sources */,
+				E7160CB7156CEE49000EFE09 /* NSMutableDictionary+BaseKit.m in Sources */,
+				E7160CB8156CEE49000EFE09 /* NSOperationQueue+BaseKit.m in Sources */,
+				E7160CB9156CEE49000EFE09 /* NSSet+BaseKit.m in Sources */,
+				E7160CBA156CEE49000EFE09 /* NSString+BaseKit.m in Sources */,
+				E7160CBB156CEE49000EFE09 /* BKBadgeField.m in Sources */,
+				E7160CBC156CEE49000EFE09 /* BKBigTextField.m in Sources */,
+				E7160CBD156CEE49000EFE09 /* BKButtonField.m in Sources */,
+				E7160CBE156CEE49000EFE09 /* BKFloatField.m in Sources */,
+				E7160CBF156CEE49000EFE09 /* BKImageField.m in Sources */,
+				E7160CC0156CEE49000EFE09 /* BKIntegerField.m in Sources */,
+				E7160CC1156CEE49000EFE09 /* BKLabelField.m in Sources */,
+				E7160CC2156CEE49000EFE09 /* BKPasswordTextField.m in Sources */,
+				E7160CC3156CEE49000EFE09 /* BKSaveButtonField.m in Sources */,
+				E7160CC4156CEE49000EFE09 /* BKSimpleField.m in Sources */,
+				E7160CC5156CEE49000EFE09 /* BKSliderField.m in Sources */,
+				E7160CC6156CEE49000EFE09 /* BKSwitchField.m in Sources */,
+				E7160CC7156CEE49000EFE09 /* BKTextField.m in Sources */,
+				E7160CC8156CEE49000EFE09 /* BKTextViewField.m in Sources */,
+				E7160CC9156CEE49000EFE09 /* BKValueViewField.m in Sources */,
+				E7160CCC156CEE49000EFE09 /* UIBarButtonItem+BaseKit.m in Sources */,
+				E7160CCD156CEE49000EFE09 /* UINavigationController+BaseKit.m in Sources */,
+				E7160CCE156CEE49000EFE09 /* UITableView+BaseKit.m in Sources */,
+				E7160CCF156CEE49000EFE09 /* UITableViewCell+BaseKit.m in Sources */,
+				E7160CD0156CEE49000EFE09 /* UIView+BaseKit.m in Sources */,
+				E7160CD1156CEE49000EFE09 /* UIView+Debug.m in Sources */,
+				E7160CD2156CEE49000EFE09 /* UIViewController+BaseKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E7160C3D156CEDBE000EFE09 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7160C3E156CEDBE000EFE09 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E7160C4F156CEDBF000EFE09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7160C50156CEDBF000EFE09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E7160C52156CEDBF000EFE09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormFieldExample/FormFieldExample-Prefix.pch";
+				INFOPLIST_FILE = "FormFieldExample/FormFieldExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E7160C53156CEDBF000EFE09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FormFieldExample/FormFieldExample-Prefix.pch";
+				INFOPLIST_FILE = "FormFieldExample/FormFieldExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E7160C2A156CEDBE000EFE09 /* Build configuration list for PBXProject "FormFieldExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7160C4F156CEDBF000EFE09 /* Debug */,
+				E7160C50156CEDBF000EFE09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7160C51156CEDBF000EFE09 /* Build configuration list for PBXNativeTarget "FormFieldExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7160C52156CEDBF000EFE09 /* Debug */,
+				E7160C53156CEDBF000EFE09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E7160C27156CEDBE000EFE09 /* Project object */;
+}
