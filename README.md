@@ -1,5 +1,9 @@
 BaseKit is a set of IOS class to make your life easier.
 
+Please consider supporting BaseKit with a donation.
+
+[![Click here to lend your support to: RailsAdmin and make a donation at www.pledgie.com !](https://www.pledgie.com/campaigns/17480.png?skin_name=chrome)](http://www.pledgie.com/campaigns/17480)
+
 # Installation
 
 You have two way to do that
