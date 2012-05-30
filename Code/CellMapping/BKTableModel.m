@@ -50,6 +50,12 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)dealloc {
+    dispatch_release(_concurrentQueue);
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)tableModelForTableView:(UITableView *)tableView {
     BKTableModel *tableModel = [[self alloc] initWithTableView:tableView];
     return tableModel;
@@ -73,6 +79,7 @@
     self = [super init];
     
     if (self) {
+        _concurrentQueue = dispatch_queue_create("be.basekit.cellmapping.tablebodel", NULL);
         _objectMappings = [NSMutableDictionary dictionary];
     }
     
@@ -295,15 +302,12 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (BKCellMapping *)cellMappingForObject:(id)object {
-    dispatch_queue_t concurrentQueue = dispatch_queue_create("be.basekit.cellmapping.tablebodel", NULL);
     BK_WEAK_IVAR __block BKCellMapping *cellMapping = nil;
     
-    dispatch_sync(concurrentQueue, ^{
+    dispatch_sync(_concurrentQueue, ^{
         NSSet *cellMappings = [BKCellMapper cellMappingsForObject:object mappings:self.objectMappings];
         cellMapping = [BKCellMapper cellMappingForObject:object mappings:cellMappings];
     });
-    
-    dispatch_release(concurrentQueue);
     
     return cellMapping;
 }

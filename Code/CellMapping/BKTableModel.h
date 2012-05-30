@@ -24,6 +24,7 @@
 
 @interface BKTableModel : NSObject <UITableViewDataSource, UITableViewDelegate> {
     NSMutableDictionary *_objectMappings;
+    dispatch_queue_t _concurrentQueue;
 }
 
 @property (nonatomic, strong) UITableView *tableView;
