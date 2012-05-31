@@ -53,13 +53,13 @@ Iteration.
 Present modal view controller with block.
 
     [self presentModalViewControllerWithBlock:^UIViewController *{
-     	return [[[AnyViewController alloc] init] autorelease];
+     	return [[AnyViewController alloc] init];
 	} animated:YES];
 
 Push view controller with block.
 
 	[self.navigationController pushViewControllerWithBlock:^UIViewController *{
-        return [[[AnyViewController alloc] init] autorelease];
+        return [[AnyViewController alloc] init];
     } animated:YES];
 
 # Cell mapping
