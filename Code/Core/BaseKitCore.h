@@ -15,6 +15,10 @@
 // limitations under the License.
 //
 
+#if ! __has_feature(objc_arc)
+    #error This file requires ARC to be enabled. Either enable ARC for the entire project or use -fobjc-arc flag.
+#endif
+
 #import <Foundation/Foundation.h>
 
 #import "BKBlocks.h"

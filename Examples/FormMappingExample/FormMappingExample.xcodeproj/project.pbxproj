@@ -196,7 +196,7 @@
 		E7BCB78F14BE2BEE00A9C715 /* FormMappingExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FormMappingExample-Prefix.pch"; sourceTree = "<group>"; };
 		E7BCB79014BE2BEE00A9C715 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7BCB79114BE2BEE00A9C715 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E7BCB79814BE2C1B00A9C715 /* FormTableViewExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = FormTableViewExampleController.h; sourceTree = "<group>"; };
+		E7BCB79814BE2C1B00A9C715 /* FormTableViewExampleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormTableViewExampleController.h; sourceTree = "<group>"; };
 		E7BCB79914BE2C1B00A9C715 /* FormTableViewExampleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormTableViewExampleController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
