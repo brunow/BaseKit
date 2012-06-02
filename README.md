@@ -149,8 +149,11 @@ BaseKit is fully compatible out of box with both ARC and non-ARC project.
 
 # Changelog
 
+- 2012/06/02 (0.2.4)
+    - Fix FormMapping value saving bug
+
 - 2012/05/17 (0.2.3)
-	- Fix cell mapping editing style
+	- Fix cell mapping editing style bug
 
 - 2012/05/12 (0.2)
 	- Added LocationManager
