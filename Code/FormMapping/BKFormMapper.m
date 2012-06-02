@@ -205,7 +205,7 @@
         [(BKTextField *)field textField].text = convertedValue;
         [(BKTextField *)field textField].placeholder = attributeMapping.placeholderText;
         
-    } else if ([field isKindOfClass:[BKSwitchField class]] && [convertedValue isKindOfClass:[NSNumber class]]) {
+    } else if ([field isKindOfClass:[BKSwitchField class]]) {
         UISwitch *switchControl = [(BKSwitchField *)field switchControl];
         switchControl.on = [(NSNumber *)convertedValue boolValue];
         switchControl.formAttributeMapping = attributeMapping;
@@ -250,12 +250,16 @@
         
     } else if (type == BKFormAttributeMappingTypeInteger) {
         field = [BKIntegerField cellForTableView:self.tableView];
+        [[(BKIntegerField *)field textField] setDelegate:self];
+        [[(BKIntegerField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeLabel) {
         field = [BKLabelField cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypePassword) {
         field = [BKPasswordTextField cellForTableView:self.tableView];
+        [[(BKPasswordTextField *)field textField] setDelegate:self];
+        [[(BKPasswordTextField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeBoolean) {
         field = [BKSwitchField cellForTableView:self.tableView];
@@ -307,9 +311,6 @@
         } else {
             convertedValue = [value description];
         }
-        
-    } else if (attributeMapping.type == BKFormAttributeMappingTypeSelect) {
-        convertedValue = attributeMapping.labelValueBlock(value, self.object);
         
     }
     

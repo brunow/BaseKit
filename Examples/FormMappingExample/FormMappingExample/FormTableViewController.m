@@ -60,12 +60,10 @@
         [formMapping mapAttribute:@"choice" title:@"Choices" selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
             *selectedValueIndex = 1;
             return [NSArray arrayWithObjects:@"choice1", @"choice2", nil];
-        } valueFromSelectBlock:^id(id value, id object, NSInteger selectedValueIndex) {
-            return value;
-        } labelValueBlock:^id(id value, id object) {
+        } valueWithBlock:^id(id value, id object, NSInteger selectedValueIndex) {
             return value;
         }];
-        
+                
         [formMapping buttonSave:@"Save" handler:^{
             NSLog(@"save pressed");
             

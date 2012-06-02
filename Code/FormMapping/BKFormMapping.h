@@ -60,8 +60,7 @@
 - (void)mapAttribute:(NSString *)attribute
                title:(NSString *)title
    selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
-valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
-     labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue;
+      valueWithBlock:(BKFormMappingValueWithSelectValueBlock)valueBlock;
 
 - (void)sectiontTitle:(NSString *)title identifier:(NSString *)identifier;
 
