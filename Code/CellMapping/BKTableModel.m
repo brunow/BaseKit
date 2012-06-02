@@ -44,9 +44,6 @@
 @synthesize tableView = _tableView;
 @synthesize objectMappings = _objectMappings;
 @synthesize objectForRowAtIndexPathBlock = _objectForRowAtIndexPathBlock;
-@synthesize sectionTitles = _sectionTitles;
-@synthesize sections = _sections;
-@synthesize items = _items;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -196,13 +193,6 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)loadTableItems:(NSArray *)items {
-    self.items = [NSMutableArray arrayWithArray:items];
-    [self.tableView reloadData];
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)objectForRowAtIndexPathWithBlock:(BKObjectForRowAtIndexPathBlock)block {
     self.objectForRowAtIndexPathBlock = block;
 }
@@ -212,8 +202,6 @@
 - (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (nil != self.objectForRowAtIndexPathBlock) {
         return self.objectForRowAtIndexPathBlock(indexPath);
-    } else if (nil != self.items) {
-        return [self.items objectAtIndex:indexPath.row];
     }
     
     return nil;
@@ -221,9 +209,9 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////
-#pragma mark -
-#pragma mark Setters
+- (void)loadItems {
+    [self.tableView reloadData];
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -234,13 +222,13 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 0;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.items.count;
+    return 0;
 }
 
 

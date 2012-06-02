@@ -29,9 +29,6 @@
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, copy) BKObjectForRowAtIndexPathBlock objectForRowAtIndexPathBlock;
-@property (nonatomic, strong) NSMutableArray *sectionTitles; // Doesn't work yet with sections !
-@property (nonatomic, strong) NSMutableArray *sections; // Doesn't work yet with sections !
-@property (nonatomic, strong) NSMutableArray *items;
 @property (nonatomic, readonly) NSMutableDictionary *objectMappings;
 
 + (id)tableModelForTableView:(UITableView *)tableView;
@@ -55,6 +52,6 @@
 
 - (id)objectForRowAtIndexPath:(NSIndexPath *)indexPath;
 
-- (void)loadTableItems:(NSArray *)items;
+- (void)loadItems;
 
 @end

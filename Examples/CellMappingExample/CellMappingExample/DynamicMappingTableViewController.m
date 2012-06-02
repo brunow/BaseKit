@@ -25,7 +25,7 @@
     
     self.title = @"Dynamic mapping";
     
-    self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
+    self.tableModel = [BKListTableModel tableModelForTableView:self.tableView];
     self.tableView.dataSource = self.tableModel;
     self.tableView.delegate = self.tableModel;
     

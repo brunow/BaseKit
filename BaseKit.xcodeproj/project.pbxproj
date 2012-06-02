@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E706735B157A963E000061B7 /* BKListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7067359157A963E000061B7 /* BKListTableModel.m */; };
 		E729EFA61568406300BB874A /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFA41568406300BB874A /* Book.m */; };
 		E729EFB11568AF8A00BB874A /* BaseKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAA1568AF8A00BB874A /* BaseKit.xcdatamodeld */; };
 		E729EFB31568AF8A00BB874A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAD1568AF8A00BB874A /* AppDelegate.m */; };
@@ -91,6 +92,7 @@
 		E7DCB35D1567A3D00092FBBA /* BKIterationHelperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */; };
 		E7DCB35F1567A7420092FBBA /* NSArrayBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */; };
 		E7E830D8156838C400BE1A62 /* BKFormMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */; };
+		E7ED50771578DDFB00A6CB39 /* BKManagedTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7ED50741578DDFB00A6CB39 /* BKManagedTableModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7067359157A963E000061B7 /* BKListTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKListTableModel.m; sourceTree = "<group>"; };
+		E706735A157A963E000061B7 /* BKListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKListTableModel.h; sourceTree = "<group>"; };
 		E729EFA41568406300BB874A /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		E729EFA51568406300BB874A /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		E729EFA81568AF4B00BB874A /* BaseKitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BaseKitTests-Info.plist"; sourceTree = "<group>"; };
@@ -264,6 +268,9 @@
 		E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKIterationHelperSpecs.m; sourceTree = "<group>"; };
 		E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayBaseKitSpecs.m; sourceTree = "<group>"; };
 		E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormMapperSpecs.m; sourceTree = "<group>"; };
+		E7ED50741578DDFB00A6CB39 /* BKManagedTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKManagedTableModel.m; sourceTree = "<group>"; };
+		E7ED50751578DDFB00A6CB39 /* BaseKitManagedTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitManagedTableModel.h; sourceTree = "<group>"; };
+		E7ED50761578DDFB00A6CB39 /* BKManagedTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKManagedTableModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -356,6 +363,7 @@
 		E74E271A156798C2004E6FE9 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				E7ED506F1578DD7C00A6CB39 /* ManagedTableModel */,
 				E74E271C156798C2004E6FE9 /* CellMapping */,
 				E74E272A156798C2004E6FE9 /* Core */,
 				E74E274A156798C2004E6FE9 /* CoreData */,
@@ -382,6 +390,8 @@
 				E74E2726156798C2004E6FE9 /* BKDynamicCellMapping.m */,
 				E74E2727156798C2004E6FE9 /* BKTableModel.h */,
 				E74E2728156798C2004E6FE9 /* BKTableModel.m */,
+				E706735A157A963E000061B7 /* BKListTableModel.h */,
+				E7067359157A963E000061B7 /* BKListTableModel.m */,
 				E74E2729156798C2004E6FE9 /* deps */,
 			);
 			path = CellMapping;
@@ -660,6 +670,16 @@
 			path = FormMapping;
 			sourceTree = "<group>";
 		};
+		E7ED506F1578DD7C00A6CB39 /* ManagedTableModel */ = {
+			isa = PBXGroup;
+			children = (
+				E7ED50761578DDFB00A6CB39 /* BKManagedTableModel.h */,
+				E7ED50741578DDFB00A6CB39 /* BKManagedTableModel.m */,
+				E7ED50751578DDFB00A6CB39 /* BaseKitManagedTableModel.h */,
+			);
+			path = ManagedTableModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -826,6 +846,8 @@
 				E729EFB11568AF8A00BB874A /* BaseKit.xcdatamodeld in Sources */,
 				E729EFB31568AF8A00BB874A /* AppDelegate.m in Sources */,
 				E729EFB41568AF8A00BB874A /* main.m in Sources */,
+				E7ED50771578DDFB00A6CB39 /* BKManagedTableModel.m in Sources */,
+				E706735B157A963E000061B7 /* BKListTableModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

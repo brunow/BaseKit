@@ -23,3 +23,4 @@
 #import "BKTableModel.h"
 #import "BKDynamicCellMapping.h"
 #import "UITableViewCell+BaseKit.h"
+#import "BKListTableModel.h"

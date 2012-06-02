@@ -18,6 +18,7 @@
 #import "CustomDataSourceAndDelegateTableViewController.h"
 #import "EditingTableViewController.h"
 #import "WillDisplayCellExampleViewController.h"
+#import "NSFetchedResultsViewController.h"
 
 #define DYNAMIC_MAPPING @"DynamicMappingTableViewController"
 #define NIB_CELL @"NibCellTableViewController"
@@ -26,6 +27,7 @@
 #define CUSTOM_DATASOURCE_AND_DELEGATE @"CustomDataSourceAndDelegateTableViewController"
 #define EDITING @"EditingTableViewController"
 #define WILL_DISPLAY_CELL @"WillDisplayCellExampleViewController"
+#define FETCHED_RESULTS @"NSFetchedResultsViewController"
 
 @implementation CatalogTableViewController
 
@@ -38,7 +40,7 @@
     
     self.title = @"Catalog";
     
-    self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
+    self.tableModel = [BKListTableModel tableModelForTableView:self.tableView];
     self.tableView.dataSource = self.tableModel;
     self.tableView.delegate = self.tableModel;
     
@@ -62,6 +64,7 @@
                       [Item itemWithTitle:@"Custom dataSource and delegate" subtitle:nil type:CUSTOM_DATASOURCE_AND_DELEGATE],
                       [Item itemWithTitle:@"Editing table view" subtitle:nil type:EDITING],
                       [Item itemWithTitle:@"Will display cell block" subtitle:nil type:WILL_DISPLAY_CELL],
+                      [Item itemWithTitle:@"Fetched results" subtitle:nil type:FETCHED_RESULTS],
                       nil];
     
     [self.tableModel loadTableItems:items];

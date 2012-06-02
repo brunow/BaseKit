@@ -212,7 +212,7 @@
         field.textLabel.text = attributeMapping.title;
         field.accessoryType = attributeMapping.accesoryType;
         
-    } else /*if ([field isKindOfClass:[BKLabelField class]])*/ {
+    } else {
         if (![convertedValue isKindOfClass:[NSString class]]) {
             convertedValue = [convertedValue description];
         }
@@ -240,12 +240,16 @@
         
     } else if (type == BKFormAttributeMappingTypeInteger) {
         field = [BKIntegerField cellForTableView:self.tableView];
+        [[(BKIntegerField *)field textField] setDelegate:self];
+        [[(BKIntegerField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeLabel) {
         field = [BKLabelField cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypePassword) {
         field = [BKPasswordTextField cellForTableView:self.tableView];
+        [[(BKPasswordTextField *)field textField] setDelegate:self];
+        [[(BKPasswordTextField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeBoolean) {
         field = [BKSwitchField cellForTableView:self.tableView];
