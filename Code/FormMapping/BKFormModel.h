@@ -43,8 +43,21 @@
 
 - (void)reloadRowWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping;
 
+/**
+ Find the first UITextField or UITextView in the table view.
+ @return Return first UITextField or UITextView.
+ */
 - (id)findFirstTextField;
 
+/**
+ Find all UITextField or UITextView in the table view.
+ @return Return an array of UITextField and UITextView.
+ */
 - (NSArray *)findTextFields;
+
+/**
+ Save all attributes
+ */
+- (void)save;
 
 @end

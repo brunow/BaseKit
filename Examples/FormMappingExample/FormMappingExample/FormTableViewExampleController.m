@@ -80,6 +80,7 @@
         [formMapping buttonSave:@"Save" handler:^{
             NSLog(@"save pressed");
             NSLog(@"%@", self.movie);
+            [self.formModel save];
         }];
         
         [self.formModel registerMapping:formMapping];

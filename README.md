@@ -4,6 +4,8 @@ Please consider supporting BaseKit with a donation.
 
 [![Click here to lend your support to: RailsAdmin and make a donation at www.pledgie.com !](https://www.pledgie.com/campaigns/17480.png?skin_name=chrome)](http://www.pledgie.com/campaigns/17480)
 
+[BaseKit Google Group](https://groups.google.com/group/basekit)
+
 # Installation
 
 You have two way to do that
@@ -17,12 +19,12 @@ Add Code dir or pick library that you need inside Code/*.
 
 ## Install using CocoaPods.
 
-    dependency 'BaseKit/Core', '~> 0.2.3'
-    dependency 'BaseKit/View', '~> 0.2.3'
-    dependency 'BaseKit/CellMapping', '~> 0.2.3'
-    dependency 'BaseKit/LocationManager', '~> 0.2.3'
-    dependency 'BaseKit/FormField', '~> 0.2.3'
-    dependency 'BaseKit/FormMapping', '~> 0.2.3'
+    dependency 'BaseKit/Core', '~> 0.2.4'
+    dependency 'BaseKit/View', '~> 0.2.4'
+    dependency 'BaseKit/CellMapping', '~> 0.2.4'
+    dependency 'BaseKit/LocationManager', '~> 0.2.4'
+    dependency 'BaseKit/FormField', '~> 0.2.4'
+    dependency 'BaseKit/FormMapping', '~> 0.2.4'
 
 # Tutorials
 
@@ -51,13 +53,13 @@ Iteration.
 Present modal view controller with block.
 
     [self presentModalViewControllerWithBlock:^UIViewController *{
-     	return [[[AnyViewController alloc] init] autorelease];
+     	return [[AnyViewController alloc] init];
 	} animated:YES];
 
 Push view controller with block.
 
 	[self.navigationController pushViewControllerWithBlock:^UIViewController *{
-        return [[[AnyViewController alloc] init] autorelease];
+        return [[AnyViewController alloc] init];
     } animated:YES];
 
 # Cell mapping
@@ -147,8 +149,11 @@ BaseKit is fully compatible out of box with both ARC and non-ARC project.
 
 # Changelog
 
+- 2012/06/02 (0.2.4)
+    - Fix FormMapping value saving bug
+
 - 2012/05/17 (0.2.3)
-	- Fix cell mapping editing style
+	- Fix cell mapping editing style bug
 
 - 2012/05/12 (0.2)
 	- Added LocationManager
