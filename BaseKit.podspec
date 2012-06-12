@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
     core_data.dependency 'BaseKit/LocationManager'
     core_data.dependency 'BaseKit/FormField'
     core_data.dependency 'BaseKit/FormMapping'
+    core_data.dependency 'BaseKit/ViewDecorator'
   end
 
   s.subspec 'Core' do |core|
