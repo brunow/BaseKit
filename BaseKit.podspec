@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   current_version = "0.3.dev"
 
   s.name     = 'BaseKit'
-  s.version  = current_version
+  # s.version  = current_version
   s.license  = 'Apache 2'
   s.summary  = 'BaseKit is a set of IOS class to make your life easier.'
   s.homepage = 'https://github.com/brunow/BaseKit'
@@ -11,19 +11,8 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.framework = 'UIKit'
   s.description = 'BaseKit is a set of IOS class to make your life easier.'
-  s.platform = :ios, '4.0'
+  s.platform = :ios
   s.clean_paths  = 'Examples', 'Kiwi', 'Test', 'Vendor', 'README.md', '.gitignore', 'BaseKit.xcodeproj', 'LICENSE', 'form-mapping.png', 'BaseKit', 'BaseKitTests'
-
-  s.subspec 'All' do |all|
-    all.dependency 'BaseKit/Core'
-    all.dependency 'BaseKit/CoreData'
-    all.dependency 'BaseKit/View'
-    all.dependency 'BaseKit/CellMapping'
-    all.dependency 'BaseKit/LocationManager'
-    all.dependency 'BaseKit/FormField'
-    all.dependency 'BaseKit/FormMapping'
-    all.dependency 'BaseKit/ViewDecorator'
-  end
 
   s.subspec 'Core' do |core|
     core.source_files = 'Code/Core/*.{h,m}'
@@ -69,5 +58,22 @@ Pod::Spec.new do |s|
   s.subspec 'ViewDecorator' do |view_decorator|
     view_decorator.source_files = 'Code/ViewDecorator/*.{h,m}'
     view_decorator.dependency 'BaseKit/Core'
+  end
+
+  s.subspec 'ManagedTableModel' do |managed_table_model|
+    managed_table_model.source_files = 'Code/ManagedTableModel/*.{h,m}'
+    managed_table_model.dependency 'BaseKit/CoreData'
+  end
+
+  s.subspec 'All' do |all|
+    all.dependency 'BaseKit/Core'
+    all.dependency 'BaseKit/CoreData'
+    all.dependency 'BaseKit/View'
+    all.dependency 'BaseKit/CellMapping'
+    all.dependency 'BaseKit/LocationManager'
+    all.dependency 'BaseKit/FormField'
+    all.dependency 'BaseKit/FormMapping'
+    all.dependency 'BaseKit/ViewDecorator'
+    all.dependency 'BaseKit/ManagedTableModel'
   end
 end
