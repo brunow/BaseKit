@@ -15,14 +15,14 @@ Pod::Spec.new do |s|
   s.clean_paths  = 'Examples', 'Kiwi', 'Test', 'Vendor', 'README.md', '.gitignore', 'BaseKit.xcodeproj', 'LICENSE', 'form-mapping.png', 'BaseKit', 'BaseKitTests'
 
   s.subspec 'All' do |all|
-    core_data.dependency 'BaseKit/Core'
-    core_data.dependency 'BaseKit/CoreData'
-    core_data.dependency 'BaseKit/View'
-    core_data.dependency 'BaseKit/CellMapping'
-    core_data.dependency 'BaseKit/LocationManager'
-    core_data.dependency 'BaseKit/FormField'
-    core_data.dependency 'BaseKit/FormMapping'
-    core_data.dependency 'BaseKit/ViewDecorator'
+    all.dependency 'BaseKit/Core'
+    all.dependency 'BaseKit/CoreData'
+    all.dependency 'BaseKit/View'
+    all.dependency 'BaseKit/CellMapping'
+    all.dependency 'BaseKit/LocationManager'
+    all.dependency 'BaseKit/FormField'
+    all.dependency 'BaseKit/FormMapping'
+    all.dependency 'BaseKit/ViewDecorator'
   end
 
   s.subspec 'Core' do |core|
