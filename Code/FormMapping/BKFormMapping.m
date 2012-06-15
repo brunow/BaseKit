@@ -94,11 +94,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)mapAttribute:(NSString *)attribute title:(NSString *)title {
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
-    attributeMapping.title = title;
-    attributeMapping.attribute = attribute;
-    
-    [self addAttributeMappingToFormMapping:attributeMapping];
+    [self mapAttribute:attribute title:title type:BKFormAttributeMappingTypeDefault];
 }
 
 
@@ -107,10 +103,21 @@
                title:(NSString *)title
                 type:(BKFormAttributeMappingType)type {
     
+    [self mapAttribute:attribute title:title type:type controllerClass:nil];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)mapAttribute:(NSString *)attribute
+               title:(NSString *)title
+                type:(BKFormAttributeMappingType)type
+     controllerClass:(Class)controllerClass {
+    
     BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
     attributeMapping.title = title;
     attributeMapping.attribute = attribute;
     attributeMapping.type = type;
+    attributeMapping.controllerClass = controllerClass;
     
     [self addAttributeMappingToFormMapping:attributeMapping];
 }

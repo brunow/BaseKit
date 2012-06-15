@@ -41,6 +41,7 @@
 @synthesize cellSelectionBlock = _cellSelectionBlock;
 @synthesize customCell = _customCell;
 @synthesize rowHeight = _rowHeight;
+@synthesize controllerClass = _controllerClass;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -58,6 +58,7 @@ typedef enum {
 @property (nonatomic, copy) BKFormMappingCellSelectionBlock cellSelectionBlock;
 @property (nonatomic, assign) Class customCell;
 @property (nonatomic, assign) CGFloat rowHeight;
+@property (nonatomic, assign) Class controllerClass;
 
 /*
  * Convenient method to get an attributeMapping

@@ -316,8 +316,11 @@
 - (void)showTextViewControllerWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping {
     BK_WEAK_IVAR BKFormModel *weakRef = self;
     [self.navigationController pushViewControllerWithBlock:^UIViewController *{
+        Class controllerClass = (attributeMapping.controllerClass == nil) ?
+                                [BWLongTextViewController class] : attributeMapping.controllerClass;
+        
         NSString *value = [self.formMapper valueForAttriteMapping:attributeMapping];
-        BWLongTextViewController *vc = [[BWLongTextViewController alloc] initWithText:value];
+        BWLongTextViewController *vc = [[controllerClass alloc] initWithText:value];
         vc.title = attributeMapping.title;
         vc.textView.delegate = weakRef.formMapper;
         vc.textView.formAttributeMapping = attributeMapping;

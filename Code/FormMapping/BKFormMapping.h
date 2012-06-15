@@ -50,6 +50,11 @@
 - (void)mapAttribute:(NSString *)attribute
                title:(NSString *)title
                 type:(BKFormAttributeMappingType)type
+     controllerClass:(Class)controllerClass;
+
+- (void)mapAttribute:(NSString *)attribute
+               title:(NSString *)title
+                type:(BKFormAttributeMappingType)type
      dateFormatBlock:(BKFormMappingDateFormatBlock)dateFormatBlock;
 
 - (void)mapAttribute:(NSString *)attribute
@@ -68,10 +73,6 @@ valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
             rowHeight:(CGFloat)rowHeight
  willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
        didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock;
-
-//[formMapping mapCustomCell:[UITableViewCell class] identidier:@"customCell" willDisplayCellBlock:^UITableViewCell *(id object, NSIndexPath *indexPath, UITableViewCell *cell) {
-//    cell.textLabel.text = @"It's a custom cell";
-//}];
 
 - (void)sectiontTitle:(NSString *)title identifier:(NSString *)identifier;
 
