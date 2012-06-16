@@ -51,7 +51,7 @@
     
     [BKFormMapping mappingForClass:[Movie class] block:^(BKFormMapping *formMapping) {
         [formMapping sectiontTitle:@"Information section" identifier:@"info"];
-        [formMapping mapAttribute:@"title" title:@"Title" type:BKFormAttributeMappingTypeText controllerClass:[BWLongTextViewController class]];
+        [formMapping mapAttribute:@"title" title:@"Title" type:BKFormAttributeMappingTypeText];
         [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDatePicker dateFormat:@"yyyy-MM-dd HH:mm:ss"];
         [formMapping mapAttribute:@"suitAllAges" title:@"All ages" type:BKFormAttributeMappingTypeBoolean];
         [formMapping mapAttribute:@"shortName" title:@"ShortName" type:BKFormAttributeMappingTypeLabel];
