@@ -21,6 +21,7 @@ describe(@"", ^{
         _book.suitAllAges = [NSNumber numberWithBool:YES];
         _book.numberOfActor = [NSNumber numberWithInt:4];
         _book.releaseDate = [NSDate date];
+        _book.rate = [NSNumber numberWithInt:5];
         
         [BKFormMapping mappingForClass:[Book class] block:^(BKFormMapping *formMapping) {
             [formMapping sectiontTitle:firstSectionTitle identifier:@"info"];
@@ -28,6 +29,7 @@ describe(@"", ^{
             [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDatePicker dateFormat:@"yyyy-MM-dd HH:mm:ss"];
             [formMapping mapAttribute:@"suitAllAges" title:@"All ages" type:BKFormAttributeMappingTypeBoolean];
             [formMapping mapAttribute:@"shortName" title:@"ShortName" type:BKFormAttributeMappingTypeLabel];
+            [formMapping mapAttribute:@"rate" title:@"Rate" type:BKFormAttributeMappingTypeSlider];
             [formMapping sectiontTitle:@"Second section" identifier:@"second_section"];
             [formMapping mapAttribute:@"numberOfActor" title:@"Number of actor" type:BKFormAttributeMappingTypeInteger];
             [formMapping mapAttribute:@"content" title:@"Content" type:BKFormAttributeMappingTypeBigText];
@@ -132,6 +134,13 @@ describe(@"", ^{
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:3 inSection:0];
             id cell = [_mapper cellForRowAtIndexPath:indexPath];
             [[theValue([cell class]) should] equal:theValue([BKLabelField class])];
+        });
+        
+        // BKFormAttributeMappingTypeSlider
+        it(@"should be BKSwitchField", ^{
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:4 inSection:0];
+            id cell = [_mapper cellForRowAtIndexPath:indexPath];
+            [[theValue([cell class]) should] equal:theValue([BKSliderField class])];
         });
         
         // BKFormAttributeMappingTypeInteger

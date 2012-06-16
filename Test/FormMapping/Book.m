@@ -2,7 +2,7 @@
 
 @implementation Book
 
-@synthesize title, content, releaseDate, numberOfActor, suitAllAges, password, shortName, choice;
+@synthesize title, content, releaseDate, numberOfActor, suitAllAges, password, shortName, choice, rate;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
