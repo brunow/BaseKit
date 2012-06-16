@@ -46,57 +46,57 @@
 
 + (id)mappingForClass:(Class)objectClass block:(void(^)(BKFormMapping *formMapping))block;
 
-- (void)mapAttribute:(NSString *)attribute title:(NSString *)title;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute title:(NSString *)title;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-     placeholderText:(NSString *)placeholderText
-                type:(BKFormAttributeMappingType)type;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                         placeholderText:(NSString *)placeholderText
+                                    type:(BKFormAttributeMappingType)type;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type
-     controllerClass:(Class)controllerClass;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                         controllerClass:(Class)controllerClass;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type
-            minValue:(float)minValue
-            maxValue:(float)maxValue;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                                minValue:(float)minValue
+                                maxValue:(float)maxValue;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type
-     dateFormatBlock:(BKFormMappingDateFormatBlock)dateFormatBlock;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                         dateFormatBlock:(BKFormMappingDateFormatBlock)dateFormatBlock;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type
-          dateFormat:(NSString *)dateFormat;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                              dateFormat:(NSString *)dateFormat;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-   selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
-valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
-     labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                       selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
+                    valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
+                         labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue;
 
-- (void)mapCustomCell:(Class)cell
-           identifier:(NSString *)identifier
-            rowHeight:(CGFloat)rowHeight
- willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
-       didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock;
+- (BKFormAttributeMapping *)mapCustomCell:(Class)cell
+                               identifier:(NSString *)identifier
+                                rowHeight:(CGFloat)rowHeight
+                     willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
+                           didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock;
 
 - (void)sectiontTitle:(NSString *)title identifier:(NSString *)identifier;
 
-- (void)button:(NSString *)title
-    identifier:(NSString *)identifier
-       handler:(BKFormMappingButtonHandlerBlock)blockHandler
-  accesoryType:(UITableViewCellAccessoryType)accesoryType;
+- (BKFormAttributeMapping *)button:(NSString *)title
+                        identifier:(NSString *)identifier
+                           handler:(BKFormMappingButtonHandlerBlock)blockHandler
+                      accesoryType:(UITableViewCellAccessoryType)accesoryType;
 
-- (void)buttonSave:(NSString *)title handler:(BKBasicBlock)blockHandler;
+- (BKFormAttributeMapping *)buttonSave:(NSString *)title handler:(BKBasicBlock)blockHandler;
 
 @end
