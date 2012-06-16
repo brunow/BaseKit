@@ -42,6 +42,8 @@
 @synthesize customCell = _customCell;
 @synthesize rowHeight = _rowHeight;
 @synthesize controllerClass = _controllerClass;
+@synthesize minValue = _minValue;
+@synthesize maxValue = _maxValue;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

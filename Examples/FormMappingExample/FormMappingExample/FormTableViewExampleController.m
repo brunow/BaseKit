@@ -46,6 +46,7 @@
     movie.numberOfActor = [NSNumber numberWithInt:4];
     movie.genre = [Genre genreWithName:@"Action"];
     movie.releaseDate = [NSDate date];
+    movie.rate = [NSNumber numberWithFloat:5];
     
     self.movie = movie;
     
@@ -57,6 +58,7 @@
         [formMapping mapAttribute:@"shortName" title:@"ShortName" type:BKFormAttributeMappingTypeLabel];
         [formMapping mapAttribute:@"numberOfActor" title:@"Number of actor" type:BKFormAttributeMappingTypeInteger];
         [formMapping mapAttribute:@"content" title:@"Content" type:BKFormAttributeMappingTypeBigText];
+        [formMapping mapAttribute:@"rate" title:@"Rate" type:BKFormAttributeMappingTypeSlider minValue:0 maxValue:10];
         
         [formMapping mapAttribute:@"choice" title:@"Choices" selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
             *selectedValueIndex = 1;

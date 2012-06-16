@@ -127,6 +127,24 @@
 - (void)mapAttribute:(NSString *)attribute
                title:(NSString *)title
                 type:(BKFormAttributeMappingType)type
+            minValue:(float)minValue
+            maxValue:(float)maxValue {
+    
+    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
+    attributeMapping.title = title;
+    attributeMapping.attribute = attribute;
+    attributeMapping.type = type;
+    attributeMapping.minValue = minValue;
+    attributeMapping.maxValue = maxValue;
+    
+    [self addAttributeMappingToFormMapping:attributeMapping];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)mapAttribute:(NSString *)attribute
+               title:(NSString *)title
+                type:(BKFormAttributeMappingType)type
      dateFormatBlock:(BKFormMappingDateFormatBlock)dateFormatBlock {
     
     BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];

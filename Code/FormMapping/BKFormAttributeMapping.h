@@ -36,7 +36,8 @@ typedef enum {
     BKFormAttributeMappingTypeImage = 12,
     BKFormAttributeMappingTypeButton = 13,
     BKFormAttributeMappingTypeSelect = 14,
-    BKFormAttributeMappingTypeCustomCell = 15
+    BKFormAttributeMappingTypeCustomCell = 15,
+    BKFormAttributeMappingTypeSlider = 16
 } BKFormAttributeMappingType;
 
 @interface BKFormAttributeMapping : NSObject
@@ -59,6 +60,8 @@ typedef enum {
 @property (nonatomic, assign) Class customCell;
 @property (nonatomic, assign) CGFloat rowHeight;
 @property (nonatomic, assign) Class controllerClass;
+@property (nonatomic, assign) float minValue;
+@property (nonatomic, assign) float maxValue;
 
 /*
  * Convenient method to get an attributeMapping

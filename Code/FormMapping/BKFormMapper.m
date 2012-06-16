@@ -205,6 +205,16 @@
                           action:@selector(switchFieldValueDidChange:)
                 forControlEvents:UIControlEventValueChanged];
         
+    } else if ([field isKindOfClass:[BKSliderField class]]) {
+        UISlider *sliderControl = [(BKSliderField *)field slider];
+        [sliderControl setMinimumValue:attributeMapping.minValue];
+        [sliderControl setMaximumValue:attributeMapping.maxValue];
+        sliderControl.value = [(NSNumber *)convertedValue floatValue];
+        sliderControl.formAttributeMapping = attributeMapping;
+        [sliderControl addTarget:self
+                          action:@selector(sliderFieldValueDidChange:)
+                forControlEvents:UIControlEventValueChanged];
+        
     } else if ([field isKindOfClass:[BKSaveButtonField class]]) {
         [(BKSaveButtonField *)field setTitle:attributeMapping.title];
         
@@ -271,6 +281,9 @@
         
     } else if (type == BKFormAttributeMappingTypeCustomCell) {
         field = [attributeMapping.customCell cellForTableView:self.tableView];
+        
+    } else if (type == BKFormAttributeMappingTypeSlider) {
+        field = [BKSliderField cellForTableView:self.tableView];
         
     } else {
         field = [BKLabelField cellForTableView:self.tableView];
@@ -398,7 +411,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)switchFieldValueDidChange:(UISwitch *)sender {
     [self setValue:[NSNumber numberWithBool:sender.isOn] forAttributeMapping:sender.formAttributeMapping];
-    [self.formModel reloadRowWithAttributeMapping:sender.formAttributeMapping];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)sliderFieldValueDidChange:(UISlider *)sender {
+    [self setValue:[NSNumber numberWithFloat:sender.value] forAttributeMapping:sender.formAttributeMapping];
 }
 
 

@@ -55,6 +55,12 @@
 - (void)mapAttribute:(NSString *)attribute
                title:(NSString *)title
                 type:(BKFormAttributeMappingType)type
+            minValue:(float)minValue
+            maxValue:(float)maxValue;
+
+- (void)mapAttribute:(NSString *)attribute
+               title:(NSString *)title
+                type:(BKFormAttributeMappingType)type
      dateFormatBlock:(BKFormMappingDateFormatBlock)dateFormatBlock;
 
 - (void)mapAttribute:(NSString *)attribute
