@@ -34,13 +34,6 @@
     [self decorateView:self.view withIdentifier:@"background"];
     [self decorateView:self.label withIdentifier:@"default"];
     [self decorateView:self.btn withIdentifier:@"default"];
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    
     [self unloadDecorator];
 }
 
