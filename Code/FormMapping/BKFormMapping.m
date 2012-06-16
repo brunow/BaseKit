@@ -19,6 +19,7 @@
 
 #import "BKFormAttributeMapping.h"
 #import "BKMacrosDefinitions.h"
+#import "BaseKitFormField.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -40,18 +41,36 @@
 @synthesize objectClass = _objectClass;
 @synthesize fieldsOrder = _fieldsOrder;
 @synthesize saveAttribute = _saveAttribute;
+@synthesize textFieldClass = _textFieldClass;
+@synthesize floatFieldClass = _floatFieldClass;
+@synthesize integerFieldClass = _integerFieldClass;
+@synthesize labelFieldClass = _labelFieldClass;
+@synthesize passwordFieldClass = _passwordFieldClass;
+@synthesize switchFieldClass = _switchFieldClass;
+@synthesize saveButtonFieldClass = _saveButtonFieldClass;
+@synthesize bigTextFieldClass = _bigTextFieldClass;
+@synthesize sliderFieldClass = _sliderFieldClass;
+@synthesize buttonFieldClass = _buttonFieldClass;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)init {
     self = [super init];
-    
     if (self) {
         _attributeMappings = [[NSMutableDictionary alloc] init];
         _sectionTitles = [[NSMutableDictionary alloc] init];
         _fieldsOrder = [[NSMutableArray alloc] init];
+        _textFieldClass = [BKTextField class];
+        _floatFieldClass = [BKFloatField class];
+        _integerFieldClass = [BKIntegerField class];
+        _labelFieldClass = [BKLabelField class];
+        _passwordFieldClass = [BKPasswordTextField class];
+        _switchFieldClass = [BKSwitchField class];
+        _saveButtonFieldClass = [BKSaveButtonField class];
+        _bigTextFieldClass = [BKBigTextField class];
+        _sliderFieldClass = [BKSliderField class];
+        _buttonFieldClass = [BKButtonField class];
     }
-    
     return self;
 }
 
@@ -59,11 +78,9 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithObjectClass:(Class)objectClass {
     self = [self init];
-    
     if (self) {
         self.objectClass = objectClass;
     }
-    
     return self;
 }
 

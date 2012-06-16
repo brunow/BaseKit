@@ -31,6 +31,16 @@
 @property (nonatomic, readonly) NSDictionary *sectionTitles;
 @property (nonatomic, retain) NSArray *fieldsOrder;
 @property (nonatomic, retain) BKFormAttributeMapping *saveAttribute;
+@property (nonatomic, assign) Class textFieldClass;
+@property (nonatomic, assign) Class floatFieldClass;
+@property (nonatomic, assign) Class integerFieldClass;
+@property (nonatomic, assign) Class labelFieldClass;
+@property (nonatomic, assign) Class passwordFieldClass;
+@property (nonatomic, assign) Class switchFieldClass;
+@property (nonatomic, assign) Class saveButtonFieldClass;
+@property (nonatomic, assign) Class bigTextFieldClass;
+@property (nonatomic, assign) Class sliderFieldClass;
+@property (nonatomic, assign) Class buttonFieldClass;
 
 - (id)initWithObjectClass:(Class)objectClass;
 

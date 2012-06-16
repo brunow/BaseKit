@@ -241,52 +241,52 @@
     BKFormAttributeMappingType type = attributeMapping.type;
     
     if (type == BKFormAttributeMappingTypeText) {
-        field = [BKTextField cellForTableView:self.tableView];
+        field = [_formMapping.textFieldClass cellForTableView:self.tableView];
         [[(BKTextField *)field textField] setDelegate:self];
         [[(BKTextField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeFloat) {
-        field = [BKFloatField cellForTableView:self.tableView];
+        field = [_formMapping.floatFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeInteger) {
-        field = [BKIntegerField cellForTableView:self.tableView];
+        field = [_formMapping.integerFieldClass cellForTableView:self.tableView];
         [[(BKIntegerField *)field textField] setDelegate:self];
         [[(BKIntegerField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeLabel) {
-        field = [BKLabelField cellForTableView:self.tableView];
+        field = [_formMapping.labelFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypePassword) {
-        field = [BKPasswordTextField cellForTableView:self.tableView];
+        field = [_formMapping.passwordFieldClass cellForTableView:self.tableView];
         [[(BKPasswordTextField *)field textField] setDelegate:self];
         [[(BKPasswordTextField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeBoolean) {
-        field = [BKSwitchField cellForTableView:self.tableView];
+        field = [_formMapping.switchFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeSaveButton) {
-        field = [BKSaveButtonField cellForTableView:self.tableView];
+        field = [_formMapping.saveButtonFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeButton) {
-        field = [BKButtonField cellForTableView:self.tableView];
+        field = [_formMapping.buttonFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeSelect ||
                type == BKFormAttributeMappingTypeTimePicker ||
                type == BKFormAttributeMappingTypeDatePicker ||
                type == BKFormAttributeMappingTypeDateTimePicker) {
-        field = [BKLabelField cellForTableView:self.tableView];
+        field = [_formMapping.labelFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeBigText) {
-        field = [BKBigTextField cellForTableView:self.tableView];
+        field = [_formMapping.bigTextFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeCustomCell) {
         field = [attributeMapping.customCell cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeSlider) {
-        field = [BKSliderField cellForTableView:self.tableView];
+        field = [_formMapping.sliderFieldClass cellForTableView:self.tableView];
         
     } else {
-        field = [BKLabelField cellForTableView:self.tableView];
+        field = [_formMapping.labelFieldClass cellForTableView:self.tableView];
     }
     
     return field;
