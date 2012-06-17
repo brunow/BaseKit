@@ -86,6 +86,11 @@
 
 - (BKFormAttributeMapping *)mapCustomCell:(Class)cell
                                identifier:(NSString *)identifier
+                     willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
+                           didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock;
+
+- (BKFormAttributeMapping *)mapCustomCell:(Class)cell
+                               identifier:(NSString *)identifier
                                 rowHeight:(CGFloat)rowHeight
                      willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
                            didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock;

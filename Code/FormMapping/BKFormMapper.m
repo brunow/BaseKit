@@ -398,7 +398,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     BKFormAttributeMapping *attributeMapping = [self attributeMappingAtIndexPath:indexPath];
-    return attributeMapping.type == BKFormAttributeMappingTypeCustomCell ? attributeMapping.rowHeight : 44;
+    return attributeMapping.rowHeight > 0 ? attributeMapping.rowHeight : self.tableView.rowHeight;
 }
 
 

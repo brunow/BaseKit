@@ -218,6 +218,20 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (BKFormAttributeMapping *)mapCustomCell:(Class)cell
                                identifier:(NSString *)identifier
+                     willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
+                           didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock {
+    
+    return [self mapCustomCell:cell
+                    identifier:identifier
+                     rowHeight:0
+          willDisplayCellBlock:willDisplayCellBlock
+                didSelectBlock:selectionBlock];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (BKFormAttributeMapping *)mapCustomCell:(Class)cell
+                               identifier:(NSString *)identifier
                                 rowHeight:(CGFloat)rowHeight
                      willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
                            didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock {

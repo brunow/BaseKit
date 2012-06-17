@@ -80,6 +80,16 @@
                   
               }];
         
+        [formMapping mapCustomCell:[UITableViewCell class]
+                        identifier:@"custom2"
+              willDisplayCellBlock:^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+                  cell.textLabel.text = @"I am a custom cell too !";
+                  
+              }     didSelectBlock:^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+                  NSLog(@"You pressed me");
+                  
+              }];
+        
         [formMapping buttonSave:@"Save" handler:^{
             NSLog(@"save pressed");
             NSLog(@"%@", self.movie);
