@@ -38,14 +38,9 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 + (id)sharedManager {
-    static dispatch_once_t pred = 0;
-    static id _sharedObject = nil;
-    
-    dispatch_once(&pred, ^{
-        _sharedObject = [self manager];
-    });
-    
-    return _sharedObject;
+    BK_ADD_SHARED_INSTANCE_USING_BLOCK(^{
+        return [self manager];
+    });    
 }
 
 
