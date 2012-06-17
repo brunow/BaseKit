@@ -59,3 +59,14 @@ static char key##NAME; \
 - (TYPE)NAME { \
     return objc_getAssociatedObject(self, &key##NAME); \
 }
+
+
+#define BK_ADD_SHARED_INSTANCE_USING_BLOCK(BLOCK) \
+static dispatch_once_t pred = 0; \
+__strong static id _sharedObject = nil; \
+\
+dispatch_once(&pred, ^{ \
+    _sharedObject = BLOCK(); \
+}); \
+\
+return _sharedObject; \
