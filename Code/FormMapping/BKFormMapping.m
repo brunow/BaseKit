@@ -291,7 +291,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)sectiontTitle:(NSString *)title footer:(NSString *)footer identifier:(NSString *)identifier {
-    BKFormSectionObject *section = [BKFormSectionObject sectionWithHeaderTitle:title footerTitle:footer];
+    BKFormSectionObject *section = [BKFormSectionObject sectionWithHeaderTitle:(title ? title : @"") footerTitle:footer];
     [_sectionTitles setObject:section forKey:identifier];
     [self addFieldToOrdersArray:identifier];
 }
