@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E706875B158DEC1500E1164A /* BKFormSectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E706875A158DEC1500E1164A /* BKFormSectionObject.m */; };
 		E70F3246151F53EA00654199 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F3245151F53EA00654199 /* QuartzCore.framework */; };
 		E75C1D1014FEAC13009DBDCA /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = E75C1D0F14FEAC13009DBDCA /* Movie.m */; };
 		E75C1D1314FEAC48009DBDCA /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = E75C1D1214FEAC48009DBDCA /* Comment.m */; };
@@ -70,6 +71,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7068759158DEC1500E1164A /* BKFormSectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormSectionObject.h; sourceTree = "<group>"; };
+		E706875A158DEC1500E1164A /* BKFormSectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormSectionObject.m; sourceTree = "<group>"; };
 		E70F3245151F53EA00654199 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E75C1D0E14FEAC13009DBDCA /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		E75C1D0F14FEAC13009DBDCA /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 				E772DBF7155E49F3008A15B1 /* BKFormModel.m */,
 				E772DBF8155E49F3008A15B1 /* NSObject+BKFormAttributeMapping.h */,
 				E772DBF9155E49F3008A15B1 /* NSObject+BKFormAttributeMapping.m */,
+				E7068759158DEC1500E1164A /* BKFormSectionObject.h */,
+				E706875A158DEC1500E1164A /* BKFormSectionObject.m */,
 			);
 			name = FormMapping;
 			path = ../../Code/FormMapping;
@@ -558,6 +563,7 @@
 				E772DC4E155E4A00008A15B1 /* ActionSheetStringPicker.m in Sources */,
 				E772DC4F155E4A00008A15B1 /* DistancePickerView.m in Sources */,
 				E772DC50155E4A00008A15B1 /* BWLongTextViewController.m in Sources */,
+				E706875B158DEC1500E1164A /* BKFormSectionObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

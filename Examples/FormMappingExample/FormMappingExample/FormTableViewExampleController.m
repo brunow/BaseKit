@@ -51,7 +51,7 @@
     self.movie = movie;
     
     [BKFormMapping mappingForClass:[Movie class] block:^(BKFormMapping *formMapping) {        
-        [formMapping sectiontTitle:@"Information section" identifier:@"info"];
+        [formMapping sectiontTitle:@"Header" footer:@"Footer" identifier:@"info"];
         [formMapping mapAttribute:@"title" title:@"Title" type:BKFormAttributeMappingTypeText];
         [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDatePicker dateFormat:@"yyyy-MM-dd HH:mm:ss"];
         [formMapping mapAttribute:@"suitAllAges" title:@"All ages" type:BKFormAttributeMappingTypeBoolean];
@@ -68,6 +68,8 @@
         } labelValueBlock:^id(id value, id object) {
             return value;
         }];
+        
+        [formMapping sectiontTitle:@"Custom cells" identifier:@"customCells"];
         
         [formMapping mapCustomCell:[UITableViewCell class]
                         identifier:@"custom"
@@ -89,6 +91,8 @@
                   NSLog(@"You pressed me");
                   
               }];
+        
+        [formMapping sectiontTitle:@"Buttons" identifier:@"saveButton"];
         
         [formMapping buttonSave:@"Save" handler:^{
             NSLog(@"save pressed");

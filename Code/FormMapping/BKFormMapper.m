@@ -25,6 +25,7 @@
 #import "NSObject+BKFormAttributeMapping.h"
 #import "BKFormModel.h"
 #import "BKMacrosDefinitions.h"
+#import "BKFormSectionObject.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,8 +99,16 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString *)titleForHeaderInSection:(NSInteger)section {
-    return [self.titles objectAtIndex:section];
+- (NSString *)titleForHeaderInSection:(NSInteger)sectionIndex {
+    BKFormSectionObject *section = [self.titles objectAtIndex:sectionIndex];
+    return section.headerTitle;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSString *)titleForFooterInSection:(NSInteger)sectionIndex {
+    BKFormSectionObject *section = [self.titles objectAtIndex:sectionIndex];
+    return section.footerTitle;
 }
 
 

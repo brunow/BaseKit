@@ -117,6 +117,12 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSString *)titleForFooterInSection:(NSInteger)section {
+    return [self.formMapper titleForFooterInSection:section];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self.formMapper cellForRowAtIndexPath:indexPath];
 }
@@ -264,6 +270,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return [self titleForHeaderInSection:section];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    return [self titleForFooterInSection:section];
 }
 
 

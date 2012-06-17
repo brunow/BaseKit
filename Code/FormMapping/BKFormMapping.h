@@ -97,6 +97,8 @@
 
 - (void)sectiontTitle:(NSString *)title identifier:(NSString *)identifier;
 
+- (void)sectiontTitle:(NSString *)title footer:(NSString *)footer identifier:(NSString *)identifier;
+
 - (BKFormAttributeMapping *)button:(NSString *)title
                         identifier:(NSString *)identifier
                            handler:(BKFormMappingButtonHandlerBlock)blockHandler

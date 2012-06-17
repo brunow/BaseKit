@@ -20,6 +20,7 @@
 #import "BKFormAttributeMapping.h"
 #import "BKMacrosDefinitions.h"
 #import "BaseKitFormField.h"
+#import "BKFormSectionObject.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -284,7 +285,14 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)sectiontTitle:(NSString *)title identifier:(NSString *)identifier {
-    [_sectionTitles setObject:(nil == title ? @"" : title) forKey:identifier];
+    [self sectiontTitle:title footer:nil identifier:identifier];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)sectiontTitle:(NSString *)title footer:(NSString *)footer identifier:(NSString *)identifier {
+    BKFormSectionObject *section = [BKFormSectionObject sectionWithHeaderTitle:title footerTitle:footer];
+    [_sectionTitles setObject:section forKey:identifier];
     [self addFieldToOrdersArray:identifier];
 }
 

@@ -44,6 +44,8 @@
 
 - (NSString *)titleForHeaderInSection:(NSInteger)section;
 
+- (NSString *)titleForFooterInSection:(NSInteger)sectionIndex;
+
 - (UITableViewCell *)cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 - (BKFormAttributeMapping *)attributeMappingAtIndexPath:(NSIndexPath *)indexPath;
