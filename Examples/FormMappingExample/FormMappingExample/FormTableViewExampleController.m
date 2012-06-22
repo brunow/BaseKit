@@ -50,7 +50,7 @@
     
     self.movie = movie;
     
-    [BKFormMapping mappingForClass:[Movie class] block:^(BKFormMapping *formMapping) {        
+    [BKFormMapping mappingForClass:[Movie class] block:^(BKFormMapping *formMapping) {
         [formMapping sectiontTitle:@"Header" footer:@"Footer" identifier:@"info"];
         [formMapping mapAttribute:@"title" title:@"Title" type:BKFormAttributeMappingTypeText];
         [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDatePicker dateFormat:@"yyyy-MM-dd HH:mm:ss"];
