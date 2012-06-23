@@ -60,7 +60,7 @@
         [formMapping mapAttribute:@"content" title:@"Content" type:BKFormAttributeMappingTypeBigText];
         [formMapping mapAttribute:@"rate" title:@"Rate" type:BKFormAttributeMappingTypeSlider minValue:0 maxValue:10];
         
-        [formMapping mapAttribute:@"choice" title:@"Choices" selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
+        [formMapping mapAttribute:@"choice" title:@"Choices" showInPicker:NO selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
             *selectedValueIndex = 1;
             return [NSArray arrayWithObjects:@"choice1", @"choice2", nil];
         } valueFromSelectBlock:^id(id value, id object, NSInteger selectedValueIndex) {

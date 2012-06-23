@@ -200,6 +200,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
                                    title:(NSString *)title
+                            showInPicker:(BOOL)showInPicker
                        selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
                     valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
                          labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue {
@@ -211,6 +212,7 @@
     attributeMapping.selectValuesBlock = selectValueBlock;
     attributeMapping.valueFromSelectBlock = valueFromSelectBlock;
     attributeMapping.labelValueBlock = labelValue;
+    attributeMapping.showInPicker = showInPicker;
     
     return attributeMapping;
 }

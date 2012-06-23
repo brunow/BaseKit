@@ -28,6 +28,7 @@
 #import "BKMacrosDefinitions.h"
 #import "BKOperationHelper.h"
 #import "UINavigationController+BaseKit.h"
+#import "BWSelectViewController.h"
 
 #import "BWLongTextViewController.h"
 
@@ -46,6 +47,8 @@
 
 - (void)showDatePickerWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping;
 
+- (void)showSelectWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping;
+
 @end
 
 
@@ -59,6 +62,7 @@
 @synthesize object = _object;
 @synthesize formMapper = _formMapper;
 @synthesize navigationController = _navigationController;
+@synthesize selectControllerClass = _selectControllerClass;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -93,6 +97,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+        self.selectControllerClass = [BWSelectViewController class];
     }
     return self;
 }
@@ -135,7 +140,10 @@
     BKFormAttributeMapping *attributeMapping = [self.formMapper attributeMappingAtIndexPath:indexPath];
     
     if (nil != attributeMapping.selectValuesBlock) {
-        [self showSelectPickerWithAttributeMapping:attributeMapping];
+        if (attributeMapping.showInPicker)
+            [self showSelectPickerWithAttributeMapping:attributeMapping];
+        else
+            [self showSelectWithAttributeMapping:attributeMapping];
         
     } else if (nil != attributeMapping.saveBtnHandler) {
         attributeMapping.saveBtnHandler();
@@ -361,6 +369,34 @@
                                                    origin:self.tableView];
     
     picker.formAttributeMapping = attributeMapping;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)showSelectWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping {
+    BK_WEAK_IVAR BKFormModel *weakRef = self;
+    
+    [self.navigationController pushViewControllerWithBlock:^UIViewController *{
+        NSInteger selectedIndex = 0;
+        BWSelectViewController *vc = [[weakRef.selectControllerClass alloc] init];
+        vc.items = attributeMapping.selectValuesBlock(nil, weakRef.object, &selectedIndex);
+        vc.title = attributeMapping.title;
+        vc.formAttributeMapping = attributeMapping;
+        [vc setSlectedIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:selectedIndex inSection:0]]];
+        
+        [vc setDidSelectBlock:^(NSArray *selectedIndexPaths, BWSelectViewController *controller) {
+            NSIndexPath *selectedIndexPath = [selectedIndexPaths lastObject];
+            NSUInteger selectedIndex = selectedIndexPath.row;
+            id selectedValue = [controller.items objectAtIndex:selectedIndex];
+            BKFormAttributeMapping *formAttributeMapping = controller.formAttributeMapping;
+            id value = formAttributeMapping.valueFromSelectBlock(selectedValue, self.object, selectedIndex);
+            [weakRef.formMapper setValue:value forAttributeMapping:formAttributeMapping];
+            [weakRef reloadRowWithAttributeMapping:formAttributeMapping];
+            [controller.navigationController popViewControllerAnimated:YES];
+        }];
+        
+        return vc;
+    } animated:YES];
 }
 
 

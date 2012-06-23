@@ -80,6 +80,7 @@
 
 - (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
                                    title:(NSString *)title
+                            showInPicker:(BOOL)showInPicker
                        selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
                     valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
                          labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue;

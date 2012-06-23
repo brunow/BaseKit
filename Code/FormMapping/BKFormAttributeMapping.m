@@ -44,6 +44,7 @@
 @synthesize controllerClass = _controllerClass;
 @synthesize minValue = _minValue;
 @synthesize maxValue = _maxValue;
+@synthesize showInPicker = _showInPicker;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

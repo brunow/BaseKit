@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E706875B158DEC1500E1164A /* BKFormSectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E706875A158DEC1500E1164A /* BKFormSectionObject.m */; };
 		E70F3246151F53EA00654199 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70F3245151F53EA00654199 /* QuartzCore.framework */; };
+		E72E4390159608810064A898 /* BWSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72E438F159608810064A898 /* BWSelectViewController.m */; };
 		E75C1D1014FEAC13009DBDCA /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = E75C1D0F14FEAC13009DBDCA /* Movie.m */; };
 		E75C1D1314FEAC48009DBDCA /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = E75C1D1214FEAC48009DBDCA /* Comment.m */; };
 		E75C1D1614FEAC4F009DBDCA /* Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = E75C1D1514FEAC4F009DBDCA /* Genre.m */; };
@@ -74,6 +75,8 @@
 		E7068759158DEC1500E1164A /* BKFormSectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormSectionObject.h; sourceTree = "<group>"; };
 		E706875A158DEC1500E1164A /* BKFormSectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormSectionObject.m; sourceTree = "<group>"; };
 		E70F3245151F53EA00654199 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E72E438E159608810064A898 /* BWSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSelectViewController.h; sourceTree = "<group>"; };
+		E72E438F159608810064A898 /* BWSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSelectViewController.m; sourceTree = "<group>"; };
 		E75C1D0E14FEAC13009DBDCA /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		E75C1D0F14FEAC13009DBDCA /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		E75C1D1114FEAC48009DBDCA /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
@@ -218,6 +221,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E72E438D159608810064A898 /* BWSelectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E72E438E159608810064A898 /* BWSelectViewController.h */,
+				E72E438F159608810064A898 /* BWSelectViewController.m */,
+			);
+			path = BWSelectViewController;
+			sourceTree = "<group>";
+		};
 		E772DBAA155E49F3008A15B1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,6 +390,7 @@
 		E79F9B34151CBD1000D93014 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E72E438D159608810064A898 /* BWSelectViewController */,
 				E772DC39155E4A00008A15B1 /* ActionSheetPicker */,
 				E772DC47155E4A00008A15B1 /* BWLongTextViewController */,
 			);
@@ -564,6 +577,7 @@
 				E772DC4F155E4A00008A15B1 /* DistancePickerView.m in Sources */,
 				E772DC50155E4A00008A15B1 /* BWLongTextViewController.m in Sources */,
 				E706875B158DEC1500E1164A /* BKFormSectionObject.m in Sources */,
+				E72E4390159608810064A898 /* BWSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

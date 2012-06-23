@@ -62,6 +62,7 @@ typedef enum {
 @property (nonatomic, assign) Class controllerClass;
 @property (nonatomic, assign) float minValue;
 @property (nonatomic, assign) float maxValue;
+@property (nonatomic, assign) BOOL showInPicker;
 
 /*
  * Convenient method to get an attributeMapping

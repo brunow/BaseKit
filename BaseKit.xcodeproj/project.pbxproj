@@ -14,6 +14,7 @@
 		E729EFB41568AF8A00BB874A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAE1568AF8A00BB874A /* main.m */; };
 		E729EFBB1568B7AC00BB874A /* BKCellMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFB81568B7AC00BB874A /* BKCellMapperSpecs.m */; };
 		E729EFBC1568B7AC00BB874A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFBA1568B7AC00BB874A /* Item.m */; };
+		E72E43871596085C0064A898 /* BWSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72E43861596085C0064A898 /* BWSelectViewController.m */; };
 		E74E26E6156798B1004E6FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E5156798B1004E6FE9 /* UIKit.framework */; };
 		E74E26E8156798B1004E6FE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E7156798B1004E6FE9 /* Foundation.framework */; };
 		E74E26EA156798B1004E6FE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E9156798B1004E6FE9 /* CoreGraphics.framework */; };
@@ -118,6 +119,8 @@
 		E729EFB81568B7AC00BB874A /* BKCellMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapperSpecs.m; sourceTree = "<group>"; };
 		E729EFB91568B7AC00BB874A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		E729EFBA1568B7AC00BB874A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		E72E43851596085C0064A898 /* BWSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSelectViewController.h; sourceTree = "<group>"; };
+		E72E43861596085C0064A898 /* BWSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSelectViewController.m; sourceTree = "<group>"; };
 		E74E26E1156798B1004E6FE9 /* BaseKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74E26E5156798B1004E6FE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E74E26E7156798B1004E6FE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -325,6 +328,15 @@
 				E729EFBA1568B7AC00BB874A /* Item.m */,
 			);
 			path = CellMapping;
+			sourceTree = "<group>";
+		};
+		E72E43841596085C0064A898 /* BWSelectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E72E43851596085C0064A898 /* BWSelectViewController.h */,
+				E72E43861596085C0064A898 /* BWSelectViewController.m */,
+			);
+			path = BWSelectViewController;
 			sourceTree = "<group>";
 		};
 		E74E26D6156798B1004E6FE9 = {
@@ -544,6 +556,7 @@
 		E74E27CC156798CA004E6FE9 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				E72E43841596085C0064A898 /* BWSelectViewController */,
 				E74E27CD156798CA004E6FE9 /* ActionSheetPicker */,
 				E74E27DC156798CA004E6FE9 /* BWLongTextViewController */,
 				E74E27DF156798CA004E6FE9 /* JSONKit */,
@@ -860,6 +873,7 @@
 				E77882EE157FEB0C00F85E18 /* UIView+BaseKitViewDecorator.m in Sources */,
 				E77882EF157FEB0C00F85E18 /* UIViewController+BaseKitViewDecorator.m in Sources */,
 				E75B9F501594D3ED00180DB6 /* BKFormSectionObject.m in Sources */,
+				E72E43871596085C0064A898 /* BWSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
