@@ -19,7 +19,6 @@
 		E772DC11155E49F3008A15B1 /* BKRunBlockAtDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DBB6155E49F3008A15B1 /* BKRunBlockAtDealloc.m */; };
 		E772DC12155E49F3008A15B1 /* BKToogleValue.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DBB8155E49F3008A15B1 /* BKToogleValue.m */; };
 		E772DC13155E49F3008A15B1 /* BKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DBBA155E49F3008A15B1 /* BKUtils.m */; };
-		E772DC14155E49F3008A15B1 /* deps in Resources */ = {isa = PBXBuildFile; fileRef = E772DBBB155E49F3008A15B1 /* deps */; };
 		E772DC15155E49F3008A15B1 /* NSArray+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DBBD155E49F3008A15B1 /* NSArray+BaseKit.m */; };
 		E772DC16155E49F3008A15B1 /* NSDictionary+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DBBF155E49F3008A15B1 /* NSDictionary+BaseKit.m */; };
 		E772DC18155E49F3008A15B1 /* NSMutableArray+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E772DBC3155E49F3008A15B1 /* NSMutableArray+BaseKit.m */; };
@@ -99,7 +98,6 @@
 		E772DBB8155E49F3008A15B1 /* BKToogleValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKToogleValue.m; sourceTree = "<group>"; };
 		E772DBB9155E49F3008A15B1 /* BKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKUtils.h; sourceTree = "<group>"; };
 		E772DBBA155E49F3008A15B1 /* BKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKUtils.m; sourceTree = "<group>"; };
-		E772DBBB155E49F3008A15B1 /* deps */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = deps; sourceTree = "<group>"; };
 		E772DBBC155E49F3008A15B1 /* NSArray+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BaseKit.h"; sourceTree = "<group>"; };
 		E772DBBD155E49F3008A15B1 /* NSArray+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BaseKit.m"; sourceTree = "<group>"; };
 		E772DBBE155E49F3008A15B1 /* NSDictionary+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BaseKit.h"; sourceTree = "<group>"; };
@@ -249,7 +247,6 @@
 				E772DBB8155E49F3008A15B1 /* BKToogleValue.m */,
 				E772DBB9155E49F3008A15B1 /* BKUtils.h */,
 				E772DBBA155E49F3008A15B1 /* BKUtils.m */,
-				E772DBBB155E49F3008A15B1 /* deps */,
 				E772DBBC155E49F3008A15B1 /* NSArray+BaseKit.h */,
 				E772DBBD155E49F3008A15B1 /* NSArray+BaseKit.m */,
 				E772DBBE155E49F3008A15B1 /* NSDictionary+BaseKit.h */,
@@ -511,7 +508,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7BCB78C14BE2BEE00A9C715 /* InfoPlist.strings in Resources */,
-				E772DC14155E49F3008A15B1 /* deps in Resources */,
 				E772DC31155E49F3008A15B1 /* deps in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -53,7 +53,7 @@
     [BKFormMapping mappingForClass:[Movie class] block:^(BKFormMapping *formMapping) {
         [formMapping sectiontTitle:@"Header" footer:@"Footer" identifier:@"info"];
         [formMapping mapAttribute:@"title" title:@"Title" type:BKFormAttributeMappingTypeText];
-        [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDatePicker dateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDate dateFormat:@"yyyy-MM-dd HH:mm:ss"];
         [formMapping mapAttribute:@"suitAllAges" title:@"All ages" type:BKFormAttributeMappingTypeBoolean];
         [formMapping mapAttribute:@"shortName" title:@"ShortName" type:BKFormAttributeMappingTypeLabel];
         [formMapping mapAttribute:@"numberOfActor" title:@"Number of actor" type:BKFormAttributeMappingTypeInteger];

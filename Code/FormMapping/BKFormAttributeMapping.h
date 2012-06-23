@@ -22,15 +22,15 @@
 
 typedef enum {
     BKFormAttributeMappingTypeDefault = 0,
-    BKFormAttributeMappingTypeTimePicker = 1,
-    BKFormAttributeMappingTypeDatePicker = 2,
+    BKFormAttributeMappingTypeTime = 1,
+    BKFormAttributeMappingTypeDate = 2,
     BKFormAttributeMappingTypePassword = 3,
     BKFormAttributeMappingTypeLabel = 4,
     BKFormAttributeMappingTypeBoolean = 5,
     BKFormAttributeMappingTypeText = 6,
     BKFormAttributeMappingTypeFloat = 7,
     BKFormAttributeMappingTypeInteger = 8,
-    BKFormAttributeMappingTypeDateTimePicker = 9,
+    BKFormAttributeMappingTypeDateTime = 9,
     BKFormAttributeMappingTypeSaveButton = 10,
     BKFormAttributeMappingTypeBigText = 11,
     BKFormAttributeMappingTypeImage = 12,

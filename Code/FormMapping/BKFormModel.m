@@ -158,9 +158,9 @@
         BKTextField *textFieldCell = (BKTextField *)[self cellForRowAtIndexPath:indexPath];
         [textFieldCell.textField becomeFirstResponder];
         
-    } else if (BKFormAttributeMappingTypeDateTimePicker == attributeMapping.type ||
-               BKFormAttributeMappingTypeTimePicker == attributeMapping.type ||
-               BKFormAttributeMappingTypeDatePicker == attributeMapping.type) {
+    } else if (BKFormAttributeMappingTypeDateTime == attributeMapping.type ||
+               BKFormAttributeMappingTypeTime == attributeMapping.type ||
+               BKFormAttributeMappingTypeDate == attributeMapping.type) {
         
         [self showDatePickerWithAttributeMapping:attributeMapping];
         
@@ -405,9 +405,9 @@
     ActionSheetDatePicker *actionSheetPicker;
     UIDatePickerMode datePickerMode = UIDatePickerModeDate;
     
-    if (BKFormAttributeMappingTypeTimePicker == attributeMapping.type) {
+    if (BKFormAttributeMappingTypeTime == attributeMapping.type) {
         datePickerMode = UIDatePickerModeTime;
-    } else if (BKFormAttributeMappingTypeDateTimePicker == attributeMapping.type) {
+    } else if (BKFormAttributeMappingTypeDateTime == attributeMapping.type) {
         datePickerMode = UIDatePickerModeDateAndTime;
     }
     

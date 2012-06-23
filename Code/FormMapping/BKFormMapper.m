@@ -280,9 +280,9 @@
         field = [_formMapping.buttonFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeSelect ||
-               type == BKFormAttributeMappingTypeTimePicker ||
-               type == BKFormAttributeMappingTypeDatePicker ||
-               type == BKFormAttributeMappingTypeDateTimePicker) {
+               type == BKFormAttributeMappingTypeTime ||
+               type == BKFormAttributeMappingTypeDate ||
+               type == BKFormAttributeMappingTypeDateTime) {
         field = [_formMapping.labelFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeBigText) {
@@ -314,9 +314,9 @@
         float floatValue = [(NSNumber *)value floatValue];
         convertedValue = [NSString stringWithFormat:@"%d", floatValue];
         
-    } else if (attributeMapping.type == BKFormAttributeMappingTypeDateTimePicker ||
-               attributeMapping.type == BKFormAttributeMappingTypeDatePicker ||
-               attributeMapping.type == BKFormAttributeMappingTypeTimePicker) {
+    } else if (attributeMapping.type == BKFormAttributeMappingTypeDateTime ||
+               attributeMapping.type == BKFormAttributeMappingTypeDate ||
+               attributeMapping.type == BKFormAttributeMappingTypeTime) {
         
         if (nil != attributeMapping.dateFormat) {
             convertedValue = [self formattedStringDate:value usingFormat:attributeMapping.dateFormat];
