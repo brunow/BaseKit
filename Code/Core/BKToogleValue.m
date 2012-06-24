@@ -74,4 +74,5 @@
     self.isFirstValueSelected = (currentValue == self.firstValue);
 }
 
+
 @end

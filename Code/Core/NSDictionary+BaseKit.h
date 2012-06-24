@@ -20,17 +20,18 @@
 @interface NSDictionary (BaseKit)
 
 /**
- * Convinient method to check if the dictionary is empty or not.
+ Convinient method to check if the dictionary is empty or not.
  */
 @property (nonatomic, readonly) BOOL isEmpty;
 
 /**
- * Check if any value is assiated with given key
+ Check if any value is assiated with given key
  */
 - (BOOL)containsObjectForKey:(id)key;
 
 /**
- * If dictionary has a object for aKey return it, else return defaultObject
+ If dictionary has object for aKey return it, else return defaultObject
+ @return object if key exist else return defaultObject
  */
 - (id)objectForKey:(id)aKey defaultObject:(id)defaultObject;
 

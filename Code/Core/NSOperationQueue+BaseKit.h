@@ -19,6 +19,9 @@
 
 @interface NSOperationQueue (BaseKit)
 
+/**
+ A boolean value the indicating is queue is empty.
+ */
 @property (nonatomic, readonly) BOOL isEmpty;
 
 @end

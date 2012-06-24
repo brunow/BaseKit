@@ -18,47 +18,47 @@
 @interface NSArray (BaseKit)
 
 /**
- * Convinient method to check if the array is empty or not.
+ Convinient method to check if the array is empty or not.
  */
 @property (nonatomic, readonly) BOOL isEmpty;
 
 /**
- * Simply return the first object or nil if array is empty.
+ Return the first object or nil if array is empty.
  */
 - (id)firstObject;
 
 /**
- * Return boolean value at given index
+ Return boolean value at given index
  */
 - (BOOL)boolValueAtIndex:(NSInteger)index;
 
 /**
- * Return int value at given index
+ Return int value at given index
  */
 - (int)intValueAtIndex:(NSInteger)index;
 
 /**
- * Return integer value at given index
+ Return integer value at given index
  */
 - (NSInteger)integerValueAtIndex:(NSInteger)index;
 
 /**
- * Return float value at given index
+ Return float value at given index
  */
 - (float)floatValueAtIndex:(NSInteger)index;
 
 /**
- * Return double value at given index
+ Return double value at given index
  */
 - (double)doubleValueAtIndex:(NSInteger)index;
 
 /**
- * Return string value at given index
+ Return string value at given index
  */
 - (NSString *)stringValueAtIndex:(NSInteger)index;
 
 /**
- * Return number value at given index
+ Return number value at given index
  */
 - (NSNumber *)numberValueAtIndex:(NSInteger)index;
 

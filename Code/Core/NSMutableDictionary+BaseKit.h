@@ -19,6 +19,9 @@
 
 @interface NSMutableDictionary (BaseKit)
 
+/**
+ Same as setObject:forKey bu add defaultValue, is object is nil defaultValue will be added.∞a
+ */
 - (void)setObject:(id)anObject forKey:(id)aKey defaultValue:(id)defaultValue;
 
 @end

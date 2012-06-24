@@ -15,26 +15,50 @@
 // limitations under the License.
 //
 
-/*
- * Check if the device is running on ipad or not
- *      @return YES if device is ipad
+/**
+ Check if the device is running on ipad or not
+ @return YES if device is ipad
  */
 BOOL BKIsPad(void);
 
+/**
+ A boolean value indicating whether multitasking is supported.
+ @return boolean value
+ */
 BOOL BKIsMultitaskingSupported(void);
 
+/**
+ A boolean value indicating whether camera is available
+ @return boolean value
+ */
 BOOL BKIsCameraAvailable(void);
 
-BOOL BKDoesCameraSupportShootingVideos(void);
-
-BOOL BKDoesCameraSupportTakingPhotos(void);
-
+/**
+ A boolean value indicating whether front camera is available
+ @return boolean value
+ */
 BOOL BKIsFrontCameraAvailable(void);
 
+/**
+ A boolean value indicating whether rear camera is available
+ @return boolean value
+ */
 BOOL BKIsRearCameraAvailable(void);
 
+/**
+ A boolean value indicating whether front flash is available.
+ @return boolean value
+ */
 BOOL BKIsFlashAvailableOnFrontCamera(void);
 
+/**
+ A boolean value indicating whether current screen is retina display.
+ @return boolean value
+ */
 BOOL BKIsFlashAvailableOnRearCamera(void);
 
+/**
+ A boolean value indicating whether current screen is retina display.
+ @return boolean value
+ */
 BOOL BKIsRetinaDisplay(void);

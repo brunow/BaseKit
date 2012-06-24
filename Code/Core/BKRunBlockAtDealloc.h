@@ -14,10 +14,17 @@
 
 #import "BKBlocks.h"
 
+/**
+ BKRunBlockAtDealloc execute a block juste before object will be released.
+ */
+
 @interface BKRunBlockAtDealloc : NSObject
 
 @property (nonatomic, copy) BKBasicBlock block;
 
+/**
+ Init class with a block
+ */
 - (id)initWithBlock:(BKBasicBlock)block;
 
 @end

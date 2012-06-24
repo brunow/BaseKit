@@ -20,15 +20,13 @@
 @interface NSMutableArray (BaseKit)
 
 /*
- * Add object if not nil else add defaultValue
+ Add object if not nil else add defaultValue
  */
 - (void)addObject:(id)anObject defaultValue:(id)defaultValue;
 
-
 /*
- * Move an object inside mutable array
+ Move an object inside mutable array
  */
 - (void)moveObjectFromIndex:(NSInteger)from toIndex:(NSInteger)to;
-
 
 @end

@@ -22,20 +22,20 @@
 @interface BKOperationHelper : NSObject
 
 /**
- * Execute block in another thread
- *
- * Execute your long operation, after operation is finish the finish block is called in the main thread
- *
- * <h3>Example</h3>
- *
- * @code
- * [BKOperationHelper performBlockInBackground:^{
- *      // Load for example table view items
- * } completion:^{
- *      // Reload date in the main thread
- *      [self.tableView reloadData];
- * }] waitUntilDone:YES;
- * @endcode
+ Execute block in another thread
+ 
+ Execute your long operation, after operation is finish the finish block is called in the main thread
+ 
+ <h3>Example</h3>
+ 
+ @code
+ [BKOperationHelper performBlockInBackground:^{
+      // Load for example table view items
+ } completion:^{
+      // Reload date in the main thread
+      [self.tableView reloadData];
+ }] waitUntilDone:YES;
+ @endcode
  */
 + (void)performBlockInBackground:(BKBasicBlock)block completion:(BKBasicBlock)completionBlock waitUntilDone:(BOOL)waitUntilDone;
 
@@ -45,16 +45,16 @@
 
 
 /**
- * Execute block in main thread
- *
- * Execute your long operation in main thread
- *
- * <h3>Example</h3>
- *
- * @code
- * [BKOperationHelper performBlockInMainThread:^{
- *  } waitUntilDone:NO];
- * @endcode
+ Execute block in main thread
+ 
+ Execute your long operation in main thread
+ 
+ <h3>Example</h3>
+ 
+ @code
+ [BKOperationHelper performBlockInMainThread:^{
+ } waitUntilDone:NO];
+ @endcode
  */
 + (void)performBlockInMainThread:(BKBasicBlock)block waitUntilDone:(BOOL)waitUntilDone;
 

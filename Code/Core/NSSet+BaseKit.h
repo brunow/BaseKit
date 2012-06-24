@@ -20,7 +20,7 @@
 @interface NSSet (BaseKit)
 
 /**
- * Convinient method to check if the set is empty or not.
+ Convinient method to check if the set is empty.
  */
 @property (nonatomic, readonly) BOOL isEmpty;
 

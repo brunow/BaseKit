@@ -22,21 +22,21 @@
 - (NSString *)stringByCapitalizingFirstLetter;
 
 /**
- * Return the camelized string
- * Expected that the string is of type: first_letter
- * first_letter -> firstLetter
+ Return the camelized string
+ Expected that the string is of type: first_letter
+ first_letter -> firstLetter
  */
 - (NSString *)stringByCamelizingString;
 
 /**
- * Return the underscored string
- * Expected that the string is of type: first_letter
- * firstLetter -> first_letter
+ Return the underscored string
+ Expected that the string is of type: first_letter
+ firstLetter -> first_letter
  */
 - (NSString *)stringByUnderscoringWord;
 
 /**
- * Return boolean value that say if the string contain a given string
+ Return boolean value that say if the string contain a given string
  */
 - (BOOL)containString:(NSString *)string;
 

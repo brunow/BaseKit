@@ -37,20 +37,6 @@ BOOL BKIsCameraAvailable(void) {
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-BOOL BKDoesCameraSupportShootingVideos(void) {
-    //[UIImagePickerController cameraSupportsMedia:(__bridge NSString *)kUTTypeMovie sourceType:UIImagePickerControllerSourceTypeCamera];
-    return NO;
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-BOOL BKDoesCameraSupportTakingPhotos(void) {
-    //return [self cameraSupportsMedia:(__bridge NSString *)kUTTypeImage sourceType:UIImagePickerControllerSourceTypeCamera];
-    return NO;
-}
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 BOOL BKIsFrontCameraAvailable(void) {
     return [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront];
 }
