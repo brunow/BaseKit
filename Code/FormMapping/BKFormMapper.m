@@ -25,6 +25,7 @@
 #import "NSObject+BKFormAttributeMapping.h"
 #import "BKFormModel.h"
 #import "BKMacrosDefinitions.h"
+#import "BKFormSectionObject.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -98,8 +99,16 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (NSString *)titleForHeaderInSection:(NSInteger)section {
-    return [self.titles objectAtIndex:section];
+- (NSString *)titleForHeaderInSection:(NSInteger)sectionIndex {
+    BKFormSectionObject *section = [self.titles objectAtIndex:sectionIndex];
+    return section.headerTitle;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSString *)titleForFooterInSection:(NSInteger)sectionIndex {
+    BKFormSectionObject *section = [self.titles objectAtIndex:sectionIndex];
+    return section.footerTitle;
 }
 
 
@@ -205,6 +214,16 @@
                           action:@selector(switchFieldValueDidChange:)
                 forControlEvents:UIControlEventValueChanged];
         
+    } else if ([field isKindOfClass:[BKSliderField class]]) {
+        UISlider *sliderControl = [(BKSliderField *)field slider];
+        [sliderControl setMinimumValue:attributeMapping.minValue];
+        [sliderControl setMaximumValue:attributeMapping.maxValue];
+        sliderControl.value = [(NSNumber *)convertedValue floatValue];
+        sliderControl.formAttributeMapping = attributeMapping;
+        [sliderControl addTarget:self
+                          action:@selector(sliderFieldValueDidChange:)
+                forControlEvents:UIControlEventValueChanged];
+        
     } else if ([field isKindOfClass:[BKSaveButtonField class]]) {
         [(BKSaveButtonField *)field setTitle:attributeMapping.title];
         
@@ -231,49 +250,52 @@
     BKFormAttributeMappingType type = attributeMapping.type;
     
     if (type == BKFormAttributeMappingTypeText) {
-        field = [BKTextField cellForTableView:self.tableView];
+        field = [_formMapping.textFieldClass cellForTableView:self.tableView];
         [[(BKTextField *)field textField] setDelegate:self];
         [[(BKTextField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeFloat) {
-        field = [BKFloatField cellForTableView:self.tableView];
+        field = [_formMapping.floatFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeInteger) {
-        field = [BKIntegerField cellForTableView:self.tableView];
+        field = [_formMapping.integerFieldClass cellForTableView:self.tableView];
         [[(BKIntegerField *)field textField] setDelegate:self];
         [[(BKIntegerField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeLabel) {
-        field = [BKLabelField cellForTableView:self.tableView];
+        field = [_formMapping.labelFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypePassword) {
-        field = [BKPasswordTextField cellForTableView:self.tableView];
+        field = [_formMapping.passwordFieldClass cellForTableView:self.tableView];
         [[(BKPasswordTextField *)field textField] setDelegate:self];
         [[(BKPasswordTextField *)field textField] setFormAttributeMapping:attributeMapping];
         
     } else if (type == BKFormAttributeMappingTypeBoolean) {
-        field = [BKSwitchField cellForTableView:self.tableView];
+        field = [_formMapping.switchFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeSaveButton) {
-        field = [BKSaveButtonField cellForTableView:self.tableView];
+        field = [_formMapping.saveButtonFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeButton) {
-        field = [BKButtonField cellForTableView:self.tableView];
+        field = [_formMapping.buttonFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeSelect ||
-               type == BKFormAttributeMappingTypeTimePicker ||
-               type == BKFormAttributeMappingTypeDatePicker ||
-               type == BKFormAttributeMappingTypeDateTimePicker) {
-        field = [BKLabelField cellForTableView:self.tableView];
+               type == BKFormAttributeMappingTypeTime ||
+               type == BKFormAttributeMappingTypeDate ||
+               type == BKFormAttributeMappingTypeDateTime) {
+        field = [_formMapping.labelFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeBigText) {
-        field = [BKBigTextField cellForTableView:self.tableView];
+        field = [_formMapping.bigTextFieldClass cellForTableView:self.tableView];
         
     } else if (type == BKFormAttributeMappingTypeCustomCell) {
         field = [attributeMapping.customCell cellForTableView:self.tableView];
         
+    } else if (type == BKFormAttributeMappingTypeSlider) {
+        field = [_formMapping.sliderFieldClass cellForTableView:self.tableView];
+        
     } else {
-        field = [BKLabelField cellForTableView:self.tableView];
+        field = [_formMapping.labelFieldClass cellForTableView:self.tableView];
     }
     
     return field;
@@ -292,9 +314,9 @@
         float floatValue = [(NSNumber *)value floatValue];
         convertedValue = [NSString stringWithFormat:@"%d", floatValue];
         
-    } else if (attributeMapping.type == BKFormAttributeMappingTypeDateTimePicker ||
-               attributeMapping.type == BKFormAttributeMappingTypeDatePicker ||
-               attributeMapping.type == BKFormAttributeMappingTypeTimePicker) {
+    } else if (attributeMapping.type == BKFormAttributeMappingTypeDateTime ||
+               attributeMapping.type == BKFormAttributeMappingTypeDate ||
+               attributeMapping.type == BKFormAttributeMappingTypeTime) {
         
         if (nil != attributeMapping.dateFormat) {
             convertedValue = [self formattedStringDate:value usingFormat:attributeMapping.dateFormat];
@@ -385,7 +407,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     BKFormAttributeMapping *attributeMapping = [self attributeMappingAtIndexPath:indexPath];
-    return attributeMapping.type == BKFormAttributeMappingTypeCustomCell ? attributeMapping.rowHeight : 44;
+    return attributeMapping.rowHeight > 0 ? attributeMapping.rowHeight : self.tableView.rowHeight;
 }
 
 
@@ -398,7 +420,12 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)switchFieldValueDidChange:(UISwitch *)sender {
     [self setValue:[NSNumber numberWithBool:sender.isOn] forAttributeMapping:sender.formAttributeMapping];
-    [self.formModel reloadRowWithAttributeMapping:sender.formAttributeMapping];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)sliderFieldValueDidChange:(UISlider *)sender {
+    [self setValue:[NSNumber numberWithFloat:sender.value] forAttributeMapping:sender.formAttributeMapping];
 }
 
 

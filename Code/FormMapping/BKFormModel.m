@@ -28,6 +28,7 @@
 #import "BKMacrosDefinitions.h"
 #import "BKOperationHelper.h"
 #import "UINavigationController+BaseKit.h"
+#import "BWSelectViewController.h"
 
 #import "BWLongTextViewController.h"
 
@@ -46,6 +47,8 @@
 
 - (void)showDatePickerWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping;
 
+- (void)showSelectWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping;
+
 @end
 
 
@@ -59,6 +62,7 @@
 @synthesize object = _object;
 @synthesize formMapper = _formMapper;
 @synthesize navigationController = _navigationController;
+@synthesize selectControllerClass = _selectControllerClass;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -93,6 +97,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+        self.selectControllerClass = [BWSelectViewController class];
     }
     return self;
 }
@@ -117,6 +122,12 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSString *)titleForFooterInSection:(NSInteger)section {
+    return [self.formMapper titleForFooterInSection:section];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (UITableViewCell *)cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self.formMapper cellForRowAtIndexPath:indexPath];
 }
@@ -129,7 +140,10 @@
     BKFormAttributeMapping *attributeMapping = [self.formMapper attributeMappingAtIndexPath:indexPath];
     
     if (nil != attributeMapping.selectValuesBlock) {
-        [self showSelectPickerWithAttributeMapping:attributeMapping];
+        if (attributeMapping.showInPicker)
+            [self showSelectPickerWithAttributeMapping:attributeMapping];
+        else
+            [self showSelectWithAttributeMapping:attributeMapping];
         
     } else if (nil != attributeMapping.saveBtnHandler) {
         attributeMapping.saveBtnHandler();
@@ -144,9 +158,9 @@
         BKTextField *textFieldCell = (BKTextField *)[self cellForRowAtIndexPath:indexPath];
         [textFieldCell.textField becomeFirstResponder];
         
-    } else if (BKFormAttributeMappingTypeDateTimePicker == attributeMapping.type ||
-               BKFormAttributeMappingTypeTimePicker == attributeMapping.type ||
-               BKFormAttributeMappingTypeDatePicker == attributeMapping.type) {
+    } else if (BKFormAttributeMappingTypeDateTime == attributeMapping.type ||
+               BKFormAttributeMappingTypeTime == attributeMapping.type ||
+               BKFormAttributeMappingTypeDate == attributeMapping.type) {
         
         [self showDatePickerWithAttributeMapping:attributeMapping];
         
@@ -268,6 +282,12 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+    return [self titleForFooterInSection:section];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self.formMapper heightForRowAtIndexPath:indexPath];
 }
@@ -316,8 +336,11 @@
 - (void)showTextViewControllerWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping {
     BK_WEAK_IVAR BKFormModel *weakRef = self;
     [self.navigationController pushViewControllerWithBlock:^UIViewController *{
+        Class controllerClass = (attributeMapping.controllerClass == nil) ?
+                                [BWLongTextViewController class] : attributeMapping.controllerClass;
+        
         NSString *value = [self.formMapper valueForAttriteMapping:attributeMapping];
-        BWLongTextViewController *vc = [[BWLongTextViewController alloc] initWithText:value];
+        BWLongTextViewController *vc = [[controllerClass alloc] initWithText:value];
         vc.title = attributeMapping.title;
         vc.textView.delegate = weakRef.formMapper;
         vc.textView.formAttributeMapping = attributeMapping;
@@ -350,13 +373,41 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)showSelectWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping {
+    BK_WEAK_IVAR BKFormModel *weakRef = self;
+    
+    [self.navigationController pushViewControllerWithBlock:^UIViewController *{
+        NSInteger selectedIndex = 0;
+        BWSelectViewController *vc = [[weakRef.selectControllerClass alloc] init];
+        vc.items = attributeMapping.selectValuesBlock(nil, weakRef.object, &selectedIndex);
+        vc.title = attributeMapping.title;
+        vc.formAttributeMapping = attributeMapping;
+        [vc setSlectedIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:selectedIndex inSection:0]]];
+        
+        [vc setDidSelectBlock:^(NSArray *selectedIndexPaths, BWSelectViewController *controller) {
+            NSIndexPath *selectedIndexPath = [selectedIndexPaths lastObject];
+            NSUInteger selectedIndex = selectedIndexPath.row;
+            id selectedValue = [controller.items objectAtIndex:selectedIndex];
+            BKFormAttributeMapping *formAttributeMapping = controller.formAttributeMapping;
+            id value = formAttributeMapping.valueFromSelectBlock(selectedValue, self.object, selectedIndex);
+            [weakRef.formMapper setValue:value forAttributeMapping:formAttributeMapping];
+            [weakRef reloadRowWithAttributeMapping:formAttributeMapping];
+            [controller.navigationController popViewControllerAnimated:YES];
+        }];
+        
+        return vc;
+    } animated:YES];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)showDatePickerWithAttributeMapping:(BKFormAttributeMapping *)attributeMapping {
     ActionSheetDatePicker *actionSheetPicker;
     UIDatePickerMode datePickerMode = UIDatePickerModeDate;
     
-    if (BKFormAttributeMappingTypeTimePicker == attributeMapping.type) {
+    if (BKFormAttributeMappingTypeTime == attributeMapping.type) {
         datePickerMode = UIDatePickerModeTime;
-    } else if (BKFormAttributeMappingTypeDateTimePicker == attributeMapping.type) {
+    } else if (BKFormAttributeMappingTypeDateTime == attributeMapping.type) {
         datePickerMode = UIDatePickerModeDateAndTime;
     }
     

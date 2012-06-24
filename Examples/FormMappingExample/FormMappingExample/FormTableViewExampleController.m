@@ -13,6 +13,7 @@
 #import "Movie.h"
 #import "Comment.h"
 #import "Genre.h"
+#import "BWLongTextViewController.h"
 
 @implementation FormTableViewExampleController
 
@@ -45,19 +46,21 @@
     movie.numberOfActor = [NSNumber numberWithInt:4];
     movie.genre = [Genre genreWithName:@"Action"];
     movie.releaseDate = [NSDate date];
+    movie.rate = [NSNumber numberWithFloat:5];
     
     self.movie = movie;
     
     [BKFormMapping mappingForClass:[Movie class] block:^(BKFormMapping *formMapping) {
-        [formMapping sectiontTitle:@"Information section" identifier:@"info"];
+        [formMapping sectiontTitle:@"Header" footer:@"Footer" identifier:@"info"];
         [formMapping mapAttribute:@"title" title:@"Title" type:BKFormAttributeMappingTypeText];
-        [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDatePicker dateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDate dateFormat:@"yyyy-MM-dd HH:mm:ss"];
         [formMapping mapAttribute:@"suitAllAges" title:@"All ages" type:BKFormAttributeMappingTypeBoolean];
         [formMapping mapAttribute:@"shortName" title:@"ShortName" type:BKFormAttributeMappingTypeLabel];
         [formMapping mapAttribute:@"numberOfActor" title:@"Number of actor" type:BKFormAttributeMappingTypeInteger];
         [formMapping mapAttribute:@"content" title:@"Content" type:BKFormAttributeMappingTypeBigText];
+        [formMapping mapAttribute:@"rate" title:@"Rate" type:BKFormAttributeMappingTypeSlider minValue:0 maxValue:10];
         
-        [formMapping mapAttribute:@"choice" title:@"Choices" selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
+        [formMapping mapAttribute:@"choice" title:@"Choices" showInPicker:NO selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
             *selectedValueIndex = 1;
             return [NSArray arrayWithObjects:@"choice1", @"choice2", nil];
         } valueFromSelectBlock:^id(id value, id object, NSInteger selectedValueIndex) {
@@ -65,6 +68,8 @@
         } labelValueBlock:^id(id value, id object) {
             return value;
         }];
+        
+        [formMapping sectiontTitle:@"Custom cells" identifier:@"customCells"];
         
         [formMapping mapCustomCell:[UITableViewCell class]
                         identifier:@"custom"
@@ -76,6 +81,18 @@
                   NSLog(@"You pressed me");
                   
               }];
+        
+        [formMapping mapCustomCell:[UITableViewCell class]
+                        identifier:@"custom2"
+              willDisplayCellBlock:^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+                  cell.textLabel.text = @"I am a custom cell too !";
+                  
+              }     didSelectBlock:^(UITableViewCell *cell, id object, NSIndexPath *indexPath) {
+                  NSLog(@"You pressed me");
+                  
+              }];
+        
+        [formMapping sectiontTitle:@"Buttons" identifier:@"saveButton"];
         
         [formMapping buttonSave:@"Save" handler:^{
             NSLog(@"save pressed");

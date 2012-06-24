@@ -188,7 +188,7 @@
         return cellMapping.editingStyleBlock(object, indexPath);
     }
     
-    return UITableViewCellEditingStyleDelete;
+    return UITableViewCellEditingStyleNone;
 }
 
 

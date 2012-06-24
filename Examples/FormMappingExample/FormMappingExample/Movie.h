@@ -21,6 +21,7 @@
 @property (nonatomic, retain) NSString *password;
 @property (nonatomic, retain) NSString *shortName;
 @property (nonatomic, retain) NSString *choice;
+@property (nonatomic, retain) NSNumber *rate;
 
 + (id)movieWithTitle:(NSString *)title content:(NSString *)content;
 

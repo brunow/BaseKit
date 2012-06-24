@@ -22,21 +22,22 @@
 
 typedef enum {
     BKFormAttributeMappingTypeDefault = 0,
-    BKFormAttributeMappingTypeTimePicker = 1,
-    BKFormAttributeMappingTypeDatePicker = 2,
+    BKFormAttributeMappingTypeTime = 1,
+    BKFormAttributeMappingTypeDate = 2,
     BKFormAttributeMappingTypePassword = 3,
     BKFormAttributeMappingTypeLabel = 4,
     BKFormAttributeMappingTypeBoolean = 5,
     BKFormAttributeMappingTypeText = 6,
     BKFormAttributeMappingTypeFloat = 7,
     BKFormAttributeMappingTypeInteger = 8,
-    BKFormAttributeMappingTypeDateTimePicker = 9,
+    BKFormAttributeMappingTypeDateTime = 9,
     BKFormAttributeMappingTypeSaveButton = 10,
     BKFormAttributeMappingTypeBigText = 11,
     BKFormAttributeMappingTypeImage = 12,
     BKFormAttributeMappingTypeButton = 13,
     BKFormAttributeMappingTypeSelect = 14,
-    BKFormAttributeMappingTypeCustomCell = 15
+    BKFormAttributeMappingTypeCustomCell = 15,
+    BKFormAttributeMappingTypeSlider = 16
 } BKFormAttributeMappingType;
 
 @interface BKFormAttributeMapping : NSObject
@@ -58,6 +59,10 @@ typedef enum {
 @property (nonatomic, copy) BKFormMappingCellSelectionBlock cellSelectionBlock;
 @property (nonatomic, assign) Class customCell;
 @property (nonatomic, assign) CGFloat rowHeight;
+@property (nonatomic, assign) Class controllerClass;
+@property (nonatomic, assign) float minValue;
+@property (nonatomic, assign) float maxValue;
+@property (nonatomic, assign) BOOL showInPicker;
 
 /*
  * Convenient method to get an attributeMapping

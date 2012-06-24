@@ -19,6 +19,8 @@
 
 #import "BKFormAttributeMapping.h"
 #import "BKMacrosDefinitions.h"
+#import "BaseKitFormField.h"
+#import "BKFormSectionObject.h"
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -27,7 +29,13 @@
 @interface BKFormMapping ()
 
 - (void)addFieldToOrdersArray:(NSString *)identifier;
+
 - (void)addAttributeMappingToFormMapping:(BKFormAttributeMapping *)attributeMapping;
+
+- (BKFormAttributeMapping *)attributeMappingWithTitle:(NSString *)title
+                                            attribute:(NSString *)attribute
+                                                 type:(BKFormAttributeMappingType)type;
+
 
 @end
 
@@ -40,18 +48,36 @@
 @synthesize objectClass = _objectClass;
 @synthesize fieldsOrder = _fieldsOrder;
 @synthesize saveAttribute = _saveAttribute;
+@synthesize textFieldClass = _textFieldClass;
+@synthesize floatFieldClass = _floatFieldClass;
+@synthesize integerFieldClass = _integerFieldClass;
+@synthesize labelFieldClass = _labelFieldClass;
+@synthesize passwordFieldClass = _passwordFieldClass;
+@synthesize switchFieldClass = _switchFieldClass;
+@synthesize saveButtonFieldClass = _saveButtonFieldClass;
+@synthesize bigTextFieldClass = _bigTextFieldClass;
+@synthesize sliderFieldClass = _sliderFieldClass;
+@synthesize buttonFieldClass = _buttonFieldClass;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)init {
     self = [super init];
-    
     if (self) {
         _attributeMappings = [[NSMutableDictionary alloc] init];
         _sectionTitles = [[NSMutableDictionary alloc] init];
         _fieldsOrder = [[NSMutableArray alloc] init];
+        _textFieldClass = [BKTextField class];
+        _floatFieldClass = [BKFloatField class];
+        _integerFieldClass = [BKIntegerField class];
+        _labelFieldClass = [BKLabelField class];
+        _passwordFieldClass = [BKPasswordTextField class];
+        _switchFieldClass = [BKSwitchField class];
+        _saveButtonFieldClass = [BKSaveButtonField class];
+        _bigTextFieldClass = [BKBigTextField class];
+        _sliderFieldClass = [BKSliderField class];
+        _buttonFieldClass = [BKButtonField class];
     }
-    
     return self;
 }
 
@@ -59,11 +85,9 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (id)initWithObjectClass:(Class)objectClass {
     self = [self init];
-    
     if (self) {
         self.objectClass = objectClass;
     }
-    
     return self;
 }
 
@@ -77,151 +101,200 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-     placeholderText:(NSString *)placeholderText
-                type:(BKFormAttributeMappingType)type {
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute title:(NSString *)title {
+    return [self mapAttribute:attribute title:title type:BKFormAttributeMappingTypeDefault];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type {
     
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
-    attributeMapping.title = title;
-    attributeMapping.attribute = attribute;
-    attributeMapping.type = type;
+    return [self mapAttribute:attribute title:title type:type controllerClass:nil];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                         placeholderText:(NSString *)placeholderText
+                                    type:(BKFormAttributeMappingType)type {
+    
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingWithTitle:title
+                                                                     attribute:attribute
+                                                                          type:type];
+    
     attributeMapping.placeholderText = placeholderText;
     
-    [self addAttributeMappingToFormMapping:attributeMapping];
+    return attributeMapping;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapAttribute:(NSString *)attribute title:(NSString *)title {
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
-    attributeMapping.title = title;
-    attributeMapping.attribute = attribute;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                         controllerClass:(Class)controllerClass {
     
-    [self addAttributeMappingToFormMapping:attributeMapping];
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingWithTitle:title
+                                                                     attribute:attribute
+                                                                          type:type];
+    
+    attributeMapping.controllerClass = controllerClass;
+    
+    return attributeMapping;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type {
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                                minValue:(float)minValue
+                                maxValue:(float)maxValue {
     
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
-    attributeMapping.title = title;
-    attributeMapping.attribute = attribute;
-    attributeMapping.type = type;
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingWithTitle:title
+                                                                     attribute:attribute
+                                                                          type:type];
     
-    [self addAttributeMappingToFormMapping:attributeMapping];
+    attributeMapping.minValue = minValue;
+    attributeMapping.maxValue = maxValue;
+    
+    return attributeMapping;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type
-     dateFormatBlock:(BKFormMappingDateFormatBlock)dateFormatBlock {
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                         dateFormatBlock:(BKFormMappingDateFormatBlock)dateFormatBlock {
     
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
-    attributeMapping.title = title;
-    attributeMapping.attribute = attribute;
-    attributeMapping.type = type;
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingWithTitle:title
+                                                                     attribute:attribute
+                                                                          type:type];
+    
     attributeMapping.dateFormatBlock = dateFormatBlock;
     
-    [self addAttributeMappingToFormMapping:attributeMapping];
+    return attributeMapping;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type
-     dateFormat:(NSString *)dateFormat {
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                              dateFormat:(NSString *)dateFormat {
     
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
-    attributeMapping.title = title;
-    attributeMapping.attribute = attribute;
-    attributeMapping.type = type;
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingWithTitle:title
+                                                                     attribute:attribute
+                                                                          type:type];
+    
     attributeMapping.dateFormat = dateFormat;
     
-    [self addAttributeMappingToFormMapping:attributeMapping];
+    return attributeMapping;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-   selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
-valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
-     labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue {
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                            showInPicker:(BOOL)showInPicker
+                       selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
+                    valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
+                         labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue {
     
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
-    attributeMapping.title = title;
-    attributeMapping.attribute = attribute;
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingWithTitle:title
+                                                                     attribute:attribute
+                                                                          type:BKFormAttributeMappingTypeSelect];
+    
     attributeMapping.selectValuesBlock = selectValueBlock;
-    attributeMapping.type = BKFormAttributeMappingTypeSelect;
     attributeMapping.valueFromSelectBlock = valueFromSelectBlock;
     attributeMapping.labelValueBlock = labelValue;
+    attributeMapping.showInPicker = showInPicker;
     
-    [self addAttributeMappingToFormMapping:attributeMapping];
+    return attributeMapping;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)mapCustomCell:(Class)cell
-           identifier:(NSString *)identifier
-            rowHeight:(CGFloat)rowHeight
- willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
-       didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock {
+- (BKFormAttributeMapping *)mapCustomCell:(Class)cell
+                               identifier:(NSString *)identifier
+                     willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
+                           didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock {
     
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
+    return [self mapCustomCell:cell
+                    identifier:identifier
+                     rowHeight:0
+          willDisplayCellBlock:willDisplayCellBlock
+                didSelectBlock:selectionBlock];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (BKFormAttributeMapping *)mapCustomCell:(Class)cell
+                               identifier:(NSString *)identifier
+                                rowHeight:(CGFloat)rowHeight
+                     willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
+                           didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock {
+    
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingWithTitle:nil
+                                                                     attribute:identifier
+                                                                          type:BKFormAttributeMappingTypeCustomCell];
+    
     attributeMapping.willDisplayCellBlock = willDisplayCellBlock;;
-    attributeMapping.type = BKFormAttributeMappingTypeCustomCell;
     attributeMapping.cellSelectionBlock = selectionBlock;
     attributeMapping.customCell = cell;
-    attributeMapping.attribute = identifier;
     attributeMapping.rowHeight = rowHeight;
     
-    [self addAttributeMappingToFormMapping:attributeMapping];
+    return attributeMapping;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)button:(NSString *)title
-    identifier:(NSString *)identifier
-       handler:(BKFormMappingButtonHandlerBlock)blockHandler
-  accesoryType:(UITableViewCellAccessoryType)accesoryType; {
+- (BKFormAttributeMapping *)button:(NSString *)title
+                        identifier:(NSString *)identifier
+                           handler:(BKFormMappingButtonHandlerBlock)blockHandler
+                      accesoryType:(UITableViewCellAccessoryType)accesoryType; {
     
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
-    attributeMapping.title = title;
-    attributeMapping.attribute = identifier;
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingWithTitle:title
+                                                                     attribute:identifier
+                                                                          type:BKFormAttributeMappingTypeButton];
+    
     attributeMapping.btnHandler = blockHandler;
     attributeMapping.accesoryType = accesoryType;
-    attributeMapping.type = BKFormAttributeMappingTypeButton;
-    
-    [self addAttributeMappingToFormMapping:attributeMapping];
     self.saveAttribute = attributeMapping;
+    
+    return attributeMapping;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-- (void)buttonSave:(NSString *)title handler:(BKBasicBlock)blockHandler {
+- (BKFormAttributeMapping *)buttonSave:(NSString *)title handler:(BKBasicBlock)blockHandler {
     [self sectiontTitle:@"" identifier:@"saveSection"];
     
-    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
-    attributeMapping.title = title;
-    attributeMapping.attribute = @"save";
-    attributeMapping.saveBtnHandler = blockHandler;
-    attributeMapping.type = BKFormAttributeMappingTypeSaveButton;
+    BKFormAttributeMapping *attributeMapping = [self attributeMappingWithTitle:title
+                                                                     attribute:@"save"
+                                                                          type:BKFormAttributeMappingTypeSaveButton];
     
-    [self addAttributeMappingToFormMapping:attributeMapping];
+    attributeMapping.saveBtnHandler = blockHandler;    
     self.saveAttribute = attributeMapping;
+    
+    return attributeMapping;
 }
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)sectiontTitle:(NSString *)title identifier:(NSString *)identifier {
-    [_sectionTitles setObject:(nil == title ? @"" : title) forKey:identifier];
+    [self sectiontTitle:title footer:nil identifier:identifier];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (void)sectiontTitle:(NSString *)title footer:(NSString *)footer identifier:(NSString *)identifier {
+    BKFormSectionObject *section = [BKFormSectionObject sectionWithHeaderTitle:(title ? title : @"") footerTitle:footer];
+    [_sectionTitles setObject:section forKey:identifier];
     [self addFieldToOrdersArray:identifier];
 }
 
@@ -248,6 +321,21 @@ valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #pragma mark -
 #pragma mark Private
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+- (BKFormAttributeMapping *)attributeMappingWithTitle:(NSString *)title
+                                            attribute:(NSString *)attribute
+                                                 type:(BKFormAttributeMappingType)type {
+    
+    BKFormAttributeMapping *attributeMapping = [BKFormAttributeMapping attributeMapping];
+    attributeMapping.title = title;
+    attributeMapping.attribute = attribute;
+    attributeMapping.type = type;
+    [self addAttributeMappingToFormMapping:attributeMapping];
+    
+    return attributeMapping;
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////

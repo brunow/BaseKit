@@ -28,6 +28,7 @@
 @property (nonatomic, retain) UITableView *tableView;
 @property (nonatomic, retain) id object;
 @property (nonatomic, retain) UINavigationController *navigationController;
+@property (nonatomic, assign) Class selectControllerClass;
 
 + (id)formTableModelForTableView:(UITableView *)tableView;
 

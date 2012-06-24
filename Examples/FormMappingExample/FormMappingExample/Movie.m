@@ -12,7 +12,7 @@
 
 @implementation Movie
 
-@synthesize title, content, releaseDate, numberOfActor, suitAllAges, genre, password, shortName, choice;
+@synthesize title, content, releaseDate, numberOfActor, suitAllAges, genre, password, shortName, choice, rate;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -29,8 +29,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 - (NSString *)description {
     return [NSString stringWithFormat:
-            @"title = %@, content = %@, releaseDate = %@, numberOfActor = %@, suitAllAges = %@, genre = %@, password = %@, shortName = %@, choice = %@",
-            self.title, self.content, self.releaseDate, self.numberOfActor, self.suitAllAges, self.genre, self.password, self.shortName, self.choice];
+            @"title = %@, content = %@, releaseDate = %@, numberOfActor = %@, suitAllAges = %@, genre = %@, password = %@, shortName = %@, choice = %@, rate = %@",
+            self.title, self.content, self.releaseDate, self.numberOfActor, self.suitAllAges, self.genre, self.password, self.shortName, self.choice, self.rate];
 }
 
 

@@ -31,55 +31,80 @@
 @property (nonatomic, readonly) NSDictionary *sectionTitles;
 @property (nonatomic, retain) NSArray *fieldsOrder;
 @property (nonatomic, retain) BKFormAttributeMapping *saveAttribute;
+@property (nonatomic, assign) Class textFieldClass;
+@property (nonatomic, assign) Class floatFieldClass;
+@property (nonatomic, assign) Class integerFieldClass;
+@property (nonatomic, assign) Class labelFieldClass;
+@property (nonatomic, assign) Class passwordFieldClass;
+@property (nonatomic, assign) Class switchFieldClass;
+@property (nonatomic, assign) Class saveButtonFieldClass;
+@property (nonatomic, assign) Class bigTextFieldClass;
+@property (nonatomic, assign) Class sliderFieldClass;
+@property (nonatomic, assign) Class buttonFieldClass;
 
 - (id)initWithObjectClass:(Class)objectClass;
 
 + (id)mappingForClass:(Class)objectClass block:(void(^)(BKFormMapping *formMapping))block;
 
-- (void)mapAttribute:(NSString *)attribute title:(NSString *)title;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute title:(NSString *)title;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-     placeholderText:(NSString *)placeholderText
-                type:(BKFormAttributeMappingType)type;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                         placeholderText:(NSString *)placeholderText
+                                    type:(BKFormAttributeMappingType)type;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type
-     dateFormatBlock:(BKFormMappingDateFormatBlock)dateFormatBlock;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                         controllerClass:(Class)controllerClass;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-                type:(BKFormAttributeMappingType)type
-          dateFormat:(NSString *)dateFormat;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                                minValue:(float)minValue
+                                maxValue:(float)maxValue;
 
-- (void)mapAttribute:(NSString *)attribute
-               title:(NSString *)title
-   selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
-valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
-     labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                         dateFormatBlock:(BKFormMappingDateFormatBlock)dateFormatBlock;
 
-- (void)mapCustomCell:(Class)cell
-           identifier:(NSString *)identifier
-            rowHeight:(CGFloat)rowHeight
- willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
-       didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock;
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                                    type:(BKFormAttributeMappingType)type
+                              dateFormat:(NSString *)dateFormat;
 
-//[formMapping mapCustomCell:[UITableViewCell class] identidier:@"customCell" willDisplayCellBlock:^UITableViewCell *(id object, NSIndexPath *indexPath, UITableViewCell *cell) {
-//    cell.textLabel.text = @"It's a custom cell";
-//}];
+- (BKFormAttributeMapping *)mapAttribute:(NSString *)attribute
+                                   title:(NSString *)title
+                            showInPicker:(BOOL)showInPicker
+                       selectValuesBlock:(BKFormMappingSelectValueBlock)selectValueBlock
+                    valueFromSelectBlock:(BKFormMappingValueFromSelectBlock)valueFromSelectBlock
+                         labelValueBlock:(BKFormMappingSelectLabelValueBlock)labelValue;
+
+- (BKFormAttributeMapping *)mapCustomCell:(Class)cell
+                               identifier:(NSString *)identifier
+                     willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
+                           didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock;
+
+- (BKFormAttributeMapping *)mapCustomCell:(Class)cell
+                               identifier:(NSString *)identifier
+                                rowHeight:(CGFloat)rowHeight
+                     willDisplayCellBlock:(BKFormMappingWillDisplayCellBlock)willDisplayCellBlock
+                           didSelectBlock:(BKFormMappingCellSelectionBlock)selectionBlock;
 
 - (void)sectiontTitle:(NSString *)title identifier:(NSString *)identifier;
 
-- (void)button:(NSString *)title
-    identifier:(NSString *)identifier
-       handler:(BKFormMappingButtonHandlerBlock)blockHandler
-  accesoryType:(UITableViewCellAccessoryType)accesoryType;
+- (void)sectiontTitle:(NSString *)title footer:(NSString *)footer identifier:(NSString *)identifier;
 
-- (void)buttonSave:(NSString *)title handler:(BKBasicBlock)blockHandler;
+- (BKFormAttributeMapping *)button:(NSString *)title
+                        identifier:(NSString *)identifier
+                           handler:(BKFormMappingButtonHandlerBlock)blockHandler
+                      accesoryType:(UITableViewCellAccessoryType)accesoryType;
+
+- (BKFormAttributeMapping *)buttonSave:(NSString *)title handler:(BKBasicBlock)blockHandler;
 
 @end

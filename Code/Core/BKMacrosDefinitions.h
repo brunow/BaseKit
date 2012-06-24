@@ -15,6 +15,7 @@
 // limitations under the License.
 //
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 #define BK_HAS_ARC __has_feature(objc_arc)
 #define BK_HAS_WEAK __has_feature(objc_arc_weak)
@@ -45,3 +46,27 @@
 #define BK_INTEGER(val) [NSNumber numberWithInteger:val]
 #define BK_FLOAT(val) [NSNumber numberWithFloat:val]
 
+#define BK_ADD_DYNAMIC_PROPERTY(TYPE, NAME, SETTER_NAME) \
+static char key##NAME; \
+@dynamic NAME; \
+\
+- (void)SETTER_NAME:(TYPE)NAME { \
+    objc_setAssociatedObject(self, &key##NAME, \
+                             NAME, \
+                             OBJC_ASSOCIATION_RETAIN_NONATOMIC); \
+} \
+\
+- (TYPE)NAME { \
+    return objc_getAssociatedObject(self, &key##NAME); \
+}
+
+
+#define BK_ADD_SHARED_INSTANCE_USING_BLOCK(BLOCK) \
+static dispatch_once_t pred = 0; \
+__strong static id _sharedObject = nil; \
+\
+dispatch_once(&pred, ^{ \
+    _sharedObject = BLOCK(); \
+}); \
+\
+return _sharedObject; \
