@@ -3,7 +3,7 @@ BaseKit is a set of IOS class to make your life easier.
 # Attention
 
 CellMapping and FormMapping will be removed from BaseKit, because it's too big to maintain.
-CellMapping is now called [TableKit.m](https://github.com/brunow/TableKit.m) and FormMapping will be called [FormKit.m](https://github.com/brunow/FormKit.m) but is not released yet.
+CellMapping is now called [TableKit.m](https://github.com/brunow/TableKit.m) and FormMapping is called [FormKit.m](https://github.com/brunow/FormKit.m).
 
 I'm sorry for that but it will not be hard to update your project.
 
