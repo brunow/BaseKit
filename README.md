@@ -1,11 +1,5 @@
 BaseKit is a set of IOS class to make your life easier.
 
-Please consider supporting BaseKit with a donation.
-
-[![Click here to lend your support to: RailsAdmin and make a donation at www.pledgie.com !](https://www.pledgie.com/campaigns/17480.png?skin_name=chrome)](http://www.pledgie.com/campaigns/17480)
-
-[BaseKit Google Group](https://groups.google.com/group/basekit)
-
 # Installation
 
 You have two way to do that
@@ -19,12 +13,12 @@ Add Code dir or pick library that you need inside Code/*.
 
 ## Install using CocoaPods.
 
-    dependency 'BaseKit/Core', '~> 0.2.4'
-    dependency 'BaseKit/View', '~> 0.2.4'
-    dependency 'BaseKit/CellMapping', '~> 0.2.4'
-    dependency 'BaseKit/LocationManager', '~> 0.2.4'
-    dependency 'BaseKit/FormField', '~> 0.2.4'
-    dependency 'BaseKit/FormMapping', '~> 0.2.4'
+    dependency 'BaseKit/Core', '~> 0.2.5'
+    dependency 'BaseKit/View', '~> 0.2.5'
+    dependency 'BaseKit/CellMapping', '~> 0.2.5'
+    dependency 'BaseKit/LocationManager', '~> 0.2.5'
+    dependency 'BaseKit/FormField', '~> 0.2.5'
+    dependency 'BaseKit/FormMapping', '~> 0.2.5'
 
 # Tutorials
 
@@ -174,5 +168,3 @@ If you use BaseKit I'll be happy to add your app name here.
 Bruno Wernimont
 
 - http://twitter.com/brunowernimont
-
-- hello@brunowernimont.be
