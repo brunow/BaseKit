@@ -173,7 +173,6 @@
     BKCellMapping *cellMapping = [self cellMappingForObject:object];
     
     if (nil != cellMapping.willDisplayCellBlock) {
-        UITableViewCell *cell = [self cellForRowAtIndexPath:indexPath];
         cellMapping.willDisplayCellBlock(cell, object, indexPath);
     }
 }
