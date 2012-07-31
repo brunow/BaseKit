@@ -5,8 +5,6 @@ BaseKit is a set of IOS class to make your life easier.
 CellMapping and FormMapping will be removed from BaseKit, because it's too big to maintain.
 CellMapping is now called [TableKit.m](https://github.com/brunow/TableKit.m) and FormMapping is called [FormKit.m](https://github.com/brunow/FormKit.m).
 
-I'm sorry for that but it will not be hard to update your project.
-
 # Installation
 
 You have two way to do that
@@ -65,67 +63,11 @@ Push view controller with block.
 
 # Cell mapping
 
-Create table view with blocks based syntax.
-
-	self.tableModel = [BKTableModel tableModelForTableView:self.tableView];
-	self.tableView.dataSource = self.tableModel;
-	self.tableView.delegate = self.tableModel;
-
-    [BKCellMapping mappingForObjectClass:[Item class] block:^(BKCellMapping *cellMapping) {
-        [cellMapping mapKeyPath:@"title" toAttribute:@"textLabel.text"];
-
-        [cellMapping onSelectRowWithBlock:^(UITableViewCell *cell, Item *item, NSIndexPath *indexPath) {
-	           // Do something
-        }];
-
-        [cellMapping mapObjectToCellClass:[UITableViewCell class]];
-        [self.tableModel registerMapping:cellMapping];
-    }];
-
-	NSArray *items = [NSArray arrayWithObjects:
-                      	[Item itemWithTitle:@"Simple mapping"],
-                      	[Item itemWithTitle:@"Nib cell example"],
-                        nil];
-    
-	[self.tableModel loadTableItems:items];
-
-For more **example** open **Examples/CellMappingExample/CellMappingExample.xcodeproj project**.
+Cell mapping has moved to [TableKit.m](https://github.com/brunow/TableKit.m).
 
 # Form mapping
 
-FormMapping is a library for building form with table view. Fields data are automatically filled from a model. When data changed it's automatically savec inside the object.
-
-BaseKit use an external library called ActionSheetPicker but unfortunately that library doesn't support ARC yet, so you need to add "-fno-objc-arc" when you import it to your project.
-
-	self.formModel = [BKFormModel formTableModelForTableView:self.tableView navigationController:self.navigationController];
-    
-    [BKFormMapping mappingForClass:[Movie class] block:^(BKFormMapping *formMapping) {
-        [formMapping sectiontTitle:@"Information section" identifier:@"info"];
-        [formMapping mapAttribute:@"title" title:@"Title" type:BKFormAttributeMappingTypeText];
-        [formMapping mapAttribute:@"releaseDate" title:@"ReleaseDate" type:BKFormAttributeMappingTypeDatePicker];
-        [formMapping mapAttribute:@"suitAllAges" title:@"All ages" type:BKFormAttributeMappingTypeBoolean];
-        [formMapping mapAttribute:@"shortName" title:@"ShortName" type:BKFormAttributeMappingTypeLabel];
-        [formMapping mapAttribute:@"numberOfActor" title:@"Number of actor" type:BKFormAttributeMappingTypeInteger];
-        [formMapping mapAttribute:@"content" title:@"Content" type:BKFormAttributeMappingTypeBigText];
-        
-        [formMapping mapAttribute:@"choice" title:@"Choices" selectValuesBlock:^NSArray *(id value, id object, NSInteger *selectedValueIndex){
-            *selectedValueIndex = 1;
-            return [NSArray arrayWithObjects:@"choice1", @"choice2", nil];
-        } valueWithBlock:^id(id value, id object, NSInteger selectedValueIndex) {
-            return value;
-        }];
-        
-        [formMapping buttonSave:@"Save" handler:^{
-        }];
-        
-        [self.formModel registerMapping:formMapping];
-    }];
-    
-    [self.formModel loadFieldsWithObject:movie];
-
-![Form Mapping](https://github.com/brunow/BaseKit/raw/master/form-mapping.png)
-
-For more **example** open **Examples/FormMappingExample/FormMappingExample.xcodeproj project**.
+Form mapping has moved to [FormKit.m](https://github.com/brunow/FormKit.m).
 
 # LocationManager
 
