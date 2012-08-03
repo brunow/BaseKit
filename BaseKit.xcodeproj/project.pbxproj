@@ -7,14 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E706735B157A963E000061B7 /* BKListTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7067359157A963E000061B7 /* BKListTableModel.m */; };
-		E729EFA61568406300BB874A /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFA41568406300BB874A /* Book.m */; };
 		E729EFB11568AF8A00BB874A /* BaseKit.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAA1568AF8A00BB874A /* BaseKit.xcdatamodeld */; };
 		E729EFB31568AF8A00BB874A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAD1568AF8A00BB874A /* AppDelegate.m */; };
 		E729EFB41568AF8A00BB874A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFAE1568AF8A00BB874A /* main.m */; };
-		E729EFBB1568B7AC00BB874A /* BKCellMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFB81568B7AC00BB874A /* BKCellMapperSpecs.m */; };
-		E729EFBC1568B7AC00BB874A /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = E729EFBA1568B7AC00BB874A /* Item.m */; };
-		E72E43871596085C0064A898 /* BWSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E72E43861596085C0064A898 /* BWSelectViewController.m */; };
 		E74E26E6156798B1004E6FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E5156798B1004E6FE9 /* UIKit.framework */; };
 		E74E26E8156798B1004E6FE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E7156798B1004E6FE9 /* Foundation.framework */; };
 		E74E26EA156798B1004E6FE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E9156798B1004E6FE9 /* CoreGraphics.framework */; };
@@ -23,11 +18,6 @@
 		E74E2704156798B2004E6FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E5156798B1004E6FE9 /* UIKit.framework */; };
 		E74E2705156798B2004E6FE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26E7156798B1004E6FE9 /* Foundation.framework */; };
 		E74E2706156798B2004E6FE9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E26EB156798B1004E6FE9 /* CoreData.framework */; };
-		E74E2797156798C2004E6FE9 /* BKCellAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E271F156798C2004E6FE9 /* BKCellAttributeMapping.m */; };
-		E74E2798156798C2004E6FE9 /* BKCellMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2721156798C2004E6FE9 /* BKCellMapper.m */; };
-		E74E2799156798C2004E6FE9 /* BKCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2723156798C2004E6FE9 /* BKCellMapping.m */; };
-		E74E279A156798C2004E6FE9 /* BKDynamicCellMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2726156798C2004E6FE9 /* BKDynamicCellMapping.m */; };
-		E74E279B156798C2004E6FE9 /* BKTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2728156798C2004E6FE9 /* BKTableModel.m */; };
 		E74E279D156798C2004E6FE9 /* BKDeviceAvailability.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E272F156798C2004E6FE9 /* BKDeviceAvailability.m */; };
 		E74E279E156798C2004E6FE9 /* BKIteratingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2731156798C2004E6FE9 /* BKIteratingHelper.m */; };
 		E74E279F156798C2004E6FE9 /* BKOperationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2734156798C2004E6FE9 /* BKOperationHelper.m */; };
@@ -42,26 +32,6 @@
 		E74E27A9156798C2004E6FE9 /* NSSet+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2747156798C2004E6FE9 /* NSSet+BaseKit.m */; };
 		E74E27AA156798C2004E6FE9 /* NSString+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2749156798C2004E6FE9 /* NSString+BaseKit.m */; };
 		E74E27AB156798C2004E6FE9 /* NSManagedObject+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E274C156798C2004E6FE9 /* NSManagedObject+BaseKit.m */; };
-		E74E27AC156798C2004E6FE9 /* BKBadgeField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2750156798C2004E6FE9 /* BKBadgeField.m */; };
-		E74E27AD156798C2004E6FE9 /* BKBigTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2752156798C2004E6FE9 /* BKBigTextField.m */; };
-		E74E27AE156798C2004E6FE9 /* BKButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2754156798C2004E6FE9 /* BKButtonField.m */; };
-		E74E27AF156798C2004E6FE9 /* BKFloatField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2756156798C2004E6FE9 /* BKFloatField.m */; };
-		E74E27B0156798C2004E6FE9 /* BKImageField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2759156798C2004E6FE9 /* BKImageField.m */; };
-		E74E27B1156798C2004E6FE9 /* BKIntegerField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E275B156798C2004E6FE9 /* BKIntegerField.m */; };
-		E74E27B2156798C2004E6FE9 /* BKLabelField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E275D156798C2004E6FE9 /* BKLabelField.m */; };
-		E74E27B3156798C2004E6FE9 /* BKPasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E275F156798C2004E6FE9 /* BKPasswordTextField.m */; };
-		E74E27B4156798C2004E6FE9 /* BKSaveButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2761156798C2004E6FE9 /* BKSaveButtonField.m */; };
-		E74E27B5156798C2004E6FE9 /* BKSimpleField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2763156798C2004E6FE9 /* BKSimpleField.m */; };
-		E74E27B6156798C2004E6FE9 /* BKSliderField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2765156798C2004E6FE9 /* BKSliderField.m */; };
-		E74E27B7156798C2004E6FE9 /* BKSwitchField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2767156798C2004E6FE9 /* BKSwitchField.m */; };
-		E74E27B8156798C2004E6FE9 /* BKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2769156798C2004E6FE9 /* BKTextField.m */; };
-		E74E27B9156798C2004E6FE9 /* BKTextViewField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E276B156798C2004E6FE9 /* BKTextViewField.m */; };
-		E74E27BA156798C2004E6FE9 /* BKValueViewField.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E276D156798C2004E6FE9 /* BKValueViewField.m */; };
-		E74E27BC156798C2004E6FE9 /* BKFormAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2772156798C2004E6FE9 /* BKFormAttributeMapping.m */; };
-		E74E27BD156798C2004E6FE9 /* BKFormMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2774156798C2004E6FE9 /* BKFormMapper.m */; };
-		E74E27BE156798C2004E6FE9 /* BKFormMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2776156798C2004E6FE9 /* BKFormMapping.m */; };
-		E74E27BF156798C2004E6FE9 /* BKFormModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2779156798C2004E6FE9 /* BKFormModel.m */; };
-		E74E27C1156798C2004E6FE9 /* NSObject+BKFormAttributeMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E277C156798C2004E6FE9 /* NSObject+BKFormAttributeMapping.m */; };
 		E74E27C2156798C2004E6FE9 /* BKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2780156798C2004E6FE9 /* BKLocationManager.m */; };
 		E74E27C5156798C2004E6FE9 /* UIBarButtonItem+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E278A156798C2004E6FE9 /* UIBarButtonItem+BaseKit.m */; };
 		E74E27C6156798C2004E6FE9 /* UINavigationController+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E278C156798C2004E6FE9 /* UINavigationController+BaseKit.m */; };
@@ -70,18 +40,7 @@
 		E74E27C9156798C2004E6FE9 /* UIView+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2792156798C2004E6FE9 /* UIView+BaseKit.m */; };
 		E74E27CA156798C2004E6FE9 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2794156798C2004E6FE9 /* UIView+Debug.m */; };
 		E74E27CB156798C2004E6FE9 /* UIViewController+BaseKit.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E2796156798C2004E6FE9 /* UIViewController+BaseKit.m */; };
-		E74E27E4156798CA004E6FE9 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E27CF156798CA004E6FE9 /* AbstractActionSheetPicker.m */; };
-		E74E27E5156798CA004E6FE9 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E27D1156798CA004E6FE9 /* ActionSheetCustomPicker.m */; };
-		E74E27E6156798CA004E6FE9 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E27D4156798CA004E6FE9 /* ActionSheetDatePicker.m */; };
-		E74E27E7156798CA004E6FE9 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E27D6156798CA004E6FE9 /* ActionSheetDistancePicker.m */; };
-		E74E27E8156798CA004E6FE9 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E27D8156798CA004E6FE9 /* ActionSheetStringPicker.m */; };
-		E74E27E9156798CA004E6FE9 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E27DA156798CA004E6FE9 /* DistancePickerView.m */; };
-		E74E27EA156798CA004E6FE9 /* BWLongTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E74E27DE156798CA004E6FE9 /* BWLongTextViewController.m */; };
 		E74E27EC15679943004E6FE9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E74E27EB15679943004E6FE9 /* CoreLocation.framework */; };
-		E75B9F501594D3ED00180DB6 /* BKFormSectionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E75B9F4E1594D3ED00180DB6 /* BKFormSectionObject.m */; };
-		E77882ED157FEB0C00F85E18 /* BKViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = E77882E7157FEB0C00F85E18 /* BKViewDecorator.m */; };
-		E77882EE157FEB0C00F85E18 /* UIView+BaseKitViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = E77882EA157FEB0C00F85E18 /* UIView+BaseKitViewDecorator.m */; };
-		E77882EF157FEB0C00F85E18 /* UIViewController+BaseKitViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = E77882EC157FEB0C00F85E18 /* UIViewController+BaseKitViewDecorator.m */; };
 		E7871FF31567D21200061D17 /* BKOperationHelperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E786C60D1567D1D500D633DD /* BKOperationHelperSpecs.m */; };
 		E7871FF61567D40000061D17 /* BKToogleValueSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7871FF41567D3B800061D17 /* BKToogleValueSpecs.m */; };
 		E7871FFE15680CBB00061D17 /* NSManagedObjectBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7871FFD15680CBB00061D17 /* NSManagedObjectBaseKitSpecs.m */; };
@@ -90,8 +49,6 @@
 		E7DCB35615679B590092FBBA /* libKiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DCB35515679B590092FBBA /* libKiwi.a */; };
 		E7DCB35D1567A3D00092FBBA /* BKIterationHelperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */; };
 		E7DCB35F1567A7420092FBBA /* NSArrayBaseKitSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */; };
-		E7E830D8156838C400BE1A62 /* BKFormMapperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */; };
-		E7ED50771578DDFB00A6CB39 /* BKManagedTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7ED50741578DDFB00A6CB39 /* BKManagedTableModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,10 +62,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E7067359157A963E000061B7 /* BKListTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKListTableModel.m; sourceTree = "<group>"; };
-		E706735A157A963E000061B7 /* BKListTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKListTableModel.h; sourceTree = "<group>"; };
-		E729EFA41568406300BB874A /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
-		E729EFA51568406300BB874A /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		E729EFA81568AF4B00BB874A /* BaseKitTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BaseKitTests-Info.plist"; sourceTree = "<group>"; };
 		E729EFAB1568AF8A00BB874A /* BaseKit.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BaseKit.xcdatamodel; sourceTree = "<group>"; };
 		E729EFAC1568AF8A00BB874A /* BaseKit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BaseKit-Info.plist"; sourceTree = "<group>"; };
@@ -116,11 +69,6 @@
 		E729EFAE1568AF8A00BB874A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E729EFAF1568AF8A00BB874A /* BaseKit-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseKit-Prefix.pch"; sourceTree = "<group>"; };
 		E729EFB01568AF8A00BB874A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E729EFB81568B7AC00BB874A /* BKCellMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapperSpecs.m; sourceTree = "<group>"; };
-		E729EFB91568B7AC00BB874A /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
-		E729EFBA1568B7AC00BB874A /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
-		E72E43851596085C0064A898 /* BWSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWSelectViewController.h; sourceTree = "<group>"; };
-		E72E43861596085C0064A898 /* BWSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWSelectViewController.m; sourceTree = "<group>"; };
 		E74E26E1156798B1004E6FE9 /* BaseKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74E26E5156798B1004E6FE9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E74E26E7156798B1004E6FE9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,18 +76,6 @@
 		E74E26EB156798B1004E6FE9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E74E2701156798B2004E6FE9 /* BaseKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BaseKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74E2702156798B2004E6FE9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E74E271D156798C2004E6FE9 /* BaseKitCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCellMapping.h; sourceTree = "<group>"; };
-		E74E271E156798C2004E6FE9 /* BKCellAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellAttributeMapping.h; sourceTree = "<group>"; };
-		E74E271F156798C2004E6FE9 /* BKCellAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellAttributeMapping.m; sourceTree = "<group>"; };
-		E74E2720156798C2004E6FE9 /* BKCellMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellMapper.h; sourceTree = "<group>"; };
-		E74E2721156798C2004E6FE9 /* BKCellMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapper.m; sourceTree = "<group>"; };
-		E74E2722156798C2004E6FE9 /* BKCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellMapping.h; sourceTree = "<group>"; };
-		E74E2723156798C2004E6FE9 /* BKCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKCellMapping.m; sourceTree = "<group>"; };
-		E74E2724156798C2004E6FE9 /* BKCellMappingBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKCellMappingBlocks.h; sourceTree = "<group>"; };
-		E74E2725156798C2004E6FE9 /* BKDynamicCellMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKDynamicCellMapping.h; sourceTree = "<group>"; };
-		E74E2726156798C2004E6FE9 /* BKDynamicCellMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKDynamicCellMapping.m; sourceTree = "<group>"; };
-		E74E2727156798C2004E6FE9 /* BKTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTableModel.h; sourceTree = "<group>"; };
-		E74E2728156798C2004E6FE9 /* BKTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTableModel.m; sourceTree = "<group>"; };
 		E74E272B156798C2004E6FE9 /* BaseKitCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCore.h; sourceTree = "<group>"; };
 		E74E272C156798C2004E6FE9 /* BaseKitCoreAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCoreAdditions.h; sourceTree = "<group>"; };
 		E74E272D156798C2004E6FE9 /* BKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBlocks.h; sourceTree = "<group>"; };
@@ -172,50 +108,6 @@
 		E74E2749156798C2004E6FE9 /* NSString+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BaseKit.m"; sourceTree = "<group>"; };
 		E74E274B156798C2004E6FE9 /* NSManagedObject+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+BaseKit.h"; sourceTree = "<group>"; };
 		E74E274C156798C2004E6FE9 /* NSManagedObject+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+BaseKit.m"; sourceTree = "<group>"; };
-		E74E274E156798C2004E6FE9 /* BaseKitFormField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitFormField.h; sourceTree = "<group>"; };
-		E74E274F156798C2004E6FE9 /* BKBadgeField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBadgeField.h; sourceTree = "<group>"; };
-		E74E2750156798C2004E6FE9 /* BKBadgeField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKBadgeField.m; sourceTree = "<group>"; };
-		E74E2751156798C2004E6FE9 /* BKBigTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKBigTextField.h; sourceTree = "<group>"; };
-		E74E2752156798C2004E6FE9 /* BKBigTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKBigTextField.m; sourceTree = "<group>"; };
-		E74E2753156798C2004E6FE9 /* BKButtonField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKButtonField.h; sourceTree = "<group>"; };
-		E74E2754156798C2004E6FE9 /* BKButtonField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKButtonField.m; sourceTree = "<group>"; };
-		E74E2755156798C2004E6FE9 /* BKFloatField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFloatField.h; sourceTree = "<group>"; };
-		E74E2756156798C2004E6FE9 /* BKFloatField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFloatField.m; sourceTree = "<group>"; };
-		E74E2757156798C2004E6FE9 /* BKFormFieldBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormFieldBlocks.h; sourceTree = "<group>"; };
-		E74E2758156798C2004E6FE9 /* BKImageField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKImageField.h; sourceTree = "<group>"; };
-		E74E2759156798C2004E6FE9 /* BKImageField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKImageField.m; sourceTree = "<group>"; };
-		E74E275A156798C2004E6FE9 /* BKIntegerField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKIntegerField.h; sourceTree = "<group>"; };
-		E74E275B156798C2004E6FE9 /* BKIntegerField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKIntegerField.m; sourceTree = "<group>"; };
-		E74E275C156798C2004E6FE9 /* BKLabelField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLabelField.h; sourceTree = "<group>"; };
-		E74E275D156798C2004E6FE9 /* BKLabelField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLabelField.m; sourceTree = "<group>"; };
-		E74E275E156798C2004E6FE9 /* BKPasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKPasswordTextField.h; sourceTree = "<group>"; };
-		E74E275F156798C2004E6FE9 /* BKPasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKPasswordTextField.m; sourceTree = "<group>"; };
-		E74E2760156798C2004E6FE9 /* BKSaveButtonField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSaveButtonField.h; sourceTree = "<group>"; };
-		E74E2761156798C2004E6FE9 /* BKSaveButtonField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSaveButtonField.m; sourceTree = "<group>"; };
-		E74E2762156798C2004E6FE9 /* BKSimpleField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSimpleField.h; sourceTree = "<group>"; };
-		E74E2763156798C2004E6FE9 /* BKSimpleField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSimpleField.m; sourceTree = "<group>"; };
-		E74E2764156798C2004E6FE9 /* BKSliderField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSliderField.h; sourceTree = "<group>"; };
-		E74E2765156798C2004E6FE9 /* BKSliderField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSliderField.m; sourceTree = "<group>"; };
-		E74E2766156798C2004E6FE9 /* BKSwitchField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKSwitchField.h; sourceTree = "<group>"; };
-		E74E2767156798C2004E6FE9 /* BKSwitchField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKSwitchField.m; sourceTree = "<group>"; };
-		E74E2768156798C2004E6FE9 /* BKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTextField.h; sourceTree = "<group>"; };
-		E74E2769156798C2004E6FE9 /* BKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTextField.m; sourceTree = "<group>"; };
-		E74E276A156798C2004E6FE9 /* BKTextViewField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKTextViewField.h; sourceTree = "<group>"; };
-		E74E276B156798C2004E6FE9 /* BKTextViewField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKTextViewField.m; sourceTree = "<group>"; };
-		E74E276C156798C2004E6FE9 /* BKValueViewField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKValueViewField.h; sourceTree = "<group>"; };
-		E74E276D156798C2004E6FE9 /* BKValueViewField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKValueViewField.m; sourceTree = "<group>"; };
-		E74E2770156798C2004E6FE9 /* BaseKitFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitFormModel.h; sourceTree = "<group>"; };
-		E74E2771156798C2004E6FE9 /* BKFormAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormAttributeMapping.h; sourceTree = "<group>"; };
-		E74E2772156798C2004E6FE9 /* BKFormAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormAttributeMapping.m; sourceTree = "<group>"; };
-		E74E2773156798C2004E6FE9 /* BKFormMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormMapper.h; sourceTree = "<group>"; };
-		E74E2774156798C2004E6FE9 /* BKFormMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormMapper.m; sourceTree = "<group>"; };
-		E74E2775156798C2004E6FE9 /* BKFormMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormMapping.h; sourceTree = "<group>"; };
-		E74E2776156798C2004E6FE9 /* BKFormMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormMapping.m; sourceTree = "<group>"; };
-		E74E2777156798C2004E6FE9 /* BKFormMappingBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormMappingBlocks.h; sourceTree = "<group>"; };
-		E74E2778156798C2004E6FE9 /* BKFormModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormModel.h; sourceTree = "<group>"; };
-		E74E2779156798C2004E6FE9 /* BKFormModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormModel.m; sourceTree = "<group>"; };
-		E74E277B156798C2004E6FE9 /* NSObject+BKFormAttributeMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BKFormAttributeMapping.h"; sourceTree = "<group>"; };
-		E74E277C156798C2004E6FE9 /* NSObject+BKFormAttributeMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BKFormAttributeMapping.m"; sourceTree = "<group>"; };
 		E74E277E156798C2004E6FE9 /* BaseKitLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitLocationManager.h; sourceTree = "<group>"; };
 		E74E277F156798C2004E6FE9 /* BKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKLocationManager.h; sourceTree = "<group>"; };
 		E74E2780156798C2004E6FE9 /* BKLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKLocationManager.m; sourceTree = "<group>"; };
@@ -237,32 +129,7 @@
 		E74E2794156798C2004E6FE9 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
 		E74E2795156798C2004E6FE9 /* UIViewController+BaseKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BaseKit.h"; sourceTree = "<group>"; };
 		E74E2796156798C2004E6FE9 /* UIViewController+BaseKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BaseKit.m"; sourceTree = "<group>"; };
-		E74E27CE156798CA004E6FE9 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
-		E74E27CF156798CA004E6FE9 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
-		E74E27D0156798CA004E6FE9 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
-		E74E27D1156798CA004E6FE9 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
-		E74E27D2156798CA004E6FE9 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
-		E74E27D3156798CA004E6FE9 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
-		E74E27D4156798CA004E6FE9 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
-		E74E27D5156798CA004E6FE9 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
-		E74E27D6156798CA004E6FE9 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
-		E74E27D7156798CA004E6FE9 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
-		E74E27D8156798CA004E6FE9 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
-		E74E27D9156798CA004E6FE9 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
-		E74E27DA156798CA004E6FE9 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
-		E74E27DD156798CA004E6FE9 /* BWLongTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWLongTextViewController.h; sourceTree = "<group>"; };
-		E74E27DE156798CA004E6FE9 /* BWLongTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWLongTextViewController.m; sourceTree = "<group>"; };
 		E74E27EB15679943004E6FE9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		E75B9F4E1594D3ED00180DB6 /* BKFormSectionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormSectionObject.m; sourceTree = "<group>"; };
-		E75B9F4F1594D3ED00180DB6 /* BKFormSectionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKFormSectionObject.h; sourceTree = "<group>"; };
-		E77882E5157FEB0C00F85E18 /* BaseKitViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitViewDecorator.h; sourceTree = "<group>"; };
-		E77882E6157FEB0C00F85E18 /* BKViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKViewDecorator.h; sourceTree = "<group>"; };
-		E77882E7157FEB0C00F85E18 /* BKViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKViewDecorator.m; sourceTree = "<group>"; };
-		E77882E8157FEB0C00F85E18 /* BKViewDecoratorBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKViewDecoratorBlocks.h; sourceTree = "<group>"; };
-		E77882E9157FEB0C00F85E18 /* UIView+BaseKitViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BaseKitViewDecorator.h"; sourceTree = "<group>"; };
-		E77882EA157FEB0C00F85E18 /* UIView+BaseKitViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BaseKitViewDecorator.m"; sourceTree = "<group>"; };
-		E77882EB157FEB0C00F85E18 /* UIViewController+BaseKitViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BaseKitViewDecorator.h"; sourceTree = "<group>"; };
-		E77882EC157FEB0C00F85E18 /* UIViewController+BaseKitViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BaseKitViewDecorator.m"; sourceTree = "<group>"; };
 		E786C60D1567D1D500D633DD /* BKOperationHelperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKOperationHelperSpecs.m; sourceTree = "<group>"; };
 		E7871FF41567D3B800061D17 /* BKToogleValueSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKToogleValueSpecs.m; sourceTree = "<group>"; };
 		E7871FF81567D4C800061D17 /* BaseKitCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitCoreData.h; sourceTree = "<group>"; };
@@ -272,10 +139,6 @@
 		E7DCB35515679B590092FBBA /* libKiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libKiwi.a; path = "../../dev/xcodeBuilds/Release-iphoneos/libKiwi.a"; sourceTree = "<group>"; };
 		E7DCB35C1567A3D00092FBBA /* BKIterationHelperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKIterationHelperSpecs.m; sourceTree = "<group>"; };
 		E7DCB35E1567A7420092FBBA /* NSArrayBaseKitSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayBaseKitSpecs.m; sourceTree = "<group>"; };
-		E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKFormMapperSpecs.m; sourceTree = "<group>"; };
-		E7ED50741578DDFB00A6CB39 /* BKManagedTableModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BKManagedTableModel.m; sourceTree = "<group>"; };
-		E7ED50751578DDFB00A6CB39 /* BaseKitManagedTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseKitManagedTableModel.h; sourceTree = "<group>"; };
-		E7ED50761578DDFB00A6CB39 /* BKManagedTableModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BKManagedTableModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,25 +183,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		E729EFB71568B7AC00BB874A /* CellMapping */ = {
-			isa = PBXGroup;
-			children = (
-				E729EFB81568B7AC00BB874A /* BKCellMapperSpecs.m */,
-				E729EFB91568B7AC00BB874A /* Item.h */,
-				E729EFBA1568B7AC00BB874A /* Item.m */,
-			);
-			path = CellMapping;
-			sourceTree = "<group>";
-		};
-		E72E43841596085C0064A898 /* BWSelectViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E72E43851596085C0064A898 /* BWSelectViewController.h */,
-				E72E43861596085C0064A898 /* BWSelectViewController.m */,
-			);
-			path = BWSelectViewController;
-			sourceTree = "<group>";
-		};
 		E74E26D6156798B1004E6FE9 = {
 			isa = PBXGroup;
 			children = (
@@ -377,38 +221,12 @@
 		E74E271A156798C2004E6FE9 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				E77882E4157FEB0C00F85E18 /* ViewDecorator */,
-				E7ED506F1578DD7C00A6CB39 /* ManagedTableModel */,
-				E74E271C156798C2004E6FE9 /* CellMapping */,
 				E74E272A156798C2004E6FE9 /* Core */,
 				E74E274A156798C2004E6FE9 /* CoreData */,
-				E74E274D156798C2004E6FE9 /* FormField */,
-				E74E276F156798C2004E6FE9 /* FormMapping */,
 				E74E277D156798C2004E6FE9 /* LocationManager */,
 				E74E2783156798C2004E6FE9 /* View */,
 			);
 			path = Code;
-			sourceTree = "<group>";
-		};
-		E74E271C156798C2004E6FE9 /* CellMapping */ = {
-			isa = PBXGroup;
-			children = (
-				E74E271D156798C2004E6FE9 /* BaseKitCellMapping.h */,
-				E74E271E156798C2004E6FE9 /* BKCellAttributeMapping.h */,
-				E74E271F156798C2004E6FE9 /* BKCellAttributeMapping.m */,
-				E74E2720156798C2004E6FE9 /* BKCellMapper.h */,
-				E74E2721156798C2004E6FE9 /* BKCellMapper.m */,
-				E74E2722156798C2004E6FE9 /* BKCellMapping.h */,
-				E74E2723156798C2004E6FE9 /* BKCellMapping.m */,
-				E74E2724156798C2004E6FE9 /* BKCellMappingBlocks.h */,
-				E74E2725156798C2004E6FE9 /* BKDynamicCellMapping.h */,
-				E74E2726156798C2004E6FE9 /* BKDynamicCellMapping.m */,
-				E74E2727156798C2004E6FE9 /* BKTableModel.h */,
-				E74E2728156798C2004E6FE9 /* BKTableModel.m */,
-				E706735A157A963E000061B7 /* BKListTableModel.h */,
-				E7067359157A963E000061B7 /* BKListTableModel.m */,
-			);
-			path = CellMapping;
 			sourceTree = "<group>";
 		};
 		E74E272A156798C2004E6FE9 /* Core */ = {
@@ -458,66 +276,6 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		E74E274D156798C2004E6FE9 /* FormField */ = {
-			isa = PBXGroup;
-			children = (
-				E74E274E156798C2004E6FE9 /* BaseKitFormField.h */,
-				E74E274F156798C2004E6FE9 /* BKBadgeField.h */,
-				E74E2750156798C2004E6FE9 /* BKBadgeField.m */,
-				E74E2751156798C2004E6FE9 /* BKBigTextField.h */,
-				E74E2752156798C2004E6FE9 /* BKBigTextField.m */,
-				E74E2753156798C2004E6FE9 /* BKButtonField.h */,
-				E74E2754156798C2004E6FE9 /* BKButtonField.m */,
-				E74E2755156798C2004E6FE9 /* BKFloatField.h */,
-				E74E2756156798C2004E6FE9 /* BKFloatField.m */,
-				E74E2757156798C2004E6FE9 /* BKFormFieldBlocks.h */,
-				E74E2758156798C2004E6FE9 /* BKImageField.h */,
-				E74E2759156798C2004E6FE9 /* BKImageField.m */,
-				E74E275A156798C2004E6FE9 /* BKIntegerField.h */,
-				E74E275B156798C2004E6FE9 /* BKIntegerField.m */,
-				E74E275C156798C2004E6FE9 /* BKLabelField.h */,
-				E74E275D156798C2004E6FE9 /* BKLabelField.m */,
-				E74E275E156798C2004E6FE9 /* BKPasswordTextField.h */,
-				E74E275F156798C2004E6FE9 /* BKPasswordTextField.m */,
-				E74E2760156798C2004E6FE9 /* BKSaveButtonField.h */,
-				E74E2761156798C2004E6FE9 /* BKSaveButtonField.m */,
-				E74E2762156798C2004E6FE9 /* BKSimpleField.h */,
-				E74E2763156798C2004E6FE9 /* BKSimpleField.m */,
-				E74E2764156798C2004E6FE9 /* BKSliderField.h */,
-				E74E2765156798C2004E6FE9 /* BKSliderField.m */,
-				E74E2766156798C2004E6FE9 /* BKSwitchField.h */,
-				E74E2767156798C2004E6FE9 /* BKSwitchField.m */,
-				E74E2768156798C2004E6FE9 /* BKTextField.h */,
-				E74E2769156798C2004E6FE9 /* BKTextField.m */,
-				E74E276A156798C2004E6FE9 /* BKTextViewField.h */,
-				E74E276B156798C2004E6FE9 /* BKTextViewField.m */,
-				E74E276C156798C2004E6FE9 /* BKValueViewField.h */,
-				E74E276D156798C2004E6FE9 /* BKValueViewField.m */,
-			);
-			path = FormField;
-			sourceTree = "<group>";
-		};
-		E74E276F156798C2004E6FE9 /* FormMapping */ = {
-			isa = PBXGroup;
-			children = (
-				E75B9F4E1594D3ED00180DB6 /* BKFormSectionObject.m */,
-				E75B9F4F1594D3ED00180DB6 /* BKFormSectionObject.h */,
-				E74E2770156798C2004E6FE9 /* BaseKitFormModel.h */,
-				E74E2771156798C2004E6FE9 /* BKFormAttributeMapping.h */,
-				E74E2772156798C2004E6FE9 /* BKFormAttributeMapping.m */,
-				E74E2773156798C2004E6FE9 /* BKFormMapper.h */,
-				E74E2774156798C2004E6FE9 /* BKFormMapper.m */,
-				E74E2775156798C2004E6FE9 /* BKFormMapping.h */,
-				E74E2776156798C2004E6FE9 /* BKFormMapping.m */,
-				E74E2777156798C2004E6FE9 /* BKFormMappingBlocks.h */,
-				E74E2778156798C2004E6FE9 /* BKFormModel.h */,
-				E74E2779156798C2004E6FE9 /* BKFormModel.m */,
-				E74E277B156798C2004E6FE9 /* NSObject+BKFormAttributeMapping.h */,
-				E74E277C156798C2004E6FE9 /* NSObject+BKFormAttributeMapping.m */,
-			);
-			path = FormMapping;
-			sourceTree = "<group>";
-		};
 		E74E277D156798C2004E6FE9 /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,50 +314,9 @@
 		E74E27CC156798CA004E6FE9 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				E72E43841596085C0064A898 /* BWSelectViewController */,
-				E74E27CD156798CA004E6FE9 /* ActionSheetPicker */,
-				E74E27DC156798CA004E6FE9 /* BWLongTextViewController */,
-				E74E27DF156798CA004E6FE9 /* JSONKit */,
 				E74E27E0156798CA004E6FE9 /* MagicalRecord */,
-				E74E27E3156798CA004E6FE9 /* SOCKit */,
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		E74E27CD156798CA004E6FE9 /* ActionSheetPicker */ = {
-			isa = PBXGroup;
-			children = (
-				E74E27CE156798CA004E6FE9 /* AbstractActionSheetPicker.h */,
-				E74E27CF156798CA004E6FE9 /* AbstractActionSheetPicker.m */,
-				E74E27D0156798CA004E6FE9 /* ActionSheetCustomPicker.h */,
-				E74E27D1156798CA004E6FE9 /* ActionSheetCustomPicker.m */,
-				E74E27D2156798CA004E6FE9 /* ActionSheetCustomPickerDelegate.h */,
-				E74E27D3156798CA004E6FE9 /* ActionSheetDatePicker.h */,
-				E74E27D4156798CA004E6FE9 /* ActionSheetDatePicker.m */,
-				E74E27D5156798CA004E6FE9 /* ActionSheetDistancePicker.h */,
-				E74E27D6156798CA004E6FE9 /* ActionSheetDistancePicker.m */,
-				E74E27D7156798CA004E6FE9 /* ActionSheetStringPicker.h */,
-				E74E27D8156798CA004E6FE9 /* ActionSheetStringPicker.m */,
-				E74E27D9156798CA004E6FE9 /* DistancePickerView.h */,
-				E74E27DA156798CA004E6FE9 /* DistancePickerView.m */,
-			);
-			path = ActionSheetPicker;
-			sourceTree = "<group>";
-		};
-		E74E27DC156798CA004E6FE9 /* BWLongTextViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E74E27DD156798CA004E6FE9 /* BWLongTextViewController.h */,
-				E74E27DE156798CA004E6FE9 /* BWLongTextViewController.m */,
-			);
-			path = BWLongTextViewController;
-			sourceTree = "<group>";
-		};
-		E74E27DF156798CA004E6FE9 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = JSONKit;
 			sourceTree = "<group>";
 		};
 		E74E27E0156798CA004E6FE9 /* MagicalRecord */ = {
@@ -625,28 +342,6 @@
 			path = DataImport;
 			sourceTree = "<group>";
 		};
-		E74E27E3156798CA004E6FE9 /* SOCKit */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SOCKit;
-			sourceTree = "<group>";
-		};
-		E77882E4157FEB0C00F85E18 /* ViewDecorator */ = {
-			isa = PBXGroup;
-			children = (
-				E77882E5157FEB0C00F85E18 /* BaseKitViewDecorator.h */,
-				E77882E6157FEB0C00F85E18 /* BKViewDecorator.h */,
-				E77882E7157FEB0C00F85E18 /* BKViewDecorator.m */,
-				E77882E8157FEB0C00F85E18 /* BKViewDecoratorBlocks.h */,
-				E77882E9157FEB0C00F85E18 /* UIView+BaseKitViewDecorator.h */,
-				E77882EA157FEB0C00F85E18 /* UIView+BaseKitViewDecorator.m */,
-				E77882EB157FEB0C00F85E18 /* UIViewController+BaseKitViewDecorator.h */,
-				E77882EC157FEB0C00F85E18 /* UIViewController+BaseKitViewDecorator.m */,
-			);
-			path = ViewDecorator;
-			sourceTree = "<group>";
-		};
 		E7871FF71567D4AD00061D17 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -667,10 +362,8 @@
 			isa = PBXGroup;
 			children = (
 				E7AD2B59156AD629007F7790 /* View */,
-				E729EFB71568B7AC00BB874A /* CellMapping */,
 				E7871FF71567D4AD00061D17 /* CoreData */,
 				E7DCB35A1567A38C0092FBBA /* Core */,
-				E7DCB35B1567A38C0092FBBA /* FormMapping */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -685,26 +378,6 @@
 				E7871FFF15680E5900061D17 /* NSStringBaseKitSpecs.m */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		E7DCB35B1567A38C0092FBBA /* FormMapping */ = {
-			isa = PBXGroup;
-			children = (
-				E7E830D7156838C400BE1A62 /* BKFormMapperSpecs.m */,
-				E729EFA41568406300BB874A /* Book.m */,
-				E729EFA51568406300BB874A /* Book.h */,
-			);
-			path = FormMapping;
-			sourceTree = "<group>";
-		};
-		E7ED506F1578DD7C00A6CB39 /* ManagedTableModel */ = {
-			isa = PBXGroup;
-			children = (
-				E7ED50761578DDFB00A6CB39 /* BKManagedTableModel.h */,
-				E7ED50741578DDFB00A6CB39 /* BKManagedTableModel.m */,
-				E7ED50751578DDFB00A6CB39 /* BaseKitManagedTableModel.h */,
-			);
-			path = ManagedTableModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -810,11 +483,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E74E2797156798C2004E6FE9 /* BKCellAttributeMapping.m in Sources */,
-				E74E2798156798C2004E6FE9 /* BKCellMapper.m in Sources */,
-				E74E2799156798C2004E6FE9 /* BKCellMapping.m in Sources */,
-				E74E279A156798C2004E6FE9 /* BKDynamicCellMapping.m in Sources */,
-				E74E279B156798C2004E6FE9 /* BKTableModel.m in Sources */,
 				E74E279D156798C2004E6FE9 /* BKDeviceAvailability.m in Sources */,
 				E74E279E156798C2004E6FE9 /* BKIteratingHelper.m in Sources */,
 				E74E279F156798C2004E6FE9 /* BKOperationHelper.m in Sources */,
@@ -829,26 +497,6 @@
 				E74E27A9156798C2004E6FE9 /* NSSet+BaseKit.m in Sources */,
 				E74E27AA156798C2004E6FE9 /* NSString+BaseKit.m in Sources */,
 				E74E27AB156798C2004E6FE9 /* NSManagedObject+BaseKit.m in Sources */,
-				E74E27AC156798C2004E6FE9 /* BKBadgeField.m in Sources */,
-				E74E27AD156798C2004E6FE9 /* BKBigTextField.m in Sources */,
-				E74E27AE156798C2004E6FE9 /* BKButtonField.m in Sources */,
-				E74E27AF156798C2004E6FE9 /* BKFloatField.m in Sources */,
-				E74E27B0156798C2004E6FE9 /* BKImageField.m in Sources */,
-				E74E27B1156798C2004E6FE9 /* BKIntegerField.m in Sources */,
-				E74E27B2156798C2004E6FE9 /* BKLabelField.m in Sources */,
-				E74E27B3156798C2004E6FE9 /* BKPasswordTextField.m in Sources */,
-				E74E27B4156798C2004E6FE9 /* BKSaveButtonField.m in Sources */,
-				E74E27B5156798C2004E6FE9 /* BKSimpleField.m in Sources */,
-				E74E27B6156798C2004E6FE9 /* BKSliderField.m in Sources */,
-				E74E27B7156798C2004E6FE9 /* BKSwitchField.m in Sources */,
-				E74E27B8156798C2004E6FE9 /* BKTextField.m in Sources */,
-				E74E27B9156798C2004E6FE9 /* BKTextViewField.m in Sources */,
-				E74E27BA156798C2004E6FE9 /* BKValueViewField.m in Sources */,
-				E74E27BC156798C2004E6FE9 /* BKFormAttributeMapping.m in Sources */,
-				E74E27BD156798C2004E6FE9 /* BKFormMapper.m in Sources */,
-				E74E27BE156798C2004E6FE9 /* BKFormMapping.m in Sources */,
-				E74E27BF156798C2004E6FE9 /* BKFormModel.m in Sources */,
-				E74E27C1156798C2004E6FE9 /* NSObject+BKFormAttributeMapping.m in Sources */,
 				E74E27C2156798C2004E6FE9 /* BKLocationManager.m in Sources */,
 				E74E27C5156798C2004E6FE9 /* UIBarButtonItem+BaseKit.m in Sources */,
 				E74E27C6156798C2004E6FE9 /* UINavigationController+BaseKit.m in Sources */,
@@ -857,23 +505,9 @@
 				E74E27C9156798C2004E6FE9 /* UIView+BaseKit.m in Sources */,
 				E74E27CA156798C2004E6FE9 /* UIView+Debug.m in Sources */,
 				E74E27CB156798C2004E6FE9 /* UIViewController+BaseKit.m in Sources */,
-				E74E27E4156798CA004E6FE9 /* AbstractActionSheetPicker.m in Sources */,
-				E74E27E5156798CA004E6FE9 /* ActionSheetCustomPicker.m in Sources */,
-				E74E27E6156798CA004E6FE9 /* ActionSheetDatePicker.m in Sources */,
-				E74E27E7156798CA004E6FE9 /* ActionSheetDistancePicker.m in Sources */,
-				E74E27E8156798CA004E6FE9 /* ActionSheetStringPicker.m in Sources */,
-				E74E27E9156798CA004E6FE9 /* DistancePickerView.m in Sources */,
-				E74E27EA156798CA004E6FE9 /* BWLongTextViewController.m in Sources */,
 				E729EFB11568AF8A00BB874A /* BaseKit.xcdatamodeld in Sources */,
 				E729EFB31568AF8A00BB874A /* AppDelegate.m in Sources */,
 				E729EFB41568AF8A00BB874A /* main.m in Sources */,
-				E7ED50771578DDFB00A6CB39 /* BKManagedTableModel.m in Sources */,
-				E706735B157A963E000061B7 /* BKListTableModel.m in Sources */,
-				E77882ED157FEB0C00F85E18 /* BKViewDecorator.m in Sources */,
-				E77882EE157FEB0C00F85E18 /* UIView+BaseKitViewDecorator.m in Sources */,
-				E77882EF157FEB0C00F85E18 /* UIViewController+BaseKitViewDecorator.m in Sources */,
-				E75B9F501594D3ED00180DB6 /* BKFormSectionObject.m in Sources */,
-				E72E43871596085C0064A898 /* BWSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,10 +521,6 @@
 				E7871FF61567D40000061D17 /* BKToogleValueSpecs.m in Sources */,
 				E7871FFE15680CBB00061D17 /* NSManagedObjectBaseKitSpecs.m in Sources */,
 				E787200015680E5900061D17 /* NSStringBaseKitSpecs.m in Sources */,
-				E7E830D8156838C400BE1A62 /* BKFormMapperSpecs.m in Sources */,
-				E729EFA61568406300BB874A /* Book.m in Sources */,
-				E729EFBB1568B7AC00BB874A /* BKCellMapperSpecs.m in Sources */,
-				E729EFBC1568B7AC00BB874A /* Item.m in Sources */,
 				E7AD2B5C156AD642007F7790 /* UIViewBaseKitSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
